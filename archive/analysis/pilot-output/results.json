@@ -1,0 +1,997 @@
+{
+  "olist": {
+    "audit": {
+      "raw_orders": 99441,
+      "raw_review_rows": 99224,
+      "distinct_review_orders": 98673,
+      "orders_with_multiple_reviews": 547,
+      "delivered": 96478,
+      "eligible_with_review": 95824,
+      "before_delivery_or_unknown_answer": 4768,
+      "final_reviewed_after_delivery": 91056,
+      "low_definition": "review_score <= 2",
+      "primary_review": "earliest submitted review per order",
+      "late_definition": "delivered calendar date > estimated calendar date"
+    },
+    "overall": [
+      {
+        "n": 91056,
+        "on_time": 0.979079,
+        "median_actual": 9.91522,
+        "median_promised": 24,
+        "low_rate": 0.094535,
+        "score": 4.27974
+      }
+    ],
+    "duration": [
+      {
+        "duration_band": "0-<7",
+        "late": false,
+        "n": 25864,
+        "low_n": 1924,
+        "low_rate": 0.074389,
+        "mean_score": 4.419618
+      },
+      {
+        "duration_band": "0-<7",
+        "late": true,
+        "n": 52,
+        "low_n": 4,
+        "low_rate": 0.076923,
+        "mean_score": 4.211538
+      },
+      {
+        "duration_band": "7-<14",
+        "late": false,
+        "n": 39592,
+        "low_n": 3467,
+        "low_rate": 0.087568,
+        "mean_score": 4.320191
+      },
+      {
+        "duration_band": "7-<14",
+        "late": true,
+        "n": 208,
+        "low_n": 25,
+        "low_rate": 0.120192,
+        "mean_score": 4.076923
+      },
+      {
+        "duration_band": "14-<21",
+        "late": false,
+        "n": 16945,
+        "low_n": 1804,
+        "low_rate": 0.106462,
+        "mean_score": 4.17905
+      },
+      {
+        "duration_band": "14-<21",
+        "late": true,
+        "n": 313,
+        "low_n": 53,
+        "low_rate": 0.169329,
+        "mean_score": 3.753994
+      },
+      {
+        "duration_band": "21-<30",
+        "late": false,
+        "n": 5812,
+        "low_n": 841,
+        "low_rate": 0.144701,
+        "mean_score": 3.955953
+      },
+      {
+        "duration_band": "21-<30",
+        "late": true,
+        "n": 906,
+        "low_n": 180,
+        "low_rate": 0.198675,
+        "mean_score": 3.697572
+      },
+      {
+        "duration_band": "30+",
+        "late": false,
+        "n": 938,
+        "low_n": 202,
+        "low_rate": 0.215352,
+        "mean_score": 3.67484
+      },
+      {
+        "duration_band": "30+",
+        "late": true,
+        "n": 426,
+        "low_n": 108,
+        "low_rate": 0.253521,
+        "mean_score": 3.514085
+      }
+    ],
+    "promise": [
+      {
+        "promise_band": "0-13",
+        "n": 9138,
+        "median_actual": 4.364884,
+        "median_promised": 11,
+        "on_time": 0.964325,
+        "low_rate": 0.072664,
+        "score": 4.40917
+      },
+      {
+        "promise_band": "14-20",
+        "n": 20072,
+        "median_actual": 7.116742,
+        "median_promised": 18,
+        "on_time": 0.978826,
+        "low_rate": 0.083599,
+        "score": 4.332055
+      },
+      {
+        "promise_band": "21-27",
+        "n": 33243,
+        "median_actual": 10.503368,
+        "median_promised": 24,
+        "on_time": 0.976958,
+        "low_rate": 0.092651,
+        "score": 4.282405
+      },
+      {
+        "promise_band": "28-34",
+        "n": 18705,
+        "median_actual": 13.305197,
+        "median_promised": 30,
+        "on_time": 0.983213,
+        "low_rate": 0.104945,
+        "score": 4.22657
+      },
+      {
+        "promise_band": "35+",
+        "n": 9898,
+        "median_actual": 14.951852,
+        "median_promised": 39,
+        "on_time": 0.992524,
+        "low_rate": 0.12356,
+        "score": 4.145686
+      }
+    ],
+    "states": [
+      {
+        "customer_state": "RS",
+        "n": 5064,
+        "on_time": 0.984202,
+        "median_actual": 12.946493,
+        "median_promised": 29,
+        "low_rate": 0.087678,
+        "score": 4.304897,
+        "punctuality_rank": 1,
+        "speed_rank": 7
+      },
+      {
+        "customer_state": "PR",
+        "n": 4762,
+        "on_time": 0.98362,
+        "median_actual": 10.268507,
+        "median_promised": 25,
+        "low_rate": 0.092398,
+        "score": 4.299244,
+        "punctuality_rank": 2,
+        "speed_rank": 3
+      },
+      {
+        "customer_state": "MG",
+        "n": 10925,
+        "on_time": 0.983616,
+        "median_actual": 10.151343,
+        "median_promised": 24,
+        "low_rate": 0.096293,
+        "score": 4.270481,
+        "punctuality_rank": 3,
+        "speed_rank": 2
+      },
+      {
+        "customer_state": "DF",
+        "n": 1978,
+        "on_time": 0.983316,
+        "median_actual": 11.099416,
+        "median_promised": 25,
+        "low_rate": 0.098584,
+        "score": 4.253286,
+        "punctuality_rank": 4,
+        "speed_rank": 4
+      },
+      {
+        "customer_state": "SP",
+        "n": 39084,
+        "on_time": 0.98209,
+        "median_actual": 7.108148,
+        "median_promised": 19,
+        "low_rate": 0.087964,
+        "score": 4.316088,
+        "punctuality_rank": 5,
+        "speed_rank": 1
+      },
+      {
+        "customer_state": "MT",
+        "n": 843,
+        "on_time": 0.979834,
+        "median_actual": 15.81375,
+        "median_promised": 32,
+        "low_rate": 0.104389,
+        "score": 4.238434,
+        "punctuality_rank": 6,
+        "speed_rank": 14
+      },
+      {
+        "customer_state": "GO",
+        "n": 1854,
+        "on_time": 0.979504,
+        "median_actual": 13.445446,
+        "median_promised": 28,
+        "low_rate": 0.10302,
+        "score": 4.214671,
+        "punctuality_rank": 7,
+        "speed_rank": 10
+      },
+      {
+        "customer_state": "PA",
+        "n": 845,
+        "on_time": 0.978698,
+        "median_actual": 20.037083,
+        "median_promised": 37,
+        "low_rate": 0.113609,
+        "score": 4.140828,
+        "punctuality_rank": 8,
+        "speed_rank": 20
+      },
+      {
+        "customer_state": "PE",
+        "n": 1461,
+        "on_time": 0.977413,
+        "median_actual": 15.078102,
+        "median_promised": 32,
+        "low_rate": 0.094456,
+        "score": 4.28063,
+        "punctuality_rank": 9,
+        "speed_rank": 11
+      },
+      {
+        "customer_state": "RN",
+        "n": 437,
+        "on_time": 0.974828,
+        "median_actual": 15.352975,
+        "median_promised": 33,
+        "low_rate": 0.075515,
+        "score": 4.343249,
+        "punctuality_rank": 10,
+        "speed_rank": 13
+      },
+      {
+        "customer_state": "RJ",
+        "n": 10993,
+        "on_time": 0.973892,
+        "median_actual": 11.128194,
+        "median_promised": 26,
+        "low_rate": 0.112253,
+        "score": 4.228509,
+        "punctuality_rank": 11,
+        "speed_rank": 5
+      },
+      {
+        "customer_state": "SC",
+        "n": 3324,
+        "on_time": 0.970217,
+        "median_actual": 12.44695,
+        "median_promised": 26,
+        "low_rate": 0.090854,
+        "score": 4.271961,
+        "punctuality_rank": 12,
+        "speed_rank": 6
+      },
+      {
+        "customer_state": "BA",
+        "n": 2930,
+        "on_time": 0.968259,
+        "median_actual": 15.894722,
+        "median_promised": 30,
+        "low_rate": 0.112628,
+        "score": 4.136177,
+        "punctuality_rank": 13,
+        "speed_rank": 15
+      },
+      {
+        "customer_state": "CE",
+        "n": 1134,
+        "on_time": 0.968254,
+        "median_actual": 17.207841,
+        "median_promised": 32,
+        "low_rate": 0.090829,
+        "score": 4.23545,
+        "punctuality_rank": 14,
+        "speed_rank": 17
+      },
+      {
+        "customer_state": "MS",
+        "n": 644,
+        "on_time": 0.967391,
+        "median_actual": 13.286522,
+        "median_promised": 27,
+        "low_rate": 0.085404,
+        "score": 4.335404,
+        "punctuality_rank": 15,
+        "speed_rank": 9
+      },
+      {
+        "customer_state": "PB",
+        "n": 475,
+        "on_time": 0.966316,
+        "median_actual": 17.175694,
+        "median_promised": 33,
+        "low_rate": 0.094737,
+        "score": 4.263158,
+        "punctuality_rank": 16,
+        "speed_rank": 16
+      },
+      {
+        "customer_state": "ES",
+        "n": 1819,
+        "on_time": 0.965366,
+        "median_actual": 12.953854,
+        "median_promised": 26,
+        "low_rate": 0.092358,
+        "score": 4.247938,
+        "punctuality_rank": 17,
+        "speed_rank": 8
+      },
+      {
+        "customer_state": "PI",
+        "n": 427,
+        "on_time": 0.948478,
+        "median_actual": 15.314722,
+        "median_promised": 31,
+        "low_rate": 0.096019,
+        "score": 4.227166,
+        "punctuality_rank": 18,
+        "speed_rank": 12
+      },
+      {
+        "customer_state": "MA",
+        "n": 619,
+        "on_time": 0.945073,
+        "median_actual": 17.981736,
+        "median_promised": 31,
+        "low_rate": 0.116317,
+        "score": 4.135703,
+        "punctuality_rank": 19,
+        "speed_rank": 18
+      },
+      {
+        "customer_state": "AL",
+        "n": 331,
+        "on_time": 0.942598,
+        "median_actual": 19.986644,
+        "median_promised": 32,
+        "low_rate": 0.096677,
+        "score": 4.280967,
+        "punctuality_rank": 20,
+        "speed_rank": 19
+      }
+    ],
+    "all_delivery_promise": [
+      {
+        "promise_band": "0-13",
+        "n": 9496,
+        "on_time": 0.932498,
+        "median_actual": 4.50474,
+        "median_promised": 11
+      },
+      {
+        "promise_band": "14-20",
+        "n": 21168,
+        "on_time": 0.935232,
+        "median_actual": 7.26515,
+        "median_promised": 18
+      },
+      {
+        "promise_band": "21-27",
+        "n": 35570,
+        "on_time": 0.920888,
+        "median_actual": 10.991314,
+        "median_promised": 24
+      },
+      {
+        "promise_band": "28-34",
+        "n": 19902,
+        "on_time": 0.933122,
+        "median_actual": 13.869896,
+        "median_promised": 30
+      },
+      {
+        "promise_band": "35+",
+        "n": 10334,
+        "on_time": 0.963518,
+        "median_actual": 15.218542,
+        "median_promised": 39
+      }
+    ],
+    "review_selection": [
+      {
+        "late": false,
+        "n": 89443,
+        "retained_after_delivery": 89151,
+        "retain_rate": 0.996735,
+        "low_all": 0.092606,
+        "low_retained": 0.092405
+      },
+      {
+        "late": true,
+        "n": 6381,
+        "retained_after_delivery": 1905,
+        "retain_rate": 0.298543,
+        "low_all": 0.62357,
+        "low_retained": 0.194226
+      }
+    ],
+    "review_timing": [
+      {
+        "late": false,
+        "timing": "At/after recorded delivery",
+        "n": 89151,
+        "low_n": 8238,
+        "low_rate": 0.092405,
+        "median_answer_before_delivery": -2.025741,
+        "before_by_at_least_24h": 0
+      },
+      {
+        "late": false,
+        "timing": "Before recorded delivery",
+        "n": 292,
+        "low_n": 45,
+        "low_rate": 0.15411,
+        "median_answer_before_delivery": 3.546111,
+        "before_by_at_least_24h": 238
+      },
+      {
+        "late": true,
+        "timing": "At/after recorded delivery",
+        "n": 1905,
+        "low_n": 370,
+        "low_rate": 0.194226,
+        "median_answer_before_delivery": -1.53228,
+        "before_by_at_least_24h": 0
+      },
+      {
+        "late": true,
+        "timing": "Before recorded delivery",
+        "n": 4476,
+        "low_n": 3609,
+        "low_rate": 0.8063,
+        "median_answer_before_delivery": 5.791615,
+        "before_by_at_least_24h": 3945
+      }
+    ]
+  },
+  "hotel": {
+    "audit": {
+      "raw_rows": 119390,
+      "exact_duplicate_rows": 31994,
+      "rows_2016": 56707,
+      "missing_arrival": 0,
+      "canceled_negative_gap": 0,
+      "status_cross_tab": [
+        {
+          "Var1": "0",
+          "Var2": "Canceled",
+          "Freq": 0
+        },
+        {
+          "Var1": "1",
+          "Var2": "Canceled",
+          "Freq": 43017
+        },
+        {
+          "Var1": "0",
+          "Var2": "Check-Out",
+          "Freq": 75166
+        },
+        {
+          "Var1": "1",
+          "Var2": "Check-Out",
+          "Freq": 0
+        },
+        {
+          "Var1": "0",
+          "Var2": "No-Show",
+          "Freq": 0
+        },
+        {
+          "Var1": "1",
+          "Var2": "No-Show",
+          "Freq": 1207
+        }
+      ],
+      "duplicates_policy": "Retain identical rows: no booking identifier to distinguish genuine repeated bookings",
+      "late_definition": "Explicit Canceled status and cancellation 0-7 calendar days before arrival"
+    },
+    "channels": [
+      {
+        "hotel": "City Hotel",
+        "distribution_channel": "Corporate",
+        "bookings": 1874,
+        "canceled_n": 360,
+        "cancellation_rate": 0.192102,
+        "no_show_n": 28,
+        "stayed_n": 1486,
+        "stayed_rate": 0.792956,
+        "late_cancel_n": 222,
+        "late_cancel_per_booking": 0.118463,
+        "late_share_of_canceled": 0.616667,
+        "median_cancel_days": 6,
+        "median_lead_time": 10
+      },
+      {
+        "hotel": "City Hotel",
+        "distribution_channel": "Direct",
+        "bookings": 3007,
+        "canceled_n": 445,
+        "cancellation_rate": 0.147988,
+        "no_show_n": 91,
+        "stayed_n": 2471,
+        "stayed_rate": 0.821749,
+        "late_cancel_n": 192,
+        "late_cancel_per_booking": 0.063851,
+        "late_share_of_canceled": 0.431461,
+        "median_cancel_days": 12,
+        "median_lead_time": 18
+      },
+      {
+        "hotel": "City Hotel",
+        "distribution_channel": "GDS",
+        "bookings": 104,
+        "canceled_n": 20,
+        "cancellation_rate": 0.192308,
+        "no_show_n": 2,
+        "stayed_n": 82,
+        "stayed_rate": 0.788462,
+        "late_cancel_n": 8,
+        "late_cancel_per_booking": 0.076923,
+        "late_share_of_canceled": 0.4,
+        "median_cancel_days": 10.5,
+        "median_lead_time": 10
+      },
+      {
+        "hotel": "City Hotel",
+        "distribution_channel": "TA/TO",
+        "bookings": 33155,
+        "canceled_n": 14027,
+        "cancellation_rate": 0.423073,
+        "no_show_n": 434,
+        "stayed_n": 18694,
+        "stayed_rate": 0.563837,
+        "late_cancel_n": 1684,
+        "late_cancel_per_booking": 0.050792,
+        "late_share_of_canceled": 0.120054,
+        "median_cancel_days": 63,
+        "median_lead_time": 82
+      },
+      {
+        "hotel": "Resort Hotel",
+        "distribution_channel": "Corporate",
+        "bookings": 1418,
+        "canceled_n": 204,
+        "cancellation_rate": 0.143865,
+        "no_show_n": 12,
+        "stayed_n": 1202,
+        "stayed_rate": 0.847673,
+        "late_cancel_n": 90,
+        "late_cancel_per_booking": 0.06347,
+        "late_share_of_canceled": 0.441176,
+        "median_cancel_days": 10,
+        "median_lead_time": 7
+      },
+      {
+        "hotel": "Resort Hotel",
+        "distribution_channel": "Direct",
+        "bookings": 3792,
+        "canceled_n": 605,
+        "cancellation_rate": 0.159546,
+        "no_show_n": 27,
+        "stayed_n": 3160,
+        "stayed_rate": 0.833333,
+        "late_cancel_n": 158,
+        "late_cancel_per_booking": 0.041667,
+        "late_share_of_canceled": 0.261157,
+        "median_cancel_days": 25,
+        "median_lead_time": 21
+      },
+      {
+        "hotel": "Resort Hotel",
+        "distribution_channel": "TA/TO",
+        "bookings": 13357,
+        "canceled_n": 4008,
+        "cancellation_rate": 0.300067,
+        "no_show_n": 74,
+        "stayed_n": 9275,
+        "stayed_rate": 0.694392,
+        "late_cancel_n": 310,
+        "late_cancel_per_booking": 0.023209,
+        "late_share_of_canceled": 0.077345,
+        "median_cancel_days": 54,
+        "median_lead_time": 74
+      }
+    ],
+    "segments": [
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Aviation",
+        "bookings": 127,
+        "canceled_n": 22,
+        "cancellation_rate": 0.173228,
+        "no_show_n": 7,
+        "stayed_n": 98,
+        "stayed_rate": 0.771654,
+        "late_cancel_n": 18,
+        "late_cancel_per_booking": 0.141732,
+        "late_share_of_canceled": 0.818182,
+        "median_cancel_days": 2,
+        "median_lead_time": 4
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Complementary",
+        "bookings": 261,
+        "canceled_n": 27,
+        "cancellation_rate": 0.103448,
+        "no_show_n": 2,
+        "stayed_n": 232,
+        "stayed_rate": 0.888889,
+        "late_cancel_n": 26,
+        "late_cancel_per_booking": 0.099617,
+        "late_share_of_canceled": 0.962963,
+        "median_cancel_days": 0,
+        "median_lead_time": 2
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Corporate",
+        "bookings": 1636,
+        "canceled_n": 264,
+        "cancellation_rate": 0.161369,
+        "no_show_n": 25,
+        "stayed_n": 1347,
+        "stayed_rate": 0.82335,
+        "late_cancel_n": 92,
+        "late_cancel_per_booking": 0.056235,
+        "late_share_of_canceled": 0.348485,
+        "median_cancel_days": 18,
+        "median_lead_time": 9
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Direct",
+        "bookings": 2720,
+        "canceled_n": 415,
+        "cancellation_rate": 0.152574,
+        "no_show_n": 89,
+        "stayed_n": 2216,
+        "stayed_rate": 0.814706,
+        "late_cancel_n": 170,
+        "late_cancel_per_booking": 0.0625,
+        "late_share_of_canceled": 0.409639,
+        "median_cancel_days": 14,
+        "median_lead_time": 23
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Groups",
+        "bookings": 4687,
+        "canceled_n": 3494,
+        "cancellation_rate": 0.745466,
+        "no_show_n": 5,
+        "stayed_n": 1188,
+        "stayed_rate": 0.253467,
+        "late_cancel_n": 173,
+        "late_cancel_per_booking": 0.036911,
+        "late_share_of_canceled": 0.049513,
+        "median_cancel_days": 178,
+        "median_lead_time": 251
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Offline TA/TO",
+        "bookings": 9001,
+        "canceled_n": 3789,
+        "cancellation_rate": 0.420953,
+        "no_show_n": 119,
+        "stayed_n": 5093,
+        "stayed_rate": 0.565826,
+        "late_cancel_n": 356,
+        "late_cancel_per_booking": 0.039551,
+        "late_share_of_canceled": 0.093956,
+        "median_cancel_days": 91,
+        "median_lead_time": 118
+      },
+      {
+        "hotel": "City Hotel",
+        "market_segment": "Online TA",
+        "bookings": 19708,
+        "canceled_n": 6841,
+        "cancellation_rate": 0.347118,
+        "no_show_n": 308,
+        "stayed_n": 12559,
+        "stayed_rate": 0.637254,
+        "late_cancel_n": 1271,
+        "late_cancel_per_booking": 0.064492,
+        "late_share_of_canceled": 0.185792,
+        "median_cancel_days": 33,
+        "median_lead_time": 55
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Complementary",
+        "bookings": 103,
+        "canceled_n": 16,
+        "cancellation_rate": 0.15534,
+        "no_show_n": 2,
+        "stayed_n": 85,
+        "stayed_rate": 0.825243,
+        "late_cancel_n": 10,
+        "late_cancel_per_booking": 0.097087,
+        "late_share_of_canceled": 0.625,
+        "median_cancel_days": 6,
+        "median_lead_time": 9
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Corporate",
+        "bookings": 926,
+        "canceled_n": 78,
+        "cancellation_rate": 0.084233,
+        "no_show_n": 8,
+        "stayed_n": 840,
+        "stayed_rate": 0.907127,
+        "late_cancel_n": 63,
+        "late_cancel_per_booking": 0.068035,
+        "late_share_of_canceled": 0.807692,
+        "median_cancel_days": 3,
+        "median_lead_time": 4
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Direct",
+        "bookings": 2943,
+        "canceled_n": 338,
+        "cancellation_rate": 0.114849,
+        "no_show_n": 25,
+        "stayed_n": 2580,
+        "stayed_rate": 0.876656,
+        "late_cancel_n": 129,
+        "late_cancel_per_booking": 0.043833,
+        "late_share_of_canceled": 0.381657,
+        "median_cancel_days": 12,
+        "median_lead_time": 8
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Groups",
+        "bookings": 3170,
+        "canceled_n": 1348,
+        "cancellation_rate": 0.425237,
+        "no_show_n": 5,
+        "stayed_n": 1817,
+        "stayed_rate": 0.573186,
+        "late_cancel_n": 121,
+        "late_cancel_per_booking": 0.03817,
+        "late_share_of_canceled": 0.089763,
+        "median_cancel_days": 60,
+        "median_lead_time": 168
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Offline TA/TO",
+        "bookings": 3472,
+        "canceled_n": 401,
+        "cancellation_rate": 0.115495,
+        "no_show_n": 21,
+        "stayed_n": 3050,
+        "stayed_rate": 0.878456,
+        "late_cancel_n": 61,
+        "late_cancel_per_booking": 0.017569,
+        "late_share_of_canceled": 0.15212,
+        "median_cancel_days": 64,
+        "median_lead_time": 110
+      },
+      {
+        "hotel": "Resort Hotel",
+        "market_segment": "Online TA",
+        "bookings": 7953,
+        "canceled_n": 2636,
+        "cancellation_rate": 0.331447,
+        "no_show_n": 52,
+        "stayed_n": 5265,
+        "stayed_rate": 0.662014,
+        "late_cancel_n": 174,
+        "late_cancel_per_booking": 0.021879,
+        "late_share_of_canceled": 0.066009,
+        "median_cancel_days": 49,
+        "median_lead_time": 48
+      }
+    ]
+  },
+  "bike": {
+    "audit": {
+      "raw_trips": 233865,
+      "duplicate_ride_ids": 0,
+      "invalid_duration_or_time": 55,
+      "missing_either_station": 572,
+      "retained_trips": 233293,
+      "local_events": 451874,
+      "month_rows": [
+        {
+          "source_month": "2024-09",
+          "n": 115558
+        },
+        {
+          "source_month": "2024-10",
+          "n": 118307
+        }
+      ],
+      "primary_station_day": "Calendar weekday, >=40 events; day abs(net)/activity <=0.10; strong hour >=20 events, abs(net)>=10 and abs(net)/activity>=0.50",
+      "scope": "JC monthly files: Jersey City and Hoboken JC/HB station events. Month first day excluded.",
+      "time": "Source local clock strings, parsed as UTC solely to preserve civil-hour arithmetic; no timezone conversion."
+    },
+    "summary": [
+      {
+        "month": "2024-09",
+        "active_station_days": 1739,
+        "eligible_station_days": 1454,
+        "balanced_station_days": 1297,
+        "masked_station_days": 99,
+        "masked_share_of_balanced": 0.07633,
+        "stations_eligible": 76,
+        "stations_with_masked_day": 23
+      },
+      {
+        "month": "2024-10",
+        "active_station_days": 1825,
+        "eligible_station_days": 1507,
+        "balanced_station_days": 1327,
+        "masked_station_days": 96,
+        "masked_share_of_balanced": 0.072344,
+        "stations_eligible": 76,
+        "stations_with_masked_day": 19
+      }
+    ],
+    "reversal_summary": [
+      {
+        "month": "2024-09",
+        "eligible_stations": 77,
+        "reversed_stations": 32
+      },
+      {
+        "month": "2024-10",
+        "eligible_stations": 77,
+        "reversed_stations": 33
+      }
+    ],
+    "repeated_stations": [
+      {
+        "station": "JC115",
+        "name": "Grove St PATH",
+        "masked_days_2024-09": 20,
+        "masked_days_2024-10": 21,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 21,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.033136,
+        "month_ratio_2024-10": 0.059145
+      },
+      {
+        "station": "HB102",
+        "name": "Hoboken Terminal - River St & Hudson Pl",
+        "masked_days_2024-09": 19,
+        "masked_days_2024-10": 22,
+        "balanced_days_2024-09": 20,
+        "balanced_days_2024-10": 22,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.013871,
+        "month_ratio_2024-10": 0.006902
+      },
+      {
+        "station": "HB103",
+        "name": "South Waterfront Walkway - Sinatra Dr & 1 St",
+        "masked_days_2024-09": 9,
+        "masked_days_2024-10": 9,
+        "balanced_days_2024-09": 20,
+        "balanced_days_2024-10": 21,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.011631,
+        "month_ratio_2024-10": 0.017087
+      },
+      {
+        "station": "JC109",
+        "name": "Bergen Ave & Sip Ave",
+        "masked_days_2024-09": 9,
+        "masked_days_2024-10": 11,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 21,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.018159,
+        "month_ratio_2024-10": 0.00902
+      },
+      {
+        "station": "HB101",
+        "name": "Hoboken Terminal - Hudson St & Hudson Pl",
+        "masked_days_2024-09": 5,
+        "masked_days_2024-10": 5,
+        "balanced_days_2024-09": 20,
+        "balanced_days_2024-10": 22,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.031955,
+        "month_ratio_2024-10": 0.017013
+      },
+      {
+        "station": "HB609",
+        "name": "River St & 1 St",
+        "masked_days_2024-09": 4,
+        "masked_days_2024-10": 4,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 19,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.016308,
+        "month_ratio_2024-10": 0.030668
+      },
+      {
+        "station": "JC116",
+        "name": "Exchange Pl",
+        "masked_days_2024-09": 3,
+        "masked_days_2024-10": 5,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 19,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.011571,
+        "month_ratio_2024-10": 0.003357
+      },
+      {
+        "station": "HB402",
+        "name": "Madison St & 1 St",
+        "masked_days_2024-09": 2,
+        "masked_days_2024-10": 3,
+        "balanced_days_2024-09": 18,
+        "balanced_days_2024-10": 21,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.003205,
+        "month_ratio_2024-10": 0.003051
+      },
+      {
+        "station": "JC009",
+        "name": "Hamilton Park",
+        "masked_days_2024-09": 6,
+        "masked_days_2024-10": 2,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 22,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.004444,
+        "month_ratio_2024-10": 0.012507
+      },
+      {
+        "station": "HB105",
+        "name": "City Hall - Washington St & 1 St",
+        "masked_days_2024-09": 3,
+        "masked_days_2024-10": 1,
+        "balanced_days_2024-09": 21,
+        "balanced_days_2024-10": 19,
+        "eligible_days_2024-09": 21,
+        "eligible_days_2024-10": 22,
+        "month_ratio_2024-09": 0.010335,
+        "month_ratio_2024-10": 0.015564
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+# R sessions and local project state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Local environment settings and secrets
+.Renviron
+.Renviron.*
+!.Renviron.example
+.env
+.env.*
+!.env.example
+
+# Local dependency libraries
+renv/library/
+renv/staging/
+renv/local/
+renv/python/
+.venv/
+venv/
+
+# Python and document build caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.quarto/
+*_cache/
+
+# Operating system and editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.swp
+*.swo

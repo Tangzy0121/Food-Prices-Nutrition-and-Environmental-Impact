@@ -1,0 +1,2624 @@
+{
+  "id" : "nre2-6m2s",
+  "name" : "DCWP Consumer Complaints",
+  "assetType" : "dataset",
+  "attribution" : "Department of Consumer and Worker Protection (DCWP)",
+  "averageRating" : 0,
+  "category" : "Business",
+  "createdAt" : 1425674360,
+  "description" : "This dataset features consumer complaints submitted to the NYC Department of Consumer and Worker Protection (DCWP).",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 47869,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 42102869,
+  "provenance" : "official",
+  "publicationAppendEnabled" : true,
+  "publicationDate" : 1777471357,
+  "publicationGroup" : 2429801,
+  "publicationStage" : "published",
+  "rowClass" : "",
+  "rowsUpdatedAt" : 1790945154,
+  "rowsUpdatedBy" : "5fuc-pqz2",
+  "tableId" : 20361434,
+  "totalTimesRated" : 0,
+  "viewCount" : 21766,
+  "viewLastModified" : 1790945127,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1477921850,
+    "reviewedAutomatically" : true,
+    "state" : "approved",
+    "submissionId" : 7451077,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1477921850,
+    "targetAudience" : "public",
+    "workflowId" : 2285,
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "failureCount" : 0,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "5fuc-pqz2",
+      "displayName" : "NYC OpenData"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 631642684,
+    "name" : "Record ID",
+    "dataTypeName" : "text",
+    "description" : "An identification number assigned to the complaint record for tracking purposes.\n",
+    "fieldName" : "record_id",
+    "position" : 1,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136678,
+    "cachedContents" : {
+      "non_null" : "79287",
+      "largest" : "9999-2023-CMPL",
+      "null" : "0",
+      "top" : [ {
+        "item" : "006935-2026-CMPL",
+        "count" : "4"
+      }, {
+        "item" : "024350-2023-CMPL",
+        "count" : "3"
+      }, {
+        "item" : "13532-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "044588-2024-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12383-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12624-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12691-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "058507-2025-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "13646-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12778-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "071252-2025-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12416-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12372-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "081403-2025-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "027193-2024-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "069108-2025-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "7894-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "13336-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "12440-2023-CMPL",
+        "count" : "2"
+      }, {
+        "item" : "003279-2026-CMPL",
+        "count" : "2"
+      } ],
+      "smallest" : "000001-2026-CMPL",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642685,
+    "name" : "Intake Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The method by which the complaint was submitted.\n",
+    "fieldName" : "intake_date",
+    "position" : 2,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 158136679,
+    "cachedContents" : {
+      "non_null" : "79287",
+      "largest" : "2026-08-27T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023-07-24T00:00:00.000",
+        "count" : "195"
+      }, {
+        "item" : "2025-06-11T00:00:00.000",
+        "count" : "194"
+      }, {
+        "item" : "2024-07-16T00:00:00.000",
+        "count" : "178"
+      }, {
+        "item" : "2025-07-23T00:00:00.000",
+        "count" : "148"
+      }, {
+        "item" : "2025-06-13T00:00:00.000",
+        "count" : "141"
+      }, {
+        "item" : "2025-06-12T00:00:00.000",
+        "count" : "140"
+      }, {
+        "item" : "2024-08-15T00:00:00.000",
+        "count" : "137"
+      }, {
+        "item" : "2026-06-01T00:00:00.000",
+        "count" : "137"
+      }, {
+        "item" : "2023-10-27T00:00:00.000",
+        "count" : "131"
+      }, {
+        "item" : "2024-07-15T00:00:00.000",
+        "count" : "129"
+      }, {
+        "item" : "2025-07-18T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "2026-05-12T00:00:00.000",
+        "count" : "128"
+      }, {
+        "item" : "2026-06-02T00:00:00.000",
+        "count" : "125"
+      }, {
+        "item" : "2024-01-11T00:00:00.000",
+        "count" : "123"
+      }, {
+        "item" : "2025-07-30T00:00:00.000",
+        "count" : "121"
+      }, {
+        "item" : "2026-04-16T00:00:00.000",
+        "count" : "120"
+      }, {
+        "item" : "2023-11-17T00:00:00.000",
+        "count" : "120"
+      }, {
+        "item" : "2024-08-02T00:00:00.000",
+        "count" : "118"
+      }, {
+        "item" : "2026-06-03T00:00:00.000",
+        "count" : "116"
+      }, {
+        "item" : "2024-05-16T00:00:00.000",
+        "count" : "115"
+      } ],
+      "smallest" : "2022-09-22T00:00:00.000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 631642686,
+    "name" : "Intake Channel",
+    "dataTypeName" : "text",
+    "description" : "The method by which the complaint was submitted.",
+    "fieldName" : "intake_channel",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136680,
+    "cachedContents" : {
+      "non_null" : "79287",
+      "largest" : "Walk-In",
+      "null" : "0",
+      "top" : [ {
+        "item" : "311",
+        "count" : "55619"
+      }, {
+        "item" : "Online",
+        "count" : "18267"
+      }, {
+        "item" : "Email/Fax",
+        "count" : "2714"
+      }, {
+        "item" : "Hardcopy",
+        "count" : "2149"
+      }, {
+        "item" : "Cloned",
+        "count" : "273"
+      }, {
+        "item" : "Phone",
+        "count" : "249"
+      }, {
+        "item" : "Walk-In",
+        "count" : "11"
+      }, {
+        "item" : "External Affairs",
+        "count" : "5"
+      } ],
+      "smallest" : "311",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642687,
+    "name" : "311 SR Number",
+    "dataTypeName" : "text",
+    "description" : "An identification number assigned by NYC311 for complaints they receive which are referred to DCWP for resolution.\n",
+    "fieldName" : "_311_sr_number",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136681,
+    "cachedContents" : {
+      "non_null" : "55609",
+      "largest" : "311-28739537",
+      "null" : "23678",
+      "top" : [ {
+        "item" : "0",
+        "count" : "246"
+      }, {
+        "item" : "311-19304092",
+        "count" : "9"
+      }, {
+        "item" : "311-19314560",
+        "count" : "5"
+      }, {
+        "item" : "311-19344528",
+        "count" : "5"
+      }, {
+        "item" : "311-19314272",
+        "count" : "3"
+      }, {
+        "item" : "311-19327514",
+        "count" : "3"
+      }, {
+        "item" : "311-15568788",
+        "count" : "3"
+      }, {
+        "item" : "311-14717074",
+        "count" : "2"
+      }, {
+        "item" : "311-14644414",
+        "count" : "2"
+      }, {
+        "item" : "311-14727577",
+        "count" : "2"
+      }, {
+        "item" : "311-14587922",
+        "count" : "2"
+      }, {
+        "item" : "311-14613434",
+        "count" : "2"
+      }, {
+        "item" : "311-14645313",
+        "count" : "2"
+      }, {
+        "item" : "311-14645703",
+        "count" : "2"
+      }, {
+        "item" : "311-14512554",
+        "count" : "2"
+      }, {
+        "item" : "311-14422906",
+        "count" : "2"
+      }, {
+        "item" : "311-14561324",
+        "count" : "2"
+      }, {
+        "item" : "311-14226524",
+        "count" : "2"
+      }, {
+        "item" : "311-14344926",
+        "count" : "2"
+      }, {
+        "item" : "311-14201062",
+        "count" : "2"
+      } ],
+      "smallest" : "0",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642688,
+    "name" : "Business Category",
+    "dataTypeName" : "text",
+    "description" : "The business activity or business category that is the subject of the complaint.\n",
+    "fieldName" : "business_category",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136682,
+    "cachedContents" : {
+      "non_null" : "77889",
+      "largest" : "Wholesale Food Market",
+      "null" : "1398",
+      "top" : [ {
+        "item" : "Other",
+        "count" : "11543"
+      }, {
+        "item" : "Misc Non-Food Retail",
+        "count" : "6234"
+      }, {
+        "item" : "Tow Truck Company",
+        "count" : "5869"
+      }, {
+        "item" : "Restaurant",
+        "count" : "3978"
+      }, {
+        "item" : "Supermarket",
+        "count" : "3579"
+      }, {
+        "item" : "Grocery-Retail",
+        "count" : "3485"
+      }, {
+        "item" : "Home Improvement Contractor",
+        "count" : "3434"
+      }, {
+        "item" : "Garage & Parking Lot",
+        "count" : "3152"
+      }, {
+        "item" : "Secondhand Dealer - Auto",
+        "count" : "2497"
+      }, {
+        "item" : "Landlord or Real Estate Agent",
+        "count" : "2374"
+      }, {
+        "item" : "Tobacco Retail Dealer",
+        "count" : "2345"
+      }, {
+        "item" : "Car Wash",
+        "count" : "2283"
+      }, {
+        "item" : "Specialized Vending License - MFV",
+        "count" : "1968"
+      }, {
+        "item" : "Electronics Store",
+        "count" : "1876"
+      }, {
+        "item" : "Drug Store Retail",
+        "count" : "1376"
+      }, {
+        "item" : "Salons And Barbershop",
+        "count" : "1224"
+      }, {
+        "item" : "General Vendor",
+        "count" : "1171"
+      }, {
+        "item" : "Furniture Sales",
+        "count" : "1087"
+      }, {
+        "item" : "Debt Collection Agency",
+        "count" : "1032"
+      }, {
+        "item" : "Hotel",
+        "count" : "982"
+      } ],
+      "smallest" : "Air Conditioning Law",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642689,
+    "name" : "Complaint Code",
+    "dataTypeName" : "text",
+    "description" : "Indicates the type of business practice that is the subject of the complaint.\n",
+    "fieldName" : "complaint_code",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136683,
+    "cachedContents" : {
+      "non_null" : "68240",
+      "largest" : "Wrong Goods - W01; Exchange/Refund/Return",
+      "null" : "11047",
+      "top" : [ {
+        "item" : "Advertising/Misleading - A02",
+        "count" : "6534"
+      }, {
+        "item" : "Overcharge",
+        "count" : "6531"
+      }, {
+        "item" : "Unlicensed",
+        "count" : "6417"
+      }, {
+        "item" : "Exchange/Refund/Return",
+        "count" : "5302"
+      }, {
+        "item" : "Non-Delivery of Goods - N01",
+        "count" : "5143"
+      }, {
+        "item" : "Sidewalk Blocked",
+        "count" : "3332"
+      }, {
+        "item" : "Other - Z01",
+        "count" : "3079"
+      }, {
+        "item" : "Billing Dispute - B02",
+        "count" : "3007"
+      }, {
+        "item" : "Lost/Stolen/Damaged Property",
+        "count" : "2406"
+      }, {
+        "item" : "Damaged Goods - D01",
+        "count" : "1442"
+      }, {
+        "item" : "Price Gouging",
+        "count" : "1322"
+      }, {
+        "item" : "Price Not Posted",
+        "count" : "1293"
+      }, {
+        "item" : "Prohibited Item Sale to Minor",
+        "count" : "1252"
+      }, {
+        "item" : "Unsolicited/Unauthorized Services",
+        "count" : "1168"
+      }, {
+        "item" : "Cashless Business",
+        "count" : "1022"
+      }, {
+        "item" : "Receipt Incomplete/Inaccurate/Not Given",
+        "count" : "953"
+      }, {
+        "item" : "Broker Fee Listed",
+        "count" : "746"
+      }, {
+        "item" : "Non-Delivery of Service - N02",
+        "count" : "728"
+      }, {
+        "item" : "Quality of Work - Q01",
+        "count" : "576"
+      }, {
+        "item" : "License or Complaint Sign Not Displayed",
+        "count" : "543"
+      } ],
+      "smallest" : "1st Language; Breach of Contract - B03; Other - Z01; Contract or Billing Dispute",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642690,
+    "name" : "Business Unique ID",
+    "dataTypeName" : "text",
+    "description" : "An identification number assigned by DCWP to track unique businesses across its systems.\n",
+    "fieldName" : "business_unique_id",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136684,
+    "cachedContents" : {
+      "non_null" : "76748",
+      "largest" : "BA-999886-2022",
+      "null" : "2539",
+      "top" : [ {
+        "item" : "BA-1103959-2022",
+        "count" : "134"
+      }, {
+        "item" : "BA-1669484-2023",
+        "count" : "106"
+      }, {
+        "item" : "BA-1120307-2022",
+        "count" : "83"
+      }, {
+        "item" : "BA-1688781-2024",
+        "count" : "79"
+      }, {
+        "item" : "BA-1770004-2026",
+        "count" : "77"
+      }, {
+        "item" : "BA-1690898-2024",
+        "count" : "62"
+      }, {
+        "item" : "BA-1666039-2023",
+        "count" : "61"
+      }, {
+        "item" : "BA-1670797-2023",
+        "count" : "59"
+      }, {
+        "item" : "BA-1671602-2023",
+        "count" : "50"
+      }, {
+        "item" : "BA-1488086-2022",
+        "count" : "46"
+      }, {
+        "item" : "BA-1671172-2023",
+        "count" : "46"
+      }, {
+        "item" : "BA-1754688-2025",
+        "count" : "46"
+      }, {
+        "item" : "BA-1546075-2022",
+        "count" : "46"
+      }, {
+        "item" : "BA-1669507-2023",
+        "count" : "45"
+      }, {
+        "item" : "BA-1661991-2023",
+        "count" : "43"
+      }, {
+        "item" : "BA-1582775-2023",
+        "count" : "43"
+      }, {
+        "item" : "BA-1569628-2023",
+        "count" : "42"
+      }, {
+        "item" : "BA-1583765-2023",
+        "count" : "42"
+      }, {
+        "item" : "BA-1120813-2022",
+        "count" : "38"
+      }, {
+        "item" : "BA-1665531-2023",
+        "count" : "36"
+      } ],
+      "smallest" : "BA-1000232-2022",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642691,
+    "name" : "Business Name",
+    "dataTypeName" : "text",
+    "description" : "The legal business name as filed with the New York State Secretary of State or County Clerk or, if an individual, the person’s first name and last name.\n",
+    "fieldName" : "business_name",
+    "position" : 8,
+    "renderTypeName" : "text",
+    "tableColumnId" : 26156444,
+    "cachedContents" : {
+      "non_null" : "77006",
+      "largest" : "运通驾驶学校",
+      "null" : "2281",
+      "top" : [ {
+        "item" : "N/A",
+        "count" : "682"
+      }, {
+        "item" : "MEMORIAL SLOAN KETTERING CANCER CENTER",
+        "count" : "393"
+      }, {
+        "item" : "n/a",
+        "count" : "329"
+      }, {
+        "item" : "Unknown",
+        "count" : "257"
+      }, {
+        "item" : "NYC Soft Ice Cream Truck owned by Eddie Cumart",
+        "count" : "199"
+      }, {
+        "item" : "ROSARIO FAMILY BEST CIGARS LLC",
+        "count" : "198"
+      }, {
+        "item" : "No name",
+        "count" : "148"
+      }, {
+        "item" : "unknown",
+        "count" : "142"
+      }, {
+        "item" : "CVS",
+        "count" : "136"
+      }, {
+        "item" : "ROSARIO FAMILY CIGAR BUISNESS",
+        "count" : "133"
+      }, {
+        "item" : "BEN & NINO AUTO REPAIR INC.",
+        "count" : "133"
+      }, {
+        "item" : "no name",
+        "count" : "129"
+      }, {
+        "item" : "NA",
+        "count" : "124"
+      }, {
+        "item" : "NYC Soft Ice Cream Trucks owned by Eddie Cumart",
+        "count" : "119"
+      }, {
+        "item" : "Car Wash",
+        "count" : "111"
+      }, {
+        "item" : "Clutch Towing Inc",
+        "count" : "109"
+      }, {
+        "item" : "Target",
+        "count" : "100"
+      }, {
+        "item" : "BEAR TRANSPORTATION LLC",
+        "count" : "99"
+      }, {
+        "item" : "LANDMARK SNACK AND MORE CORP.",
+        "count" : "96"
+      }, {
+        "item" : "SP PLUS CORPORATION",
+        "count" : "81"
+      } ],
+      "smallest" : "-",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642692,
+    "name" : "Result Date",
+    "dataTypeName" : "calendar_date",
+    "description" : "The date the complaint was resolved.\n",
+    "fieldName" : "result_date",
+    "position" : 9,
+    "renderTypeName" : "calendar_date",
+    "tableColumnId" : 158136685,
+    "cachedContents" : {
+      "non_null" : "79287",
+      "largest" : "2026-08-27T00:00:00.000",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2023-09-25T00:00:00.000",
+        "count" : "1426"
+      }, {
+        "item" : "2025-07-16T00:00:00.000",
+        "count" : "235"
+      }, {
+        "item" : "2024-01-11T00:00:00.000",
+        "count" : "232"
+      }, {
+        "item" : "2026-05-18T00:00:00.000",
+        "count" : "201"
+      }, {
+        "item" : "2026-08-10T00:00:00.000",
+        "count" : "200"
+      }, {
+        "item" : "2026-07-17T00:00:00.000",
+        "count" : "198"
+      }, {
+        "item" : "2024-07-17T00:00:00.000",
+        "count" : "182"
+      }, {
+        "item" : "2025-07-17T00:00:00.000",
+        "count" : "177"
+      }, {
+        "item" : "2025-07-18T00:00:00.000",
+        "count" : "169"
+      }, {
+        "item" : "2024-06-03T00:00:00.000",
+        "count" : "168"
+      }, {
+        "item" : "2026-06-22T00:00:00.000",
+        "count" : "167"
+      }, {
+        "item" : "2024-08-19T00:00:00.000",
+        "count" : "163"
+      }, {
+        "item" : "2025-07-21T00:00:00.000",
+        "count" : "163"
+      }, {
+        "item" : "2023-11-20T00:00:00.000",
+        "count" : "160"
+      }, {
+        "item" : "2026-08-12T00:00:00.000",
+        "count" : "158"
+      }, {
+        "item" : "2023-11-13T00:00:00.000",
+        "count" : "157"
+      }, {
+        "item" : "2026-07-22T00:00:00.000",
+        "count" : "155"
+      }, {
+        "item" : "2024-02-20T00:00:00.000",
+        "count" : "155"
+      }, {
+        "item" : "2024-11-12T00:00:00.000",
+        "count" : "154"
+      }, {
+        "item" : "2024-08-16T00:00:00.000",
+        "count" : "152"
+      } ],
+      "smallest" : "2023-07-02T00:00:00.000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "view" : "date"
+    }
+  }, {
+    "id" : 631642693,
+    "name" : "Result",
+    "dataTypeName" : "text",
+    "description" : "The type of resolution for the complaint.\n",
+    "fieldName" : "result",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136686,
+    "cachedContents" : {
+      "non_null" : "79287",
+      "largest" : "Wrong Business and Null and Void - NUL",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Referred",
+        "count" : "26313"
+      }, {
+        "item" : "Requested Information Not Provided",
+        "count" : "24632"
+      }, {
+        "item" : "Complaint Review Complete",
+        "count" : "11554"
+      }, {
+        "item" : "Insufficient Info Received",
+        "count" : "5055"
+      }, {
+        "item" : "No Jurisdiction",
+        "count" : "2037"
+      }, {
+        "item" : "Information Provided",
+        "count" : "1412"
+      }, {
+        "item" : "Advised to Sue - ATS",
+        "count" : "1338"
+      }, {
+        "item" : "Duplicate Complaint - DUP",
+        "count" : "1079"
+      }, {
+        "item" : "No Business Response - NVR",
+        "count" : "1060"
+      }, {
+        "item" : "Resolved and Consumer Satisfied - SPF",
+        "count" : "1050"
+      }, {
+        "item" : "Cash Amount - AMT",
+        "count" : "828"
+      }, {
+        "item" : "No Consumer Response - NCR",
+        "count" : "731"
+      }, {
+        "item" : "Credit Card Refund and/or Contract Cancelled - CRC",
+        "count" : "431"
+      }, {
+        "item" : "No Satisfactory Agreement - NSA",
+        "count" : "344"
+      }, {
+        "item" : "Business Reported",
+        "count" : "243"
+      }, {
+        "item" : "Referred to Outside - RTO",
+        "count" : "227"
+      }, {
+        "item" : "Inspection Requested",
+        "count" : "201"
+      }, {
+        "item" : "Consumer Took Action - CTA",
+        "count" : "125"
+      }, {
+        "item" : "Bill Reduced - BLR",
+        "count" : "123"
+      }, {
+        "item" : "Store Credit - SCR",
+        "count" : "105"
+      } ],
+      "smallest" : "Advised to Sue - ATS",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642694,
+    "name" : "Referred To",
+    "dataTypeName" : "text",
+    "description" : "The external agency to which the complainant was referred.\n",
+    "fieldName" : "referred_to",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136687,
+    "cachedContents" : {
+      "non_null" : "28665",
+      "largest" : "Westchester County Consumer Affairs",
+      "null" : "50622",
+      "top" : [ {
+        "item" : "Other",
+        "count" : "7668"
+      }, {
+        "item" : "NYC Department of Sanitation",
+        "count" : "3945"
+      }, {
+        "item" : "-",
+        "count" : "2442"
+      }, {
+        "item" : "NYC Police Department",
+        "count" : "1868"
+      }, {
+        "item" : "NYS Office of the Attorney General",
+        "count" : "1367"
+      }, {
+        "item" : "NYC Department of Health & Mental Hygiene",
+        "count" : "1289"
+      }, {
+        "item" : "NYC Department of Transportation",
+        "count" : "1045"
+      }, {
+        "item" : "Court System",
+        "count" : "1035"
+      }, {
+        "item" : "NYS Department of Agriculture and Markets",
+        "count" : "885"
+      }, {
+        "item" : "NYS Department of Motor Vehicles",
+        "count" : "817"
+      }, {
+        "item" : "NYS Department of Education: Office of Professional Discipline",
+        "count" : "764"
+      }, {
+        "item" : "NYC Department of Buildings",
+        "count" : "712"
+      }, {
+        "item" : "NYS Department of State",
+        "count" : "591"
+      }, {
+        "item" : "NYC Commission on Human Rights",
+        "count" : "465"
+      }, {
+        "item" : "NYS Department of Financial Services",
+        "count" : "432"
+      }, {
+        "item" : "Federal Trade Commission",
+        "count" : "293"
+      }, {
+        "item" : "NYC Human Resources Administration",
+        "count" : "279"
+      }, {
+        "item" : "Nassau County Consumer Affairs",
+        "count" : "275"
+      }, {
+        "item" : "Federal Communications Commission",
+        "count" : "245"
+      }, {
+        "item" : "Better Business Bureau",
+        "count" : "190"
+      } ],
+      "smallest" : "-",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642695,
+    "name" : "Contract Cancelled Amount",
+    "dataTypeName" : "number",
+    "description" : "The amount of consumer restitution awarded in the form of the reduction of a contract amount, that DCWP negotiated on behalf of the consumer.\n",
+    "fieldName" : "contract_cancelled_amount",
+    "position" : 12,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158136688,
+    "cachedContents" : {
+      "non_null" : "46",
+      "largest" : "46629",
+      "null" : "79241",
+      "top" : [ {
+        "item" : "3000",
+        "count" : "2"
+      }, {
+        "item" : "53.68000000000000000",
+        "count" : "2"
+      }, {
+        "item" : "55",
+        "count" : "1"
+      }, {
+        "item" : "100.89000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "107.79000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "123.48",
+        "count" : "1"
+      }, {
+        "item" : "145.74000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "597.72000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "187.26000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "200",
+        "count" : "1"
+      }, {
+        "item" : "243.33000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "341.29000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "381.06000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "474.91000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "550.20000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "140.45000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "637.87000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "800.27000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "815.10000000000000000",
+        "count" : "1"
+      }, {
+        "item" : "76.42000000000000000",
+        "count" : "1"
+      } ],
+      "smallest" : "42.46000000000000000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 631642696,
+    "name" : "Refund Amount",
+    "dataTypeName" : "number",
+    "description" : "The amount of consumer restitution awarded in the form of a refund or reduction in fees that DCWP negotiated on behalf of the consumer.\n",
+    "fieldName" : "refund_amount",
+    "position" : 13,
+    "renderTypeName" : "number",
+    "tableColumnId" : 158136689,
+    "cachedContents" : {
+      "non_null" : "1566",
+      "largest" : "56602.93000000000000000",
+      "null" : "77721",
+      "top" : [ {
+        "item" : "10000",
+        "count" : "82"
+      }, {
+        "item" : "100",
+        "count" : "30"
+      }, {
+        "item" : "50",
+        "count" : "24"
+      }, {
+        "item" : "200",
+        "count" : "21"
+      }, {
+        "item" : "1000",
+        "count" : "20"
+      }, {
+        "item" : "150",
+        "count" : "20"
+      }, {
+        "item" : "250",
+        "count" : "19"
+      }, {
+        "item" : "10",
+        "count" : "17"
+      }, {
+        "item" : "1500",
+        "count" : "15"
+      }, {
+        "item" : "500",
+        "count" : "15"
+      }, {
+        "item" : "2000",
+        "count" : "14"
+      }, {
+        "item" : "20",
+        "count" : "14"
+      }, {
+        "item" : "75",
+        "count" : "13"
+      }, {
+        "item" : "300",
+        "count" : "13"
+      }, {
+        "item" : "25",
+        "count" : "13"
+      }, {
+        "item" : "700",
+        "count" : "11"
+      }, {
+        "item" : "125",
+        "count" : "10"
+      }, {
+        "item" : "60",
+        "count" : "10"
+      }, {
+        "item" : "30",
+        "count" : "9"
+      }, {
+        "item" : "40",
+        "count" : "9"
+      } ],
+      "smallest" : "0.21000000000000000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "precisionStyle" : "currency",
+      "precision" : "0"
+    }
+  }, {
+    "id" : 631642697,
+    "name" : "Address Type",
+    "dataTypeName" : "text",
+    "description" : "The type of address where the business is located.\n",
+    "fieldName" : "address_type",
+    "position" : 14,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136690,
+    "cachedContents" : {
+      "non_null" : "75632",
+      "largest" : "P.O. Box",
+      "null" : "3655",
+      "top" : [ {
+        "item" : "Complete Address",
+        "count" : "72260"
+      }, {
+        "item" : "Cross Street (Intersection)",
+        "count" : "2960"
+      }, {
+        "item" : "Place (Landmark)",
+        "count" : "257"
+      }, {
+        "item" : "Block",
+        "count" : "147"
+      }, {
+        "item" : "P.O. Box",
+        "count" : "8"
+      } ],
+      "smallest" : "Block",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642698,
+    "name" : "Building Nbr",
+    "dataTypeName" : "text",
+    "description" : "The building number where the business is located.\n",
+    "fieldName" : "building_nbr",
+    "position" : 15,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136691,
+    "cachedContents" : {
+      "non_null" : "66413",
+      "largest" : "Yonkers Terrace",
+      "null" : "12874",
+      "top" : [ {
+        "item" : "1",
+        "count" : "450"
+      }, {
+        "item" : "323",
+        "count" : "359"
+      }, {
+        "item" : "633",
+        "count" : "357"
+      }, {
+        "item" : "200",
+        "count" : "307"
+      }, {
+        "item" : "504",
+        "count" : "300"
+      }, {
+        "item" : "25",
+        "count" : "286"
+      }, {
+        "item" : "2",
+        "count" : "284"
+      }, {
+        "item" : "2603",
+        "count" : "248"
+      }, {
+        "item" : "150",
+        "count" : "228"
+      }, {
+        "item" : "55",
+        "count" : "225"
+      }, {
+        "item" : "30",
+        "count" : "220"
+      }, {
+        "item" : "15",
+        "count" : "216"
+      }, {
+        "item" : "100",
+        "count" : "206"
+      }, {
+        "item" : "300",
+        "count" : "176"
+      }, {
+        "item" : "26",
+        "count" : "174"
+      }, {
+        "item" : "175",
+        "count" : "166"
+      }, {
+        "item" : "10",
+        "count" : "165"
+      }, {
+        "item" : "5",
+        "count" : "164"
+      }, {
+        "item" : "4070",
+        "count" : "161"
+      }, {
+        "item" : "1908",
+        "count" : "159"
+      } ],
+      "smallest" : "#",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642699,
+    "name" : "Street1",
+    "dataTypeName" : "text",
+    "description" : "The name of the street where the business is located.\n",
+    "fieldName" : "street1",
+    "position" : 16,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136692,
+    "cachedContents" : {
+      "non_null" : "75581",
+      "largest" : "约翰·菲茨杰拉德·肯尼迪国际机场",
+      "null" : "3706",
+      "top" : [ {
+        "item" : "BROADWAY",
+        "count" : "2542"
+      }, {
+        "item" : "3RD AVE",
+        "count" : "1241"
+      }, {
+        "item" : "5TH AVE",
+        "count" : "962"
+      }, {
+        "item" : "NORTHERN BLVD",
+        "count" : "831"
+      }, {
+        "item" : "QUEENS BLVD",
+        "count" : "605"
+      }, {
+        "item" : "8TH AVE",
+        "count" : "576"
+      }, {
+        "item" : "ATLANTIC AVE",
+        "count" : "513"
+      }, {
+        "item" : "2ND AVE",
+        "count" : "508"
+      }, {
+        "item" : "FLATBUSH AVE",
+        "count" : "498"
+      }, {
+        "item" : "BOSTON RD",
+        "count" : "495"
+      }, {
+        "item" : "NOSTRAND AVE",
+        "count" : "492"
+      }, {
+        "item" : "JAMAICA AVE",
+        "count" : "491"
+      }, {
+        "item" : "ROOSEVELT AVE",
+        "count" : "472"
+      }, {
+        "item" : "LIBERTY AVE",
+        "count" : "447"
+      }, {
+        "item" : "E GUN HILL RD",
+        "count" : "444"
+      }, {
+        "item" : "7TH AVE",
+        "count" : "427"
+      }, {
+        "item" : "HILLSIDE AVE",
+        "count" : "426"
+      }, {
+        "item" : "FULTON ST",
+        "count" : "403"
+      }, {
+        "item" : "MAIN ST",
+        "count" : "385"
+      }, {
+        "item" : "AVENUE U",
+        "count" : "379"
+      } ],
+      "smallest" : "배터리 공원",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642700,
+    "name" : "Street2",
+    "dataTypeName" : "text",
+    "description" : "The name of the cross street where the business is located.\n\n",
+    "fieldName" : "street2",
+    "position" : 17,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136693,
+    "cachedContents" : {
+      "non_null" : "3278",
+      "largest" : "ZEREGA AVENUE",
+      "null" : "76009",
+      "top" : [ {
+        "item" : "PLYMOUTH STREET",
+        "count" : "90"
+      }, {
+        "item" : "NORTHERN BOULEVARD",
+        "count" : "80"
+      }, {
+        "item" : "WATER STREET",
+        "count" : "77"
+      }, {
+        "item" : "WASHINGTON AVENUE",
+        "count" : "73"
+      }, {
+        "item" : "ST PAULS PLACE",
+        "count" : "40"
+      }, {
+        "item" : "JEROME AVENUE",
+        "count" : "37"
+      }, {
+        "item" : "WEST 96 STREET",
+        "count" : "37"
+      }, {
+        "item" : "PARK AVENUE",
+        "count" : "32"
+      }, {
+        "item" : "WEST 142 STREET",
+        "count" : "32"
+      }, {
+        "item" : "BROADWAY",
+        "count" : "31"
+      }, {
+        "item" : "3 AVENUE",
+        "count" : "30"
+      }, {
+        "item" : "ROOSEVELT AVENUE",
+        "count" : "27"
+      }, {
+        "item" : "BASIL PATERSON BOULEVARD",
+        "count" : "26"
+      }, {
+        "item" : "WALL STREET",
+        "count" : "26"
+      }, {
+        "item" : "WEBSTER AVENUE",
+        "count" : "26"
+      }, {
+        "item" : "LEXINGTON AVENUE",
+        "count" : "25"
+      }, {
+        "item" : "MADISON AVENUE",
+        "count" : "21"
+      }, {
+        "item" : "NOSTRAND AVENUE",
+        "count" : "21"
+      }, {
+        "item" : "LIBERTY AVENUE",
+        "count" : "19"
+      }, {
+        "item" : "MORRIS AVENUE",
+        "count" : "19"
+      } ],
+      "smallest" : "101 AVENUE",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642701,
+    "name" : "Street3",
+    "dataTypeName" : "text",
+    "description" : "The name of the street where the business is located.\n",
+    "fieldName" : "street3",
+    "position" : 18,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136694,
+    "cachedContents" : {
+      "non_null" : "146",
+      "largest" : "YORK STREET",
+      "null" : "79141",
+      "top" : [ {
+        "item" : "BROADWAY",
+        "count" : "5"
+      }, {
+        "item" : "GUY R BREWER BOULEVARD",
+        "count" : "3"
+      }, {
+        "item" : "8 AVENUE",
+        "count" : "3"
+      }, {
+        "item" : "NOSTRAND AVENUE",
+        "count" : "3"
+      }, {
+        "item" : "WEST 42 STREET",
+        "count" : "2"
+      }, {
+        "item" : "YORK STREET",
+        "count" : "2"
+      }, {
+        "item" : "EAST 118 STREET",
+        "count" : "2"
+      }, {
+        "item" : "JAMAICA AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "FREDERICK DOUGLASS BOULEVARD",
+        "count" : "2"
+      }, {
+        "item" : "LEXINGTON AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "WARWICK STREET",
+        "count" : "2"
+      }, {
+        "item" : "WASHINGTON AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "7 AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "3 AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "9 AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "FULTON STREET",
+        "count" : "2"
+      }, {
+        "item" : "PARK AVENUE",
+        "count" : "2"
+      }, {
+        "item" : "32 AVENUE",
+        "count" : "1"
+      }, {
+        "item" : "21 AVENUE",
+        "count" : "1"
+      }, {
+        "item" : "31 STREET",
+        "count" : "1"
+      } ],
+      "smallest" : "101 AVENUE",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642702,
+    "name" : "Unit Type",
+    "dataTypeName" : "text",
+    "description" : "The type of unit of the business' address.\n",
+    "fieldName" : "unit_type",
+    "position" : 19,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136695,
+    "cachedContents" : {
+      "non_null" : "4215",
+      "largest" : "UPPR",
+      "null" : "75072",
+      "top" : [ {
+        "item" : "APT",
+        "count" : "1820"
+      }, {
+        "item" : "STE",
+        "count" : "950"
+      }, {
+        "item" : "FL",
+        "count" : "641"
+      }, {
+        "item" : "UNIT",
+        "count" : "216"
+      }, {
+        "item" : "FRNT",
+        "count" : "176"
+      }, {
+        "item" : "#",
+        "count" : "150"
+      }, {
+        "item" : "RM",
+        "count" : "117"
+      }, {
+        "item" : "BLDG",
+        "count" : "53"
+      }, {
+        "item" : "BSMT",
+        "count" : "21"
+      }, {
+        "item" : "OFC",
+        "count" : "14"
+      }, {
+        "item" : "PIER",
+        "count" : "14"
+      }, {
+        "item" : "LBBY",
+        "count" : "11"
+      }, {
+        "item" : "LOT",
+        "count" : "9"
+      }, {
+        "item" : "PH",
+        "count" : "8"
+      }, {
+        "item" : "BAY",
+        "count" : "4"
+      }, {
+        "item" : "SPC",
+        "count" : "3"
+      }, {
+        "item" : "DEPT",
+        "count" : "3"
+      }, {
+        "item" : "REAR",
+        "count" : "2"
+      }, {
+        "item" : "STOP",
+        "count" : "1"
+      }, {
+        "item" : "SIDE",
+        "count" : "1"
+      } ],
+      "smallest" : "#",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642703,
+    "name" : "Apt/Suite",
+    "dataTypeName" : "text",
+    "description" : "The unit number of the business' address.\n",
+    "fieldName" : "apt_suite",
+    "position" : 20,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136696,
+    "cachedContents" : {
+      "non_null" : "7251",
+      "largest" : "ستور",
+      "null" : "72036",
+      "top" : [ {
+        "item" : "1",
+        "count" : "450"
+      }, {
+        "item" : "2",
+        "count" : "340"
+      }, {
+        "item" : "3",
+        "count" : "146"
+      }, {
+        "item" : "A",
+        "count" : "123"
+      }, {
+        "item" : "5",
+        "count" : "98"
+      }, {
+        "item" : "4",
+        "count" : "94"
+      }, {
+        "item" : "NYPD PIG'S",
+        "count" : "84"
+      }, {
+        "item" : "SIDEWALK",
+        "count" : "71"
+      }, {
+        "item" : "N/A",
+        "count" : "70"
+      }, {
+        "item" : "6",
+        "count" : "70"
+      }, {
+        "item" : "12",
+        "count" : "58"
+      }, {
+        "item" : "NA",
+        "count" : "55"
+      }, {
+        "item" : "2A",
+        "count" : "49"
+      }, {
+        "item" : "8",
+        "count" : "45"
+      }, {
+        "item" : "Ground floor",
+        "count" : "45"
+      }, {
+        "item" : "300",
+        "count" : "45"
+      }, {
+        "item" : "Store",
+        "count" : "44"
+      }, {
+        "item" : "3A",
+        "count" : "43"
+      }, {
+        "item" : "1A",
+        "count" : "41"
+      }, {
+        "item" : "2R",
+        "count" : "40"
+      } ],
+      "smallest" : "/",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642704,
+    "name" : "City",
+    "dataTypeName" : "text",
+    "description" : "The city where the business is located.\n",
+    "fieldName" : "city",
+    "position" : 21,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136697,
+    "cachedContents" : {
+      "non_null" : "73243",
+      "largest" : "YORKVILLE",
+      "null" : "6044",
+      "top" : [ {
+        "item" : "BROOKLYN",
+        "count" : "19037"
+      }, {
+        "item" : "NEW YORK",
+        "count" : "18596"
+      }, {
+        "item" : "BRONX",
+        "count" : "9854"
+      }, {
+        "item" : "STATEN ISLAND",
+        "count" : "2019"
+      }, {
+        "item" : "New York",
+        "count" : "1989"
+      }, {
+        "item" : "FLUSHING",
+        "count" : "1914"
+      }, {
+        "item" : "JAMAICA",
+        "count" : "1878"
+      }, {
+        "item" : "LONG ISLAND CITY",
+        "count" : "1076"
+      }, {
+        "item" : "ASTORIA",
+        "count" : "967"
+      }, {
+        "item" : "Brooklyn",
+        "count" : "940"
+      }, {
+        "item" : "JACKSON HEIGHTS",
+        "count" : "866"
+      }, {
+        "item" : "CORONA",
+        "count" : "556"
+      }, {
+        "item" : "ELMHURST",
+        "count" : "555"
+      }, {
+        "item" : "WOODSIDE",
+        "count" : "550"
+      }, {
+        "item" : "OZONE PARK",
+        "count" : "471"
+      }, {
+        "item" : "FOREST HILLS",
+        "count" : "449"
+      }, {
+        "item" : "RIDGEWOOD",
+        "count" : "400"
+      }, {
+        "item" : "SOUTH OZONE PARK",
+        "count" : "390"
+      }, {
+        "item" : "Bronx",
+        "count" : "381"
+      }, {
+        "item" : "QUEENS VILLAGE",
+        "count" : "355"
+      } ],
+      "smallest" : "뉴욕",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642705,
+    "name" : "State",
+    "dataTypeName" : "text",
+    "description" : "The state where the business is located.\n",
+    "fieldName" : "state",
+    "position" : 22,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136698,
+    "cachedContents" : {
+      "non_null" : "75549",
+      "largest" : "WY",
+      "null" : "3738",
+      "top" : [ {
+        "item" : "NY",
+        "count" : "73316"
+      }, {
+        "item" : "NJ",
+        "count" : "392"
+      }, {
+        "item" : "CA",
+        "count" : "317"
+      }, {
+        "item" : "FL",
+        "count" : "141"
+      }, {
+        "item" : "Outside USA",
+        "count" : "140"
+      }, {
+        "item" : "TX",
+        "count" : "123"
+      }, {
+        "item" : "PA",
+        "count" : "116"
+      }, {
+        "item" : "WA",
+        "count" : "72"
+      }, {
+        "item" : "IL",
+        "count" : "72"
+      }, {
+        "item" : "CO",
+        "count" : "71"
+      }, {
+        "item" : "MN",
+        "count" : "69"
+      }, {
+        "item" : "MA",
+        "count" : "67"
+      }, {
+        "item" : "VA",
+        "count" : "58"
+      }, {
+        "item" : "OH",
+        "count" : "57"
+      }, {
+        "item" : "GA",
+        "count" : "55"
+      }, {
+        "item" : "SC",
+        "count" : "52"
+      }, {
+        "item" : "CT",
+        "count" : "48"
+      }, {
+        "item" : "DE",
+        "count" : "44"
+      }, {
+        "item" : "UT",
+        "count" : "42"
+      }, {
+        "item" : "MI",
+        "count" : "39"
+      } ],
+      "smallest" : "AL",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642706,
+    "name" : "Postcode",
+    "dataTypeName" : "text",
+    "description" : "The ZIP Code where the business is located.\n",
+    "fieldName" : "postcode",
+    "position" : 23,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136699,
+    "cachedContents" : {
+      "non_null" : "75524",
+      "largest" : "W6 7AE",
+      "null" : "3763",
+      "top" : [ {
+        "item" : "11201",
+        "count" : "1461"
+      }, {
+        "item" : "10036",
+        "count" : "1324"
+      }, {
+        "item" : "10019",
+        "count" : "1320"
+      }, {
+        "item" : "10001",
+        "count" : "1226"
+      }, {
+        "item" : "11235",
+        "count" : "1200"
+      }, {
+        "item" : "11101",
+        "count" : "1142"
+      }, {
+        "item" : "10017",
+        "count" : "1019"
+      }, {
+        "item" : "10467",
+        "count" : "1005"
+      }, {
+        "item" : "11372",
+        "count" : "1001"
+      }, {
+        "item" : "11220",
+        "count" : "980"
+      }, {
+        "item" : "11354",
+        "count" : "962"
+      }, {
+        "item" : "10018",
+        "count" : "920"
+      }, {
+        "item" : "11236",
+        "count" : "919"
+      }, {
+        "item" : "10003",
+        "count" : "876"
+      }, {
+        "item" : "11214",
+        "count" : "874"
+      }, {
+        "item" : "11223",
+        "count" : "859"
+      }, {
+        "item" : "10013",
+        "count" : "853"
+      }, {
+        "item" : "10002",
+        "count" : "799"
+      }, {
+        "item" : "11234",
+        "count" : "788"
+      }, {
+        "item" : "11207",
+        "count" : "777"
+      } ],
+      "smallest" : "0",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642707,
+    "name" : "Borough",
+    "dataTypeName" : "text",
+    "description" : "The NYC Borough where the business is located.\n",
+    "fieldName" : "borough",
+    "position" : 24,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136700,
+    "cachedContents" : {
+      "non_null" : "69452",
+      "largest" : "Staten Island",
+      "null" : "9835",
+      "top" : [ {
+        "item" : "Manhattan",
+        "count" : "20517"
+      }, {
+        "item" : "Brooklyn",
+        "count" : "20068"
+      }, {
+        "item" : "Queens",
+        "count" : "15933"
+      }, {
+        "item" : "Bronx",
+        "count" : "10318"
+      }, {
+        "item" : "Staten Island",
+        "count" : "2033"
+      }, {
+        "item" : "Outside NYC",
+        "count" : "583"
+      } ],
+      "smallest" : "Bronx",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642708,
+    "name" : "Community Board",
+    "dataTypeName" : "text",
+    "description" : "The NYC Community District where the business is located.\n",
+    "fieldName" : "community_board",
+    "position" : 25,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136701,
+    "cachedContents" : {
+      "non_null" : "68444",
+      "largest" : "595",
+      "null" : "10843",
+      "top" : [ {
+        "item" : "105",
+        "count" : "4637"
+      }, {
+        "item" : "101",
+        "count" : "2166"
+      }, {
+        "item" : "104",
+        "count" : "2109"
+      }, {
+        "item" : "302",
+        "count" : "2050"
+      }, {
+        "item" : "407",
+        "count" : "2029"
+      }, {
+        "item" : "315",
+        "count" : "1877"
+      }, {
+        "item" : "102",
+        "count" : "1826"
+      }, {
+        "item" : "401",
+        "count" : "1818"
+      }, {
+        "item" : "412",
+        "count" : "1812"
+      }, {
+        "item" : "106",
+        "count" : "1661"
+      }, {
+        "item" : "103",
+        "count" : "1575"
+      }, {
+        "item" : "403",
+        "count" : "1491"
+      }, {
+        "item" : "313",
+        "count" : "1460"
+      }, {
+        "item" : "317",
+        "count" : "1438"
+      }, {
+        "item" : "301",
+        "count" : "1433"
+      }, {
+        "item" : "108",
+        "count" : "1382"
+      }, {
+        "item" : "212",
+        "count" : "1312"
+      }, {
+        "item" : "318",
+        "count" : "1308"
+      }, {
+        "item" : "207",
+        "count" : "1301"
+      }, {
+        "item" : "305",
+        "count" : "1281"
+      } ],
+      "smallest" : "101",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642709,
+    "name" : "Council District",
+    "dataTypeName" : "text",
+    "description" : "The NYC City Council District where the business is located.\n",
+    "fieldName" : "council_district",
+    "position" : 26,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136702,
+    "cachedContents" : {
+      "non_null" : "68444",
+      "largest" : "51",
+      "null" : "10843",
+      "top" : [ {
+        "item" : "03",
+        "count" : "4231"
+      }, {
+        "item" : "04",
+        "count" : "4016"
+      }, {
+        "item" : "01",
+        "count" : "3904"
+      }, {
+        "item" : "33",
+        "count" : "2148"
+      }, {
+        "item" : "47",
+        "count" : "1919"
+      }, {
+        "item" : "48",
+        "count" : "1820"
+      }, {
+        "item" : "02",
+        "count" : "1804"
+      }, {
+        "item" : "26",
+        "count" : "1783"
+      }, {
+        "item" : "20",
+        "count" : "1527"
+      }, {
+        "item" : "38",
+        "count" : "1507"
+      }, {
+        "item" : "08",
+        "count" : "1454"
+      }, {
+        "item" : "37",
+        "count" : "1382"
+      }, {
+        "item" : "11",
+        "count" : "1344"
+      }, {
+        "item" : "12",
+        "count" : "1342"
+      }, {
+        "item" : "27",
+        "count" : "1330"
+      }, {
+        "item" : "15",
+        "count" : "1323"
+      }, {
+        "item" : "06",
+        "count" : "1317"
+      }, {
+        "item" : "25",
+        "count" : "1307"
+      }, {
+        "item" : "17",
+        "count" : "1290"
+      }, {
+        "item" : "34",
+        "count" : "1274"
+      } ],
+      "smallest" : "01",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642710,
+    "name" : "BIN",
+    "dataTypeName" : "text",
+    "description" : "The Building Identification Number where the business is located.\n",
+    "fieldName" : "bin",
+    "position" : 27,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164484607,
+    "cachedContents" : {
+      "non_null" : "63500",
+      "largest" : "5797001",
+      "null" : "15787",
+      "top" : [ {
+        "item" : "3000000",
+        "count" : "384"
+      }, {
+        "item" : "2018642",
+        "count" : "366"
+      }, {
+        "item" : "1037174",
+        "count" : "329"
+      }, {
+        "item" : "4000000",
+        "count" : "310"
+      }, {
+        "item" : "3102448",
+        "count" : "290"
+      }, {
+        "item" : "3329395",
+        "count" : "262"
+      }, {
+        "item" : "2000000",
+        "count" : "233"
+      }, {
+        "item" : "1000000",
+        "count" : "228"
+      }, {
+        "item" : "2101591",
+        "count" : "171"
+      }, {
+        "item" : "3427233",
+        "count" : "137"
+      }, {
+        "item" : "3042076",
+        "count" : "123"
+      }, {
+        "item" : "3204886",
+        "count" : "118"
+      }, {
+        "item" : "1011738",
+        "count" : "117"
+      }, {
+        "item" : "2127183",
+        "count" : "108"
+      }, {
+        "item" : "3344163",
+        "count" : "102"
+      }, {
+        "item" : "1000045",
+        "count" : "102"
+      }, {
+        "item" : "2127269",
+        "count" : "95"
+      }, {
+        "item" : "1088797",
+        "count" : "94"
+      }, {
+        "item" : "1000811",
+        "count" : "93"
+      }, {
+        "item" : "3348087",
+        "count" : "92"
+      } ],
+      "smallest" : "1000000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 631642711,
+    "name" : "BBL",
+    "dataTypeName" : "text",
+    "description" : "The Borough-Block-Lot number where the business is located.\n",
+    "fieldName" : "bbl",
+    "position" : 28,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164484606,
+    "cachedContents" : {
+      "non_null" : "63500",
+      "largest" : "5240009999",
+      "null" : "15787",
+      "top" : [ {
+        "item" : "2033560107",
+        "count" : "366"
+      }, {
+        "item" : "1013147502",
+        "count" : "329"
+      }, {
+        "item" : "3046850011",
+        "count" : "290"
+      }, {
+        "item" : "3072250090",
+        "count" : "262"
+      }, {
+        "item" : "2052750006",
+        "count" : "196"
+      }, {
+        "item" : "3069440010",
+        "count" : "137"
+      }, {
+        "item" : "1000580001",
+        "count" : "127"
+      }, {
+        "item" : "3015440021",
+        "count" : "124"
+      }, {
+        "item" : "3074560006",
+        "count" : "118"
+      }, {
+        "item" : "1006300048",
+        "count" : "117"
+      }, {
+        "item" : "2036480019",
+        "count" : "108"
+      }, {
+        "item" : "3000270040",
+        "count" : "102"
+      }, {
+        "item" : "1000130027",
+        "count" : "102"
+      }, {
+        "item" : "2040050001",
+        "count" : "95"
+      }, {
+        "item" : "1000220013",
+        "count" : "93"
+      }, {
+        "item" : "3069910048",
+        "count" : "92"
+      }, {
+        "item" : "3008610001",
+        "count" : "89"
+      }, {
+        "item" : "3015400072",
+        "count" : "86"
+      }, {
+        "item" : "4014240033",
+        "count" : "83"
+      }, {
+        "item" : "5072060037",
+        "count" : "82"
+      } ],
+      "smallest" : "0000000000",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 631642712,
+    "name" : "NTA",
+    "dataTypeName" : "text",
+    "description" : "The Neighborhood Tabulation Area where the business is located.\n",
+    "fieldName" : "nta",
+    "position" : 29,
+    "renderTypeName" : "text",
+    "tableColumnId" : 158136703,
+    "cachedContents" : {
+      "non_null" : "65480",
+      "largest" : "SI54",
+      "null" : "13807",
+      "top" : [ {
+        "item" : "MN17",
+        "count" : "3332"
+      }, {
+        "item" : "MN13",
+        "count" : "1696"
+      }, {
+        "item" : "MN25",
+        "count" : "1490"
+      }, {
+        "item" : "MN24",
+        "count" : "1254"
+      }, {
+        "item" : "QN22",
+        "count" : "1107"
+      }, {
+        "item" : "QN31",
+        "count" : "1074"
+      }, {
+        "item" : "MN19",
+        "count" : "1067"
+      }, {
+        "item" : "BK38",
+        "count" : "1036"
+      }, {
+        "item" : "BK17",
+        "count" : "1022"
+      }, {
+        "item" : "MN23",
+        "count" : "974"
+      }, {
+        "item" : "MN15",
+        "count" : "909"
+      }, {
+        "item" : "QN61",
+        "count" : "842"
+      }, {
+        "item" : "QN28",
+        "count" : "832"
+      }, {
+        "item" : "BK82",
+        "count" : "802"
+      }, {
+        "item" : "MN27",
+        "count" : "786"
+      }, {
+        "item" : "QN55",
+        "count" : "756"
+      }, {
+        "item" : "BK96",
+        "count" : "735"
+      }, {
+        "item" : "MN12",
+        "count" : "714"
+      }, {
+        "item" : "BK26",
+        "count" : "705"
+      }, {
+        "item" : "QN70",
+        "count" : "674"
+      } ],
+      "smallest" : "BK09",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642713,
+    "name" : "Census Block (2010)",
+    "dataTypeName" : "text",
+    "description" : "The 2010 Census Block where the business is located.\n",
+    "fieldName" : "census_block_2010_",
+    "position" : 30,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164484605,
+    "cachedContents" : {
+      "non_null" : "65480",
+      "largest" : "9003",
+      "null" : "13807",
+      "top" : [ {
+        "item" : "1000",
+        "count" : "5627"
+      }, {
+        "item" : "1001",
+        "count" : "4768"
+      }, {
+        "item" : "2000",
+        "count" : "4736"
+      }, {
+        "item" : "2001",
+        "count" : "3857"
+      }, {
+        "item" : "1002",
+        "count" : "3702"
+      }, {
+        "item" : "1003",
+        "count" : "3128"
+      }, {
+        "item" : "3000",
+        "count" : "2829"
+      }, {
+        "item" : "2002",
+        "count" : "2677"
+      }, {
+        "item" : "3001",
+        "count" : "2264"
+      }, {
+        "item" : "2003",
+        "count" : "1965"
+      }, {
+        "item" : "1004",
+        "count" : "1930"
+      }, {
+        "item" : "4000",
+        "count" : "1678"
+      }, {
+        "item" : "3002",
+        "count" : "1575"
+      }, {
+        "item" : "1005",
+        "count" : "1532"
+      }, {
+        "item" : "4001",
+        "count" : "1176"
+      }, {
+        "item" : "1007",
+        "count" : "1138"
+      }, {
+        "item" : "2005",
+        "count" : "1128"
+      }, {
+        "item" : "1006",
+        "count" : "1120"
+      }, {
+        "item" : "2004",
+        "count" : "1002"
+      }, {
+        "item" : "3003",
+        "count" : "868"
+      } ],
+      "smallest" : "0001",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 631642714,
+    "name" : "Census Tract (2010)",
+    "dataTypeName" : "text",
+    "description" : "The 2010 Census Tract where the business is located.\n",
+    "fieldName" : "census_tract_2010_",
+    "position" : 31,
+    "renderTypeName" : "text",
+    "tableColumnId" : 164484604,
+    "cachedContents" : {
+      "non_null" : "68440",
+      "largest" : "999",
+      "null" : "10847",
+      "top" : [ {
+        "item" : "21",
+        "count" : "804"
+      }, {
+        "item" : "9",
+        "count" : "567"
+      }, {
+        "item" : "13",
+        "count" : "554"
+      }, {
+        "item" : "431",
+        "count" : "458"
+      }, {
+        "item" : "88",
+        "count" : "452"
+      }, {
+        "item" : "119",
+        "count" : "420"
+      }, {
+        "item" : "864",
+        "count" : "388"
+      }, {
+        "item" : "96",
+        "count" : "381"
+      }, {
+        "item" : "7",
+        "count" : "370"
+      }, {
+        "item" : "113",
+        "count" : "365"
+      }, {
+        "item" : "41",
+        "count" : "357"
+      }, {
+        "item" : "137",
+        "count" : "351"
+      }, {
+        "item" : "58",
+        "count" : "351"
+      }, {
+        "item" : "46202",
+        "count" : "347"
+      }, {
+        "item" : "871",
+        "count" : "344"
+      }, {
+        "item" : "348",
+        "count" : "331"
+      }, {
+        "item" : "606",
+        "count" : "327"
+      }, {
+        "item" : "84",
+        "count" : "304"
+      }, {
+        "item" : "125",
+        "count" : "303"
+      }, {
+        "item" : "98",
+        "count" : "299"
+      } ],
+      "smallest" : "1",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : {
+      "noCommas" : "true"
+    }
+  }, {
+    "id" : 631642718,
+    "name" : "Latitude",
+    "dataTypeName" : "text",
+    "description" : "The latitudinal coordinate where the business is located.\n",
+    "fieldName" : "latitude",
+    "position" : 32,
+    "renderTypeName" : "text",
+    "tableColumnId" : 167294596,
+    "cachedContents" : {
+      "non_null" : "68920",
+      "largest" : "-74.009061",
+      "null" : "10367",
+      "top" : [ {
+        "item" : "40.87891384109099",
+        "count" : "220"
+      }, {
+        "item" : "40.65393126547588",
+        "count" : "181"
+      }, {
+        "item" : "40.584368247243226",
+        "count" : "166"
+      }, {
+        "item" : "40.74990977843035",
+        "count" : "164"
+      }, {
+        "item" : "40.74991",
+        "count" : "163"
+      }, {
+        "item" : "0",
+        "count" : "144"
+      }, {
+        "item" : "40.885544990593246",
+        "count" : "127"
+      }, {
+        "item" : "40.878914",
+        "count" : "117"
+      }, {
+        "item" : "40.58706510844741",
+        "count" : "113"
+      }, {
+        "item" : "40.733159",
+        "count" : "111"
+      }, {
+        "item" : "40.653932",
+        "count" : "110"
+      }, {
+        "item" : "40.679468",
+        "count" : "98"
+      }, {
+        "item" : "40.584369",
+        "count" : "96"
+      }, {
+        "item" : "40.70575131991168",
+        "count" : "94"
+      }, {
+        "item" : "40.705679964399216",
+        "count" : "88"
+      }, {
+        "item" : "40.70263387349705",
+        "count" : "82"
+      }, {
+        "item" : "40.70353110962287",
+        "count" : "74"
+      }, {
+        "item" : "40.756823",
+        "count" : "74"
+      }, {
+        "item" : "40.70386047847687",
+        "count" : "71"
+      }, {
+        "item" : "40.59723092685554",
+        "count" : "71"
+      } ],
+      "smallest" : "0",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  }, {
+    "id" : 631642717,
+    "name" : "Longitude",
+    "dataTypeName" : "text",
+    "description" : "The longitudinal coordinate where the business is located.\n",
+    "fieldName" : "longitude",
+    "position" : 33,
+    "renderTypeName" : "text",
+    "tableColumnId" : 167294595,
+    "cachedContents" : {
+      "non_null" : "68920",
+      "largest" : "-98.57519219999999",
+      "null" : "10367",
+      "top" : [ {
+        "item" : "-73.8737129159977",
+        "count" : "220"
+      }, {
+        "item" : "-73.92124622027247",
+        "count" : "181"
+      }, {
+        "item" : "-73.98290981403754",
+        "count" : "166"
+      }, {
+        "item" : "-73.97506074579181",
+        "count" : "164"
+      }, {
+        "item" : "-73.975061",
+        "count" : "163"
+      }, {
+        "item" : "0",
+        "count" : "144"
+      }, {
+        "item" : "-73.82894585166179",
+        "count" : "127"
+      }, {
+        "item" : "-73.873713",
+        "count" : "117"
+      }, {
+        "item" : "-73.9570189833512",
+        "count" : "113"
+      }, {
+        "item" : "-74.006401",
+        "count" : "111"
+      }, {
+        "item" : "-73.921246",
+        "count" : "109"
+      }, {
+        "item" : "-73.904905",
+        "count" : "98"
+      }, {
+        "item" : "-73.98291",
+        "count" : "96"
+      }, {
+        "item" : "-74.01337387786249",
+        "count" : "94"
+      }, {
+        "item" : "-74.01330172836009",
+        "count" : "88"
+      }, {
+        "item" : "-73.99373534534621",
+        "count" : "82"
+      }, {
+        "item" : "-73.9895695882966",
+        "count" : "74"
+      }, {
+        "item" : "-73.87354",
+        "count" : "74"
+      }, {
+        "item" : "-73.79247986883259",
+        "count" : "71"
+      }, {
+        "item" : "-73.98953707681466",
+        "count" : "71"
+      } ],
+      "smallest" : "0",
+      "count" : "79287",
+      "cardinality" : "79287"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "metadata" : {
+    "rdfSubject" : "0",
+    "rdfClass" : "",
+    "attachments" : [ {
+      "filename" : "Archived_Consumer_Services_Mediated_Complaints_07142023.csv",
+      "assetId" : "c6a55e99-d427-4c5c-99e7-c4a69e0dc734",
+      "name" : "Archived_Consumer_Services_Mediated_Complaints_07142023.csv"
+    }, {
+      "filename" : "DCWP_Consumer_Complaints_Data_Dictionary.xlsx",
+      "assetId" : "3cb64705-8716-4d01-ae3e-e1d7b6171050",
+      "name" : "DCWP_Consumer_Complaints_Data_Dictionary.xlsx"
+    } ],
+    "custom_fields" : {
+      "Update" : {
+        "Automation" : "Yes",
+        "Date Made Public" : "1/29/2016",
+        "Update Frequency" : "Monthly",
+        "Data Change Frequency" : "As Needed"
+      },
+      "Legislative Compliance" : {
+        "Geo-coding Attached?" : "No"
+      },
+      "Dataset Information" : {
+        "Agency" : "Department of Consumer and Worker Protection (DCWP)"
+      }
+    },
+    "rowLabel" : "consumer complaint processed by DCWP.\t",
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+    "renderTypeConfig" : {
+      "visible" : {
+        "table" : true
+      }
+    }
+  },
+  "owner" : {
+    "id" : "5fuc-pqz2",
+    "displayName" : "NYC OpenData",
+    "profileImageUrlLarge" : "/api/users/5fuc-pqz2/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/5fuc-pqz2/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/5fuc-pqz2/profile_images/TINY",
+    "screenName" : "NYC OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "5fuc-pqz2",
+    "displayName" : "NYC OpenData",
+    "profileImageUrlLarge" : "/api/users/5fuc-pqz2/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/5fuc-pqz2/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/5fuc-pqz2/profile_images/TINY",
+    "screenName" : "NYC OpenData",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "consumer", "license", "business", "complaint", "business practice", "inspection", "department of consumer affairs", "dca" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

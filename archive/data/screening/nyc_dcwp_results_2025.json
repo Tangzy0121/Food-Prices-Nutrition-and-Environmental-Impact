@@ -1,0 +1,30 @@
+[{"result":"Referred","records":"8813"}
+,{"result":"Requested Information Not Provided","records":"7406"}
+,{"result":"Complaint Review Complete","records":"3862"}
+,{"result":"Insufficient Info Received","records":"1364"}
+,{"result":"No Jurisdiction","records":"670"}
+,{"result":"Advised to Sue - ATS","records":"458"}
+,{"result":"Duplicate Complaint - DUP","records":"392"}
+,{"result":"No Business Response - NVR","records":"355"}
+,{"result":"Resolved and Consumer Satisfied - SPF","records":"335"}
+,{"result":"Cash Amount - AMT","records":"317"}
+,{"result":"No Consumer Response - NCR","records":"253"}
+,{"result":"Credit Card Refund and/or Contract Cancelled - CRC","records":"133"}
+,{"result":"No Satisfactory Agreement - NSA","records":"111"}
+,{"result":"Referred to Outside - RTO","records":"66"}
+,{"result":"Consumer Took Action - CTA","records":"42"}
+,{"result":"Store Credit - SCR","records":"37"}
+,{"result":"Inspection Requested","records":"34"}
+,{"result":"Bill Reduced - BLR","records":"30"}
+,{"result":"Information Provided","records":"24"}
+,{"result":"Goods Received - GDR","records":"21"}
+,{"result":"Unable to Locate Business- ULV","records":"19"}
+,{"result":"Wrong Business and Null and Void - NUL","records":"18"}
+,{"result":"Consumer Withdrew Complaint - CWC","records":"13"}
+,{"result":"Goods Exchanged - GEX","records":"10"}
+,{"result":"Complaint Invalid - CIN","records":"9"}
+,{"result":"Goods Repaired - GRS","records":"9"}
+,{"result":"Referred to Hearing - RTH","records":"6"}
+,{"result":"Provider Feedback Received","records":"1"}
+,{"result":"Referred to Manufacturer - RMF","records":"1"}
+,{"result":"Agency Collected Judgement - ACJ","records":"1"}]

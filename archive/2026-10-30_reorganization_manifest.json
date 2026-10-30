@@ -1,0 +1,518 @@
+[
+  {
+    "old_path": "食品价格_营养与环境_选题.md",
+    "new_path": "archive/2026-10-30_topic-exploration/notes/食品价格_营养与环境_选题.md",
+    "bytes": 8179,
+    "sha256": "e1f6c9c65ffef67ebb92f13761c2ddecf5c932a1e6597da515bc2377562e51b1"
+  },
+  {
+    "old_path": "食品数据_具体数值抽查.md",
+    "new_path": "archive/2026-10-30_topic-exploration/notes/食品数据_具体数值抽查.md",
+    "bytes": 2800,
+    "sha256": "e886567140299eecdd877b7eb3cfba99142df261353e486665b4425974b0c9e0"
+  },
+  {
+    "old_path": "食品数据_可行性检查.md",
+    "new_path": "archive/2026-10-30_topic-exploration/notes/食品数据_可行性检查.md",
+    "bytes": 3227,
+    "sha256": "35efb8762daf2cd0e8dc93024cabcac650c60da17982de97e668eab90d3896f6"
+  },
+  {
+    "old_path": "agent.md",
+    "new_path": "agent.md",
+    "bytes": 592,
+    "sha256": "a84ccfb72c0ba10f2bcd07ab522556854fa8955d0ab33b35acaf01f37dce18ec"
+  },
+  {
+    "old_path": "Final project introduction.pdf",
+    "new_path": "course/Final project introduction.pdf",
+    "bytes": 3051759,
+    "sha256": "f83d7e69271c0afd6b4a7ca5b25859ac51402464380c677d099b812e504b0e50"
+  },
+  {
+    "old_path": "R Final Project Requirements.pdf",
+    "new_path": "course/R Final Project Requirements.pdf",
+    "bytes": 213343,
+    "sha256": "3e50784452afa4db66cffb1b287f5697bef28a7fb0b674ddd7a5729b6d703d73"
+  },
+  {
+    "old_path": "archive/选题讨论_第一轮存档.html",
+    "new_path": "archive/选题讨论_第一轮存档.html",
+    "bytes": 458086,
+    "sha256": "08bc65ac03cb4721fa2a9dad0d7b2f744566d256ed98f40be090aa379092db0e"
+  },
+  {
+    "old_path": "archive/选题讨论.html",
+    "new_path": "archive/选题讨论.html",
+    "bytes": 32953,
+    "sha256": "fe20d185365a17c94497f952d95efb37c91a92cb0b2640ee26bce5f90f099f46"
+  },
+  {
+    "old_path": "archive/analysis/build_recent_screening.py",
+    "new_path": "archive/analysis/build_recent_screening.py",
+    "bytes": 27165,
+    "sha256": "ff80a8cecce70d53cfbd263882397baefec336340b404befefffd61736625a39"
+  },
+  {
+    "old_path": "archive/analysis/download_pilot.py",
+    "new_path": "archive/analysis/download_pilot.py",
+    "bytes": 2916,
+    "sha256": "c32b7f7bf1eb8fde32abe6be4b9f01119a2a1c4b7fedbaa82cc46e133a61fc4a"
+  },
+  {
+    "old_path": "archive/analysis/pilot.R",
+    "new_path": "archive/analysis/pilot.R",
+    "bytes": 23373,
+    "sha256": "9fd508a38647d99b50624f52022f9fe1668a50a4fc7d56c5a4d0513ca9af5807"
+  },
+  {
+    "old_path": "archive/analysis/profile_recent_sources.py",
+    "new_path": "archive/analysis/profile_recent_sources.py",
+    "bytes": 4101,
+    "sha256": "21b2c15d0c8fcab0f9ee41913a0eef93d297b3f3dd24001402c70134824928a4"
+  },
+  {
+    "old_path": "archive/analysis/README.md",
+    "new_path": "archive/analysis/README.md",
+    "bytes": 5370,
+    "sha256": "a97154f5de970f39407ab2aad381bc338b60be63ce17e6140daba51929016f23"
+  },
+  {
+    "old_path": "archive/analysis/screen_food_numeric.py",
+    "new_path": "archive/analysis/screen_food_numeric.py",
+    "bytes": 2074,
+    "sha256": "dee65470f084fe9fa30fb52bb343e634be61279478aa41e7f07ebe0b1c653fef"
+  },
+  {
+    "old_path": "archive/analysis/screen_food_sample.py",
+    "new_path": "archive/analysis/screen_food_sample.py",
+    "bytes": 2736,
+    "sha256": "e6490f3815c78542b805b26cc666ec0a917b54aa52778165ba5858f2362bd8ad"
+  },
+  {
+    "old_path": "archive/analysis/screen_recent_sources.py",
+    "new_path": "archive/analysis/screen_recent_sources.py",
+    "bytes": 5827,
+    "sha256": "ba2856fef2c06c5a84bff5f5d4ce1ab70bb5ba4132707727a67204007f796024"
+  },
+  {
+    "old_path": "archive/analysis/update_pilot_report.py",
+    "new_path": "archive/analysis/update_pilot_report.py",
+    "bytes": 17606,
+    "sha256": "21dcdd0bae5d9d63910a09d8fdd188af69e9a315741797a13a500db07f131755"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_example_hourly.csv",
+    "new_path": "archive/analysis/pilot-output/bike_example_hourly.csv",
+    "bytes": 1028,
+    "sha256": "295e83b9a8b1461f932b03ededb1a68c69dfe70738438a28143f21739d277023"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_periods.csv",
+    "new_path": "archive/analysis/pilot-output/bike_periods.csv",
+    "bytes": 22061,
+    "sha256": "375b6d081c75c531963b14bdac72ae83ece51c13438db2bddffbf6c0ca17591e"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_repeated_stations.csv",
+    "new_path": "archive/analysis/pilot-output/bike_repeated_stations.csv",
+    "bytes": 5889,
+    "sha256": "6df76b9852153432d04377b49a68942a250dd810813188778dba4960f910ac51"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_station_days.csv",
+    "new_path": "archive/analysis/pilot-output/bike_station_days.csv",
+    "bytes": 264415,
+    "sha256": "2e0cf91589b3d7c651c9312006d052f5d616dcbae1a92a4327c191816735e2e7"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_station_hours.csv",
+    "new_path": "archive/analysis/pilot-output/bike_station_hours.csv",
+    "bytes": 3027398,
+    "sha256": "05668e35381eca421a255c402a344599b90ae63880d0fa4f2990f7fd77122d69"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_stations.csv",
+    "new_path": "archive/analysis/pilot-output/bike_stations.csv",
+    "bytes": 12013,
+    "sha256": "0be3b44aaa85b6e5de417382e04e10588b574372dd2c1a1893d3625623c7f5d9"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_summary.csv",
+    "new_path": "archive/analysis/pilot-output/bike_summary.csv",
+    "bytes": 262,
+    "sha256": "9d868d0149e4b55f00bf83d20bf2fcad29dd11ddcb8a9eaee7f9aab90a31c300"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike_threshold_sensitivity.csv",
+    "new_path": "archive/analysis/pilot-output/bike_threshold_sensitivity.csv",
+    "bytes": 580,
+    "sha256": "9db71dd6ca5c65c221e5b3332293ac50d8ec6fbf9286043c6f09eb9e91fe717a"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike-example.svg",
+    "new_path": "archive/analysis/pilot-output/bike-example.svg",
+    "bytes": 114333,
+    "sha256": "09d23aca8b32797826af86162c49307b1e0ebde91cae42ae24f93123eef6dca6"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/bike-reversals.svg",
+    "new_path": "archive/analysis/pilot-output/bike-reversals.svg",
+    "bytes": 187129,
+    "sha256": "bd12c6909d003f271e4dabeb10e2bb09be3af1d4a556cb54b9cf045be1e3b410"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_by_year.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_by_year.csv",
+    "bytes": 2915,
+    "sha256": "328f10ad0afce472329eef59960d8a2430b552430bc6e9964a1afa91360242a3"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_cancel_windows.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_cancel_windows.csv",
+    "bytes": 1434,
+    "sha256": "31ae54ae0894bda71cca745f4102ac18f4881d8f9412aac76314da7074d8041a"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_channels_2016.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_channels_2016.csv",
+    "bytes": 1046,
+    "sha256": "c8f60b0b0e42404df9ca5264e02340fd08348681619c9e3cebc762ae9f6746cf"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_dedup_sensitivity.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_dedup_sensitivity.csv",
+    "bytes": 1042,
+    "sha256": "973657bbe0d79053ca4fc84ef53b32e920cf1bdd0048e6845e16cbf53b69eee5"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_lead_bins.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_lead_bins.csv",
+    "bytes": 3494,
+    "sha256": "b93693d7023f11a3a90825b155717c5d65d75586f2fb6afae0325a3cfc1fcdaa"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_months_2016.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_months_2016.csv",
+    "bytes": 9761,
+    "sha256": "693967bd2ab4d15422f6fa0e6c7dab361b5516f5f5d980b27635dc36af75a51c"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_segments_2016.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_segments_2016.csv",
+    "bytes": 1793,
+    "sha256": "577d72001684a3aa4ef6002d743d19a29d4e38ddf5e3133a5d6c198b3588078d"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel_timing_thresholds.csv",
+    "new_path": "archive/analysis/pilot-output/hotel_timing_thresholds.csv",
+    "bytes": 2815,
+    "sha256": "477dee90eca6a127cbc172cc036130718c896c52a49603804db8ea2be17e7234"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel-channels.svg",
+    "new_path": "archive/analysis/pilot-output/hotel-channels.svg",
+    "bytes": 89370,
+    "sha256": "67c45e78cef10a2d1aece365a8dee4924add72a41dce4a5867ff06e9beda29cc"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/hotel-windows.svg",
+    "new_path": "archive/analysis/pilot-output/hotel-windows.svg",
+    "bytes": 112283,
+    "sha256": "ac0571e03453747945d2df1586f9e7f817275837d88e08b9a37a494d76479ddd"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_delivery_promise_all_delivered.csv",
+    "new_path": "archive/analysis/pilot-output/olist_delivery_promise_all_delivered.csv",
+    "bytes": 313,
+    "sha256": "7d05953bd73e9e20e143d59e8b44df5a7afd20b9fc112e1a8058176a474e62ad"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_duration.csv",
+    "new_path": "archive/analysis/pilot-output/olist_duration.csv",
+    "bytes": 626,
+    "sha256": "8d7990b6f1614a01a28f053544e761054bcf7ec74d9c5c2f0e2649eafc869cd3"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_month.csv",
+    "new_path": "archive/analysis/pilot-output/olist_month.csv",
+    "bytes": 1133,
+    "sha256": "c28c73e25c935f452d67da194d5b860eb6a3e5d642c81a274e6cb873f0bbfb98"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_overall.csv",
+    "new_path": "archive/analysis/pilot-output/olist_overall.csv",
+    "bytes": 139,
+    "sha256": "6e7c06ba17a9eb59c0f7aa32114989d7905d99633b71e1d87953a2ba6dab1e89"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_promise.csv",
+    "new_path": "archive/analysis/pilot-output/olist_promise.csv",
+    "bytes": 514,
+    "sha256": "2c2fd7157200fd1481c533d399f331a514d5abb257333692745cebcba7abb3e1"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_review_selection.csv",
+    "new_path": "archive/analysis/pilot-output/olist_review_selection.csv",
+    "bytes": 214,
+    "sha256": "48ef9201498c76a71fa4b6b318c1fdc8d771db616bd31390094a5aaa17ca4460"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_review_timing.csv",
+    "new_path": "archive/analysis/pilot-output/olist_review_timing.csv",
+    "bytes": 411,
+    "sha256": "aa72799774b94d0b6d61e81d6ec24998fd8f3a3ec9c8ed5ec969e6bb47c7a71e"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_sensitivity.csv",
+    "new_path": "archive/analysis/pilot-output/olist_sensitivity.csv",
+    "bytes": 1827,
+    "sha256": "6f8100edcd2b17cb6ae5adc75f3b8e4847f029c1ff7aab405ef3df4fd55c4e0e"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_state_duration.csv",
+    "new_path": "archive/analysis/pilot-output/olist_state_duration.csv",
+    "bytes": 7324,
+    "sha256": "cd4ed09adb961deeb8a5ed2941960c3dec8fe93a625c115576f07411923ed601"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist_state.csv",
+    "new_path": "archive/analysis/pilot-output/olist_state.csv",
+    "bytes": 1913,
+    "sha256": "a58fffb9d55b9fdc10d377910c431da3bb94cad9e85dafce39e6491173ec2eda"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist-duration.svg",
+    "new_path": "archive/analysis/pilot-output/olist-duration.svg",
+    "bytes": 102332,
+    "sha256": "79ea006dac7331206834aa6c4e8df22d3e4dd6933c083b15a883ac0cff77ae2a"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist-review-timing.svg",
+    "new_path": "archive/analysis/pilot-output/olist-review-timing.svg",
+    "bytes": 107122,
+    "sha256": "2e9f64ee28436043f1109e50bb11fa243798b827f9c2e68b18a8e8c9607c09ba"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/olist-states.svg",
+    "new_path": "archive/analysis/pilot-output/olist-states.svg",
+    "bytes": 123914,
+    "sha256": "da68d5075c683ea7662782be2bd41ce8e1c0f1c5c16ce210c0a0a40a66966a3c"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/results.json",
+    "new_path": "archive/analysis/pilot-output/results.json",
+    "bytes": 28091,
+    "sha256": "1b593a30b8a1f8693bb19fa5c1f39ee2e38ee2ade1d897c2e1e1eba9d71095bf"
+  },
+  {
+    "old_path": "archive/analysis/pilot-output/sessionInfo.txt",
+    "new_path": "archive/analysis/pilot-output/sessionInfo.txt",
+    "bytes": 1175,
+    "sha256": "28097c7338fc156fe55cea197f1abce4cd6f7591d4641a75838695124ad90c3d"
+  },
+  {
+    "old_path": "archive/data/pilot/download_manifest.json",
+    "new_path": "archive/data/pilot/download_manifest.json",
+    "bytes": 2876,
+    "sha256": "d9257446a15606603e51f60a57d86a35a3b0eae57a9e61d4b046b70eb47feb50"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/bike_oct.zip",
+    "new_path": "archive/data/pilot/raw/bike_oct.zip",
+    "bytes": 4028203,
+    "sha256": "ba2b2431e618047f4092a48931f914b8abe53c0d053f366f2a4e2e1850feb23c"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/bike_sep.zip",
+    "new_path": "archive/data/pilot/raw/bike_sep.zip",
+    "bytes": 4140046,
+    "sha256": "9bdf20c1a16ae41b7c4a9f70554166b847703c112e2ddce63d80c6c37ea65ff3"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/hotels.csv",
+    "new_path": "archive/data/pilot/raw/hotels.csv",
+    "bytes": 16855599,
+    "sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/olist_customers_dataset.csv",
+    "new_path": "archive/data/pilot/raw/olist_customers_dataset.csv",
+    "bytes": 9033957,
+    "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/olist_order_reviews_dataset.csv",
+    "new_path": "archive/data/pilot/raw/olist_order_reviews_dataset.csv",
+    "bytes": 14346950,
+    "sha256": "81336b6e5183133b632a3d9ed899428e33430987fa540926a6daa8b4a2157598"
+  },
+  {
+    "old_path": "archive/data/pilot/raw/olist_orders_dataset.csv",
+    "new_path": "archive/data/pilot/raw/olist_orders_dataset.csv",
+    "bytes": 17654914,
+    "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf"
+  },
+  {
+    "old_path": "archive/data/screening/airbnb_singapore_2026_listings.csv.gz",
+    "new_path": "archive/data/screening/airbnb_singapore_2026_listings.csv.gz",
+    "bytes": 1274919,
+    "sha256": "96dcc23048a03631aec9bbeee2f1e39b3bef871fc614e7a573df2e7dd42cb037"
+  },
+  {
+    "old_path": "archive/data/screening/airbnb_singapore_2026_reviews.csv.gz",
+    "new_path": "archive/data/screening/airbnb_singapore_2026_reviews.csv.gz",
+    "bytes": 5239810,
+    "sha256": "a84abeddb76491520626678f979c64c8f8925c881413d0a4043dac457a689ea3"
+  },
+  {
+    "old_path": "archive/data/screening/brazil_portal.html",
+    "new_path": "archive/data/screening/brazil_portal.html",
+    "bytes": 18154,
+    "sha256": "bb87c8b4bb0a1c1f3535cd0e13958cccfd1a047658cac1a35731a163deff2d9d"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_credit_card_2025_sample_structured.json",
+    "new_path": "archive/data/screening/cfpb_credit_card_2025_sample_structured.json",
+    "bytes": 603300,
+    "sha256": "0a7095155920d78e3778b9f26cc8162eb7e040ddfa2a88a2cc33b72ea420d508"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_credit_card_2025_sample.json",
+    "new_path": "archive/data/screening/cfpb_credit_card_2025_sample.json",
+    "bytes": 657679,
+    "sha256": "b241715037098ef45bc46ebb35e63a1a939b1eef7de1de9c4a08bcab61401448"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_credit_card_2025_structured.json",
+    "new_path": "archive/data/screening/cfpb_credit_card_2025_structured.json",
+    "bytes": 603300,
+    "sha256": "0a7095155920d78e3778b9f26cc8162eb7e040ddfa2a88a2cc33b72ea420d508"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_purchase_disputes_2025_structured.json",
+    "new_path": "archive/data/screening/cfpb_purchase_disputes_2025_structured.json",
+    "bytes": 647055,
+    "sha256": "547ff4e95555a5fb7ff810a7850ec426b621d4640b36f510df3438c0b5013b93"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_purchase_disputes_2025.json",
+    "new_path": "archive/data/screening/cfpb_purchase_disputes_2025.json",
+    "bytes": 700034,
+    "sha256": "8ccdbd9b9477b38ab50f886871bcb9d8e23094c2284fe94efa469ea4c107885e"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_reference.yaml",
+    "new_path": "archive/data/screening/cfpb_reference.yaml",
+    "bytes": 19549,
+    "sha256": "a384563b5bf721a448085b2bb4c9e374469b982dedb68da3094cffe677a5bb99"
+  },
+  {
+    "old_path": "archive/data/screening/cfpb_sample_2025.json",
+    "new_path": "archive/data/screening/cfpb_sample_2025.json",
+    "bytes": 243900,
+    "sha256": "87782fcd3e8ad65c26142760a4c2b8b422220d11c1a052d0e9291d4b9b271ad6"
+  },
+  {
+    "old_path": "archive/data/screening/food_numeric_sample_2026-10-30.json",
+    "new_path": "data/feasibility/food_numeric_sample_2026-10-30.json",
+    "bytes": 9496,
+    "sha256": "34b829eba3a13cf54678d73831aa0aaa208b4f162ccf94acbeac3d04ecc821d8"
+  },
+  {
+    "old_path": "archive/data/screening/food_product_sample_2026-10-30.json",
+    "new_path": "data/feasibility/food_product_sample_2026-10-30.json",
+    "bytes": 268779,
+    "sha256": "435926ca4b7010647056545973f7dd2d8122bff127021ad51bbcbca77e984f3c"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_all_2025.json",
+    "new_path": "archive/data/screening/nyc_dcwp_all_2025.json",
+    "bytes": 6654003,
+    "sha256": "da9fc9e5e4b5d5f2c0449b76319ffb6bc5aeae4f8cb3604a02c5524b819eb823"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_categories_2025.json",
+    "new_path": "archive/data/screening/nyc_dcwp_categories_2025.json",
+    "bytes": 5928,
+    "sha256": "7b5e6588ea5ffb6d7120c42683a6d95386321ffb85a06b73c20065e8a4006521"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_count_2025.json",
+    "new_path": "archive/data/screening/nyc_dcwp_count_2025.json",
+    "bytes": 131,
+    "sha256": "6a579b07a82c21e1d39496b7f19d8898f6b2ba6e77867434acb78bcc3c529164"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_dictionary.xlsx",
+    "new_path": "archive/data/screening/nyc_dcwp_dictionary.xlsx",
+    "bytes": 92314,
+    "sha256": "4bc5d31e30393116a9ec27eb428cefd3125244868949b217167cea7ab16840d8"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_metadata.json",
+    "new_path": "archive/data/screening/nyc_dcwp_metadata.json",
+    "bytes": 63685,
+    "sha256": "ca73e32e7d61323c13aa800940a44248dd321a7b57e13eb25db299875211380b"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_results_2025.json",
+    "new_path": "archive/data/screening/nyc_dcwp_results_2025.json",
+    "bytes": 1677,
+    "sha256": "bc381b00d0b7e83cf7e71e732c247969077e4b796f94c89fcaaf79c0fa3a6c31"
+  },
+  {
+    "old_path": "archive/data/screening/nyc_dcwp_sample_2025.json",
+    "new_path": "archive/data/screening/nyc_dcwp_sample_2025.json",
+    "bytes": 267492,
+    "sha256": "b643a70f166d692b9100bd9807fc135e52a7aa1bc609349127829fdb605c54c0"
+  },
+  {
+    "old_path": "archive/data/screening/ofcom_downloads.json",
+    "new_path": "archive/data/screening/ofcom_downloads.json",
+    "bytes": 755,
+    "sha256": "f2f64327e3b908e6a06d23080ff0c405199552de46895fc538de8d3ed5fe2c10"
+  },
+  {
+    "old_path": "archive/data/screening/open_prices_2026-10-30.parquet",
+    "new_path": "data/raw/open_prices/open_prices_2026-10-30.parquet",
+    "bytes": 34628819,
+    "sha256": "32aa1ca9de2663d4b455fdc70421ead1c7d7a1d01a4b2b76bfffabbabab91725"
+  },
+  {
+    "old_path": "archive/data/screening/profile.json",
+    "new_path": "archive/data/screening/profile.json",
+    "bytes": 11350,
+    "sha256": "63fb1be447482a08643ac1b843e1f5aeab62761b531a6ca068db84d8793a03d4"
+  },
+  {
+    "old_path": "archive/data/screening/recent_download_manifest.json",
+    "new_path": "archive/data/screening/recent_download_manifest.json",
+    "bytes": 6812,
+    "sha256": "a884e921b5f2989338a7e69414f78421916e8f9ae45803123bc50f8ccb0cc6e4"
+  },
+  {
+    "old_path": "archive/data/screening/synerise_official_readme.md",
+    "new_path": "archive/data/screening/synerise_official_readme.md",
+    "bytes": 22882,
+    "sha256": "4fdae2f35be9dccdd384bad5d944d39d6890956b421afd4d4eff8e9ed2d260cb"
+  },
+  {
+    "old_path": "reference/Example - Nutrition.pdf",
+    "new_path": "course/examples/Example - Nutrition.pdf",
+    "bytes": 695239,
+    "sha256": "b7b256aedcaf3b38ee0febb38560b0cd5ffd478cd812ba67f948010b795aeaad"
+  },
+  {
+    "old_path": "reference/Example - Prestige Wine Butler.pdf",
+    "new_path": "course/examples/Example - Prestige Wine Butler.pdf",
+    "bytes": 4599030,
+    "sha256": "a338c5f4b625fae1acdbc9c1bc0cdbb372822e82a37529992a490a0be4a1a421"
+  },
+  {
+    "old_path": "reference/Example- Museums.pdf",
+    "new_path": "course/examples/Example- Museums.pdf",
+    "bytes": 3140089,
+    "sha256": "ad2e34990fa2b84e4230efa513c7c7b3c0b4623a4de175396b6f5cf02b8d5fa0"
+  }
+]

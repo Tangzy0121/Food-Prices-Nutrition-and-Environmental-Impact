@@ -1,0 +1,131 @@
+[
+  {
+    "file": "data\\screening\\nyc_dcwp_metadata.json",
+    "url": "https://data.cityofnewyork.us/api/views/nre2-6m2s.json",
+    "checked_at_utc": "2026-10-30T03:39:58.811022+00:00",
+    "cached": true,
+    "bytes": 63685,
+    "sha256": "ca73e32e7d61323c13aa800940a44248dd321a7b57e13eb25db299875211380b"
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_dictionary.xlsx",
+    "url": "https://data.cityofnewyork.us/api/views/nre2-6m2s/files/3cb64705-8716-4d01-ae3e-e1d7b6171050?download=true&filename=DCWP_Consumer_Complaints_Data_Dictionary.xlsx",
+    "checked_at_utc": "2026-10-30T03:39:58.811022+00:00",
+    "cached": true,
+    "bytes": 92314,
+    "sha256": "4bc5d31e30393116a9ec27eb428cefd3125244868949b217167cea7ab16840d8"
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_sample_2025.json",
+    "url": "https://data.cityofnewyork.us/resource/nre2-6m2s.json?%24where=intake_date+%3E%3D+%272025-01-01T00%3A00%3A00%27+AND+intake_date+%3C+%272026-01-01T00%3A00%3A00%27&%24select=record_id%2Cintake_date%2Cintake_channel%2Cbusiness_category%2Ccomplaint_code%2Cresult_date%2Cresult%2Crefund_amount%2Ccontract_cancelled_amount%2Cborough&%24order=intake_date+ASC%2Crecord_id+ASC&%24limit=1000",
+    "checked_at_utc": "2026-10-30T03:39:58.811022+00:00",
+    "cached": true,
+    "bytes": 267492,
+    "sha256": "b643a70f166d692b9100bd9807fc135e52a7aa1bc609349127829fdb605c54c0",
+    "returned_rows": 1000
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_count_2025.json",
+    "url": "https://data.cityofnewyork.us/resource/nre2-6m2s.json?%24where=intake_date+%3E%3D+%272025-01-01T00%3A00%3A00%27+AND+intake_date+%3C+%272026-01-01T00%3A00%3A00%27&%24select=count%28%2A%29+as+records%2Ccount%28distinct+record_id%29+as+unique_complaints%2Cmin%28intake_date%29+as+first_intake%2Cmax%28intake_date%29+as+last_intake",
+    "checked_at_utc": "2026-10-30T03:39:58.811022+00:00",
+    "cached": true,
+    "bytes": 131,
+    "sha256": "6a579b07a82c21e1d39496b7f19d8898f6b2ba6e77867434acb78bcc3c529164",
+    "returned_rows": 1
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_all_2025.json",
+    "url": "https://data.cityofnewyork.us/resource/nre2-6m2s.json?%24where=intake_date+%3E%3D+%272025-01-01T00%3A00%3A00%27+AND+intake_date+%3C+%272026-01-01T00%3A00%3A00%27&%24select=record_id%2Cintake_date%2Cintake_channel%2Cbusiness_category%2Ccomplaint_code%2Cresult_date%2Cresult%2Crefund_amount%2Ccontract_cancelled_amount%2Cborough&%24order=intake_date+ASC%2Crecord_id+ASC&%24limit=50000",
+    "checked_at_utc": "2026-10-30T03:39:58.812458+00:00",
+    "cached": true,
+    "bytes": 6654003,
+    "sha256": "da9fc9e5e4b5d5f2c0449b76319ffb6bc5aeae4f8cb3604a02c5524b819eb823",
+    "returned_rows": 24810
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_categories_2025.json",
+    "url": "https://data.cityofnewyork.us/resource/nre2-6m2s.json?%24where=intake_date+%3E%3D+%272025-01-01T00%3A00%3A00%27+AND+intake_date+%3C+%272026-01-01T00%3A00%3A00%27&%24select=business_category%2Ccount%28%2A%29+as+records&%24group=business_category&%24order=records+DESC&%24limit=200",
+    "checked_at_utc": "2026-10-30T03:39:58.813466+00:00",
+    "cached": true,
+    "bytes": 5928,
+    "sha256": "7b5e6588ea5ffb6d7120c42683a6d95386321ffb85a06b73c20065e8a4006521",
+    "returned_rows": 100
+  },
+  {
+    "file": "data\\screening\\nyc_dcwp_results_2025.json",
+    "url": "https://data.cityofnewyork.us/resource/nre2-6m2s.json?%24where=intake_date+%3E%3D+%272025-01-01T00%3A00%3A00%27+AND+intake_date+%3C+%272026-01-01T00%3A00%3A00%27&%24select=result%2Ccount%28%2A%29+as+records&%24group=result&%24order=records+DESC&%24limit=200",
+    "checked_at_utc": "2026-10-30T03:39:58.813466+00:00",
+    "cached": true,
+    "bytes": 1677,
+    "sha256": "bc381b00d0b7e83cf7e71e732c247969077e4b796f94c89fcaaf79c0fa3a6c31",
+    "returned_rows": 30
+  },
+  {
+    "file": "data\\screening\\cfpb_credit_card_2025_sample.json",
+    "url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?date_received_min=2025-01-01&date_received_max=2025-12-31&product=Credit+card&size=1000&no_aggs=true&sort=created_date_asc",
+    "checked_at_utc": "2026-10-30T03:39:58.814498+00:00",
+    "cached": true,
+    "bytes": 657679,
+    "sha256": "b241715037098ef45bc46ebb35e63a1a939b1eef7de1de9c4a08bcab61401448",
+    "matched_records": {
+      "value": 89978,
+      "relation": "eq"
+    },
+    "sample_rows": 1000,
+    "sample_products": [
+      "Credit card"
+    ],
+    "sample_date_min": "2025-01-01T00:05:25.000Z",
+    "sample_date_max": "2025-01-05T12:54:45.000Z"
+  },
+  {
+    "file": "data\\screening\\cfpb_reference.yaml",
+    "url": "https://raw.githubusercontent.com/cfpb/ccdb5-api/main/swagger-config.yaml",
+    "checked_at_utc": "2026-10-30T03:39:58.814498+00:00",
+    "cached": true,
+    "bytes": 19549,
+    "sha256": "a384563b5bf721a448085b2bb4c9e374469b982dedb68da3094cffe677a5bb99"
+  },
+  {
+    "file": "data\\screening\\cfpb_purchase_disputes_2025.json",
+    "url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/?date_received_min=2025-01-01&date_received_max=2025-12-31&product=Credit+card&issue=Problem+with+a+purchase+shown+on+your+statement&size=1000&no_aggs=true&sort=created_date_asc",
+    "checked_at_utc": "2026-10-30T03:39:58.815505+00:00",
+    "cached": true,
+    "bytes": 700034,
+    "sha256": "8ccdbd9b9477b38ab50f886871bcb9d8e23094c2284fe94efa469ea4c107885e",
+    "matched_records": {
+      "value": 19810,
+      "relation": "eq"
+    },
+    "sample_rows": 1000,
+    "sample_products": [
+      "Credit card"
+    ],
+    "sample_date_min": "2025-01-01T00:45:25.000Z",
+    "sample_date_max": "2025-01-23T04:33:54.000Z"
+  },
+  {
+    "file": "data\\screening\\airbnb_singapore_2026_listings.csv.gz",
+    "url": "https://data.insideairbnb.com/singapore/sg/singapore/2026-09-23/data/listings.csv.gz",
+    "checked_at_utc": "2026-10-30T03:39:58.841077+00:00",
+    "cached": true,
+    "bytes": 1274919,
+    "sha256": "96dcc23048a03631aec9bbeee2f1e39b3bef871fc614e7a573df2e7dd42cb037"
+  },
+  {
+    "file": "data\\screening\\airbnb_singapore_2026_reviews.csv.gz",
+    "url": "https://data.insideairbnb.com/singapore/sg/singapore/2026-09-23/data/reviews.csv.gz",
+    "checked_at_utc": "2026-10-30T03:39:58.841077+00:00",
+    "cached": true,
+    "bytes": 5239810,
+    "sha256": "a84abeddb76491520626678f979c64c8f8925c881413d0a4043dac457a689ea3"
+  },
+  {
+    "file": "data\\screening\\synerise_official_readme.md",
+    "url": "https://raw.githubusercontent.com/Synerise/recsys2025/main/README.md",
+    "checked_at_utc": "2026-10-30T03:39:58.843442+00:00",
+    "cached": true,
+    "bytes": 22882,
+    "sha256": "4fdae2f35be9dccdd384bad5d944d39d6890956b421afd4d4eff8e9ed2d260cb"
+  }
+]

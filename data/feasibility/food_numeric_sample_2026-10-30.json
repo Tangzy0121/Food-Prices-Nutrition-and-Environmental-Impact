@@ -1,0 +1,369 @@
+[
+  {
+    "code": "3770014911001",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "code": "3265950000013",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 545,
+      "sugars_100g": 0,
+      "fat_100g": 100,
+      "saturated-fat_100g": 56,
+      "proteins_100g": 0,
+      "fiber_100g": null,
+      "salt_100g": 0,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": null,
+      "agribalyse_food_code": null,
+      "name_en": null,
+      "version": null
+    },
+    "product_name": "Graisse de boeuf raffinée",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1773998080
+  },
+  {
+    "code": "4008284781505",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "code": "3483190093354",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 262,
+      "sugars_100g": 0.5,
+      "fat_100g": 20,
+      "saturated-fat_100g": 5.7,
+      "proteins_100g": 20,
+      "fiber_100g": 0,
+      "salt_100g": 1.4,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 5.68,
+      "agribalyse_food_code": "8040",
+      "name_en": "Rillettes, poultry",
+      "version": "3.2"
+    },
+    "product_name": "Rillette de poulet",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1773517483
+  },
+  {
+    "code": "3580283512508",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 41,
+      "sugars_100g": 9.7,
+      "fat_100g": 0.1,
+      "saturated-fat_100g": 0,
+      "proteins_100g": 0.1,
+      "fiber_100g": null,
+      "salt_100g": 0.03,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 0.566,
+      "agribalyse_food_code": "2074",
+      "name_en": "Apple juice, pure juice",
+      "version": "3.2"
+    },
+    "product_name": "Pur jus de pomme bio",
+    "nutrition_data_per": "100ml",
+    "last_modified_t": 1780633881
+  },
+  {
+    "code": "3019089042273",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 265,
+      "sugars_100g": 0.4,
+      "fat_100g": 21,
+      "saturated-fat_100g": 1.7,
+      "proteins_100g": 17,
+      "fiber_100g": 0.9,
+      "salt_100g": 0.9,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 3.55,
+      "agribalyse_food_code": "8082",
+      "name_en": "Rillettes, tuna",
+      "version": "3.2"
+    },
+    "product_name": "Rillettes de thon aux olives vertes",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1787418175
+  },
+  {
+    "code": "3760253220507",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 296,
+      "sugars_100g": 0.33,
+      "fat_100g": 21,
+      "saturated-fat_100g": 20,
+      "proteins_100g": 2.4,
+      "fiber_100g": null,
+      "salt_100g": 1.5,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": null,
+      "agribalyse_food_code": null,
+      "name_en": null,
+      "version": null
+    },
+    "product_name": "Le rapé végétal bio",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1774488607
+  },
+  {
+    "code": "5060191281508",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 47,
+      "sugars_100g": 11.1,
+      "fat_100g": 0,
+      "saturated-fat_100g": 0,
+      "proteins_100g": 0.1,
+      "fiber_100g": null,
+      "salt_100g": 0.03,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 1.53,
+      "agribalyse_food_code": "39526",
+      "name_en": "Ice lolly",
+      "version": "3.2"
+    },
+    "product_name": "Mr. Freeze Party",
+    "nutrition_data_per": "100ml",
+    "last_modified_t": 1784493812
+  },
+  {
+    "code": "3328400866000",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 251,
+      "sugars_100g": 35.5,
+      "fat_100g": 0.3,
+      "saturated-fat_100g": 0.1,
+      "proteins_100g": 1.7,
+      "fiber_100g": 6.3,
+      "salt_100g": 0.02,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 3.11,
+      "agribalyse_food_code": "13042",
+      "name_en": "Prune",
+      "version": "3.2"
+    },
+    "product_name": "Pruneaux d’Agen dénoyautés",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1780103927
+  },
+  {
+    "code": "8003340091303",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 623,
+      "sugars_100g": 42,
+      "fat_100g": 47,
+      "saturated-fat_100g": 34,
+      "proteins_100g": 5,
+      "fiber_100g": null,
+      "salt_100g": 0.17,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 1.41,
+      "agribalyse_food_code": "31003",
+      "name_en": "Candies, all types",
+      "version": "3.2"
+    },
+    "product_name": "Lindor Lait",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1773367374
+  },
+  {
+    "code": "3335880006239",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 42,
+      "sugars_100g": 2.3,
+      "fat_100g": 0.5,
+      "saturated-fat_100g": 0.1,
+      "proteins_100g": 2.1,
+      "fiber_100g": 2,
+      "salt_100g": 0.69,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 1.72,
+      "agribalyse_food_code": "25150",
+      "name_en": "Couscous with vegetables",
+      "version": "3.2"
+    },
+    "product_name": "Couscous aux 7 légumes",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1780000141
+  },
+  {
+    "code": "3229820803265",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 109,
+      "sugars_100g": 3,
+      "fat_100g": 0.5,
+      "saturated-fat_100g": 0.1,
+      "proteins_100g": 1.7,
+      "fiber_100g": 1.2,
+      "salt_100g": 1,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 1.49,
+      "agribalyse_food_code": "9085",
+      "name_en": "Asian noodles, flavoured, cooked",
+      "version": "3.2"
+    },
+    "product_name": "Nouilles de riz precuites saveur boeuf pour soupe pho",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1774512179
+  },
+  {
+    "code": "3498640101008",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "code": "3367305281648",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "code": "3580288087704",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 30,
+      "sugars_100g": 7.4,
+      "fat_100g": 0,
+      "saturated-fat_100g": 0,
+      "proteins_100g": 0,
+      "fiber_100g": null,
+      "salt_100g": null,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": null,
+      "agribalyse_food_code": null,
+      "name_en": null,
+      "version": null
+    },
+    "product_name": "Boisson gazeuse bio pamplemousse",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1774512192
+  },
+  {
+    "code": "3250390289289",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 476,
+      "sugars_100g": 41,
+      "fat_100g": 18,
+      "saturated-fat_100g": 5.3,
+      "proteins_100g": 7.4,
+      "fiber_100g": 2.2,
+      "salt_100g": 0.18,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": 3.64,
+      "agribalyse_food_code": "24615",
+      "name_en": "Biscuit (cookie), thin, w almonds",
+      "version": "3.2"
+    },
+    "product_name": "Tuiles aux amandes",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1780103203
+  },
+  {
+    "code": "8594155110230",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "code": "3250391162338",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3250392427160",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3154230810131",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "20466923",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "code": "3350033947030",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "code": "3250390207566",
+    "status": 1,
+    "nutrients": {
+      "energy-kcal_100g": 539.4,
+      "sugars_100g": 24,
+      "fat_100g": 36,
+      "saturated-fat_100g": 4.2,
+      "proteins_100g": 17,
+      "fiber_100g": 5.7,
+      "salt_100g": 0.01,
+      "carbon-footprint_100g": null
+    },
+    "agribalyse": {
+      "co2_total": null,
+      "agribalyse_food_code": null,
+      "name_en": null,
+      "version": null
+    },
+    "product_name": "Mélange graines & raisins",
+    "nutrition_data_per": "100g",
+    "last_modified_t": 1789522695
+  },
+  {
+    "code": "8720181206542",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "code": "3527860005084",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3600550817591",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3770008500228",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3596710219377",
+    "error": "HTTP Error 429: Too Many Requests"
+  },
+  {
+    "code": "3451515154738",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "code": "3166291748469",
+    "error": "HTTP Error 429: Too Many Requests"
+  }
+]

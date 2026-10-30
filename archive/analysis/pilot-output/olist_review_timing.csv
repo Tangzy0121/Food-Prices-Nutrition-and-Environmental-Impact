@@ -1,0 +1,5 @@
+late,timing,n,low_n,low_rate,median_answer_before_delivery,before_by_at_least_24h
+FALSE,At/after recorded delivery,89151,8238,0.09240502069522495,-2.0257407407407406,0
+FALSE,Before recorded delivery,292,45,0.1541095890410959,3.546111111111111,238
+TRUE,At/after recorded delivery,1905,370,0.1942257217847769,-1.5322800925925926,0
+TRUE,Before recorded delivery,4476,3609,0.8063002680965148,5.791614583333334,3945

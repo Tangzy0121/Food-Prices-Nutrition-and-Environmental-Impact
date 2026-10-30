@@ -1,0 +1,54 @@
+[
+  {
+    "file": "data\\pilot\\raw\\olist_orders_dataset.csv",
+    "url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_orders_dataset.csv",
+    "resolved_url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_orders_dataset.csv",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 17654914,
+    "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf",
+    "checked_at_utc": "2026-10-30T03:04:49.155375+00:00"
+  },
+  {
+    "file": "data\\pilot\\raw\\olist_order_reviews_dataset.csv",
+    "url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_order_reviews_dataset.csv",
+    "resolved_url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_order_reviews_dataset.csv",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 14346950,
+    "sha256": "81336b6e5183133b632a3d9ed899428e33430987fa540926a6daa8b4a2157598",
+    "checked_at_utc": "2026-10-30T03:04:45.345514+00:00"
+  },
+  {
+    "file": "data\\pilot\\raw\\olist_customers_dataset.csv",
+    "url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_customers_dataset.csv",
+    "resolved_url": "https://raw.githubusercontent.com/anggid/Brazilian-E-Commerce-Public-Dataset-by-Olist/master/olist_customers_dataset.csv",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 9033957,
+    "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2",
+    "checked_at_utc": "2026-10-30T03:04:45.845974+00:00"
+  },
+  {
+    "file": "data\\pilot\\raw\\hotels.csv",
+    "url": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv",
+    "resolved_url": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv",
+    "content_type": "text/plain; charset=utf-8",
+    "bytes": 16855599,
+    "sha256": "7c2ae42a7353905ea136e5c2287f17c92c5435826598bfbb8491c6f0c7b1fc06",
+    "checked_at_utc": "2026-10-30T03:04:48.782602+00:00"
+  },
+  {
+    "file": "data\\pilot\\raw\\bike_sep.zip",
+    "url": "https://s3.amazonaws.com/tripdata/JC-202409-citibike-tripdata.csv.zip",
+    "cached": true,
+    "bytes": 4140046,
+    "sha256": "9bdf20c1a16ae41b7c4a9f70554166b847703c112e2ddce63d80c6c37ea65ff3",
+    "checked_at_utc": "2026-10-30T03:04:45.358867+00:00"
+  },
+  {
+    "file": "data\\pilot\\raw\\bike_oct.zip",
+    "url": "https://s3.amazonaws.com/tripdata/JC-202410-citibike-tripdata.csv.zip",
+    "cached": true,
+    "bytes": 4028203,
+    "sha256": "ba2b2431e618047f4092a48931f914b8abe53c0d053f366f2a4e2e1850feb23c",
+    "checked_at_utc": "2026-10-30T03:04:45.368535+00:00"
+  }
+]

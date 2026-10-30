@@ -1,0 +1,14 @@
+[
+  {
+    "name": "ofcom_residential_2025.xlsx",
+    "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/data/statistics/2026/residential-postal-tracker/ofcom-residential-postal-tracker-q1-q4-2025-participant-level-data.xlsx?v=414884",
+    "checked_at_utc": "2026-10-30T03:28:01.686741+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "name": "ofcom_residential_2025_technical.pdf",
+    "url": "https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/data/statistics/2026/residential-postal-tracker/ofcom-residential-postal-tracker-q1-q4-2025-technical-appendix.pdf?v=414885",
+    "checked_at_utc": "2026-10-30T03:28:01.686741+00:00",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]
