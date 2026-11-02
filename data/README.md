@@ -1,20 +1,45 @@
-# 数据目录
+# 数据目录与冻结快照
 
-## 已有文件
+正式数据已获取并冻结为 `processed/frozen_v1/`。四类各 150 款，共 600 款入选商品；全部计划字段均已请求，598 款进入主要比较集，568 款具备价格与两种等级。第四步直接使用冻结快照。
 
-| 文件 | 用途与状态 |
+## 第四步读取
+
+```r
+products <- readRDS("data/processed/frozen_v1/analysis_products.rds")
+prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
+```
+
+| 冻结文件 | 用途 |
 | --- | --- |
-| [`raw/open_prices/open_prices_2026-10-30.parquet`](raw/open_prices/open_prices_2026-10-30.parquet) | Open Prices 原始快照；337,631 条记录，约 34.6 MB；未清洗 |
-| [`feasibility/food_product_sample_2026-10-30.json`](feasibility/food_product_sample_2026-10-30.json) | 200 条码的商品对象抽样，支持前期字段覆盖检查 |
-| [`feasibility/food_numeric_sample_2026-10-30.json`](feasibility/food_numeric_sample_2026-10-30.json) | 30 条码的具体数值接口抽查，包含成功与失败记录 |
-| `processed/` | 预留给 R 工作流生成的清洗数据，当前为空 |
+| `analysis_products.rds`／`.csv` | 598 款主要比较商品 |
+| `selected_products.rds`／`.csv` | 600 款完整入选记录，保留缺失、排除及方法版本 |
+| `price_observations.rds` | 1,541 条对应报价及单位价格核查状态 |
+| `prices_by_year.csv` | 按条码、年份的报价构成与代表价格 |
+| `selection.csv` | 类别、抽样顺序及候选资料 |
+| `source_requests.csv` | 600 个条码的完整请求终态 |
+| `category_coverage.csv`、`tables/` | 冻结时的指标覆盖与核查表 |
+| `data_dictionary.md`、`manifest.json` | 字段定义、来源与文件 SHA-256 |
 
-快照来源：[Open Prices](https://huggingface.co/datasets/openfoodfacts/open-prices)。价格快照 SHA-256：`32aa1ca9de2663d4b455fdc70421ead1c7d7a1d01a4b2b76bfffabbabab91725`。下载记录日期为 2026-10-30。
+`joint_grades_price` 标记 568 款三维等级比较商品，`carbon_primary` 标记 594 款主要比较集中具备 AGRIBALYSE 3.2 碳估算的商品。各营养数值视图按相应字段筛选，保留自己的分母。
 
-## 使用规则
+## 原始来源与工作表
 
-保留原始快照；新增快照采用不同日期文件名。抽样 JSON 是可行性记录，正式全量匹配及分析数据在 Step 3 建立。条码按字符读取，价格观察与商品表分开组织；保留来源、采集时间和匹配状态。
+| 路径 | 用途 |
+| --- | --- |
+| `raw/open_prices/open_prices_2026-10-30.parquet` | 337,631 条原始价格记录，约 34.6 MB，保持原文件 |
+| `raw/open_prices/open_prices_2026-10-30_manifest.json` | 固定版本、来源 URL 和 SHA-256 |
+| `raw/open_food_facts/formal_2026-11-02/catalog/` | 四类完整候选目录的分页响应 |
+| `raw/open_food_facts/formal_2026-11-02/products/` | 正式商品批量搜索、补取及获取过程响应，实际采用文件见 manifest |
+| `raw/open_food_facts/formal_2026-11-02/products_formal.rds` | 正式商品响应提取对象 |
+| `processed/price_observations.rds`、`product_universe.csv` | 83,141 条法国历史报价、44,789 个候选条码的底表 |
+| `processed/formal_category_candidates.csv`、`formal_selection.csv` | 类别目录筛选与 600 款正式抽样清单 |
+| `processed/products_formal.rds`、`.csv`、`prices_linked_formal.rds` | 冻结前正式工作表，EDA 使用 frozen_v1 |
+| `feasibility/`、`raw/open_food_facts/api_pilot_2026-11-02/`、`processed/*pilot*` | 早期可行性与试取过程材料 |
 
-Step 3 将补充完整数据字典、字段和单位核验、许可与署名记录、API 获取或批量下载方案，以及可复现的 R 导入脚本。历史 Python 脚本保存在 `archive/analysis/`，不作为当前执行入口。
+价格来源：[Open Prices 官方数据集](https://huggingface.co/datasets/openfoodfacts/open-prices)，revision `3d4e029340f3a5128f84913ab1ee5197399518c2`，SHA-256 `32aa1ca9de2663d4b455fdc70421ead1c7d7a1d01a4b2b76bfffabbabab91725`。
 
-详细抽样方法和已知问题见[数据可行性汇总](../docs/03_data/feasibility_summary.md)。旧候选题数据继续保存在 `archive/data/`。
+## 使用与复现
+
+在项目根目录运行 `Rscript --vanilla R/run_step3.R`。已有 frozen_v1 时只校验快照与来源文件、重建核查报告，不发起网络请求。冻结文件保持不变，未来数据刷新另建版本。
+
+条码按字符读取。原始响应保留来源、请求参数、HTTP 方法、UTC 时间和版本；不把重新访问在线接口视为同一历史快照。公开数据随项目保留来源、许可和署名，详情见 [正式数据说明](../docs/03_data/data_description.md)、[字典](../docs/03_data/data_dictionary.md)、[核查报告](../docs/03_data/data_quality_review.md)。

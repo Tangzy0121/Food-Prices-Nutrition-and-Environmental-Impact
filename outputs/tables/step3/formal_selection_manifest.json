@@ -1,0 +1,356 @@
+{
+  "started_at_utc": "2026-11-02T01:25:56Z",
+  "completed_at_utc": "2026-11-02T01:26:17Z",
+  "seed": 20261102,
+  "sampling": "stratified simple random sample of currently categorized, quantity-comparable barcodes with 2024-2025 FR/EUR regular quotes; no score-availability filter",
+  "selected": 600,
+  "selection_file": "data/processed/formal_selection.csv",
+  "selection_sha256": "fb4bf087116ec788a75abad90fafc1b05d690c2a26fbff79f418fd122be86517",
+  "category_config_sha256": "222c5735d37e140645690a51d94a88b3079e9b38061dda80c750c43ecd326a49",
+  "raw_responses": [
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_001.json",
+      "sha256": "6c729058c613a9c93e394fcfa99371b69516e207ee46a53c4b06320396f9b7ea"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_002.json",
+      "sha256": "c97c9eebe55cff64241ab3b54e8942bb55231a1822106e873d2526daf352922d"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_003.json",
+      "sha256": "ecbf299ec77ae7d46e6d65df2906b1f592835b96edef289143435a6d4a3549cb"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_004.json",
+      "sha256": "d7b2399dccf1441f25244e588c10e6627054114f3d7a4a206d5831b7aa36cec4"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_005.json",
+      "sha256": "0b19e1770179d18aae2ae4231349ba5a5cecaf275e49b50c8853973a773a421f"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_006.json",
+      "sha256": "766f151d9b12856dfc58b4456436263562ee8f6a4b9a44316ba06e01bb393413"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_007.json",
+      "sha256": "10254dcab18d8528c497946fc609bb70f746707db40500174a50921a5e1d216b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_008.json",
+      "sha256": "34716484b256c39042e19631952961b4cd457e03800587b52587d6c243517836"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_009.json",
+      "sha256": "45dfcf1e1567cf7248b56c12cd91493e5f16853fcaf02aee48cadff732205240"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_010.json",
+      "sha256": "0d269b640bfb18cd5fe7d20311fcf5f039680cfab5c1a61a16169fae34b42a0f"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_011.json",
+      "sha256": "fe73902087a78fe0ccebd659353da2c883a91dfddd3643fbe6c6274870c88c0b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_012.json",
+      "sha256": "14834072c94ad2c8258a852136c679d31de9b53de9fd14b0c15fd5c77651eeb3"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_013.json",
+      "sha256": "7d2c8b6af2cbbff705260be060987bf90254a9d6dcf6c6f7463ad56bc1d071ea"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_014.json",
+      "sha256": "859f4b2a471cedb9b1ecc154bef556dcb51ce65ca355f584a05f068ee9bb9bf2"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_015.json",
+      "sha256": "7a5372fb1e66ca3cf1e27a936dff7713ee9f05d96d034430aeb3a22047a7b570"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_016.json",
+      "sha256": "b86d4f7661f3e3b04a1632ad23ab939f9aeb1a9b5bf98e5a8b30b1fb2cab1b39"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_017.json",
+      "sha256": "a6531c81670fe67ab242d962101475007cb6bf2dbb33417ce99f3568f28c22ef"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_018.json",
+      "sha256": "ea4de1096cd79f85fc5a1b3d634db18efbd2f51257528f914ea17ef35b2cf3e2"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_019.json",
+      "sha256": "f75ec40a03ddfb87ffa42876596b563d5195c46bd21bb1ed6770005352e97de8"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_020.json",
+      "sha256": "18f811e5083d680c91e7e1ca129b9fde49826ceb061fcc66b90bdf6d125caa61"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_021.json",
+      "sha256": "a86d607842b9bec51cbf69612d4f0de18266d9f5cde44a75afef014f6f691b1f"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_022.json",
+      "sha256": "0bbfe509e40d7ef59b4ca6c2b93a87ed5abd34b9ec36ef7f263e677a3fba447a"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_023.json",
+      "sha256": "12e97d053d9aebf10ba485e21dd1b4d6a46c79aa168bf5d87b7e3feb1a53da8b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_024.json",
+      "sha256": "e1ca9c698d6ab6ea9578461a5f66e2456b9e42f3dee0afb67e8c52277151cc8d"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_025.json",
+      "sha256": "4b12f23ea904006ea4c14f5aed70ea08b242dff949074935a96ca528b0da2c40"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_026.json",
+      "sha256": "2ac4af8e1102773a28e948e180cc7c5100521294356e4d202ee781d1e4c35c53"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_027.json",
+      "sha256": "20e54353cc1738c1f8b4c7aebecbbe30e129263aec993b25c54d5b952f4f4056"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_028.json",
+      "sha256": "d80f75544a143583b12b9548066415150fb76d6270de897b33923fa26b134e20"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_029.json",
+      "sha256": "985c5bd44a84a07ee5145b2bf68ec634524cad1c0047dff3adcf0ef12fdd6579"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_030.json",
+      "sha256": "3f6ebbfdfc4583c72bb5301931df5f8d1d1adb6626924f14738437efe5aa4ec4"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_031.json",
+      "sha256": "7f93c5fc977b58e6504b22b13b52603f53b4de6f945f2ce86c31fc3073eb4e21"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_032.json",
+      "sha256": "a0b59fed0d6986500020cbd4454f719d6381f2bf9f022380c7bbf66406ef425a"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_033.json",
+      "sha256": "48b8a6c3a8a4357815e8a4c76cde39f7cc44c1d3fafa47a5f3311aaba65a7082"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_034.json",
+      "sha256": "8d04117799fb3e9e8e91dfde83e77ded7e97c9b040e20be05e29ad02e2d6404e"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_035.json",
+      "sha256": "e3c2209eaeb0bf1c91b897a59f53d775322a996aa98afef9920bb7c55dfae405"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_036.json",
+      "sha256": "c99acdb8af8dde142e8492e675a54acdb202e1cc5682122bda7a38f30f6f41b9"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_037.json",
+      "sha256": "88e68e189bb623eef7b9ef5e2130a01f7f192b4c872730ca657a067cfc860360"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_038.json",
+      "sha256": "745a115260ead98f5817ba3c2c295d3b631254d3bf6166c93cb735964044846b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/biscuits_039.json",
+      "sha256": "b08a9818077d86c555d2bfcdfe2e35f9332e75c55930c77896354f8714e0f47f"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_001.json",
+      "sha256": "e765ab6bb4dc73cb7c0ef0a32764f5dc402738cf931eee147e82b137e4023d5e"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_002.json",
+      "sha256": "f2d993fd557b0c86b7b73b0a72699f5c59bd02e3c5c841cc2aa4d6c7d74b4a97"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_003.json",
+      "sha256": "53636afa3095a9aff0cb1f02d5c69b644b75e9e55c1e3bf52e8334fefcc5dee6"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_004.json",
+      "sha256": "fb8022758aa2e8fe2049ca46aea316cb689c8d9181854a301d3d5868d2822d61"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_005.json",
+      "sha256": "65f009bc4fd80ad812cb6e41fe2498447c575d1368b26f33a8cc91b4ffe20ae7"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_006.json",
+      "sha256": "fe6b6d7226baec6237afaa6fe7fe60bbfd54a4198de0077f7e0436a1bb130fd0"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_007.json",
+      "sha256": "c7698c5a960f4774d39404924cbc0fa5a8084f3f27c2bb82b98f6f80bedd746d"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_008.json",
+      "sha256": "5d0cb5014e1d2e7edf9452b316714ca5ea046566d3445c29441688fa92031424"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_009.json",
+      "sha256": "b69a77191e9b0f128cba1f16157d9665778c0aa325bbf80952f3c72032735edf"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_010.json",
+      "sha256": "beb6eaef669cd0ff2cb5f9650e5c90b0e9223c46770efa6c1416e4f321659374"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_011.json",
+      "sha256": "d28f9957088883e3bf52c7431e2418c5e5cb441ac472f70d9e3866c37514a0ab"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_012.json",
+      "sha256": "b513fd9511f2353a412892dfa02774aa8c42185f9569396c3b2840758ba2e718"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_013.json",
+      "sha256": "bc17284f427b388d3767048853fd59178266b8d7e6de8006f07bbd119caeb3af"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_014.json",
+      "sha256": "f055f5c78934198aa3e4e991f388f2056e668d4bf2f4017395b7446dc1ba4336"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_015.json",
+      "sha256": "8d0b21dc3543302104d3b857abe8cc410454eb50324cdd1c50c5bb021ecb2543"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_016.json",
+      "sha256": "2b1d557dcdfb8397d23bda923ddca99568f6d587cc3842a77f7396090a2b4ea6"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_017.json",
+      "sha256": "b4a88bb19745ae61253501985caa26aec412ed286f0adc2062e84ca5e47cc2a2"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_018.json",
+      "sha256": "a00b30f5ec06b077dd44db4da216e7b5f27e3ed739f2a2833fcc78ae04fb16fb"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/breakfast_cereals_019.json",
+      "sha256": "213eeb2d68ce8d6308499d02f0d5eeeb17b38dc991cb1c2e3f2f0aeb5fcdd8c5"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_001.json",
+      "sha256": "b1133598c1a99f8a68c43ef95708255576d4c740b2f910a0e5d52821659651ca"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_002.json",
+      "sha256": "587a70cbc6ff21971bf290e0d4adaaffd78a53a311c32dd98c868f756772f0f8"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_003.json",
+      "sha256": "6cf1cdc962989a209a74e06735c7956f80e987086a85ddad242806bb4cdceb6b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_004.json",
+      "sha256": "007cc3db2f017cef245d5a7e8f91329d7fa4b7e0e0b845747ce612242bb7564b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_005.json",
+      "sha256": "db6cbeaf6412cd6a348a947510b85b9d0a5b439166fbe827b941243190d28b57"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_006.json",
+      "sha256": "cc9b82f45647d79c508ec585441e295aa2f5ef1a200eef648b5fd4b3d75884c0"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_007.json",
+      "sha256": "afee6a691d8357f1e7e6b8d0ae1b1da54b77f658fb4916a6d780a6514d68fc76"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_008.json",
+      "sha256": "9dda46d3d69d6468c6f3ac8ade3a72533b2cd8da01c4761961ac79394a9650da"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_009.json",
+      "sha256": "9fdc31c77f30d14ae0189501f99a3f6a6386440a5970019d95be856a66e5d133"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_010.json",
+      "sha256": "f0fe741495311a63c05dfd7818fadf2c41fb164e6e093485d7dd03d6c8b93c58"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/dark_chocolates_011.json",
+      "sha256": "e340dc73370cea3cf7337c1e3d52ed4ccd488d234eb5fecf60c6490058a0a483"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_001.json",
+      "sha256": "2dd92024c4b1b275db911fb5a050485ff113d08c1a2d00bd7f609a1bfa8a0c07"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_002.json",
+      "sha256": "af6f18a462d11c0756fa66e0187ae9c48b9b64145b00b5745d3db298a9c4d633"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_003.json",
+      "sha256": "37e4c6c142f89105f365b54c252db6800a5339bdd916393b4c403bd17d2c7206"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_004.json",
+      "sha256": "36fbfcf3bcb4567fa844ef0d3a7dd41d35a3afa386075cdf031e97d96bacf2ca"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_005.json",
+      "sha256": "7bfb4393097c0abda5b9e42edc1d206e11088f15030895037722b4be770d5d74"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_006.json",
+      "sha256": "3bb229f986f8f35c82332b77b16a3ef5e70cd4a60a1da7a624d5ff2720dd5c2b"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_007.json",
+      "sha256": "e409267ff9cfdd99ff964d1b125f8521ffd1f68b23d74feaad47d0d036ce0a85"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_008.json",
+      "sha256": "020807851c527c5d5703384a12c5b3b753d567f817502e83473d3564c0194155"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_009.json",
+      "sha256": "b8c65776d33acdd940775a27e0869f362bd1c636af00b0c409549d8aee7fd77c"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_010.json",
+      "sha256": "04f88c8995b5a49e72e0e626ce4e5ede205d76f3b3bbb4ea3ca54a86695b72ef"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_011.json",
+      "sha256": "0bae2f9d285296b4b71e1f619365c97f834de64f36f9f3daff428694843c9bf4"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_012.json",
+      "sha256": "35234f462325001f889f554d3af22374894078bcc68b1143f80025539b5a4c13"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_013.json",
+      "sha256": "ebd791da3ad82c86723f361b76da6ba161f4f06dca6f2434a0c5872ac5808799"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_014.json",
+      "sha256": "a1eb59e07cde860ab1f7053445fc9276ee573c97484dffeab88cae587e42c1d0"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_015.json",
+      "sha256": "09c08e3d619333e48db7fc755cc39c24e8b14e4e38bd5dc574d15e36f0903f0f"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_016.json",
+      "sha256": "39e7700e5d085d7d5a86342775771880f776704db76719bf2223b243537d3375"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/catalog/fruit_juices_017.json",
+      "sha256": "2fe300a928bd78af1fbafa729de90792f6baf4791131a2dfb32f145a6122849c"
+    }
+  ]
+}

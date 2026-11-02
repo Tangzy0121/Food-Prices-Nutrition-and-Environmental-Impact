@@ -1,0 +1,1 @@
+{"scope":"pilot","source":"official bulk Parquet","status":"stopped_at_deadline","reason":"No completed subset after bounded remote scan; primary acquisition uses cached Open Prices batch responses and a 50-code OFF numeric subset.","stdout_log":"C:/tmp/food_step3_pilot_retry.stdout.log","stderr_log":"C:/tmp/food_step3_pilot_retry.stderr.log"}

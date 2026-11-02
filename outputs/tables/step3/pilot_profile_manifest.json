@@ -1,0 +1,14 @@
+{
+  "scope": "pilot",
+  "run_date": "2026-11-02",
+  "requested": 500,
+  "matched": 400,
+  "usable_price": 328,
+  "nutri_grade": 297,
+  "environment_grade": 271,
+  "joint_price_grades": 199,
+  "carbon": 31,
+  "quantity_conflicts": 1,
+  "category_rule_version": "2026-11-02",
+  "raw_source": "data/raw/open_food_facts/products_api_pilot_2026-11-02.rds"
+}

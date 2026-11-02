@@ -1,0 +1,15 @@
+category,nutriscore_version_source,nutriscore_algorithm_version,agribalyse_version,schema_version,n_products
+biscuits,2023,2023,3.1.1,996,1
+biscuits,2023,2023,3.2,996,146
+biscuits,2023,2023,,996,1
+biscuits,2023,,3.2,996,2
+breakfast_cereals,2023,2023,3.2,996,146
+breakfast_cereals,2023,2023,3.2,1001,1
+breakfast_cereals,2023,,3.2,996,3
+dark_chocolates,2023,2023,3.2,996,147
+dark_chocolates,2023,,3.1.1,996,1
+dark_chocolates,2023,,3.2,996,2
+fruit_juices,2023,2023,3.2,996,143
+fruit_juices,2023,2023,3.2,1001,1
+fruit_juices,2023,2023,,996,1
+fruit_juices,2023,,3.2,996,5

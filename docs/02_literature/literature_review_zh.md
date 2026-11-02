@@ -109,3 +109,11 @@ Nakavachara, V., Thongtai, C., Chalidabhongse, T., & Pharino, C. (2025). *The gr
 - Open Food Facts. (n.d.). [Product-Nutrition schema](https://openfoodfacts.github.io/documentation/docs/Product-Opener/schemas/schemas/product_nutrition/). 查阅日期：2026-10-30。文档说明 `_100g` 为销售状态下每 100 g，液体为每 100 ml 的标准化值；冲调状态另有字段。
 - Open Food Facts. (n.d.). [API and product schema change log](https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/ref-api-and-product-schema-change-log/). 查阅日期：2026-10-30。2024-12-12 条目记录 Eco-Score 更名为 Green-Score，相关字段改为 `environmental_score_*`。现有抽样含 `ecoscore_*`，正式获取需根据实际 API／schema 版本映射并保留来源字段。
 - ADEME. (n.d.). [AGRIBALYSE: Data access](https://doc.agribalyse.fr/documentation-en/agribalyse-data/data-access). 查阅日期：2026-10-30。类别碳排放字段在采用前需与相应版本的官方方法、功能单位和类别代码核对。
+
+## Step 3 落实后的分析范围（2026-11-02）
+
+正式样本为饼干、早餐谷物、黑巧克力和果汁四类各 150 款，共 600 款，来自具有法国 2024—2025 年欧元常规报价和可换算规格的类别候选。所有入选商品均已请求计划字段。规格核查后，598 款进入主要比较集，568 款同时具备价格、营养等级和环境等级。
+
+主营养等级采用 Nutri-Score 2023；明确冲调状态的等级另存。碳估算主子样本使用 AGRIBALYSE 3.2，按标准食品参考项解释。代表价格采用合并相同报价组合后的常规单位报价中位数，保留分年、含折扣和保留重复观察的对照。研究问题沿用本综述的三项类别内比较，第四步读取已冻结数据开展 EDA。
+
+数据范围、版本、缺失与处理决定见 [正式数据说明](../03_data/data_description.md) 和 [数据核查报告](../03_data/data_quality_review.md)，固定数据位于 `data/processed/frozen_v1/`。

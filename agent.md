@@ -2,7 +2,7 @@
 
 - 项目：R for Data Science 课程期末项目，选题为“食品价格、营养与环境影响：同类食品比较”。
 - 研究方向：探索同类食品的单位价格与营养、环境表现之间的关系，使用 R 完成 EDA，并开发 Shiny 交互仪表板。
-- 初步数据路线：法国、EUR、2024—2025 年 Open Prices 价格记录，通过条码连接 Open Food Facts 商品信息；具体范围随文献和数据核查细化。
+- 正式数据路线：法国、EUR、2024—2025 年 Open Prices 价格，通过条码连接当前 Open Food Facts 商品资料；四类各 150 款，共 600 款，主要比较集 598 款，冻结数据位于 `data/processed/frozen_v1/`，Step 3 已完成。
 - 详细步骤、进度、交付物和里程碑统一维护在独立计划文件中；本文件保留项目概况、文件入口和工作约定。
 
 # 文件入口
@@ -17,6 +17,8 @@
 | 第二步文献综述（中文） | [docs/02_literature/literature_review_zh.md](docs/02_literature/literature_review_zh.md) |
 | 第二步文献综述（英文） | [docs/02_literature/literature_review_en.md](docs/02_literature/literature_review_en.md) |
 | 数据可行性汇总 | [docs/03_data/feasibility_summary.md](docs/03_data/feasibility_summary.md) |
+| 第三步数据说明与字典 | [数据说明](docs/03_data/data_description.md)；[数据字典](docs/03_data/data_dictionary.md) |
+| 第三步实际核查结果 | [docs/03_data/data_quality_review.md](docs/03_data/data_quality_review.md) |
 | 数据文件与使用说明 | [data/README.md](data/README.md) |
 | 历史材料与归档索引 | [archive/README.md](archive/README.md) |
 

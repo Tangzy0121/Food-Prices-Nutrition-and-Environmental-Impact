@@ -1,0 +1,3 @@
+code,category,product_name,quantity_text,quantity_source,quantity_unit_source,quantity_status,exclusion_reason,decision
+3017760805087,biscuits,Résille d'or,110 g X 2,110,g,conflict,quantity_conflict,excluded_from_primary_retained_in_selected_sample
+20022464,dark_chocolates,Extra Dark 74% Cocoa,g,,,missing_or_unsupported,quantity_missing_or_wrong_basis,excluded_from_primary_retained_in_selected_sample

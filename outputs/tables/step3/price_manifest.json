@@ -1,0 +1,14 @@
+{
+  "run_date": "2026-11-02",
+  "source_file": "data/raw/open_prices/open_prices_2026-10-30.parquet",
+  "sha256": "32aa1ca9de2663d4b455fdc70421ead1c7d7a1d01a4b2b76bfffabbabab91725",
+  "raw_rows": 337631,
+  "filtered_rows": 83141,
+  "products": 44789,
+  "pilot_size": 500,
+  "pilot_seed": 20261102,
+  "pilot_sampling": "R sample.int without replacement from sorted distinct barcodes",
+  "duplicate_ids": 0,
+  "potential_repeat_rows": 3890,
+  "r_version": "R version 4.6.0 (2026-04-24 ucrt)"
+}

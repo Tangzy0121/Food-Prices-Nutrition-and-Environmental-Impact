@@ -1,0 +1,49 @@
+{
+  "started_at_utc": "2026-11-02T01:26:18Z",
+  "completed_at_utc": "2026-11-02T01:26:18Z",
+  "selected": 600,
+  "requested": 600,
+  "matched": 600,
+  "all_planned_fields_requested": "code,product_name,brands,quantity,product_quantity,product_quantity_unit,categories_tags,nutriments,nutriscore,nutriscore_grade,nutriscore_score,nutriscore_version,ecoscore_data,ecoscore_grade,ecoscore_score,last_modified_t,schema_version,obsolete,nutrition_data_per",
+  "endpoint": "https://world.openfoodfacts.org/cgi/search.pl",
+  "http_method": "POST (read-only search action=process)",
+  "compatibility": "JSON search returns legacy schema and ecoscore_* fields; v3.2 confirmation requests also request environmental_score_*; source field retained",
+  "selection_sha256": "fb4bf087116ec788a75abad90fafc1b05d690c2a26fbff79f418fd122be86517",
+  "product_file": "data/raw/open_food_facts/formal_2026-11-02/products_formal.rds",
+  "product_sha256": "d04913631cc3599f2dfe2ce7fdb0243fd51d5043541165296b0b1e9c23f69b5e",
+  "raw_responses": [
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_001.json",
+      "sha256": "96c890f6752f01c98854cca769362750b43c1ebcf6043f7c7337d5dde14da11c"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_002.json",
+      "sha256": "b51a31ed38266c05c73dfcc3a21298f86414251d664c577ee6eb1c331ca7d0db"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_003.json",
+      "sha256": "59c432567db2ae5ec3ec42fc81a9d589420b39aa617071453af8f78995aae9e3"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json",
+      "sha256": "d54f7ee3afe1bd97ef0feb963a0a404944f24bbaae19d46901ae13bb9fd51f48"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_005.json",
+      "sha256": "b7c4eb636df73a705ae63a076c0451c93ab307296038dace483a382f41415650"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_006.json",
+      "sha256": "67d6907e4140ffdec8d1c12a5f02566a1e0c1c5e46701974a737a086fda76ac8"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/confirm_3596710446599.json",
+      "sha256": "9cc8211d142245dd175561bae2bd54c3ad12877447fcbbab5b4553cf961d8244"
+    },
+    {
+      "file": "data/raw/open_food_facts/formal_2026-11-02/products/confirm_3596710355075.json",
+      "sha256": "ba6c257b509b42c271f2291fa9a75f381c954420d252c8223957783d03ae0c96"
+    }
+  ],
+  "license": "ODbL-1.0; individual contents DbCL-1.0"
+}

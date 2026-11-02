@@ -1,0 +1,1 @@
+{"scope":"full","status":"stopped_before_completion","stopped_at":"2026-11-02T08:37:00+08:00","reason":"Bulk scan too slow for initial acquisition; switched to the preselected 500-code pilot. No completed full product dataset was produced.","stdout_log":"C:/tmp/food_step3_acquire.stdout.log","stderr_log":"C:/tmp/food_step3_acquire.stderr.log"}

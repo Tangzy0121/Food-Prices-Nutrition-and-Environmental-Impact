@@ -109,3 +109,11 @@ The following official documentation supports field interpretation and is additi
 - Open Food Facts. (n.d.). [Product-Nutrition schema](https://openfoodfacts.github.io/documentation/docs/Product-Opener/schemas/schemas/product_nutrition/). Accessed 2026-10-30. The documentation defines `_100g` as standardized as-sold values per 100 g, or per 100 ml for liquids; prepared-product values have separate fields.
 - Open Food Facts. (n.d.). [API and product schema change log](https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/ref-api-and-product-schema-change-log/). Accessed 2026-10-30. The 2024-12-12 entry records the rename from Eco-Score to Green-Score and the change to `environmental_score_*` fields. Existing samples contain `ecoscore_*`; acquisition will require mapping by actual API/schema version while retaining source fields.
 - ADEME. (n.d.). [AGRIBALYSE: Data access](https://doc.agribalyse.fr/documentation-en/agribalyse-data/data-access). Accessed 2026-10-30. Before using category carbon values, check the corresponding official version, method, functional unit and food-category code.
+
+## Analysis scope after Step 3 (2026-11-02)
+
+The formal stratified sample contains 150 products in each of four categories: biscuits, breakfast cereals, dark chocolates, and fruit juices (600 products in total). Candidates have French EUR regular-price observations in 2024–2025 and comparable pack quantities. All selected products have been queried for the planned fields. Quantity checks retain 598 products in the primary comparison set; 568 have valid representative prices and both grades.
+
+Primary nutritional grades use Nutri-Score 2023, with explicitly prepared-state grades stored separately. The primary carbon subset uses AGRIBALYSE 3.2 and is interpreted through its standard-food references. Representative prices are medians of regular unit-price offers after identical offer combinations are collapsed; annual, discounted-inclusive and repeat-inclusive summaries remain available. The three within-category research questions remain unchanged. Step 4 reads the frozen dataset for EDA.
+
+See the [formal data description](../03_data/data_description.md) and [quality report](../03_data/data_quality_review.md) for scope, methods, missingness and decisions. The fixed dataset is stored in `data/processed/frozen_v1/`.

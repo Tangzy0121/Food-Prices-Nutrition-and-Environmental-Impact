@@ -1,0 +1,306 @@
+{
+  "scope": "pilot",
+  "source": "Open Prices cached OFF subset; Open Food Facts API v3.2 numeric enrichment",
+  "revision": "live API responses cached individually; see request URLs and UTC timestamps",
+  "started_at_utc": "2026-11-02T00:52:03Z",
+  "completed_at_utc": "2026-11-02T00:52:05Z",
+  "requested": 500,
+  "matched": 400,
+  "numeric_requested": 50,
+  "numeric_success": 43,
+  "selection_hash": "77956efdf7aa60cce289f65bfa77a2d6dab5af453c0c0e660b65c3ea04aee024",
+  "file": "data/raw/open_food_facts/products_api_pilot_2026-11-02.rds",
+  "sha256": "8264a28c0fa6d83bbd7f0ab96283765102f5ee42bb8afe46fcb54b3484de4682",
+  "raw_response_folder": "data/raw/open_food_facts/api_pilot_2026-11-02",
+  "raw_responses": [
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_0201416049137.json",
+      "sha256": "b4be8f07f48e9a96d3189fa078af63c3a306bb8d26eb61e60713fe43e12898c8"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_0490000000139.json",
+      "sha256": "01d5f012f53e7b2c451ef87aacf5c3396a5ff53ad6e43c4a4d050dc5425aa570"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_0490000000665.json",
+      "sha256": "36f11a29349f7ac04cba594401fe858f5917e921531cf756ded427a2e06fcaf8"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3032230114247.json",
+      "sha256": "aa08e7af31fd6829d882dda70fafa55201c46d0448b2cf83a7eafe449357a5ec"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3033491967566.json",
+      "sha256": "8efc4f42085edf379d4cc9ceab5ada989eba5d1c381b3f263612e3a402fafe6d"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3036810217526.json",
+      "sha256": "7c3a87fbc01e9ddc6d3614dbaf2babb7b305127eb4f3376ac55696e6d13db70f"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3083681120356.json",
+      "sha256": "bab04bb6d2af9c01d3807c0970927ae813d90dd45bc9308728229f5773a5d0b3"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3119789829010.json",
+      "sha256": "bf948ff2aac5f70bf1b5224d931b1fc3cced96f86341fa2cfa4e22a90aaef450"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3162900031250.json",
+      "sha256": "1801561412e893507ba2f269fc959208a2cf083d93759c4de37877a0d5403b56"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3187670044064.json",
+      "sha256": "36e8803e277dd8da43a9002a73c6d8acb535458d622e88818a61f7e2ed9ea8bf"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3250390003731.json",
+      "sha256": "bf284c249ab6ff6da7469327156d08c36b980ad51941bcea046a9bf036310d54"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3250390107453.json",
+      "sha256": "5b78bf4cd0d5d532e7732110316f9984e19fb870f2c89fb744534c3ea39c75f7"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3250390337409.json",
+      "sha256": "d66619ed25253a46dc1d257c79203f16052c1b59b354153ccd718c12f2e7f344"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3250390751632.json",
+      "sha256": "c1055973147135f55b65e612a85b8029049ed3e9b259b72cbb232d34b5ca9b85"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3256220929707.json",
+      "sha256": "7359d22e5994ea1f762a18bffa417268bcebcd6b0067e9b93cec267443214298"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3256221135367.json",
+      "sha256": "472f509ad232614d53473f908cfd26dc1ee90d9a60b70414740a281f6ec101ce"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3256229878242.json",
+      "sha256": "eaa85ca9532b06157c44b7fb3116ec97ed4e5806b7c852591514c4f2b0dfb8d2"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3258561239934.json",
+      "sha256": "5585f5c97321c055d15b48913f28582f07525faae8d337a3d0d04c4abb91c2db"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3260260200030.json",
+      "sha256": "6f383758ebbfa0ad994cd1ed19133153fcec0ce1cc94e1c7cea2275bee569507"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3267031050610.json",
+      "sha256": "f299aa29ab4cf6012b5fbfb2714aa39f884d5d8c2bc31d89162802032007757b"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3276650044177.json",
+      "sha256": "bd75451c94928cc0422a0b18179f27cb7417abd100e3a507f4322fc23587a1a8"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3276650115976.json",
+      "sha256": "9b298e39cf4916ae192febe62d068ed9f33ac737b4645dda5b658abff7352883"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3276770008714.json",
+      "sha256": "1c385a3b4f82dc705a9f6e140395161095e6ab948ba80ddd763a2de27421f8e0"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3560070446384.json",
+      "sha256": "be88a9b2207bf4fcbd8ba32ad90901a0af21ece69106c11d946297cdd3aaed84"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3560071328931.json",
+      "sha256": "f2a6342253607f2dc43a3659ccf821c0d3721bbc55e0dcf33dbf94519ece3467"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3564700750322.json",
+      "sha256": "6602ff53871baa06fbafd1aa38a2f8ec0d5f695aadf4fc217d391b650b4423a6"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3564700891391.json",
+      "sha256": "0546459e9ceea2d6034011d266fbbff9dab41fba64614f6e04cd3763f63f4b87"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3564706563278.json",
+      "sha256": "77d63e99c6a9fbbbdc3750f0feb316a02cb478d05005067509786c2435e75743"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3564706683938.json",
+      "sha256": "331a6c191b6a759afc1679fb99fd4e6681c836beb662004c9cb85e4a1c969f73"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3596710472604.json",
+      "sha256": "9d04bee39860386e2a80df352b8fd4040e4e633cfcd09f87d67f0fb9db450b3f"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3596710537464.json",
+      "sha256": "c982b136edad3ecb861c1c3a5fda4c1dde5e5d8365b2eed54d0c7b8891ea4aa1"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3596710537648.json",
+      "sha256": "02cd8cb797eb60d42d2397c2bbda03177274b6aa5e78a3c137a3c3e35d7bbfa3"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3599740007297.json",
+      "sha256": "4cb6948fa68b90fd9f88c9b8b7e635ec264904f0a2408811c7ab7aa12f601b59"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3605580018048.json",
+      "sha256": "cbcac8d69f644e7f18489f752f987e45f9641d8991042feee0259512e9cd1076"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3616180433162.json",
+      "sha256": "8d5e35d2b4a747c3dbd6199cc5ad2c654a7d4e793447baff20e67150f85de1bd"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3700116101277.json",
+      "sha256": "d33d212cb51c9af9f27f9a8125e334de15538215833ac3d201921a3af1a7828c"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3760077530752.json",
+      "sha256": "175e0b2870e489e25fe439a2cc655bdf7105266aea4015bd89893291c6b740a7"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3760147070874.json",
+      "sha256": "1e16aa7844adaae12f55eb34711a76c209e345ce157e156ecc600906ba27bd9d"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_3760415340036.json",
+      "sha256": "dbd96dc9b49fa8866206b8a96a37135cf1cec274aa22161e940fa20e0d46c3d8"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_4002359018268.json",
+      "sha256": "96423388029e08e78e10d959dfa5a8ea8993459011c8da24d23dc3ee45e9d347"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_4005900465603.json",
+      "sha256": "fc35239ac6dfb065fb62764b23d7d80b365e016a33b9f239ea28a6606339d7d0"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_4006040004608.json",
+      "sha256": "383978d323307f061e4a439de88be28211c3cf99f30eb7b17e5436675dd10aac"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_4006381603140.json",
+      "sha256": "8f7e81695f5ca8f0060d9dfa69c3eb94ade4a7fe574f95618940585b0c06f29f"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_4020943136860.json",
+      "sha256": "76336c46d465bec775a0fb860d967e1a45ce22d7eb6c54a344ea0f1405189928"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_5060122039123.json",
+      "sha256": "a1782962e6efa3bcf108b65a014a5966e08d11a6a929c36ea16269ffedcba12d"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_5411188139348.json",
+      "sha256": "62b007bdb2282eb27d5570f9bc94c6134044cf061dec488d1d7eb63791826909"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_7622210588302.json",
+      "sha256": "2bb5755d360daebd6dbf33055b82a81e720952841891105318ed575e61affffd"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_8005510001525.json",
+      "sha256": "40edb31e3baf6b3ee440061877ef4097c1931f4bd81b039f7c8d148fa681a76d"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_8015197030046.json",
+      "sha256": "f15f87085094ff08aa91148c50d0c9ee0b6207ef16eb9c11d872c7c44540edd8"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/off_8034063241492.json",
+      "sha256": "176a87bf92d6edb993db2e70627ddb22f0459283315c2562ea9c798c783dbeba"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_01_page_01.json",
+      "sha256": "40466fff6833eaa53a633a5421fc1141f8bd94ed71b447eff10ea55d6d3a4eb3"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_01_page_02.json",
+      "sha256": "1e80aef145f243199a1927195b2588ac43cdc071123405ff2d0d89bddb8dbda5"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_02_page_01.json",
+      "sha256": "fdd6e0617ec69995eacade4f068b72d839c80e8be787b5f7e95ee1a59853e8a6"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_02_page_02.json",
+      "sha256": "9ccf0266e639f52c13202d7d2e5b034741c24afa0004e12694cdc07962c6dd03"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_03_page_01.json",
+      "sha256": "4bdc24b7b2d712c910d84cbfa06eaf2f59fe522dee1a00bbfbb2e287b07717cf"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_03_page_02.json",
+      "sha256": "4070e8e9413553d6119278b645c8fba05edf0307df9af842f4093f81375175cb"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_03_page_03.json",
+      "sha256": "dc254f2d78184fe6832bb43d5958deb5a51e9e63e0a88dbef3a0369b73e9b189"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_04_page_01.json",
+      "sha256": "287e91400a96bc654e2187fd826d4a2d908a0ff0dc3e2a83091f2b6cc25bd635"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_04_page_02.json",
+      "sha256": "673a84486b0ed8e2fa7e61cc14cd6cf4914bdd65dd6f855150874aa026dae072"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_05_page_01.json",
+      "sha256": "13b9264100ef911bc58f62b020d57d99edb68645fa3c174e512e90ebbe2a7a5b"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_05_page_02.json",
+      "sha256": "bf3331b243403c6856209d11a2bf45559b4163674af446f2c77ce5b843b379ba"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_06_page_01.json",
+      "sha256": "a8baefaeb5d249799406d8c1da7f3ace748fb9c078bd23e9034b575c72c3e1e1"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_06_page_02.json",
+      "sha256": "856953c63b5323c3543a24071b8295bc4b6ca3c65c459c5a5e90b086d2de5d5b"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_07_page_01.json",
+      "sha256": "71b161817d723294c82d0168b95a55673db6d61b15728c231bdda421a8969212"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_07_page_02.json",
+      "sha256": "b641192ee27215382d109690e5258b62a57a8ec1d0c21b614b9b70cc16767284"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_08_page_01.json",
+      "sha256": "62ef90d3b9f8c1089b743aaa762aac2dc9debe8ef726beb1e9a39d77b941b5fd"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_08_page_02.json",
+      "sha256": "e7fc27bbf5eeca46434aaca611365a903040a87f4652592afdba545458409d80"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_09_page_01.json",
+      "sha256": "94c2d9e220008b80a6f792b87cdebbf1f201e2d5f7be7edea3cb7248b2f16c64"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_09_page_02.json",
+      "sha256": "46217024e26d5482ad627822fb470b714072f0943d441a9e725488f453f354a1"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_09_page_03.json",
+      "sha256": "11d389d229471c7d501668658628cf25f2834e08be1a8830b149989c6f2dd2c5"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_10_page_01.json",
+      "sha256": "9b800133ad604a3b5dcfd930888e9a8c769f97733c2c8857db3bef1f2e43a244"
+    },
+    {
+      "file": "data/raw/open_food_facts/api_pilot_2026-11-02/op_batch_10_page_02.json",
+      "sha256": "44ea78d22b9fee858e68a491c80fbc12e64c08621f211b9eb6556c5e8604cb45"
+    }
+  ],
+  "license": "ODbL-1.0; individual contents DbCL-1.0"
+}

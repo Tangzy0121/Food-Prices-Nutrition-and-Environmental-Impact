@@ -1,0 +1,88 @@
+category,agribalyse_version,agribalyse_food_code,agribalyse_proxy_food_code,agribalyse_name,co2_total,n_products
+biscuits,3.2,23200,,Gingerbread,2.5,1
+biscuits,3.2,23851,23851,"Soft waffle (Brussels-style), plain or with sugar, prepacked",2.44,1
+biscuits,3.2,23853,,"Wafer biscuit, crunchy (thin or dry), plain or with sugar, prepacked",2.21,3
+biscuits,3.2,23930,,"Fruit shortbread cake, prepacked",3.34,1
+biscuits,3.2,24000,24000,Biscuit (cookie),3.59,17
+biscuits,3.2,24000,,Biscuit (cookie),3.59,2
+biscuits,3.2,24009,,Speculoos biscuit,3.82,3
+biscuits,3.2,24011,,"Biscuit (cookie), assortment of miniature sweets and biscuits",4.01,2
+biscuits,3.2,24015,,Butter biscuit (cookie),2.47,4
+biscuits,3.2,24016,,"Biscuit (cookie), covering with a chocolate bar",7.79,6
+biscuits,3.2,24034,,Breakfast biscuit (cookie),3.59,1
+biscuits,3.2,24038,,"Biscuit (cookie), chocolate covering",7.79,7
+biscuits,3.2,24041,,"Breakfast biscuit (cookie) with cereals, fortified with vitamins and chemical elements",3.59,2
+biscuits,3.2,24049,,"Biscuit shortbread, with butter",3.38,3
+biscuits,3.2,24051,,"Biscuit sponge cake, with chocolate, pre-packed",6.54,1
+biscuits,3.2,24052,,"Biscuit (small tart), with chocolate, pre-packed",6.06,2
+biscuits,3.2,24054,,"Biscuit shortbread, with fruits",2.44,1
+biscuits,3.2,24071,,Shortbread pastry biscuit,3.19,20
+biscuits,3.2,24080,,"Shortbread cookie with cocoa or chocolate, or praline or other",6.06,1
+biscuits,3.2,24225,,"Biscuit (cookie), snack with dairy or vanilla filling",6.67,3
+biscuits,3.2,24320,,"Wafer biscuit, with fruits",2.92,2
+biscuits,3.2,24371,,"Wafer cookie, with chocolate, prepacked",10.3,1
+biscuits,3.2,24615,,"Biscuit (cookie), thin, w almonds",3.64,1
+biscuits,3.2,24631,,"Madeleine biscuit, with chocolate, prepacked",7.6,1
+biscuits,3.2,24659,,Biscuit puff pastry,3.59,3
+biscuits,3.2,24678,,"Biscuit sponge cake with fruits covering, pre-packed",2.92,1
+biscuits,3.2,24679,,"Biscuit (small tart), with fruit covering",2.44,4
+biscuits,3.2,24684,,"Biscuit (cookie), with chocolate drops",6.27,6
+biscuits,3.2,24686,,Dried sponge cake filled with fruits and covered with chocolate,2.47,6
+biscuits,3.2,31113,,Cereal bar w fruit,3.26,1
+biscuits,3.2,38402,38402,"Salty snacks, crackers, plain",1.54,1
+biscuits,3.2,7741,,Brioche,2.95,1
+biscuits,3.2,,24000,Biscuit (cookie),3.59,13
+biscuits,3.2,,24036,"Biscuit (cookie), with chocolate, prepacked",6.67,22
+biscuits,3.2,,31001,Coated chocolate bar without biscuit,6.18,1
+biscuits,3.2,,31085,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,1
+biscuits,3.2,,38402,"Salty snacks, crackers, plain",1.54,1
+breakfast_cereals,3.2,32001,,"Breakfast cereals, with chocolate, not filled, fortified with vitamins and chemical elements",3.4,5
+breakfast_cereals,3.2,32013,,"Breakfast cereals, with chocolate, not filled (not fortified with vitamins and chemical elements)",3.4,3
+breakfast_cereals,3.2,32017,,"Breakfast cereals, filled with chocolate or chocolate-hazelnuts",3.4,5
+breakfast_cereals,3.2,32018,,"Breakfast cereals, filled with a filling other than chocolate, fortified with vitamins and chemical elements",3.4,2
+breakfast_cereals,3.2,32111,32111,"Muesli, crunchy, with fruits or dried fruits, fortified with vitamins and chemical elements",2.55,12
+breakfast_cereals,3.2,32112,32112,"Muesli, crunchy, with chocolate, with or without fruits, fortified with vitamins and chemical elements",2.55,8
+breakfast_cereals,3.2,32113,,"Muesli, flakes (Bircher-style), with fruits or dried fruits, without sugar",2.55,2
+breakfast_cereals,3.2,32128,32128,"Muesli, flakes (Bircher-style)",2.55,4
+breakfast_cereals,3.2,32128,,"Muesli, flakes (Bircher-style)",2.55,3
+breakfast_cereals,3.2,9311,,Oatmeal flakes,1.22,5
+breakfast_cereals,3.2,9340_1,,"Quinoa, raw",5.85,1
+breakfast_cereals,3.2,,32000,"Breakfast cereals, popped or puffed wheat grain, with honey or caramel, fortified with vitamins and chemical elements",3.4,1
+breakfast_cereals,3.2,,32111,"Muesli, crunchy, with fruits or dried fruits, fortified with vitamins and chemical elements",2.55,13
+breakfast_cereals,3.2,,32112,"Muesli, crunchy, with chocolate, with or without fruits, fortified with vitamins and chemical elements",2.55,7
+breakfast_cereals,3.2,,32128,"Muesli, flakes (Bircher-style)",2.55,15
+breakfast_cereals,3.2,,32135,"Breakfast cereals, mix of puffed or extruded cereals, fortified with vitamins and chemical elements",3.4,64
+dark_chocolates,3.2,31004,31004,Milk chocolate bar,12.6,1
+dark_chocolates,3.2,31005,31005,"Dark chocolate bar, less than 70% cocoa",19.1,63
+dark_chocolates,3.2,31030,31030,"Dark chocolate bar, without sugar and with artificial sweeteners",19.1,1
+dark_chocolates,3.2,31069,,"Dark chocolate bar, with fruits (orange, raspberries, pear)",5.32,8
+dark_chocolates,3.2,31070,31070,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)",13.2,7
+dark_chocolates,3.2,31072,,"Dark chocolate, filled with mint confectionery",19.3,1
+dark_chocolates,3.2,31074,,"Dark chocolate bar, more than 70% cocoa",19.1,17
+dark_chocolates,3.2,31080,,"Dark chocolate bar, filled with praline",19.1,1
+dark_chocolates,3.2,31085,31085,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,16
+dark_chocolates,3.2,31085,,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,2
+dark_chocolates,3.2,,31005,"Dark chocolate bar, less than 70% cocoa",19.1,22
+dark_chocolates,3.2,,31070,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)",13.2,9
+fruit_juices,3.2,18017,,"Syrup, with sugar (to be diluted)",0.833,1
+fruit_juices,3.2,18900,,"Soy drink, plain, prepacked",0.427,2
+fruit_juices,3.2,2000,,"Pineapple juice, reconstituted from a concentrate",0.933,3
+fruit_juices,3.2,2002,2002,"Mixed fruits juice, pure juice, multivitamin",0.882,4
+fruit_juices,3.2,2011,2011,"Mixed fruits juice, orange based, multivitamin",0.797,4
+fruit_juices,3.2,2012,,"Orange juice, reconstituted from a concentrate",0.906,3
+fruit_juices,3.2,2016,,"Grape juice, pure juice",0.579,2
+fruit_juices,3.2,2028,,"Lemon juice, pure juice",0.837,1
+fruit_juices,3.2,2035,2035,"Mixed fruits juice, pure juice",0.882,31
+fruit_juices,3.2,2035,,"Mixed fruits juice, pure juice",0.882,10
+fruit_juices,3.2,2073,,"Pineapple juice, pure juice",1.25,3
+fruit_juices,3.2,2074,2074,"Apple juice, pure juice",0.566,20
+fruit_juices,3.2,2074,,"Apple juice, pure juice",0.566,8
+fruit_juices,3.2,2371,,Peach nectar,0.579,1
+fruit_juices,3.2,2500,,Smoothie,0.738,2
+fruit_juices,3.2,5006,5006,"Cider, dry",1.33,1
+fruit_juices,3.2,5007,,"Cider, sweet",1.33,1
+fruit_juices,3.2,,2002,"Mixed fruits juice, pure juice, multivitamin",0.882,6
+fruit_juices,3.2,,2011,"Mixed fruits juice, orange based, multivitamin",0.797,18
+fruit_juices,3.2,,2035,"Mixed fruits juice, pure juice",0.882,23
+fruit_juices,3.2,,2061,Mixed fruits nectar,0.888,1
+fruit_juices,3.2,,2074,"Apple juice, pure juice",0.566,4

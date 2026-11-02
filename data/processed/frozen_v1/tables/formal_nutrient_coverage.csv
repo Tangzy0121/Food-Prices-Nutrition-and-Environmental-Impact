@@ -1,0 +1,8 @@
+nutrient,n_requested,n_returned_value,n_valid,n_invalid
+energy_kcal,600,591,591,0
+sugars,600,592,592,0
+fat,600,590,590,0
+saturated_fat,600,591,591,0
+proteins,600,590,590,0
+fiber,600,523,523,0
+salt,600,587,587,0

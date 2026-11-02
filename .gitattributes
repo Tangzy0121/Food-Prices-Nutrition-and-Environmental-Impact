@@ -1,0 +1,10 @@
+# Reproducible scripts/configuration keep their recorded LF byte representation.
+R/** text eol=lf
+config/** text eol=lf
+
+# Frozen snapshots and provenance are verified byte-for-byte with SHA-256.
+# Raw/generated output whitespace is part of the saved source representation.
+data/processed/** -text -whitespace
+data/raw/open_food_facts/** -text -whitespace
+data/raw/open_prices/*.json -text -whitespace
+outputs/tables/step3/** -text -whitespace

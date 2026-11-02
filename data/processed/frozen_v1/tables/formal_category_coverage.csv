@@ -1,0 +1,5 @@
+category,target_unit,n_selected,n_matched,n_primary,n_nutri_2023,n_environment,n_joint,n_sugars,n_salt,n_fiber,n_carbon,n_carbon_3_2,nutri_grades,environment_grades,carbon_values_3_2
+biscuits,kg,150,150,149,147,146,144,147,147,134,148,147,5,6,24
+breakfast_cereals,kg,150,150,150,147,150,147,148,147,148,150,150,5,5,4
+dark_chocolates,kg,150,150,149,146,136,133,148,146,123,149,148,2,5,6
+fruit_juices,L,150,150,150,145,148,144,147,145,116,149,149,4,6,13

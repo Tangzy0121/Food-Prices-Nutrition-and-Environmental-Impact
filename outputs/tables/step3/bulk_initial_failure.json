@@ -1,0 +1,8 @@
+{
+  "scope": "pilot",
+  "source_url": "https://huggingface.co/datasets/openfoodfacts/product-database/resolve/f9ed2be201b9da02328fe23a96eeb7530049a698/food.parquet",
+  "started_at_utc": "2026-11-02T00:37:29Z",
+  "failed_at_utc": "2026-11-02T00:37:36Z",
+  "status": "failed",
+  "error": "Failed to perform HTTP request.\nCaused by error in `curl::curl_fetch_memory()`:\n! SSL connect error [huggingface.co]:\nschannel: failed to receive handshake, SSL/TLS connection failed"
+}

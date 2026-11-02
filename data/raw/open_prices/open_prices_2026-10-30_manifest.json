@@ -1,0 +1,12 @@
+{
+  "source": "Open Prices / Open Food Facts contributors",
+  "revision": "3d4e029340f3a5128f84913ab1ee5197399518c2",
+  "source_url": "https://huggingface.co/datasets/openfoodfacts/open-prices/resolve/3d4e029340f3a5128f84913ab1ee5197399518c2/prices.parquet",
+  "file": "data/raw/open_prices/open_prices_2026-10-30.parquet",
+  "original_local_snapshot_date": "2026-10-30",
+  "verified_at_utc": "2026-11-02T01:25:50Z",
+  "sha256": "32aa1ca9de2663d4b455fdc70421ead1c7d7a1d01a4b2b76bfffabbabab91725",
+  "bytes": 34628819,
+  "method": "existing local snapshot, verified against pinned upstream SHA-256",
+  "license": "ODbL-1.0"
+}

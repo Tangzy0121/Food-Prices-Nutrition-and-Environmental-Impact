@@ -1,0 +1,3 @@
+Validated scope: pilot
+Validated at UTC: 2026-11-02T00:57:24Z
+PASS: worked unit/pack examples; unique keys; join cardinality; price validity; subset flags; independent median checks; raw cache SHA-256.

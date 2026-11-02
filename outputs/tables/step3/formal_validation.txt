@@ -1,0 +1,2 @@
+Frozen at UTC: 2026-11-02T01:32:17Z
+PASS: complete request coverage; unique keys; joins; balanced selection; physical units; all representative medians; score/method versions; source and snapshot hashes.

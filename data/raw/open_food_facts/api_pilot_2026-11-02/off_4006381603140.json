@@ -1,0 +1,36 @@
+{
+  "url": "https://world.openfoodfacts.org/api/v3.2/product/4006381603140.json",
+  "query": {
+    "fields": "code,nutriments,nutrition_data_per,no_nutrition_data,environmental_score_data,environmental_score_grade,environmental_score_score,last_modified_t,last_updated_t,schema_version,obsolete,data_quality_errors_tags,data_quality_warnings_tags"
+  },
+  "fetched_at_utc": "2026-11-02T00:47:48Z",
+  "http_status": 404,
+  "body": {
+    "code": "4006381603140",
+    "errors": [
+      {
+        "field": {
+          "id": "code",
+          "value": "4006381603140"
+        },
+        "impact": {
+          "id": "failure",
+          "lc_name": "Failure",
+          "name": "Failure"
+        },
+        "message": {
+          "id": "product_not_found",
+          "lc_name": "",
+          "name": ""
+        }
+      }
+    ],
+    "result": {
+      "id": "product_not_found",
+      "lc_name": "Product not found",
+      "name": "Product not found"
+    },
+    "status": "failure",
+    "warnings": []
+  }
+}

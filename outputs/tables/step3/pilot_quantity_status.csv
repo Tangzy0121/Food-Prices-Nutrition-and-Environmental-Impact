@@ -1,0 +1,10 @@
+quantity_status,unit_basis,n_products
+confirmed,L,43
+confirmed,kg,233
+conflict,kg,1
+missing_or_unsupported,,63
+multipack_unresolved,kg,4
+multipack_unresolved,,1
+structured_only,L,9
+structured_only,kg,46
+,,100
