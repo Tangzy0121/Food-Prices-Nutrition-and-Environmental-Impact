@@ -14,6 +14,8 @@
 | 课程要求原件 | [course/R Final Project Requirements.pdf](course/R%20Final%20Project%20Requirements.pdf) |
 | 正式选题说明 | [docs/01_topic/industry_selection.md](docs/01_topic/industry_selection.md) |
 | 文献综述工作目录 | [docs/02_literature/](docs/02_literature/) |
+| 第二步文献综述（中文） | [docs/02_literature/literature_review_zh.md](docs/02_literature/literature_review_zh.md) |
+| 第二步文献综述（英文） | [docs/02_literature/literature_review_en.md](docs/02_literature/literature_review_en.md) |
 | 数据可行性汇总 | [docs/03_data/feasibility_summary.md](docs/03_data/feasibility_summary.md) |
 | 数据文件与使用说明 | [data/README.md](data/README.md) |
 | 历史材料与归档索引 | [archive/README.md](archive/README.md) |

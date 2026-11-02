@@ -2,12 +2,13 @@
 
 R for Data Science 课程期末项目。研究同类食品中价格与营养、环境表现的关系，并用 R 完成探索性分析，开发 Shiny 交互仪表板。
 
-当前阶段：**Step 1 选题文档已整理；小组信息与教师审批状态待补充。** 研究方向已确定，分析范围和指标将在文献综述与正式数据核查中细化。
+当前阶段：**Step 2 中英文文献综述初稿已完成，包含八篇研究、综述矩阵和更新后的研究问题。** 下一步准备正式数据获取与核查；小组信息与教师审批状态待补充。
 
 ## 从这里开始
 
-- [正式选题说明（Markdown）](docs/01_topic/industry_selection.md) · [一页 PDF](docs/01_topic/industry_selection.pdf)
+- [正式选题说明（中文 Markdown）](docs/01_topic/industry_selection.md) · [英文版（Markdown）](docs/01_topic/industry_selection_en.md) · [中文一页 PDF](docs/01_topic/industry_selection.pdf)
 - [按课程要求推进的项目计划](docs/project_plan.md)
+- [文献综述（中文 Markdown）](docs/02_literature/literature_review_zh.md) · [英文版（Markdown）](docs/02_literature/literature_review_en.md)
 - [数据可行性与现有材料](docs/03_data/feasibility_summary.md)
 - [数据文件说明](data/README.md)
 - [历史材料与归档索引](archive/README.md)
@@ -23,7 +24,7 @@ R-final-project/
 ├── docs/
 │   ├── project_plan.md       八个步骤、交付物和里程碑
 │   ├── 01_topic/             正式选题说明及一页 PDF
-│   ├── 02_literature/        文献矩阵、综述与参考文献（后续）
+│   ├── 02_literature/        中英文综述、文献矩阵与参考文献
 │   ├── 03_data/              可行性记录、数据说明与字典
 │   └── 05_dashboard/         框架、线框图与设计说明（后续）
 ├── data/
