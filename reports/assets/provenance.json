@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "mode": "built-in image_gen",
+  "model": "The built-in interface does not expose a selectable model version; no specific image2.6 model identifier was supplied.",
+  "purpose": "Editorial illustrations for cover and industry background, not sampled products or empirical evidence.",
+  "assets": [
+    {
+      "file": "food-choices-cover.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: portrait cover photograph for an English business analytics report titled Food choices: value within reach (the text will be typeset separately; render NO TEXT). Create a premium editorial still-life photograph about comparing everyday packaged food value, nutrition and environmental performance in France. Portrait A4 composition: upper 40 percent is uninterrupted warm ivory negative space for the report title. Across lower 60 percent, carefully composed breakfast cereal in a clear bowl beside a simple unbranded kraft cereal box, a few plain biscuits in a paper sleeve, dark chocolate pieces with plain paper wrapping, and a glass bottle of orange juice. Natural linen and pale limestone surface, subtle deep forest-green cloth, restrained muted orange and oat tones. Soft directional daylight, tactile realistic materials, sophisticated business magazine art direction, calm balanced composition, generous breathing room. No people, logos, writing, labels, graphs, data, watermark or decorative fake statistics. This is a contextual illustration, not evidence of specific sampled products."
+    },
+    {
+      "file": "shopping-decision.png",
+      "prompt": "Use case: photorealistic-natural. Asset type: wide contextual photograph for the industry background page of an English business analytics report. Editorial photograph of a shopper's hands comparing two simple unbranded cereal packages above a small grocery basket in a modern French supermarket. Basket contains a plain packet of biscuits, dark chocolate in simple kraft wrapping and a glass orange juice bottle. Focus on the moment of choosing between similar everyday products. Warm natural supermarket lighting, forest green and muted oat tones, premium restrained business-magazine photography, shallow depth of field, shelves softly blurred in background, realistic adult hands and realistic packaging geometry. Landscape 16:9 composition, no face, no logos, no readable writing or price tags, no invented data labels, no watermark. Image illustrates the shopping decision, not actual sampled products or measured results."
+    }
+  ]
+}
