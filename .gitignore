@@ -48,3 +48,5 @@ outputs/step4/run.log
 outputs/step4/html_qa.json
 outputs/step4/delivery_check.json
 output/*.zip
+output/food-value-report.pdf
+output/shiny-preview.png
