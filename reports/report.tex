@@ -5,6 +5,14 @@
 \usepackage{tabularx}
 \geometry{margin=22mm,bottom=25mm}
 \setlength{\emergencystretch}{2em}
+\raggedbottom
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.12}
+\renewcommand{\floatpagefraction}{.75}
 \definecolor{taucolor}{HTML}{245D4B}
 \hypersetup{pdftitle={Food choices: value within reach},pdfauthor={Food Prices, Nutrition and Environmental Impact project}}
 \doctype{Business analytics report}
@@ -53,9 +61,22 @@ The primary user is a consumer comparing similar packaged foods. The immediate b
 
 \textbf{Value to validate.} Historical price gaps identify comparison opportunities. Revenue uplift, realised household savings, conversion and willingness to use the tool require user testing and current transaction evidence. The proposed pilot measures task completion, time to a suitable shortlist, understanding of units, and checking of offer dates.
 
-\clearpage
+\subsection{What the displayed numbers mean}
+The application separates a price benchmark, product attributes, sample coverage and descriptive relationships. Table~\ref{tab:meaning} connects each measure to the decision it can support.
+\begin{table}[!ht]\centering\small
+\begin{tabularx}{\linewidth}{p{.2\linewidth}XX}\toprule
+Displayed measure & Meaning & Practical use \\\midrule
+Median unit price & Middle product price in the selected category; each product price is itself a median regular offer & Set a same-category budget or benchmark a product's observed retail positioning \\
+Nutrition / environment grade & Ordered summaries of different product attributes, with separate directions and coverage & Compare the attributes behind a price; inspect composition when grades hide differences \\
+Spearman $\rho$ and $n$ & Direction and strength of rank association across $n$ complete products & Decide whether price is an informative signal in this category; it is not a probability or a percentage improvement \\
+Candidate share / pair gap & Products with a strictly cheaper, no-worse-grade option / price gap for two recorded medians & Build a comparison list, then check product suitability and current offers \\
+Offer count and dates & Amount and timing of price evidence & Prioritise price checks, particularly for a single old observation \\\bottomrule
+\end{tabularx}
+\caption{Read the measure before acting on it. Category overviews use all category products; live chart explanations use the current filtered sample.}\label{tab:meaning}
+\end{table}
+
 \section{Industry background: the comparison gap}
-\begin{figure}[H]\centering
+\begin{figure}[!htbp]\centering
 \includegraphics[width=\linewidth]{assets/shopping-decision.png}
 \caption{The decision context: choosing between similar packaged foods. AI-generated editorial illustration; the packaging does not depict sampled barcodes.}
 \end{figure}
@@ -64,16 +85,17 @@ For a shopper choosing between two cereal products, the shelf price answers only
 
 Our four categories represent familiar comparison tasks: choosing biscuits for a snack, cereals for breakfast, dark chocolate and bottled fruit juice. Their units and grade distributions differ. The application therefore begins with a category, carries its price unit through the whole interaction, and keeps composition beside the two composite grades.
 
+\begin{samepage}
 \begin{tauenv}
 \textbf{The business question.} Can a consumer find a lower-price option worth inspecting, understand what changes in its nutrition and environmental profile, and judge the quality of the price evidence? The proposed service creates value by making that sequence quicker and easier to explain.
 \end{tauenv}
+\end{samepage}
 \subsection{A discovery service to validate}
 The immediate deliverable is a transparent decision aid built from the recorded sample. A retailer, consumer organisation or comparison service could test whether the workflow reduces search time and improves comprehension. The pilot in this report specifies how to measure that benefit before making claims about conversion, customer savings or revenue. The images provide context; all numerical findings come from the executed R analysis.
 
-\clearpage
 \section{Evidence base and analytical design}
 The study links French Open Prices observations in EUR from 2024--2025 to Open Food Facts product information retrieved on 2 November 2026. A fixed seed selected 150 products in each of four categories. Specification checks excluded two products from primary comparison, leaving 598 products. The linked price table contains 1,541 observations for the selected products; representative prices use valid regular offers after duplicate-combination handling.
-\begin{table}[H]\centering\small
+\begin{table}[!ht]\centering\small
 \caption{Primary sample and coverage. Medians are historical unit prices.}
 \input{generated/category.tex}
 \end{table}
@@ -85,41 +107,37 @@ The study links French Open Prices observations in EUR from 2024--2025 to Open F
 
 The literature motivates this design. Functional units can change apparent food sustainability relationships \cite{masset2015}; cross-country prices and food profiles motivate separate nutrition and environmental questions \cite{martinez2025}. Product-level nutrition and environmental work supports showing both dimensions and their exceptions \cite{clark2022}. The project's existing eight-source review supplies the broader context, including food-level sustainability, price trends, green premiums, discount coverage and diet-level costs \cite{masset2014,hoenink2024,nakavachara2025,desiderio2026,bai2025}.
 
-\clearpage
 \section{Finding 1: price carries different information by category}
-\begin{table}[H]\centering\scriptsize
+\begin{table}[!ht]\centering\scriptsize
 \caption{Within-category Spearman correlations, each with its own available sample.}
 \input{generated/associations.tex}
 \end{table}
 Negative price--nutrition correlations align with better numerical nutrition scores at higher prices; positive price--environment correlations align with better environmental scores. Breakfast cereals and dark chocolate show these favourable directions, with modest coefficients. Biscuits and fruit juices are close to zero on both dimensions. These results support category-specific comparisons.
-\begin{figure}[H]\centering
-\includegraphics[width=.94\linewidth]{../outputs/step4/figures/03_price_nutrition.png}
-\caption{Historical unit-price distributions by nutrition grade within each category. Grades run from A (best) to E. Executed Step 4 output.}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/03_price_nutrition.png}
+\caption{Historical unit-price distributions by nutrition grade within each category. Grades run from A (best) to E. Executed Step 4 output.}\label{fig:nutrition}
 \end{figure}
-\textbf{Decision implication.} Set the category before presenting budgets or scores. Avoid a single cross-category price ranking: the price ranges, units and nutrition composition differ. In biscuits and juices, users gain more from inspecting the actual score and formulation than from relying on a price tier.
+\textbf{Decision implication.} Set the category before presenting budgets or scores. Figure~\ref{fig:nutrition} shows how prices vary within each nutrition grade. Avoid a single cross-category price ranking: the price ranges, units and nutrition composition differ. In biscuits and juices, users gain more from inspecting the actual score and formulation than from relying on a price tier.
 
-\clearpage
 \section{Finding 2: composition explains a meaningful trade-off}
 Dark chocolate illustrates why a composite grade should lead into a composition view. Its price--sugar correlation is $\rho=-0.456$, while price--saturated-fat is $\rho=0.401$. A higher-price item may align with less sugar and more saturated fat at the same time. Fibre supplies another useful comparison field. Nutrition grades in this category are restricted to D and E, so the ingredient-level measures add detail that the grade alone compresses.
-\begin{figure}[H]\centering
-\includegraphics[width=.94\linewidth]{../outputs/step4/figures/04_price_sugars.png}
-\caption{Price and sugar content. Solids use grams per 100 g; juices use grams per 100 ml. Each view uses the available numerical fields.}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/04_price_sugars.png}
+\caption{Price and sugar content. Solids use grams per 100 g; juices use grams per 100 ml. Each view uses the available numerical fields.}\label{fig:sugar}
 \end{figure}
-\textbf{Decision implication.} The side-by-side view shows sugar, saturated fat and fibre with their units, alongside price, grade and package size. The user can then examine which attributes differ between two candidate products. No weighting formula combines these preferences into a single invented value score.
+\textbf{Decision implication.} Figure~\ref{fig:sugar} motivates checking composition in the side-by-side view: sugar, saturated fat and fibre appear with their units, alongside price, grade and package size. The user can then examine which attributes differ between two candidate products. No weighting formula combines these preferences into a single invented value score.
 
-\clearpage
 \section{Finding 3: environmental comparisons also need context}
 The price--environment coefficients are 0.307 for cereals and 0.243 for dark chocolate, versus 0.030 for biscuits and 0.035 for juices. The application places ordered environmental grades on the vertical axis and uses nutrition grade as colour, allowing price and both grading systems to be inspected together.
-\begin{figure}[H]\centering
-\includegraphics[width=.94\linewidth]{../outputs/step4/figures/05_price_environment.png}
-\caption{Historical unit-price distributions by environmental grade. Grades run from A+ (best) to F. The corrected F grades are included.}
+\begin{figure}[!htbp]\centering
+\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/05_price_environment.png}
+\caption{Historical unit-price distributions by environmental grade. Grades run from A+ (best) to F. The corrected F grades are included.}\label{fig:environment}
 \end{figure}
 \textbf{Separate carbon reference information.} AGRIBALYSE 3.2 estimates are available for 594 primary-sample products. These map to standard reference foods: the 150 cereals share only four distinct carbon values. Reference-level carbon summaries therefore belong in a methods view, rather than a brand-level league table. The carbon unit remains kg CO$_2$e/kg food, including for the juice reference estimates.
 
-\clearpage
 \section{Finding 4: a shortlist can expose comparison opportunities}
 For each jointly covered product, the rule searches within its category for a strictly lower representative unit price and nutrition and environmental grades that are each no worse. Grade ranks encode order alone. A product is non-dominated under this rule when no candidate satisfies all three conditions.
-\begin{table}[H]\centering\small
+\begin{table}[!ht]\centering\small
 \caption{Lower-price candidates under the explicit two-grade comparison rule.}
 \input{generated/joint.tex}
 \end{table}
@@ -127,7 +145,7 @@ Overall, 562 of 583 products have a candidate under this rule; 21 are non-domina
 
 \subsection{Worked example: a biscuit comparison}
 Product A is \textit{Galettes bretonnes pur beurre}; candidate B is \textit{Petit beurre 200g}. They satisfy the formal comparison rule and illustrate why recipe and packaging still need review.
-\begin{table}[H]\centering\small
+\begin{table}[!ht]\centering\small
 \caption{A reproducible pair from the executed comparison-candidates table.}
 \input{generated/example.tex}
 \end{table}
@@ -135,9 +153,25 @@ The historical unit-price gap is EUR 3.36/kg, or 45.7\% of A's representative pr
 
 \textbf{Product action.} Show a short list of lower-price candidates for the selected product A. Retain a manual second-product choice so users can inspect other trade-offs, including cases where a better score requires a higher price.
 
-\clearpage
+\section{Who can act on the findings?}
+\textbf{Consumers: choose which products to inspect.} Use the category median to orient a budget, filter the shortlist and compare composition rather than treating a premium price as a quality label. In the biscuit example, the EUR 3.36/kg historical gap identifies a concrete comparison task: check whether the recipes and pack sizes fit the same use and verify current prices. The intended benefit is less search effort and a clearer explanation of the choice.
+
+\textbf{Suppliers: benchmark retail positioning and product attributes.} Select a category and locate a product against its observed retail-price distribution and comparable grades. Lower-price, no-worse-grade candidates flag products to study when reviewing a premium position or a reformulation brief. For dark chocolate, the opposing sugar and saturated-fat relationships give a specific reason to evaluate both attributes rather than advertise one measure alone. These are retail comparison benchmarks; a supplier should add its current prices, costs, availability and customer evidence before changing a commercial offer.
+
+\begin{table}[!ht]\centering\small
+\begin{tabularx}{\linewidth}{p{.23\linewidth}XX}\toprule
+Finding & Consumer action & Supplier action \\\midrule
+Biscuits / juice: near-zero price--score association & Read grades directly when comparing a higher price & Check which attribute actually supports a premium claim \\
+Chocolate: less sugar and more saturated fat at higher prices & Compare both nutrients for the intended use & Build a multi-attribute product or formulation comparison \\
+562 / 583 have a cheaper no-worse-grade candidate & Inspect a shortlist of possible substitutes & Identify retail-positioning benchmarks and comparison gaps \\
+291 / 598 have one regular offer & Check current offers before relying on the gap & Refresh weak price observations before competitor benchmarking \\\bottomrule
+\end{tabularx}
+\caption{Observed findings translated into reviewable decisions for two audiences.}
+\end{table}
+\textbf{How to establish business value.} For consumers, test whether the tool reduces time and unit errors while finding an acceptable alternative. For suppliers, test whether analysts can identify and explain a useful product benchmark, then validate it with current internal and market data. The present dataset contains product attributes and recorded retail offers; demand, wholesale terms, margins and inventory are future inputs to those decisions.
+
 \section{From evidence to an interactive decision workflow}
-\begin{table}[H]\centering\small
+\begin{table}[!ht]\centering\small
 \begin{tabularx}{\linewidth}{lXX}\toprule
 User task & Evidence and interface & Expected user benefit \\\midrule
 Understand a category & Whole-category price distribution and grade coverage & Calibrate a realistic unit budget \\
@@ -161,7 +195,6 @@ Price sensitivity outputs compare products with at least two regular offers, ann
 
 The contribution-based French sample and the later product-information snapshot define the scope of the findings. Sparse grade groups, unknown fields, coarse grades and shared carbon references affect interpretation. Next steps are member review, classroom feedback, current-price validation and testing whether the proposed shortlist helps real decisions.
 
-\clearpage
 \section{Reproduction and contribution record}
 From the repository root, run \texttt{scripts/run\_step4.ps1} to reconstruct corrected analysis data and the executed notebook. Run \texttt{scripts/build\_report.ps1} for this PDF, and \texttt{scripts/run\_shiny.ps1} for the local browser application. Alternative R installations can be selected with the scripts' \texttt{-RPrefix} argument. Runtime assets use local project-relative paths; application operation requires no live data API.
 

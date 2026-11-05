@@ -1,11 +1,11 @@
 # Report and Shiny delivery verification
 
-Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). The branch remains local, unpublished and unmerged. This record includes the initial implementation and the user's visual/interaction revision.
+Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). EDA PR #1 is merged (`origin/main` at `13a638f` when checked); this delivery targets `main` for PR review. Merge remains a separate action. This record includes the initial implementation and subsequent visual/decision-value revisions.
 
 ## Current deliverables
 
-- English business report: `reports/report.tex` → `output/food-value-report-v2.pdf`, 10 pages including a full-page illustrated cover and a new industry-background page. Four numerical tables still come directly from the executed Step 4 CSVs. The revised implementation section covers interpreted charts and richer discovery interactions.
-- Two generated editorial images: `reports/assets/food-choices-cover.png` and `shopping-decision.png`. Prompts, mode and interface limitations are in `reports/assets/provenance.json`. They are labelled as illustrations, not images of sampled products. The previous PDF remains at `output/food-value-report.pdf`; the reader held that file open, so the build now defaults to a sibling v2 filename.
+- English business report: `reports/report.tex` → `output/food-value-report-v3.pdf`, 9 pages including a full-page cover, background and consumer/supplier decisions. Four numerical tables still come directly from executed Step 4 CSVs. Body sections use continuous layout and floating figures, with no forced section page breaks. The preceding 10-page v2 remains local.
+- Two generated editorial images: `reports/assets/food-choices-cover.png` and `shopping-decision.png`. Prompts, mode and interface limitations are in `reports/assets/provenance.json`. They are labelled as illustrations, not sampled products. Previous PDFs remain local; the build defaults to the sibling v3 filename.
 - English bslib application: `shiny/global.R`, `ui.R`, `server.R`, `helpers.R`, `www/`. Launch with `scripts/run_shiny.ps1`; guide in `shiny/README.md`. Community comparison and source links: `docs/05_dashboard/community_references.md`.
 - Local previews: `output/shiny-preview-v2.png`, `output/shiny-explore-v2.png`, `output/report-cover-v2.png`. Sources and project images are versioned; PDF/previews are ignored. Temporary renders and exports stay in `scratch/`.
 
@@ -15,9 +15,13 @@ Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `4
 
 New checks cover current-sample interpretation against the executed coefficient, no-data/constant-value messages, per-100-ml nutrient labels, numerical plot coverage, barcode search and no-match search, quote-count filters, descending price order, disjoint pagination, brush membership, zoom/reset and zoom-scope labelling. Only existing local packages are used; bslib 0.12.0 was already installed. No Plotly, DT or inference service was added.
 
+Consumer/supplier role-switch tests passed: the role changes interpretation and next actions, preserves product counts, identifies the supplier benchmark as retail rather than wholesale, and lists costs, current prices, demand/margins/inventory as evidence to add before business action.
+
 ## Real-browser checks
 
 Chrome clean startup displayed the redesigned masthead, editorial hero, category cards and overview. Biscuits showed 149 products, median 11.09 EUR/kg and 79 products with multiple regular offers. The under-median preset returned 74 products at the slider's displayed 11.09 ceiling and updated the explanation. The Read the chart option described axes, grade colour and unknown handling. The full-category environmental explanation reproduced rho +0.030 across 148 complete products.
+
+The final role guide was checked in Chrome: the consumer view connected 149 products and 11.09 EUR/kg to a unit-price budget; the supplier view used the same figures for retail-positioning benchmarks and product-attribute review. Its expandable verification note listed current competitor prices, internal costs/terms, availability and customer evidence. Screenshot: `docs/images/decision-guide.png`.
 
 The 12-row shortlist, literal barcode search and no-variation explanation were checked. Inspecting `3350031923081` selected A; the candidate action set B to `3410280136257`. The comparison explained B's 45.7% lower unit price, nutrition E to E, environment C to B, and sugar difference -6.20 g/100 g, while retaining package, quote counts and dates. The shortlist membership indicator correctly showed A inside the one-product search and B outside it.
 
@@ -29,13 +33,13 @@ The initial delivery also exercised empty grade combinations, full-category juic
 
 ## PDF checks
 
-XeLaTeX completed two passes. The 10-page PDF was rendered with Poppler and every page inspected. The cover has typeset English copy over the generated image; the background photograph has a caption identifying it as illustrative. Table/figure labels, units, sample counts, bibliography and new interaction narrative were checked. No overfull boxes, missing characters or unresolved references were reported. The final text retains 562 candidate cases and the 583-product joint sample. Original EDA figures and frozen input files were not modified.
+XeLaTeX completed two passes. The 9-page v3 PDF was rendered with Poppler and every page inspected. Replacing forced section breaks and fixed-position figures allows body text and illustrations to share pages. The short business-question callout stays together. The final reference page retains natural end-of-document space. Table/figure references, units, sample counts, bibliography and the new measure/meaning/action and audience sections were checked. No overfull boxes, missing characters or unresolved references were reported. The final text retains 562 candidate cases and the 583-product joint sample. Original EDA figures and frozen input files were not modified.
 
 ## Remaining work
 
 - Team review and classroom user testing, especially whether the explanations improve understanding and candidate selection.
 - Named member contributions, personal reflections, classroom feedback and slides for the final course submission.
 - Current-price validation and user evidence before claiming realised savings, revenue or conversion effects.
-- Review the branch before merge. If the EDA PR is still open, land/reconcile it first to avoid duplicate ancestry.
+- Review this report/Shiny PR before merge. EDA PR #1 is already merged, and the PR diff excludes its analysis changes.
 
 No project moves, lifecycle changes or archive actions were performed. Existing archives remain unchanged.

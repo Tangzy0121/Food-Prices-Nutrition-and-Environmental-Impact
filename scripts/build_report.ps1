@@ -1,4 +1,4 @@
-param([string]$Python = 'C:\Users\VIP\miniconda3\envs\sci\python.exe', [string]$OutputName = 'food-value-report-v2.pdf')
+param([string]$Python = 'C:\Users\VIP\miniconda3\envs\sci\python.exe', [string]$OutputName = 'food-value-report-v3.pdf')
 $ErrorActionPreference = 'Stop'
 if ([IO.Path]::GetFileName($OutputName) -ne $OutputName) { throw 'OutputName must be a filename inside output/.' }
 $projectRoot = Split-Path -Parent $PSScriptRoot

@@ -103,6 +103,20 @@ grade_badge <- function(x) {
   shiny::span(class = paste0("grade grade-", ifelse(is.na(value), "unknown", value)), grade_label(value))
 }
 
+decision_guidance <- function(d, audience = "consumer") {
+  if (!nrow(d)) return(list(title = "Start with a usable comparison set", meaning = "No products match the current conditions.", action = "Broaden the budget or grades, or clear the search before making a comparison.", next_data = "The category overview still shows the full category."))
+  benchmark <- sprintf("%.2f EUR/%s", median(d$representative_price), as.character(d$target_unit[1]))
+  if (audience == "supplier") return(list(
+    title = "Use the shortlist as a retail-positioning benchmark",
+    meaning = sprintf("The median of these %d matching products is %s. It describes recorded retail unit prices, not a wholesale quotation or a sales-weighted market price.", nrow(d), benchmark),
+    action = "Compare a product's price, grades and composition with same-category alternatives. A cheaper option with neither grade worse is a concrete benchmark to inspect when reviewing a premium position or a product brief.",
+    next_data = "Before changing an offer, add current competitor prices, your costs and terms, availability and customer evidence. Demand, margins and inventory are not measured here."))
+  list(title = "Turn the shortlist into a shopping comparison",
+    meaning = sprintf("The median of these %d matching products is %s. Use it to orient your unit-price budget within this food category.", nrow(d), benchmark),
+    action = "Inspect a product, compare a lower-price candidate, and read both grades plus sugar, saturated fat and fibre. Check that recipe and pack size fit your intended use.",
+    next_data = "Check current shop price and availability before buying. A historical pair gap helps choose what to inspect; it is not a verified saving on today's basket.")
+}
+
 shortlist_html <- function(d, target = "inspect_code") {
   shiny::div(class = "table-scroll", shiny::tags$table(class = "shortlist-table",
     shiny::tags$thead(shiny::tags$tr(lapply(c("Product", paste0("EUR/", unique(d$target_unit)[1]), "Nutrition", "Environment", "Offers", ""), shiny::tags$th))),

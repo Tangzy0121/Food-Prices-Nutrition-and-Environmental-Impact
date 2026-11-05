@@ -50,6 +50,12 @@ testServer(server, {
   session$setInputs(category = "fruit_juices", budget = 14)
   stopifnot(nrow(category_data()) == 150L, all(filtered()$target_unit == "L"),
             nrow(scatter_data()) == nrow(filtered()))
+  initial_count <- nrow(filtered())
+  session$setInputs(audience = "supplier")
+  stopifnot(grepl("retail-positioning", guidance()$title), grepl("wholesale", guidance()$meaning),
+            grepl("Demand, margins and inventory", guidance()$next_data), nrow(filtered()) == initial_count)
+  session$setInputs(audience = "consumer")
+  stopifnot(grepl("shopping comparison", guidance()$title), nrow(filtered()) == initial_count)
   # Search drives chart, pagination and the shared CSV source together.
   juice_code <- category_data()$code[1]
   session$setInputs(search = juice_code)

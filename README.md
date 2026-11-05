@@ -86,6 +86,6 @@ prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
 # English business report and Shiny application
 
 The delivery branch `feat/report-shiny-delivery` builds on `feat/step4-eda`.
-The [English report](reports/README.md) translates the executed findings into a consumer decision workflow and a proposed business validation plan. Build with `./scripts/build_report.ps1`; the current illustrated PDF is written to `output/food-value-report-v2.pdf` (10 pages).
+The [English report](reports/README.md) translates the executed findings into consumer decisions, supplier retail-positioning benchmarks and a business validation plan. Build with `./scripts/build_report.ps1`; the current illustrated PDF is written to `output/food-value-report-v3.pdf` (9 pages, with continuous body layout).
 
 The [Shiny guide](shiny/README.md) covers the bslib redesign: interpreted charts, hover/click/brush/zoom, quick presets, search/sort/pagination, two-product comparisons and CSV export. First reconstruct corrected inputs with `./scripts/run_step4.ps1`, then run `./scripts/run_shiny.ps1` and open `http://127.0.0.1:3838`. See [community references](docs/05_dashboard/community_references.md) and [verification](docs/delivery_verification.md) for design sources, checks and remaining course-submission work.

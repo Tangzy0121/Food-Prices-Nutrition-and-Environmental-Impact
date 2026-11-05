@@ -156,6 +156,14 @@ server <- function(input, output, session) {
       p(class = "muted", sprintf("Price dates: %s to %s", d$first_price_date[1], d$last_price_date[1])), p(class = "muted", paste("Package:", d$quantity_text[1])))
   })
   explanation <- reactive(explain_view(filtered(), metric(), if (is.null(input$question)) "pattern" else input$question))
+  guidance <- reactive(decision_guidance(filtered(), if (is.null(input$audience)) "consumer" else input$audience))
+  output$decision_value <- renderUI({
+    g <- guidance(); div(class = "decision-guide", div(class = "eyebrow", "FROM THE NUMBER TO A DECISION"),
+      h3(g$title), p(g$meaning), p(strong("Next action: "), g$action), tags$details(tags$summary("What to verify before acting"), p(g$next_data)))
+  })
+  output$audience_action <- renderUI({
+    g <- guidance(); tagList(div(class = "insight-divider"), div(class = "insight-kicker", if (is.null(input$audience) || input$audience == "consumer") "FOR YOUR SHOPPING DECISION" else "FOR YOUR PRODUCT BENCHMARK"), p(g$action))
+  })
   output$chart_explanation <- renderUI({
     e <- explanation(); tagList(div(class = "insight-kicker", "LIVE INTERPRETATION"), h4(e$title),
       if (is.finite(e$rho) && (is.null(input$question) || input$question == "pattern")) div(class = "big-rho", sprintf("ρ = %+.3f", e$rho)),
