@@ -1,0 +1,599 @@
+category,code,product_name,quantity_text,quantity_status,representative_price,n_valid_regular_offers,n_stores,first_price_date,last_price_date,log_iqr_flag
+biscuits,8410376055856,Gullon cookies,150g,confirmed,13.266666666666667,1,1,2024-02-22,2024-02-22,FALSE
+biscuits,3350031923081,Galettes bretonnes pur beurre,125 g,confirmed,7.359999999999999,2,2,2024-02-11,2025-07-09,FALSE
+biscuits,3175681072916,Miel Châtaigne graines de lin,200g,confirmed,10.925,2,2,2024-01-11,2025-06-17,FALSE
+biscuits,5902379012125,,96 g,confirmed,31.145833333333336,1,1,2025-08-14,2025-08-14,FALSE
+biscuits,5410126806090,The Original Speculoos,140 g,confirmed,9.071428571428571,2,3,2024-02-10,2025-08-22,FALSE
+biscuits,3222472769743,Barquettes choconoisette,120 g,confirmed,14.458333333333336,2,2,2025-07-23,2025-08-02,FALSE
+biscuits,3560071191276,CROK Goût tout chocolat,300 g,confirmed,5.433333333333334,3,2,2024-12-17,2025-01-06,FALSE
+biscuits,3700311810721,Cookies pépites de chocolat,200 g,confirmed,5.749999999999999,1,1,2025-03-04,2025-03-04,FALSE
+biscuits,3251491787803,Goûter aux écorces confites,360 g,confirmed,5.805555555555555,3,4,2024-01-11,2025-09-25,FALSE
+biscuits,3256222822365,palets breton pur beurre,125 g,confirmed,12.88,1,1,2025-01-17,2025-01-17,FALSE
+biscuits,3175681187962,Génoise chocolat orange sans sucres,140 g,confirmed,21.357142857142858,3,3,2024-12-26,2025-07-04,FALSE
+biscuits,3350031532511,Génoises fourrées à la cerise nappées de chocolat blanc,150 g,confirmed,9.000000000000002,1,1,2024-12-19,2024-12-19,FALSE
+biscuits,3596710404179,Les gourmands - Cookies cœur fondant chocolat noisette,0.2 kg,confirmed,8.249999999999998,1,1,2025-12-07,2025-12-07,FALSE
+biscuits,3250391118762,Assortiment de biscuits aux 3 chocolats belges,375 g,confirmed,9.653333333333334,2,2,2024-02-05,2024-05-30,FALSE
+biscuits,3270160800629,Feuillets à la canelle,50 g,confirmed,39,1,1,2025-10-03,2025-10-03,FALSE
+biscuits,3560070972982,Crêpe dentelle au chocolat noir,100 g,confirmed,19.7,2,2,2025-05-30,2025-08-17,FALSE
+biscuits,3350033305496,Petits beurre croustillants tablette de chocolat noir,150 g,confirmed,12.333333333333334,1,1,2025-05-25,2025-05-25,FALSE
+biscuits,3258561020396,Etui Tuiles Aux Amandes 100G Belle France,100 g,confirmed,13.700000000000001,1,1,2025-09-17,2025-09-17,FALSE
+biscuits,5000168198491,Sablés Anglais L'Original,400 g,confirmed,4.875,9,8,2024-01-09,2025-12-17,FALSE
+biscuits,3396413707153,Goûters chocolat au lait,225g,confirmed,19.2,2,2,2024-03-11,2025-11-03,FALSE
+biscuits,7622300270469,Choco Biscuits,150 g,confirmed,14.066666666666666,2,2,2024-02-07,2025-06-04,FALSE
+biscuits,3267620200075,Gaufres Fines à la Chicorée,"300 g, 28 gaufres",structured_only,7.966666666666668,1,1,2024-02-23,2024-02-23,FALSE
+biscuits,3250391126637,15 Fourrés ronds parfum vanille 300G Goûters CROK,300 g,confirmed,3.6500000000000004,2,1,2024-02-05,2025-10-04,FALSE
+biscuits,3760294961735,Biscuits fourrés pâte à tartiner,150 g,confirmed,16.866666666666667,1,1,2025-12-31,2025-12-31,FALSE
+biscuits,7622210444141,Moelleux chocolat,250 g,confirmed,10.2,3,2,2024-01-08,2025-09-09,FALSE
+biscuits,3701283800543,Super petit-déj & goûter pois vert citron chocolat sésame,170 g,confirmed,22.64705882352941,2,2,2024-12-13,2025-11-03,FALSE
+biscuits,8076809580694,Settembrini mb 300g,300 g,confirmed,19.1,1,2,2025-05-20,2025-05-24,FALSE
+biscuits,3270190122845,Génoises SAVEUR CERISE,150 g,confirmed,9.933333333333334,3,3,2024-02-01,2025-01-06,FALSE
+biscuits,8000500310427,Biscuits NUTELLA Biscuits Noisettes et Cacao x22 - 304g,304 g,confirmed,10.164473684210526,16,15,2024-01-13,2025-12-07,FALSE
+biscuits,3178530409673,palmier,100 grammes,structured_only,15,1,1,2024-01-09,2024-01-09,FALSE
+biscuits,5410041161700,"Grany moelleux, fruit des bois","192 g ℮, 6 biscuits en sachet individuel",structured_only,11.09375,3,3,2024-02-10,2025-04-01,FALSE
+biscuits,3410280136257,Petit beurre 200g,200 g,confirmed,4,1,1,2024-01-10,2024-01-10,FALSE
+biscuits,3245414104730,Vitality* Orange & Soja,200 g (4 x 50 g),confirmed,6.55,2,2,2024-02-01,2025-07-04,FALSE
+biscuits,3222475983498,Crackers aux 3 graines Bio,200 g,confirmed,33.5,1,1,2024-01-13,2024-01-13,FALSE
+biscuits,3560071433345,Biscuits complets avoine blé - chocolat,200 g,confirmed,10.45,1,1,2024-02-27,2024-02-27,FALSE
+biscuits,7622210795373,oeuf coque oreo,128 g,confirmed,36.328125,1,1,2024-03-20,2024-03-20,FALSE
+biscuits,3256226396251,Biscuits Galettes bretonnes aux pépites de chocolat 130g,130 g,confirmed,9.384615384615383,2,1,2024-07-02,2025-02-26,FALSE
+biscuits,3250393006623,8 Tartelettes carrées citron,127 g,confirmed,9.68503937007874,2,2,2024-02-05,2024-12-26,FALSE
+biscuits,3258561021034,Cookies chocolat et pépites de chocolat,200 g,confirmed,11,1,1,2025-02-07,2025-02-07,FALSE
+biscuits,3596710551736,Mini cakes fourrés chocolat,0.42 kg,confirmed,4.904761904761905,1,1,2025-12-07,2025-12-07,FALSE
+biscuits,3056440070896,Bastogne,260 g ℮,structured_only,8.615384615384617,3,3,2025-08-02,2025-12-01,FALSE
+biscuits,3222472772880,Sablés Céréales et chocolat au lait,250 g,confirmed,6.44,1,1,2024-11-08,2024-11-08,FALSE
+biscuits,3760151013287,Biscuits nappés de chocolat,160 g (4 x 40 g),confirmed,33.6875,2,2,2025-01-07,2025-04-21,FALSE
+biscuits,3061990144355,DEL'ICE saveur cookie dough,175g,confirmed,12.571428571428571,1,1,2025-04-03,2025-04-03,FALSE
+biscuits,3352776301452,Canistrelli (assortiment) 300g. Biscuits Corses.,300 g,confirmed,11.866666666666667,1,1,2025-02-28,2025-02-28,FALSE
+biscuits,3564700823439,Palets bretons,125 g,confirmed,14.280000000000001,6,1,2025-05-27,2025-12-16,FALSE
+biscuits,3222473590292,Les Fameuses galettes suédoises au chocolat,150 g,confirmed,29.166666666666668,2,2,2025-01-28,2025-02-23,FALSE
+biscuits,7622210765338,OREO ORIGINAL,176g,confirmed,6.761363636363637,1,1,2024-04-20,2024-04-20,FALSE
+biscuits,3596710756476,duo de génoises,0.28 kg,confirmed,6.803571428571429,2,1,2024-01-26,2025-12-07,FALSE
+biscuits,3017760306492,Prince petit dej,300 g,confirmed,8.3,1,1,2024-02-27,2024-02-27,FALSE
+biscuits,3245413154255,ChocoGrani,200 g,confirmed,7.1,2,2,2024-02-01,2024-06-18,FALSE
+biscuits,3396410030650,Petit Beurre,167g / 20 biscuits,structured_only,19.161676646706585,1,1,2024-12-26,2024-12-26,FALSE
+biscuits,3560071071318,Chocograni chocolat noir,195 g,confirmed,6.615384615384615,1,1,2024-02-05,2024-02-05,FALSE
+biscuits,3596710490684,Biscuits meringués fourrage cacao enrobés de chocolat au lait,0.1 kg,confirmed,26.9,1,1,2024-12-21,2024-12-21,FALSE
+biscuits,3478820091145,Fourrés chocolat Jardin Bio,300 g,confirmed,11.2,1,1,2024-12-08,2024-12-08,FALSE
+biscuits,3023470001084,Galettes Au bon beurre (8x5),2x130 g,confirmed,6.442307692307692,4,3,2024-01-10,2025-12-16,FALSE
+biscuits,3560071413880,Barquette de chocolate,120 g (3 x 40 g),confirmed,22.041666666666668,2,2,2024-02-27,2025-03-11,FALSE
+biscuits,3250390232254,Feuilletés Palmiers,100 g,confirmed,6.8999999999999995,2,2,2024-05-30,2025-01-26,FALSE
+biscuits,3250390003977,Tableau d'honneur Chocolat noir,150 g,confirmed,8.866666666666667,2,2,2024-02-07,2025-07-20,FALSE
+biscuits,3173990027542,Petit beurre tablette chocolat au lait,150 g,confirmed,19.400000000000002,1,1,2025-09-17,2025-09-17,FALSE
+biscuits,3560070718849,Torselini's Au Parmigiano Reggiano et à l'ail,75 g,confirmed,25.2,1,1,2025-01-24,2025-01-24,FALSE
+biscuits,3251490332080,figues et son,210 g,confirmed,7.761904761904762,3,3,2024-01-11,2025-10-21,FALSE
+biscuits,3178530423150,La galette fourrée,240 g,confirmed,9.583333333333332,4,4,2024-12-14,2025-12-07,FALSE
+biscuits,7622210449375,Prince goût Choco blanc,300 g,confirmed,6.633333333333334,1,1,2024-02-28,2024-02-28,FALSE
+biscuits,3178530412840,Sablés framboise sésame,150 g,confirmed,16.533333333333335,8,8,2024-01-31,2025-09-02,FALSE
+biscuits,7311070346916,Pågen Gifflar Zimt  Hefe-Röllchen mit cremiger Zimtfüllung,260 g,confirmed,10.576923076923077,1,1,2024-01-23,2024-01-23,FALSE
+biscuits,3263852912564,"Génoises pur beurre, nappage à la framboise",150 g,confirmed,10.166666666666668,4,3,2025-01-10,2025-11-20,FALSE
+biscuits,3421557800153,P'tit déj sarrasin - pépite de chocolat,150 g,confirmed,23.066666666666666,1,1,2024-04-22,2024-04-22,FALSE
+biscuits,3178530416589,Sablés noisette chocolat,150 g,confirmed,17.266666666666666,1,1,2024-01-31,2024-01-31,FALSE
+biscuits,3660140954150,Savane Pocket Chocolat x14 420g,420 g,confirmed,8.261904761904763,1,1,2024-08-27,2024-08-27,FALSE
+biscuits,3329229990860,Lunettes de romans myrtille française,350 g,confirmed,10.328571428571427,2,2,2024-11-15,2025-09-17,FALSE
+biscuits,3268350120978,Cookies Nappés chocolat noir,175 g,confirmed,16.742857142857144,1,1,2024-04-22,2024-04-22,FALSE
+biscuits,3560070759293,Grandes galettes de Normandie,150 g,confirmed,12.733333333333334,2,2,2025-10-30,2025-11-26,FALSE
+biscuits,3061990143785,Tarto choco,200 g,confirmed,12.450000000000001,1,1,2024-01-31,2024-01-31,FALSE
+biscuits,3760253540179,,125g,confirmed,22.4,1,1,2025-08-06,2025-08-06,FALSE
+biscuits,3250391406562,Assortiment glacier 100g,100 g,confirmed,12.799999999999999,3,2,2024-02-05,2024-12-02,FALSE
+biscuits,3564700483978,Galettes Bretonnes aux Pépites de Chocolat,130 g,confirmed,9.384615384615383,1,1,2024-04-17,2024-04-17,FALSE
+biscuits,20289478,Broyés du poitou,220 g,confirmed,11.363636363636363,2,1,2025-01-11,2025-02-28,FALSE
+biscuits,3564707168571,Galettes suédoises chocolat,131 g,confirmed,19.770992366412212,1,1,2025-05-03,2025-05-03,FALSE
+biscuits,3760122961722,"Super cookies coeur fondant au chocolat noir, noix de pécan et caramel",180 g,confirmed,27.722222222222225,1,1,2024-02-10,2024-02-10,FALSE
+biscuits,3760020503628,Speculoos sans sucres,250 g,confirmed,13.08,4,3,2024-02-06,2025-01-24,FALSE
+biscuits,4017100499715,La Grande Galette 1905,"150 g, 3 sachets de 3 galettes",structured_only,10.333333333333334,8,6,2024-01-10,2025-12-19,FALSE
+biscuits,3564706607033,La génoise goût Poire,150g,confirmed,7.666666666666666,1,1,2025-06-09,2025-06-09,FALSE
+biscuits,3596710477456,Gaufrettes Choco laitfourrées cacao - noisette,175g,confirmed,13.457142857142856,2,2,2025-01-13,2025-08-23,FALSE
+biscuits,8003535084776,Harry Potter Hogwarts Express Snack,126g,confirmed,23.73015873015873,1,1,2025-06-19,2025-06-19,FALSE
+biscuits,3560071266530,Sablés au caramel,120 g,confirmed,25.333333333333336,1,1,2025-11-26,2025-11-26,FALSE
+biscuits,3564700871751,La Gaufrette Fraise et Fraise des bois,160 g (4x40g),confirmed,9.1875,2,1,2025-08-02,2025-08-22,FALSE
+biscuits,1103749230000,Cookies,176g,confirmed,8.522727272727273,1,1,2024-01-23,2024-01-23,FALSE
+biscuits,3175681135864,Sablé nature aux graines de chia,"132 g, 3 sachets de 4 biscuits",structured_only,21.363636363636363,2,2,2024-01-11,2024-12-26,FALSE
+biscuits,3268350120145,Twibio,150g,confirmed,24.333333333333332,1,1,2025-08-29,2025-08-29,FALSE
+biscuits,3178530409857,"Bonne Maman - Coconut Croquants, 150g (5.3oz)",150 g,confirmed,8.666666666666668,2,1,2024-02-20,2024-04-10,FALSE
+biscuits,3250391612635,Sprits au beurre,400 g,confirmed,6.487499999999999,2,2,2024-08-01,2024-12-02,FALSE
+biscuits,84100733,Original Oreo,66g,confirmed,25.757575757575754,1,1,2024-03-31,2024-03-31,FALSE
+biscuits,3251490320001,Biscuit complet au germe de blé,210 g,confirmed,7.404761904761905,6,6,2024-01-31,2025-10-27,FALSE
+biscuits,3263852857018,Le petit beurre Bio,167 g,confirmed,10.778443113772454,1,1,2024-12-14,2024-12-14,FALSE
+biscuits,3250391124879,Sablé nappé noir - 195g,195 g,confirmed,5.23076923076923,2,1,2024-04-20,2025-07-06,FALSE
+biscuits,8076809529976,Dolcetti gemme mb 200 gr,200 g,confirmed,49.94999999999999,2,1,2025-01-24,2025-01-24,FALSE
+biscuits,8000500431719,Ferrero Collection Grand Assortiment Lumières de Fête,197 g,confirmed,51.21827411167512,1,1,2025-11-23,2025-11-23,FALSE
+biscuits,3250391697915,Gaufrettes Fourrées Aux Framboises,160 g,confirmed,10.875,3,3,2024-08-23,2025-07-27,FALSE
+biscuits,3229820789118,Lunettes fraise,200 g,confirmed,14.675,2,2,2025-06-05,2025-06-28,FALSE
+biscuits,3251490307002,Goûter pépites de chocolat,250 g,confirmed,8.04,3,3,2024-06-01,2025-10-27,FALSE
+biscuits,3250392259532,Tartelettes rondes abricot 150g,150 g,confirmed,9.4,2,2,2025-02-08,2025-09-22,FALSE
+biscuits,8076809529969,TENEREZZE LIMONE MB 200g x 10,200 g,confirmed,20.95,3,3,2024-09-12,2025-05-24,FALSE
+biscuits,3560071062316,Stick & Choc Chocolat au lait,150 g,confirmed,10.4,3,3,2025-04-29,2025-07-05,FALSE
+biscuits,3760122966116,Cookie frais chocolat au lait aux noisettes 70g,70 g,confirmed,35.57142857142857,5,5,2025-01-06,2025-12-30,FALSE
+biscuits,3700531202146,Graines de courge chocolat noir 57%,2000 g,confirmed,31.472499999999997,2,1,2024-12-08,2025-12-31,FALSE
+biscuits,3258561021263,Sablés noix de coco,125 g,confirmed,11.68,1,1,2025-04-16,2025-04-16,FALSE
+biscuits,3017760635295,Granola l'original,225g,confirmed,8.044444444444444,2,2,2025-02-14,2025-06-11,FALSE
+biscuits,7622210021502,Oreo Original,220 g,confirmed,13.863636363636363,2,2,2024-02-07,2025-07-29,FALSE
+biscuits,8436048962697,Filipinos Chocolate Blanco,128 g,confirmed,8.515625,2,1,2024-02-24,2024-04-20,FALSE
+biscuits,3596710424801,Chocogusto 182 g,0.182 kg,confirmed,7.93956043956044,2,1,2024-01-26,2025-12-07,FALSE
+biscuits,3017760756198,Cookies Granola LU,184g,confirmed,12.146739130434783,2,2,2024-02-10,2024-02-28,FALSE
+biscuits,3258561020228,Galettes bretonnes pur beurre,125 g,confirmed,10.08,1,1,2024-11-15,2024-11-15,FALSE
+biscuits,3350031618154,Biscuits petit déjeuner 5 céréales et pépites de chocolat,400 g (8 sachets de 4 biscuits),structured_only,5.875,1,1,2024-11-12,2024-11-12,FALSE
+biscuits,3250391773848,Goûter fourré cacao rond BIO,185 g,confirmed,9.027027027027026,1,1,2024-01-09,2024-01-09,FALSE
+biscuits,3564700000656,Le Palet Breton,125 g,confirmed,7.68,6,1,2025-05-27,2025-12-16,FALSE
+biscuits,8052575092104,Nocciolata Mini Tartelettes,250 g,confirmed,16.82,2,2,2024-12-14,2025-09-17,FALSE
+biscuits,3175681210714,Biscuit fondant choco lait,126 g,confirmed,27.380952380952383,1,1,2024-12-26,2024-12-26,FALSE
+biscuits,3178530416541,Galettes au bon beurre bio,130 g,confirmed,10.076923076923077,1,1,2024-01-09,2024-01-09,FALSE
+biscuits,3347430020879,Cookies de petit épeautre Amandes et graines de chia,150g,confirmed,23.333333333333336,2,1,2025-12-03,2025-12-31,FALSE
+biscuits,3178530412901,Le Palmier,87 g,confirmed,14.25287356321839,1,1,2024-01-09,2024-01-09,FALSE
+biscuits,3178530424928,Petits feuilletés,250g,confirmed,10.6,3,3,2024-12-26,2025-05-13,FALSE
+biscuits,3254560028715,Galettes Bretonnes pur beurre,0.125 kg,confirmed,6.8,4,1,2024-01-08,2025-09-24,FALSE
+biscuits,8720354768853,,200 g,confirmed,4.949999999999999,1,1,2024-10-23,2024-10-23,FALSE
+biscuits,3250392259563,Tartelettes fraise rondes 150g - P'tits Prods,150 g,confirmed,8.666666666666668,4,3,2024-07-30,2025-09-22,FALSE
+biscuits,3175681077324,Biscuit chocolat saveur amande,200 g,confirmed,12.05,2,2,2025-01-20,2025-09-25,FALSE
+biscuits,3175681261365,Biscuits Abricot Pistache,160 g,confirmed,20.3125,3,3,2024-01-11,2025-07-22,FALSE
+biscuits,3760294960301,Biscuits sésame et épeautre,150 g,confirmed,11.533333333333333,8,5,2024-01-27,2025-12-31,FALSE
+biscuits,3760194783444,Petits sablés aux noix du Dauphiné,200g,confirmed,26,1,1,2025-09-16,2025-09-16,FALSE
+biscuits,0034000151271,resses Sticks,42 g,confirmed,30.952380952380953,1,1,2024-05-28,2024-05-28,FALSE
+biscuits,3222471110478,Barquettes Fraise,120 g,confirmed,13.500000000000002,1,1,2025-07-23,2025-07-23,FALSE
+biscuits,3268350120923,Cookies noix de pécan,175 g,confirmed,22.228571428571428,3,3,2024-03-11,2025-01-21,FALSE
+biscuits,3478660050142,Sablé fourré aux myrtilles,60 g,confirmed,36.66666666666667,1,1,2024-09-08,2024-09-08,FALSE
+biscuits,3560071489526,Double & Chock,"128 g (5 x 25,6 g)",confirmed,14.843749999999998,1,1,2025-02-19,2025-02-19,FALSE
+biscuits,3250391377404,Batonnet lait - 150g,150 g,confirmed,5.733333333333333,1,1,2024-02-07,2024-02-07,FALSE
+biscuits,3464860010048,La galette ovale,240 g,confirmed,16.041666666666668,2,1,2025-11-29,2025-12-20,FALSE
+biscuits,8076809530286,Cuor di mela estero mb 250 gr,250 g,confirmed,15.92,1,1,2025-01-24,2025-01-24,FALSE
+biscuits,3250392804800,Spéculoos,500 g,confirmed,2.95,2,2,2025-02-22,2025-12-06,FALSE
+biscuits,3229820021027,P'tit Nature Complet,200 g,confirmed,8.149999999999999,5,6,2024-03-15,2025-12-06,FALSE
+biscuits,3256220210423,Génoises nappées chocolat noir fourrées framboise,150 g,confirmed,7.066666666666667,3,3,2025-01-25,2025-08-04,FALSE
+biscuits,3178530402995,Tartelettes framboise,135 g,confirmed,10.814814814814813,6,6,2024-01-09,2025-08-28,FALSE
+biscuits,3256229517189,"Galettes pur beurre sans gluten, 105G",105 g,confirmed,19.42857142857143,2,2,2024-07-20,2025-05-10,FALSE
+biscuits,3279130101223,"Pain d'épice, langue chocolatées",200 g,confirmed,11.45,1,1,2025-12-15,2025-12-15,FALSE
+biscuits,3171910720023,Madeleine coquille fourrée,1 kg,confirmed,6.25,1,1,2024-10-15,2024-10-15,FALSE
+biscuits,3596710553662,Cookies pépites de chocolat nougatine,0.2 kg,confirmed,7.1,1,1,2025-12-07,2025-12-07,FALSE
+biscuits,3760122966130,Vrai Cookie Chocolat Blanc 70g,70 g,confirmed,35.57142857142857,1,1,2025-01-20,2025-01-20,FALSE
+biscuits,3250392549343,Petits beurre nature sans gluten - 130g,130 g,confirmed,14.884615384615383,2,2,2025-05-10,2025-11-05,FALSE
+biscuits,3257980024244,Cookies pépites de chocolat,200 g,confirmed,6.949999999999999,1,1,2024-02-24,2024-02-24,FALSE
+biscuits,3061990143594,"BN - Casse Croute Biscuits, 375g",400 g,confirmed,4.05,1,1,2024-01-10,2024-01-10,FALSE
+breakfast_cereals,3111902100044,Céréales muesli croustillant superfruits Bio,375 g,confirmed,13.840000000000002,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3111900370012,Naturellement équilibré Noix Muesli,350 g,confirmed,17.999999999999996,2,1,2025-02-07,2025-07-10,FALSE
+breakfast_cereals,3168930010838,Quaker Cruesli Chocolat au lait maxi format,900 g,confirmed,6.466666666666667,4,4,2024-08-22,2025-12-12,FALSE
+breakfast_cereals,3560071013042,Muesly croustillant cruchy chocolat noir intense,1 kg,confirmed,2.89,2,2,2025-09-14,2025-12-12,TRUE
+breakfast_cereals,5059319025797,Special K Chocolat au Lait,500g,confirmed,9.38,5,5,2024-02-13,2025-12-12,FALSE
+breakfast_cereals,3421557920677,Petits flocons d'avoine sans gluten,500 g,confirmed,6.5,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3560070967698,Céréales cœur fondant au chocolat et aux noisettes No gluten!,375g,confirmed,15.973333333333334,1,1,2025-05-03,2025-05-03,FALSE
+breakfast_cereals,3111900360174,Muesli Croustillant Fruits,1 kg,confirmed,9.59,1,1,2025-11-03,2025-11-03,FALSE
+breakfast_cereals,3248650201195,Céréales Fourrées chocolat,375 g,confirmed,7.6000000000000005,2,2,2025-09-01,2025-12-12,FALSE
+breakfast_cereals,3111902100105,Muesli bio céréales toastées 5 noix,350 g,confirmed,15.114285714285712,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3760336830289,Le Granola Chocolat,300g,confirmed,17.3,3,3,2024-05-31,2025-12-12,FALSE
+breakfast_cereals,3760121214492,Muesli superfruits,500 g,confirmed,9.7,1,1,2025-02-08,2025-02-08,FALSE
+breakfast_cereals,3560070737628,Cr'ocks coeur fondant lait,400 g,confirmed,5.625,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,4015637826073,Glutenfreies hafer Müsli,425 g,confirmed,17.176470588235293,1,1,2025-07-10,2025-07-10,FALSE
+breakfast_cereals,3387390331523,NESTLE CHEERIOS Céréales 375g,375 g,confirmed,7.986666666666666,2,3,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3229820804224,Céréales complètes au chocolat noir intense,450 g,confirmed,10.577777777777778,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3254560017559,Pétales sucrés,0.375 kg,confirmed,2.8000000000000003,1,1,2025-12-30,2025-12-30,TRUE
+breakfast_cereals,3760031831406,Flakes Sarrasin,325 g,confirmed,13.815384615384616,1,1,2025-11-03,2025-11-03,FALSE
+breakfast_cereals,3111900330085,Bombs miel,300g,confirmed,10.5,1,1,2025-02-17,2025-02-17,FALSE
+breakfast_cereals,3421557922435,Muesli Croustillant Pommes Noisette,375g,confirmed,10.133333333333333,1,1,2025-12-30,2025-12-30,FALSE
+breakfast_cereals,3111900350571,Muesli croustillant - duo de chocolats,500 g,confirmed,10.6,2,2,2024-04-22,2025-06-20,FALSE
+breakfast_cereals,4056489817611,Muesli Crunchy Chocolat Noir Noisettes Grillées,500 g,confirmed,4.43,2,1,2024-12-03,2025-01-11,FALSE
+breakfast_cereals,3350031573125,Pétales riz et blé complet aux fruits rouges Monoprix,300 g,confirmed,8.633333333333333,1,1,2024-01-24,2024-01-24,FALSE
+breakfast_cereals,5059319025711,Special K Chocolat Noir,500g,confirmed,8.8,5,5,2024-02-13,2025-12-12,FALSE
+breakfast_cereals,3329483607504,Flocons d’avoine petits,750 g,confirmed,2.7866666666666666,2,1,2024-11-12,2025-01-10,TRUE
+breakfast_cereals,3111900330146,Bombs choco sans gluten,350 g,confirmed,12.428571428571427,1,1,2025-02-17,2025-02-17,FALSE
+breakfast_cereals,3222473950324,Corn Flakes,375 g,confirmed,5.760000000000001,1,1,2025-01-09,2025-01-09,FALSE
+breakfast_cereals,3256228686572,Céréales Muesli croustillant fruits rouges sachet 350g,350 g,confirmed,10.799999999999999,1,1,2025-03-06,2025-03-06,FALSE
+breakfast_cereals,40897677,Hafer Flocken Zart,500 gram,structured_only,3.3899999999999997,4,1,2024-01-22,2024-05-14,FALSE
+breakfast_cereals,5050083516313,Céréales Extra Kellogg's Pépites Chocolat au lait,500 g,confirmed,6.64,15,9,2024-01-17,2025-12-12,FALSE
+breakfast_cereals,3560071267032,Pétales au chocolat blé complet,375 g,confirmed,9.733333333333333,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,5053827199759,TRÉSOR Choco Roulette,620 g,confirmed,7.725806451612903,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3111900360150,Muesli Croustillant Essentiel - Format ECO,1 kg,confirmed,6.25,3,3,2024-04-22,2025-11-03,FALSE
+breakfast_cereals,3560071407681,Croustillant fruits rouges,375 g,confirmed,10.266666666666667,2,2,2025-08-13,2025-12-12,FALSE
+breakfast_cereals,3229820800486,Flocons d'Epeautre,500 g,confirmed,5.3,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3111900350670,Cassis et graines gourmandes,500 g e,structured_only,14.74,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3273120019499,FLOCONS CHATAIGNE TOASTES,350 g,confirmed,28.857142857142854,1,1,2025-04-25,2025-04-25,TRUE
+breakfast_cereals,3256229255661,"Céréales Müesli cranberry, 400g",400 g,confirmed,8.125,3,3,2024-09-03,2025-11-24,FALSE
+breakfast_cereals,3273120011110,Flocons d'orge,500 g,confirmed,4.98,1,1,2024-12-21,2024-12-21,FALSE
+breakfast_cereals,3560071483036,Crocks mix,620 g,confirmed,4.919354838709677,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,5010477348593,Country Crisp Chocolat Noir,850 g,confirmed,6.394117647058824,2,2,2024-05-31,2025-12-12,FALSE
+breakfast_cereals,3256229255654,"Céréales Muesli chocolat & amandes, 400g",400 g,confirmed,8.149999999999999,5,5,2024-09-03,2025-11-24,FALSE
+breakfast_cereals,3421557502750,Flakes céréales & légumineuses,350 g,confirmed,13.4,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3560071407773,Croustillant graines de courge et de tournesol,375 g,confirmed,7.773333333333333,2,2,2025-04-02,2025-12-12,FALSE
+breakfast_cereals,3256228686534,"Céréales Pétales de blé chocolat bio, sachet 375g",375 g,confirmed,8.32,1,1,2025-03-06,2025-03-06,FALSE
+breakfast_cereals,5010477360755,Granola chocolat noir - faible en sucre,400g,confirmed,9.875,3,3,2024-11-01,2025-12-12,FALSE
+breakfast_cereals,5053827156219,Trésor Chocolat au lait,620 gram,structured_only,9.016129032258064,4,4,2024-01-24,2025-12-12,FALSE
+breakfast_cereals,3760031831420,Flakes Sarrasin Érable,350 g,confirmed,15.285714285714283,1,1,2025-11-03,2025-11-03,FALSE
+breakfast_cereals,3256224357988,Céréales Pépites et pétales aux fruits secs sachet de 400g,400 g,confirmed,6.625,2,2,2024-10-14,2024-10-26,FALSE
+breakfast_cereals,3421557502743,Flakes céréales & légumineuses - nature,350 g,confirmed,9.428571428571427,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3421557910494,Corn flakes sans sucres ajoutés,450 g,confirmed,10.355555555555556,1,1,2025-01-09,2025-01-09,FALSE
+breakfast_cereals,3421557501432,CORN FLAKES SUCRE CANNE,500 g,confirmed,8.51,2,2,2024-04-22,2025-12-12,FALSE
+breakfast_cereals,3596710494132,Muesli croustillant quinoa chocolat,0.5 kg,confirmed,8.68,1,1,2024-02-15,2024-02-15,FALSE
+breakfast_cereals,5010477350954,Country Crisp Fruits & Noix,500 g,confirmed,6.32,3,3,2024-02-13,2025-11-16,FALSE
+breakfast_cereals,3256225428434,Céréales Pétales de riz et blé orge avec fruits rouges boîte de,300 g,confirmed,6.533333333333333,1,1,2024-11-09,2024-11-09,FALSE
+breakfast_cereals,3560071013035,Crunchy Chocolat noir intense,500 g,confirmed,6.07,2,2,2024-07-15,2025-01-06,FALSE
+breakfast_cereals,3263851533012,Le muesli croustillant aux fruits rouges,500 g,confirmed,9.3,1,1,2025-03-15,2025-03-15,FALSE
+breakfast_cereals,3168930010890,Cruesli Chocolat au lait,450 g,confirmed,6.533333333333333,7,7,2024-01-11,2025-12-12,FALSE
+breakfast_cereals,5059319023250,Coco pops Chocos,330 g,confirmed,8.575757575757576,3,3,2024-06-22,2025-12-12,FALSE
+breakfast_cereals,3111900410008,Nature,1 kg,confirmed,6.65,1,1,2024-04-22,2024-04-22,FALSE
+breakfast_cereals,5400101041424,GRANOLA CRUNCHY,330 g,confirmed,9.621212121212121,2,2,2025-01-06,2025-12-12,FALSE
+breakfast_cereals,7613035189027,NESTLE CRUNCH Céréales 450g,450 g,confirmed,6.266666666666666,1,1,2024-02-15,2024-02-15,FALSE
+breakfast_cereals,3560071016074,Corn flakes,500 g,confirmed,4.18,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3396411241871,Cereales extra croustillantes,375g,confirmed,12.133333333333333,1,1,2025-07-10,2025-07-10,FALSE
+breakfast_cereals,3256224060697,Céréales Muesli croustillant aux fruits secs paquet 500g,500 g,confirmed,4.18,1,1,2024-12-16,2024-12-16,FALSE
+breakfast_cereals,3596710446599,Muesli croustillant Fruits rouges,450 g,confirmed,5.955555555555556,1,1,2025-03-31,2025-03-31,FALSE
+breakfast_cereals,3111902100259,Muesli croustillant cacao,900 g,confirmed,7.766666666666667,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3760294961322,Müesli croquant nature,500 g,confirmed,4.7,2,2,2024-11-19,2025-09-17,FALSE
+breakfast_cereals,3421557501616,Flocons de sarrasin,500 g,confirmed,9.32,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,5010477356239,Muesli bio chocolat noir,450 g,confirmed,8.444444444444445,3,3,2024-05-31,2025-12-30,FALSE
+breakfast_cereals,3421557501562,Crispy o'choc,375g,confirmed,10.24,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3421557500909,Chocolune,375 g,confirmed,12.293333333333333,2,2,2024-04-22,2025-07-10,FALSE
+breakfast_cereals,5411788047616,Porridge express OMEGA 3,350g,confirmed,8.2,1,1,2025-09-17,2025-09-17,FALSE
+breakfast_cereals,3111900410053,Muesli,"1,2 kg",confirmed,6.508333333333334,2,2,2024-04-22,2024-11-19,FALSE
+breakfast_cereals,3229820160672,Croustillant Chocolat,500 g,confirmed,8.08,7,5,2024-01-09,2025-07-04,FALSE
+breakfast_cereals,3229820800721,muesli superfruits,750 g,confirmed,8.626666666666667,2,2,2025-11-24,2025-12-12,FALSE
+breakfast_cereals,3250391896554,Flocons d'avoine complète 500g,500 g,confirmed,1.7,1,1,2025-02-10,2025-02-10,TRUE
+breakfast_cereals,3256225042364,Céréales blé soufflé miel caramélisé,375 g,confirmed,6.293333333333333,1,1,2024-11-09,2024-11-09,FALSE
+breakfast_cereals,3421557110320,Krounchy fruits pomme raisin datte canneberge,1 kg,confirmed,6.87,1,1,2024-04-22,2024-04-22,FALSE
+breakfast_cereals,3229820792958,Porridge 3 Céréales,375 g,confirmed,8.48,3,3,2024-01-16,2025-12-12,FALSE
+breakfast_cereals,8445291075078,NESTLE CRUNCH Céréales 675g,675 g,confirmed,6.503703703703703,1,1,2025-10-06,2025-10-06,FALSE
+breakfast_cereals,5010477348555,Country Crisp 4 Noix,850 g,confirmed,5.982352941176471,8,5,2024-05-31,2025-12-30,FALSE
+breakfast_cereals,3596710413638,Coeur lait,0.4 kg,confirmed,5.824999999999999,2,1,2024-02-15,2025-12-14,FALSE
+breakfast_cereals,4335619092648,Flocons d'avoine,1 kg,confirmed,2.49,1,1,2025-02-03,2025-02-03,TRUE
+breakfast_cereals,5010477365378,Céréales oh my crips fruit,400 g,confirmed,9.375,1,1,2025-11-16,2025-11-16,FALSE
+breakfast_cereals,5010029229110,Crispy Minis Choco,500g,confirmed,8.2,3,3,2024-01-06,2025-12-12,FALSE
+breakfast_cereals,3256228686558,Céréales Muesli croustillant au chocolat noir 500G,500 g,confirmed,7.34,1,1,2025-03-06,2025-03-06,FALSE
+breakfast_cereals,3421557112003,"Muesli+sans gluten Raisin, Figue, Banane",500 g,confirmed,10.66,4,4,2024-04-22,2025-12-12,FALSE
+breakfast_cereals,8445291914193,Chocapic minis,310 g,confirmed,7.903225806451614,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3387390123210,Chocapic,375 g,confirmed,9.333333333333334,5,5,2024-11-27,2025-12-12,FALSE
+breakfast_cereals,7613035144699,NESTLE NESQUIK Céréales 450g,450 g,confirmed,7.066666666666666,3,3,2024-01-24,2025-05-17,FALSE
+breakfast_cereals,3266191008097,"Muesli Aux 5 Cereales, Raisins Et Noisettes",1 kg,confirmed,7.99,1,1,2025-05-26,2025-05-26,FALSE
+breakfast_cereals,3229820805337,CROUTILLANT,450 g,confirmed,10.788888888888888,2,2,2025-09-29,2025-12-12,FALSE
+breakfast_cereals,3229820769165,Muesli avoine chocolat bio,375 g,confirmed,9.613333333333333,6,6,2024-01-09,2025-12-14,FALSE
+breakfast_cereals,5010029000023,Original,430 gram,structured_only,9.093023255813954,9,6,2024-01-11,2025-12-12,FALSE
+breakfast_cereals,3258561040363,Petales de blé chocolat,375 g,confirmed,4.613333333333333,1,1,2025-09-17,2025-09-17,FALSE
+breakfast_cereals,3387390019995,NESTLE LION Céréales 400g,400 g,confirmed,8.05,4,4,2024-01-11,2025-12-12,FALSE
+breakfast_cereals,3168930010906,Cruesli Chocolat noir,450 g,confirmed,6.544444444444444,14,11,2024-01-24,2025-12-12,FALSE
+breakfast_cereals,3421557108624,Krounchy sans gluten amande,500 g,confirmed,12.28,3,2,2024-04-22,2025-12-22,FALSE
+breakfast_cereals,3560071269784,Flakes épeautre,250 g,confirmed,10.24,3,3,2025-01-06,2025-12-12,FALSE
+breakfast_cereals,3380390410601,Quinoa soufflé,100 g,confirmed,46.5,1,1,2024-12-21,2024-12-21,TRUE
+breakfast_cereals,5010477348395,Country Crisp - Chocolat noir 70% cacao,550 g,confirmed,7.945454545454545,12,7,2024-02-15,2025-12-12,FALSE
+breakfast_cereals,3560071168674,Pétales de maïs,750 g,confirmed,2.92,2,1,2024-02-14,2025-12-12,TRUE
+breakfast_cereals,3168930158158,Cruesli miel et noisettes,450 g,confirmed,9.377777777777776,6,6,2024-12-19,2025-12-12,FALSE
+breakfast_cereals,3421557501142,"Muesli noisettes, raisins, seigle complet, blé sans sucres ajoutés",1 kg,confirmed,5.81,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3266191008110,Anneaux 3 céréales et miel,250 g,confirmed,17.16,1,1,2025-05-26,2025-05-26,FALSE
+breakfast_cereals,7613036669146,NESTLE CHOCAPIC BIO Céréales - Boite de 375g,375 g,confirmed,11.973333333333334,10,9,2024-01-11,2025-12-17,FALSE
+breakfast_cereals,3596710446605,Muesli CroustillantNoix,0.45 kg,confirmed,5.2444444444444445,5,2,2024-08-20,2025-03-22,FALSE
+breakfast_cereals,3421557501722,Muesli croustillant tradition,1 kg,confirmed,5.385,2,2,2025-05-31,2025-12-12,FALSE
+breakfast_cereals,3560071013004,Crunchy 5 fruits secs,500 g,confirmed,5.44,2,2,2025-01-06,2025-12-12,FALSE
+breakfast_cereals,3421557501500,Le croustillant super fruits,375 g,confirmed,11.093333333333334,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3229820794839,Muesli sans gluten fruits tournesol lin doré,375g,confirmed,17.30666666666667,1,1,2025-01-11,2025-01-11,FALSE
+breakfast_cereals,3254560043459,PETALES FRUITS et FIBRES,0.5 kg,confirmed,5.08,1,1,2024-02-15,2024-02-15,FALSE
+breakfast_cereals,3111902100020,Muesli bio croustillant 3 chocolats,375g,confirmed,12.986666666666666,3,3,2025-04-02,2025-12-12,FALSE
+breakfast_cereals,3560071013127,Stylesse Chocolat Noir,300 g,confirmed,5.966666666666667,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3560071530273,Riz et blé soufflés Chocolat,750 g,confirmed,3.0666666666666664,2,2,2025-12-12,2025-12-30,FALSE
+breakfast_cereals,3229820794556,"Muesli Proteines Soja, Dattes, Fruits Rouges",375 g,confirmed,10.533333333333333,4,4,2024-01-09,2025-12-12,FALSE
+breakfast_cereals,3256222976716,Céréales Corn flakes,375 g,confirmed,7.626666666666666,1,1,2025-03-06,2025-03-06,FALSE
+breakfast_cereals,8445290549754,Babicao,400 g,confirmed,10.375,3,3,2025-09-30,2025-12-14,FALSE
+breakfast_cereals,3560071531096,Crocks Choco-Noisette,400 g,confirmed,7.874999999999999,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3350031937804,Muesli croustillant fruits rouges Bio Monoprix,375 g,confirmed,10.533333333333333,1,1,2025-03-07,2025-03-07,FALSE
+breakfast_cereals,3564706612792,Muesli 4 Noix,500 g,confirmed,4.05,2,2,2025-04-02,2025-12-17,FALSE
+breakfast_cereals,5430000992336,Bamboo crunchy chocolate,500g,confirmed,13.38,1,1,2025-07-13,2025-07-13,FALSE
+breakfast_cereals,3111900350878,Surperfruits,8 X 45 g,confirmed,15.402777777777779,2,2,2024-04-22,2025-07-10,FALSE
+breakfast_cereals,5053827110983,Céréales Miel Pops,620 g,confirmed,5.870967741935484,4,3,2024-02-13,2025-12-12,FALSE
+breakfast_cereals,3229820797861,Croustillant 3 noix,450 g,confirmed,12.355555555555554,4,4,2024-01-09,2025-12-12,FALSE
+breakfast_cereals,3250390816416,Forme & chocolat noir,300 g,confirmed,6.366666666666666,1,1,2025-07-26,2025-07-26,FALSE
+breakfast_cereals,3387390326574,Céréales Cookie Crisp,375 g,confirmed,7.333333333333333,3,3,2024-01-20,2025-12-12,FALSE
+breakfast_cereals,3560070330867,Boules De CÉRÉALES,750 g,confirmed,3.986666666666667,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,4056489233725,Barres Granola au sirop d'érable,252 g (6 x 42g),confirmed,9.880952380952381,2,1,2024-10-29,2024-11-19,FALSE
+breakfast_cereals,3256229401167,Céréales Pétales de riz & blé orge 500g,500 g,confirmed,5.06,1,1,2024-11-09,2024-11-09,FALSE
+breakfast_cereals,5053827175654,,330 g,confirmed,9.924242424242424,4,4,2024-07-27,2025-12-12,FALSE
+breakfast_cereals,3421557110221,Muesli avoine amandes chocolat,500 g,confirmed,9.7,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,3700036908635,Croustillant nature,500 g,confirmed,6.98,1,1,2025-07-10,2025-07-10,FALSE
+breakfast_cereals,3229820794846,Muesli chocolat sans gluten et bio,375 g,confirmed,18.64,2,1,2024-01-16,2025-01-11,FALSE
+breakfast_cereals,5902884463405,Musli OneDayMore,400g,confirmed,11.225,1,1,2024-02-23,2024-02-23,FALSE
+breakfast_cereals,4056489209980,Crunchy Muesli Multi Fruit,600 g,confirmed,3.733333333333334,1,1,2024-11-19,2024-11-19,FALSE
+breakfast_cereals,3270190111108,MUESLI & Co 6 FRUITS SECS,750 g,confirmed,5.133333333333333,2,2,2025-01-06,2025-12-12,FALSE
+breakfast_cereals,7613287514325,Fitness Nature Céréales complètes,475 g,confirmed,7.347368421052631,5,3,2024-02-12,2025-12-12,FALSE
+breakfast_cereals,3560071407803,Croustillant Chocolat,500 g,confirmed,8.7,3,3,2024-01-20,2025-12-12,FALSE
+breakfast_cereals,3421557500763,Riz complet soufflé,200 g,confirmed,14.774999999999999,2,2,2024-04-22,2025-12-12,FALSE
+breakfast_cereals,3256228686596,Céréales Muesli canneberges baies de goji dattes abricots 375g,375 g,confirmed,8.213333333333333,1,1,2025-03-06,2025-03-06,FALSE
+breakfast_cereals,3111900390034,Pétales de sarrasin chataigne,300 g,confirmed,15.966666666666667,1,1,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,5010477352590,Country crisp bio Chocolat Noir,400 g,confirmed,8.575,1,1,2024-05-09,2024-05-09,FALSE
+breakfast_cereals,3229820129488,"muesli raisin,datte,figue",375 g,confirmed,6.3999999999999995,15,10,2024-01-09,2025-12-12,FALSE
+breakfast_cereals,5010477356277,Granola Amandes Noisettes & Graines,400 g,confirmed,10.825,2,2,2025-12-12,2025-12-12,FALSE
+breakfast_cereals,5053827199568,Müsli-Tresor-Choco Nut,410g,confirmed,8.182926829268293,4,4,2024-01-24,2025-12-12,FALSE
+breakfast_cereals,3273120014890,Muesli Étudiants Raisins - Pommes - Noisettes,500 g ℮,structured_only,8.649999999999999,2,1,2025-02-07,2025-07-10,FALSE
+breakfast_cereals,3111900350557,muesli croustillant Framboise & chocolat,500 grammes,structured_only,12.98,3,3,2024-04-22,2025-02-07,FALSE
+breakfast_cereals,3229820801650,Les p’tits curieux Croc Fourrés tout choco,350 g,confirmed,10.571428571428571,1,1,2025-12-30,2025-12-30,FALSE
+dark_chocolates,3046920016377,100% Cacao,50 g,confirmed,52,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3700214610190,Noir Pérou dessert,200 g,confirmed,16.15,1,1,2024-12-22,2024-12-22,FALSE
+dark_chocolates,7610036002805,Noir aux Pépites de Café,100 g,confirmed,27.7,7,6,2024-11-05,2025-07-11,FALSE
+dark_chocolates,3700214619124,Chocolat noir Noisettes muesli caramel,150 g,confirmed,26.799999999999997,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3110845303536,La Friture croustillante chocolat noir,190 g,confirmed,23.999999999999996,1,1,2025-03-20,2025-03-20,FALSE
+dark_chocolates,3396413714410,Chocolat noir fourré praliné,100 g,confirmed,55.74999999999999,2,3,2024-12-26,2025-05-20,FALSE
+dark_chocolates,3760278866728,Gianduja noir intense,100 g,confirmed,29.5,5,5,2024-04-22,2025-09-17,FALSE
+dark_chocolates,3245678046463,Dessert noir 52%,0.2 kg,confirmed,14.899999999999999,2,2,2025-05-02,2025-12-18,FALSE
+dark_chocolates,3250392556181,Tablette BIO dégustation - Chocolat noir Pérou 85% - 100g,100 g,confirmed,20.4,3,3,2025-02-02,2025-09-08,FALSE
+dark_chocolates,3046920028721,Dark absolute 99% cacao,50 g,confirmed,54.1,4,4,2024-01-08,2025-05-20,FALSE
+dark_chocolates,3596710547623,72% Noir fèves de cacao,100 g,confirmed,21.9,1,1,2025-05-02,2025-05-02,FALSE
+dark_chocolates,3258590000116,Chocolat noir 70% cacao,100 g,confirmed,47.5,1,1,2025-01-23,2025-01-23,FALSE
+dark_chocolates,1205241730009,Belöning,100 g,confirmed,19.5,1,1,2024-01-23,2024-01-23,FALSE
+dark_chocolates,3564707178006,Chocolat Noir Gingembre saveur citron,100 g,confirmed,20,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3564700475355,Noir & une pointe de menthe,100 g,confirmed,11.899999999999999,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3664346317108,Chocolat poulain bio,85 g,confirmed,40.705882352941174,3,2,2024-01-08,2025-12-13,FALSE
+dark_chocolates,3256226088958,Chocolat noir 74% de cacao d'Equateur Tablette de 100g,100 g,confirmed,21.349999999999998,2,2,2024-07-06,2025-06-08,FALSE
+dark_chocolates,7613035040823,Nestlé dessert Noir,205g,confirmed,12.73170731707317,9,8,2024-01-13,2025-06-08,FALSE
+dark_chocolates,3700531202276,Tablette noir 88% St-Domingue Grand Cru au sucre de coco,100 g,confirmed,42,2,1,2025-01-15,2025-04-24,FALSE
+dark_chocolates,20995553,Шоколад 85% какаова маса,125 g,confirmed,11.879999999999999,10,2,2024-01-22,2025-02-28,FALSE
+dark_chocolates,3256222989747,Chocolat noir corsé à pâtisser 64% Tablette de 200g,200 g,confirmed,10.95,2,2,2024-09-08,2025-06-08,FALSE
+dark_chocolates,3760020503567,Chocolat Noir pointe de Fleur de sel,100 g,confirmed,24.599999999999998,1,1,2025-01-24,2025-01-24,FALSE
+dark_chocolates,3266191106274,Noir 66% fèves de cacao,100g,confirmed,34.9,1,1,2025-06-05,2025-06-05,FALSE
+dark_chocolates,3564700010846,Chocolat dessert pâtissier,200 g,confirmed,9.049999999999999,16,1,2024-02-06,2025-12-26,FALSE
+dark_chocolates,3564706606043,Noir extra 99%,100 g,confirmed,28.9,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3560070669981,80% cacao noir,80 g,confirmed,21.625,7,6,2025-01-06,2025-07-23,FALSE
+dark_chocolates,3450970055499,Chocolat noir 70% cacao,100 g e,structured_only,9.3,1,1,2024-09-17,2024-09-17,FALSE
+dark_chocolates,3760003630020,Chocolat noir fleur de sel de Guérande,100g,confirmed,49.199999999999996,2,1,2024-12-08,2025-12-31,FALSE
+dark_chocolates,3700531202818,Chocolat noir 74% fleur de sel,100 g,confirmed,42,1,1,2025-04-24,2025-04-24,FALSE
+dark_chocolates,3046920010603,Framboise Intense,100g,confirmed,23.9,13,12,2024-01-08,2025-08-06,FALSE
+dark_chocolates,8445290539922,NESTLE L'ATELIER Tablette Chocolat noir orange confite - 100g,100 g,confirmed,117.15,2,2,2025-05-08,2025-05-20,TRUE
+dark_chocolates,3760121219695,Chocolat noir noisettes,180 g,confirmed,25.833333333333336,1,1,2024-03-02,2024-03-02,FALSE
+dark_chocolates,3760077182234,Chocolat noir Madagascar 85%,80 g,confirmed,48.125,1,1,2025-04-25,2025-04-25,FALSE
+dark_chocolates,3250391378074,Tablette fourrée chocolat noir praliné - 150g,150 g,confirmed,11.266666666666667,1,1,2025-01-29,2025-01-29,FALSE
+dark_chocolates,3250391503803,DESSERT NOIR CORSE,200 g,confirmed,11,1,1,2025-02-06,2025-02-06,FALSE
+dark_chocolates,3396411221309,Chocolat &quot,100 g e,structured_only,45.9,3,3,2024-12-26,2025-07-31,FALSE
+dark_chocolates,3700214611548,Noir equitable 85% Pérou,100 g e,structured_only,28.5,7,5,2024-01-06,2025-10-18,FALSE
+dark_chocolates,7613034938459,Chocolate After eight sabor menta,400g,confirmed,24.5,1,1,2025-12-26,2025-12-26,FALSE
+dark_chocolates,3477730040021,Chocolat noir biologique 58% cacao,80 g,confirmed,31.5625,4,4,2025-01-23,2025-05-20,FALSE
+dark_chocolates,3760091722997,Chocolat noir extra,100 g,confirmed,20.099999999999998,3,3,2024-04-22,2025-09-17,FALSE
+dark_chocolates,3245678046692,NOIR TRUFFE FANTAISIE et ECLATS DE FEVES,0.15 kg,confirmed,18.733333333333334,2,2,2024-12-17,2025-05-02,FALSE
+dark_chocolates,3256220268370,Chocolat noir dégustation 72% d'éclats fèves de cacao Tablette de 100g,100 g,confirmed,25.1,2,2,2025-01-26,2025-06-08,FALSE
+dark_chocolates,3033710001354,NESTLE LES RECETTES DE L'ATELIER - Carrés dégustation Chocolat noir 70% - 210g,210 g,confirmed,22.80952380952381,1,1,2025-06-08,2025-06-08,FALSE
+dark_chocolates,3664346332330,Dessert noir,360 G,confirmed,10.13888888888889,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3250390102625,Tablette dégustation chocolat noir min 70% - 100g,100 g,confirmed,11.95,10,3,2024-05-18,2025-07-26,FALSE
+dark_chocolates,3245678046920,Noir amandes entieres,0.18 kg,confirmed,9.055555555555555,2,2,2024-02-24,2024-11-05,FALSE
+dark_chocolates,7622201433017,Tendre noir chocolat,2 x 85 g,confirmed,17.352941176470587,1,1,2024-01-08,2024-01-08,FALSE
+dark_chocolates,3222471363591,Chocolat Noir Noisettes entières,200 g,confirmed,16.299999999999997,1,1,2025-03-13,2025-03-13,FALSE
+dark_chocolates,3760278865301,Chocolat noir dessert,200 g,confirmed,15.85,1,1,2024-04-22,2024-04-22,FALSE
+dark_chocolates,3760278863055,Chocolat bio noir Pérou 70% café Arabica,100 g,confirmed,26.7,5,5,2024-04-22,2025-09-17,FALSE
+dark_chocolates,7622210724519,Chocolat noir Bio 70%,90 g,confirmed,30.444444444444446,3,3,2025-05-20,2025-06-08,FALSE
+dark_chocolates,3760077183767,Chocolat noir Pérou SAVEURS & NATURE,70 g,confirmed,51.14285714285714,1,1,2025-07-28,2025-07-28,FALSE
+dark_chocolates,7613287142917,NESTLE DESSERT BIO Corsé,170 g,confirmed,21.55882352941176,2,2,2024-12-26,2025-04-08,FALSE
+dark_chocolates,3477730001701,Chocolat Noir 90% Bio,100 g,confirmed,39.5,8,7,2024-04-27,2025-05-20,FALSE
+dark_chocolates,8000500359815,,90 g,confirmed,22.777777777777775,3,3,2025-01-27,2025-05-20,FALSE
+dark_chocolates,3770024791136,Tablette chocolat gourde aux éclats de sarrasin caramélisé,100g,confirmed,46.5,1,1,2025-04-24,2025-04-24,FALSE
+dark_chocolates,7622210738769,Chocolate Noir de Noir Truffé & Cacao,190 g e,structured_only,9.94736842105263,1,1,2024-01-29,2024-01-29,FALSE
+dark_chocolates,3760121210975,Chocolat noir dessert 56%,200 g,confirmed,13.5,1,1,2024-01-05,2024-01-05,FALSE
+dark_chocolates,3245412980152,Piel de naranja confitadas negro,100 g,confirmed,18.9,3,3,2025-01-06,2025-06-05,FALSE
+dark_chocolates,3760121219688,Chocolat noir noisettes et fleur de sel de Guérande,180 g,confirmed,33.05555555555556,1,1,2024-12-12,2024-12-12,FALSE
+dark_chocolates,7622210477934,Toblerone Dark Chocolate,360g,confirmed,35.833333333333336,3,3,2024-06-20,2024-12-29,FALSE
+dark_chocolates,7613035040793,NESTLÉ DESSERT Noir 2x205g,410 g,confirmed,13.536585365853657,11,9,2024-01-06,2025-09-20,FALSE
+dark_chocolates,3560070660575,Dessert noir,200 g,confirmed,11.45,1,1,2025-03-19,2025-03-19,FALSE
+dark_chocolates,3258590002530,Noir noisettes entières,120 g,confirmed,45.75,1,1,2025-06-05,2025-06-05,FALSE
+dark_chocolates,3250391107018,Tablette fourrée chocolat noir praliné,150 g,confirmed,15.966666666666669,2,2,2025-05-08,2025-05-17,FALSE
+dark_chocolates,3477730001138,Chocolat noir corsé dessert biologique,200 g,confirmed,32.25,7,6,2024-01-05,2025-12-31,FALSE
+dark_chocolates,3760226261018,"Tablette de chocolat 75% de cacao,thé earl grey",100 g,confirmed,32.05,2,2,2024-04-22,2024-11-19,FALSE
+dark_chocolates,3046920027861,Excellence Noir Menthe Intense,100 g,confirmed,25.8,17,15,2024-01-08,2025-09-13,FALSE
+dark_chocolates,3760091722508,Chocolat noir 85% Madagascar,100 g,confirmed,28.549999999999997,10,8,2024-01-10,2025-12-30,FALSE
+dark_chocolates,3560070423941,COEUR de Mousse,160 g,confirmed,18.875,1,1,2025-07-19,2025-07-19,FALSE
+dark_chocolates,3046920040655,Chocolat Noir Pailleté Dentelle Caramel,100g,confirmed,30.099999999999998,1,1,2025-05-08,2025-05-08,FALSE
+dark_chocolates,3564700027486,Chocolat noir amandes entières,200 g,confirmed,9.2,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,7613037677942,LES RECETTES DE L'ATELIER. Pâte d'amande CHOCOLAT NOIR PURE CHOCOLADE MET MARSEPEIN,142 g,confirmed,25.985915492957744,1,1,2024-10-26,2024-10-26,FALSE
+dark_chocolates,3760278863857,Gianduja Noir Éclats de Noisettes,100 g,confirmed,28.3,10,8,2024-01-10,2025-09-17,FALSE
+dark_chocolates,4056489719618,"Chocolat noir, Éclats d'amandes grillées & pointe de sel",180 gram,structured_only,12.166666666666666,2,1,2024-12-03,2025-02-28,FALSE
+dark_chocolates,3501940138466,"Chocolat noir, fourré avec notre pâte à tartiner noir et amandes",100g,confirmed,60.99999999999999,1,1,2025-05-15,2025-05-15,FALSE
+dark_chocolates,3477730001121,Chocolat noir dessert pâtissier 58% cacao,200 g,confirmed,27.25,7,7,2024-04-22,2025-09-14,FALSE
+dark_chocolates,3250390008347,Tablette familiale chocolat noir - 3x100g,100 g,confirmed,29.4,3,3,2025-04-12,2025-05-10,FALSE
+dark_chocolates,4260485630482,Chocolat noir & nibs,80g,confirmed,52.24999999999999,1,1,2025-09-17,2025-09-17,FALSE
+dark_chocolates,3256224642022,Chocolat noir dégustation 72% de cacao et fleur de sel Tablette de100g,100 g,confirmed,17.15,2,2,2025-09-12,2025-10-27,FALSE
+dark_chocolates,3564700027493,Chocolat noir écorces d'orange,200 g,confirmed,12.25,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3258561060187,Chocolat noir aux écorces d'orange confites,100 g,confirmed,13.999999999999998,1,1,2024-11-15,2024-11-15,FALSE
+dark_chocolates,7640159890690,Chocolat noir Fleur de sel,100 g,confirmed,51.9,1,1,2025-06-03,2025-06-03,FALSE
+dark_chocolates,3596710540891,Auchan chocolat noir noisettes entieres 180g,0.18 kg,confirmed,11.944444444444445,1,1,2025-05-02,2025-05-02,FALSE
+dark_chocolates,3760278863062,chocolat bio noir Pérou 70% fleur de sel de Camargue,100 g,confirmed,27.799999999999997,5,5,2024-04-22,2025-12-31,FALSE
+dark_chocolates,3664346306621,tablette poulain fine et gourmande 70% noir moin 2%sucre,100 g,confirmed,16.9,15,10,2024-01-08,2025-10-04,FALSE
+dark_chocolates,3046920045384,Les Pyrénéens Noir لينت شكولاته دارك,150 g,confirmed,20.866666666666667,4,4,2025-01-20,2025-06-08,FALSE
+dark_chocolates,3396411240843,Dégustation noir Eclats d Amandes,90 g,confirmed,50.55555555555556,2,2,2025-01-23,2025-05-20,FALSE
+dark_chocolates,3760246160124,Noir 70% caramel beurre salé,100 g,confirmed,37.99999999999999,1,1,2024-01-08,2024-01-08,FALSE
+dark_chocolates,4006040013471,Chocolat noir 85%,80 g,confirmed,35,3,3,2024-03-02,2025-05-20,FALSE
+dark_chocolates,3560070720859,Chocolate negro,80 g,confirmed,20.75,9,9,2025-01-06,2025-07-23,FALSE
+dark_chocolates,3760278860498,Chocolat gianduja,100 g,confirmed,27.9,11,10,2024-01-06,2025-12-31,FALSE
+dark_chocolates,4044889002225,Feine Bitter Kuvertüre,200 g,confirmed,25.75,1,1,2025-09-17,2025-09-17,FALSE
+dark_chocolates,3250391503834,Tablette bloc chocolat noir aux amandes entières - 200g,200 g,confirmed,10.524999999999999,4,4,2025-01-20,2025-05-10,FALSE
+dark_chocolates,7613035898677,NESTLÉ DESSERT Corsé,400 g,confirmed,15.649999999999999,1,1,2025-12-01,2025-12-01,FALSE
+dark_chocolates,7613037030440,NESTLÉ DESSERT Noir Éclats de Noisettes 170g,170 g,confirmed,18.76470588235294,7,7,2024-01-08,2025-11-01,FALSE
+dark_chocolates,7610036002829,Chocolat Villars Noir Ecorces Orange Confites 100g,100 g,confirmed,29.45,2,2,2025-05-14,2025-12-18,FALSE
+dark_chocolates,3760091726599,Chocolat noir Gingembre confit,100 g,confirmed,28.5,15,13,2024-01-06,2025-12-31,FALSE
+dark_chocolates,3256229544000,Chocolat noir aromatisé à l'arome nature de menthe 100g,100 g,confirmed,13.700000000000001,1,1,2025-03-06,2025-03-06,FALSE
+dark_chocolates,3760121219718,Noir dessert,200 g,confirmed,27.999999999999996,3,2,2024-03-02,2025-03-21,FALSE
+dark_chocolates,3700531201927,Tablette chocolat noir 74% éclats d'amandes toastées,100 g,confirmed,45.49999999999999,2,1,2025-01-15,2025-04-24,FALSE
+dark_chocolates,3700036905764,Chocolat Noir Dégustation,100 g,confirmed,24.7,4,2,2024-02-14,2025-02-03,FALSE
+dark_chocolates,3760278860481,Chocolat noir amande,100 g,confirmed,28.25,6,6,2024-01-16,2025-09-17,FALSE
+dark_chocolates,3046920021463,Dessert le 70 % cacao Noir intense,200g,confirmed,34.5,2,2,2025-04-08,2025-05-08,FALSE
+dark_chocolates,3256220610407,Chocolat noir supérieur 3 Tablettes de 100g,300 g,confirmed,8.433333333333334,3,3,2025-01-26,2025-06-08,FALSE
+dark_chocolates,3396410047559,Chocolat Noir Costa Rica 75% De Cacao,80 g,confirmed,52.5,3,2,2025-01-23,2025-05-20,FALSE
+dark_chocolates,3664346305891,Poulain Noir extra - pur beurre de cacao,400 g,confirmed,10.612499999999997,2,2,2025-05-08,2025-05-27,FALSE
+dark_chocolates,3760110970446,Tablette pur cacao 100% sans sucre,70 g,confirmed,77.85714285714285,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,3046920021043,Noir intense dessert 70%,200 g,confirmed,18.099999999999998,7,7,2025-01-27,2025-06-03,FALSE
+dark_chocolates,3760077182005,Tablette de chocolat noir 70% Origine Madagascar - 80g,80g,confirmed,48.125,2,1,2025-04-25,2025-05-20,FALSE
+dark_chocolates,4044889002904,Mørk sjokolade 99%,80 g,confirmed,42.5,1,1,2024-11-16,2024-11-16,FALSE
+dark_chocolates,5410081200445,L'original noir,200 g,confirmed,16.45,9,8,2025-01-06,2025-09-13,FALSE
+dark_chocolates,3258590000185,Chocolat Noir 70% à l'agave,100 g,confirmed,33.8,1,1,2024-04-22,2024-04-22,FALSE
+dark_chocolates,4044889001013,Feine Bitter Orange,100 g,confirmed,32,1,1,2025-04-24,2025-04-24,FALSE
+dark_chocolates,3046920020992,Chocolat noir 70% Cacao Sel rose de l'Himalaya,100 g,confirmed,28.799999999999997,6,6,2024-02-10,2025-06-08,FALSE
+dark_chocolates,3046920010870,Excellence citron pointe de gingembre,100 g,confirmed,40.99999999999999,1,1,2025-09-12,2025-09-12,FALSE
+dark_chocolates,3245678047200,Noir menthe,0.1 kg,confirmed,13.1,1,1,2024-12-17,2024-12-17,FALSE
+dark_chocolates,5410081201039,100G COTE D'OR NOIR ORIGINAL,100 g,confirmed,15.5,5,5,2024-05-23,2025-07-26,FALSE
+dark_chocolates,5412956213116,Extra Dark Chocolate 85 % Cachet,90 g,confirmed,27.11111111111111,1,1,2025-09-17,2025-09-17,FALSE
+dark_chocolates,3046920010047,Cioccolato Fondente 78%,100g,confirmed,27.5,15,14,2024-01-08,2025-07-19,FALSE
+dark_chocolates,7610036002676,Chocolat Villars Noir 70% Sans sucre ajouté 100g,100 g,confirmed,29.5,1,1,2024-03-20,2024-03-20,FALSE
+dark_chocolates,7613035859098,NESTLÉ DESSERT 70% Absolu 170g,170 g,confirmed,19.55882352941176,4,4,2024-01-08,2025-09-20,FALSE
+dark_chocolates,26054247,Chocolat dessert 52% cacao noir,200 g,confirmed,9.95,1,1,2024-11-16,2024-11-16,FALSE
+dark_chocolates,3256227893797,Chocolat,100 g,confirmed,23.65,2,2,2024-05-11,2025-06-08,FALSE
+dark_chocolates,3760077182227,Chocolat Noir 85% République Dominicaine,80 g,confirmed,48.125,2,1,2025-04-25,2025-05-20,FALSE
+dark_chocolates,3179142787401,Pépites Chocolat Noir,200 g,confirmed,19.674999999999997,4,4,2024-11-27,2025-06-11,FALSE
+dark_chocolates,3046920042765,Lindor noir,150 g,confirmed,21.46666666666667,8,8,2024-02-12,2025-10-04,FALSE
+dark_chocolates,4044889002249,Mørk sjokolade 92%,80 g,confirmed,43.375,2,2,2024-11-16,2025-06-05,FALSE
+dark_chocolates,3596710507580,Noir chocolat extra fin,0.3 kg,confirmed,10.200000000000001,1,1,2025-05-02,2025-05-02,FALSE
+dark_chocolates,3046920020183,Délice pistache amande,150 g,confirmed,18.46666666666667,2,2,2025-02-07,2025-05-20,FALSE
+dark_chocolates,26026152,Chocolat Dessert Corsé,200 g,confirmed,8.95,1,1,2024-11-16,2024-11-16,FALSE
+dark_chocolates,3046920010283,Excellence Lait Extra Fondant,100 g,confirmed,24.3,14,10,2024-01-13,2025-09-12,FALSE
+dark_chocolates,3760147070164,Chocolat noir orange,100 g,confirmed,30.099999999999998,1,1,2024-04-22,2024-04-22,FALSE
+dark_chocolates,20815356,Dunkle Schokolade mit ganzen Haselnüssen,3.5 oz,structured_only,10.985323003770283,4,1,2024-01-22,2025-02-28,FALSE
+dark_chocolates,3700214619230,Chocolat noir poire amandes doux et croquant,100 g,confirmed,39.599999999999994,2,2,2025-05-07,2025-05-20,FALSE
+dark_chocolates,3760226260509,noir fleur de sel,100 g,confirmed,34.25,4,3,2024-04-22,2025-12-07,FALSE
+dark_chocolates,3760147070317,Chocolat cru 75% EL inti,100 g,confirmed,52.8,2,2,2024-04-22,2025-05-20,FALSE
+dark_chocolates,3046920110341,Chocolat 100% cacao orange,100 g,confirmed,28.5,1,1,2025-05-20,2025-05-20,FALSE
+dark_chocolates,7622210869616,Chocolat Bio noir 85%,90 g,confirmed,31.333333333333332,5,3,2024-06-01,2025-05-20,FALSE
+dark_chocolates,3700214614266,Chocolat 90% Pérou,100 g,confirmed,30.499999999999996,7,4,2024-01-06,2025-10-18,FALSE
+dark_chocolates,3760231780276,Chocolat noir caramel & sel de Guérande bio recette N°33,100 g,confirmed,53.89999999999999,1,1,2025-05-14,2025-05-14,FALSE
+dark_chocolates,3560071006327,Dessert noir,200 g,confirmed,8.75,1,1,2024-05-19,2024-05-19,FALSE
+dark_chocolates,3477730001251,Chocolat noir 75% Bio,100 g,confirmed,37.99999999999999,9,8,2024-04-27,2025-09-15,FALSE
+dark_chocolates,3421371534302,Friture chocolat noir 70% de cacao,110 g,confirmed,38.09090909090909,1,1,2024-03-30,2024-03-30,FALSE
+dark_chocolates,3700152400020,Chocolat Madagascar,100 g,confirmed,75,1,1,2024-12-24,2024-12-24,FALSE
+dark_chocolates,3560071564735,Dessert noir,200 g,confirmed,11.25,1,1,2025-06-03,2025-06-03,FALSE
+dark_chocolates,3263850574290,Chocolat noir 70% de cacao,100 g,confirmed,22,1,1,2025-11-02,2025-11-02,FALSE
+dark_chocolates,3760091722515,Nicaragua grand cru waslala 75%,100 g,confirmed,28.5,13,10,2024-01-10,2025-12-31,FALSE
+dark_chocolates,7610036002737,"Chocolat Noir 72%, Collection Pure",100g,confirmed,27.049999999999997,8,6,2024-12-24,2025-07-11,FALSE
+fruit_juices,3596710473199,pur jus d'orange issu de l'agriculture biologiqueSans pulpe,1 l,confirmed,2.89,3,2,2024-04-06,2025-03-29,FALSE
+fruit_juices,5038862134590,Jus - Tutti Frutti,900 ml,confirmed,3.555555555555556,5,5,2024-12-26,2025-06-28,FALSE
+fruit_juices,20569105,Apple Juice,1 l,confirmed,1.55,1,1,2024-06-03,2024-06-03,FALSE
+fruit_juices,3596710432653,Instant Gourmand - Fraise - Teneur en fruits : 40% minimum,1 l,confirmed,2.755,2,2,2024-03-28,2025-10-18,FALSE
+fruit_juices,3423182102411,pur jus pomme framboise bio,1 l,confirmed,4.55,3,2,2024-02-29,2025-12-31,FALSE
+fruit_juices,5601151543313,Clássico Pêssego,1 l,confirmed,2.69,1,1,2024-02-11,2024-02-11,FALSE
+fruit_juices,5038862000192,"Pur jus orange, fruit de la passion et mandarine",900 ml,confirmed,3.727777777777778,4,4,2024-12-13,2025-09-23,FALSE
+fruit_juices,3350033288881,100% pur jus multifruits bio,1 L,confirmed,3.09,1,1,2024-01-07,2024-01-07,FALSE
+fruit_juices,9002515601018,Pago Ace - Orange - Carotte - Citron,75 cl,confirmed,2.8266666666666667,3,3,2025-01-30,2025-12-15,FALSE
+fruit_juices,3289196040541,100% pur jus de grenade,1 L,confirmed,8.05,3,3,2024-03-28,2025-08-15,FALSE
+fruit_juices,0016229901189,Passion fruit juice,350 ml,confirmed,4.285714285714286,1,1,2025-01-08,2025-01-08,FALSE
+fruit_juices,3596710518975,100% Pur Jus Clémentine CORSESans sucres ajoutés** Comme tous les jus de fruits. Contient les sucres naturellement présents dans les fruits.Riche en Vitamine C,1 l,confirmed,2.99,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3608580913825,Jus d'orange pressées,1 L,confirmed,2.98,1,1,2024-11-10,2024-11-10,FALSE
+fruit_juices,3266191001814,Pur jus de cranberry,50 cl,confirmed,13.98,1,1,2025-05-26,2025-05-26,TRUE
+fruit_juices,3123340003054,LE PUR JUS Multifruits,1 L,confirmed,2.325,4,5,2024-08-30,2025-08-31,FALSE
+fruit_juices,3256227113130,Pur jus ananas bouteille en verre de 75cl,0.7500 l,confirmed,4.373333333333333,3,3,2025-01-07,2025-05-23,FALSE
+fruit_juices,3560070430215,100% pur jus multifruits,1.5 L,confirmed,1.62,1,1,2025-01-10,2025-01-10,FALSE
+fruit_juices,4902102038720,Fanta grape,300ml,confirmed,12.966666666666667,1,1,2024-09-12,2024-09-12,TRUE
+fruit_juices,3560071152260,Fiestabul Jus de pomme gazéifié,75 cl,confirmed,4.333333333333333,3,3,2025-02-01,2025-05-30,FALSE
+fruit_juices,3250392878733,Jus de nos vergers,1l,confirmed,3.79,1,1,2024-11-24,2024-11-24,FALSE
+fruit_juices,3254691592086,Jus de pomme,1.5 l,confirmed,1.4533333333333331,2,2,2025-11-01,2025-11-24,FALSE
+fruit_juices,3608580113591,Multi vitaminés 9 fruits,1.5 L,confirmed,3.0066666666666664,1,1,2025-06-28,2025-06-28,FALSE
+fruit_juices,3256223028056,Pur jus multifruits brique de 2l,2 l,confirmed,1.49,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3271471000630,Jus de pomme poire,1 l,confirmed,3.12,2,2,2024-01-21,2025-08-15,FALSE
+fruit_juices,3596710518951,100% PUR JUS Poire,1 l,confirmed,2.15,2,1,2024-11-11,2025-01-30,FALSE
+fruit_juices,5038862438728,As de Pink,750 ml,confirmed,4.2,3,3,2024-01-16,2025-06-28,FALSE
+fruit_juices,3596710493258,Cidre doux pur jus issu de l'agriculture biologique - Vergers du patrimoine BIO,0.75 l,confirmed,3.186666666666667,1,1,2025-02-25,2025-02-25,FALSE
+fruit_juices,5038862160506,Jus d'orange avec pulpe,900 ml,confirmed,3.0888888888888886,5,4,2024-12-24,2025-08-21,FALSE
+fruit_juices,3560070720743,Matin Douceur 100% Pur Jus Multifruits,1 l,confirmed,4.275,2,2,2025-04-23,2025-06-03,FALSE
+fruit_juices,3301591002099,Apibul - jus de pommes pétillant,75 cl,confirmed,5.16,2,2,2024-04-22,2025-09-17,FALSE
+fruit_juices,9002515601926,Fruit du Dragon Goyave,75 cl,confirmed,3.6533333333333333,2,2,2025-03-17,2025-10-04,FALSE
+fruit_juices,3254690670600,Le bio à emporter partout pomme,6x20cl,confirmed,2.2250000000000005,4,4,2024-10-24,2025-08-15,FALSE
+fruit_juices,3250391532230,Pur jus pomme bio pet 1l,900 ml,confirmed,2.9555555555555557,1,1,2025-04-01,2025-04-01,FALSE
+fruit_juices,3502110005663,Tropicana Pomme origine France 1 L,1000 ml,confirmed,2.83,1,1,2024-11-11,2024-11-11,FALSE
+fruit_juices,3250390031062,Abc pomme briquettes 6x20cl,1200 ml,confirmed,1.0916666666666668,1,1,2025-04-01,2025-04-01,FALSE
+fruit_juices,8410261657806,Néctar de Piña y Coco,"1,5 L",confirmed,1.6333333333333335,1,1,2025-02-22,2025-02-22,FALSE
+fruit_juices,3256224059066,"Pur jus d'orange sans pulpe pet 1,5L",1.5000 l,confirmed,1.6333333333333335,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3229820105260,Jus de pruneaux,75 cl,confirmed,5.633333333333333,4,3,2024-10-01,2025-08-15,FALSE
+fruit_juices,3560071083656,100% Pur fruit pressé Jus de Pruneau BIO,75 cl,confirmed,4.886666666666667,2,2,2025-03-20,2025-04-25,FALSE
+fruit_juices,5038862167505,pur jus pomme mangue,900 ml,confirmed,4.055555555555555,3,3,2024-02-11,2025-06-27,FALSE
+fruit_juices,3596710449828,100% pur jus - pomme douce,1 L,confirmed,1.84,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3564706579194,Jus de pomme,2 l,confirmed,1.145,1,1,2025-09-27,2025-09-27,FALSE
+fruit_juices,3560070823277,100% pur jus PAMPLEMOUSSE ROSE,1 l,confirmed,3.85,1,1,2025-01-18,2025-01-18,FALSE
+fruit_juices,3250390880479,Pj pomme pet 1l,1000 ml,confirmed,1.005,2,2,2024-01-13,2025-10-04,FALSE
+fruit_juices,3560070333127,Orange Jus à base de concentré,"1,5 l",confirmed,1.3933333333333333,1,1,2025-02-22,2025-02-22,FALSE
+fruit_juices,3289196400178,Mini pur jus de citron bio,25 cl,confirmed,8.32,2,2,2024-04-22,2024-12-28,FALSE
+fruit_juices,3123349014464,Le BIO pomme,1 L,confirmed,2.69,1,1,2025-10-04,2025-10-04,FALSE
+fruit_juices,5038862000901,innocent super smoothie défense berry,750 ml,confirmed,5.04,1,1,2025-01-06,2025-01-06,FALSE
+fruit_juices,3423182103203,Jus de pomme aux épices,1 L,confirmed,3.215,2,2,2024-02-29,2025-09-17,FALSE
+fruit_juices,3596710379927,100% - Pur jus - pomme,2 l,confirmed,1.045,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3256221510140,"Jus de citron vert 2x12, 5cl",0.2500 l,confirmed,6.52,1,1,2024-05-10,2024-05-10,FALSE
+fruit_juices,5038862432269,"Jus pressé Orange sanguine, grenade, orange, citron vert",900 ml,confirmed,3.811111111111111,2,2,2025-06-28,2025-07-11,FALSE
+fruit_juices,3250392008956,Pj orange avec pulpe brique 1l,1000 ml,confirmed,2.1550000000000002,2,2,2024-02-18,2025-04-01,FALSE
+fruit_juices,3250393446146,Pur jus pruneaux bio,1000 ml,confirmed,4.39,1,1,2025-04-05,2025-10-04,FALSE
+fruit_juices,3560070823246,100% pur jus jus d'orange sans pulpe,1 l,confirmed,2.45,3,4,2025-01-18,2025-12-05,FALSE
+fruit_juices,3250391556205,"Pj orange sans pulpe pet 1,5l",1500 ml,confirmed,1.7133333333333332,1,1,2025-02-22,2025-02-22,FALSE
+fruit_juices,3596710386444,Boisson aux jus de fruits - pomme poire - goût pomme poire - à l'eau de source,2 l,confirmed,1.045,1,1,2024-02-15,2024-02-15,FALSE
+fruit_juices,3250393446184,Pj pomme poire bio brique 1l,1000 ml,confirmed,1,1,1,2025-10-04,2025-10-04,FALSE
+fruit_juices,8020542116016,Limmi Bio,250 ml,confirmed,11.48,1,1,2025-02-14,2025-02-14,TRUE
+fruit_juices,7315120006034,Blend Orange Carrot Pers,330ml,confirmed,6.03030303030303,1,1,2025-03-06,2025-03-06,FALSE
+fruit_juices,3256223028322,Jus à base de concentré de pamplemousse rose 1l,1 l,confirmed,1.56,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3256228978844,Pur jus orange avec pulpe bocal 1 litre,1 l,confirmed,3.67,1,1,2024-10-01,2024-10-01,FALSE
+fruit_juices,3560070828692,100% pur jus fruits du verger,1 l,confirmed,3.95,2,2,2025-01-18,2025-06-03,FALSE
+fruit_juices,3760225491744,Pur Jus Douceur d orange bio,1 L,confirmed,3.22,1,1,2024-03-25,2024-03-25,FALSE
+fruit_juices,3256229529304,Pur jus d'orange - brique 1 litre,1 l,confirmed,2.61,2,2,2025-03-24,2025-11-24,FALSE
+fruit_juices,3289196260321,Pur jus de pomme bio,1 L,confirmed,2.87,1,2,2024-11-19,2025-03-31,FALSE
+fruit_juices,3560071456269,Ananas Passion 100% pur jus,25 cl,confirmed,4.28,1,1,2025-01-20,2025-01-20,FALSE
+fruit_juices,3250393004209,Pj pomme merci ! brique 1l,1000 ml,confirmed,1.34,1,1,2025-11-15,2025-11-15,FALSE
+fruit_juices,3250392445935,"Pur jus orange avec pulpe pet 1,5l",1500 ml,confirmed,2.3066666666666666,1,1,2025-06-28,2025-06-28,FALSE
+fruit_juices,5038862138390,Pure Jus Apple & Raspberry,33 cl,confirmed,7.8181818181818175,2,2,2024-10-07,2025-01-20,FALSE
+fruit_juices,5038862161503,"Innocent jus pomme, pêche & poire 900ml",900 ml,confirmed,3.977777777777778,7,7,2024-01-19,2025-09-23,FALSE
+fruit_juices,3770022787094,Oranges pressées,750 ml,confirmed,5.32,1,1,2024-03-10,2024-03-10,FALSE
+fruit_juices,3760391830354,Pur jus pomme kiwi fraise,1 l,confirmed,3.3,1,1,2025-08-15,2025-08-15,FALSE
+fruit_juices,3263857098317,Jus de pomme,1 L,confirmed,1.5,1,1,2025-03-16,2025-03-16,FALSE
+fruit_juices,3596710492916,"Nectar de pomme biologique - A base de concentré, Teneur en fruits: 55% minimum.",1.5 l,confirmed,1.2133333333333334,1,1,2025-03-29,2025-03-29,FALSE
+fruit_juices,3123349014556,Jus joker multifruit,1L,confirmed,2.23,2,2,2025-01-30,2025-09-17,FALSE
+fruit_juices,3256220024082,Jus de Pruneau - Bouteille verre 75cl,0.7500 l,confirmed,4.56,2,1,2024-10-01,2025-05-23,FALSE
+fruit_juices,3596710493234,Cidre Rosé - Vergers du patrimoine 75cl,0.75 l,confirmed,3.266666666666667,2,1,2024-01-19,2024-11-25,FALSE
+fruit_juices,3271470754503,Pétillant pomme,75cL,confirmed,3.3200000000000003,1,1,2025-04-14,2025-04-14,FALSE
+fruit_juices,4056489170099,Clémentine pur jus,1 l,confirmed,1.99,1,1,2025-03-02,2025-03-02,FALSE
+fruit_juices,3256220023931,Pur jus de pomme 1l,1 l,confirmed,2.79,1,1,2025-01-07,2025-01-07,FALSE
+fruit_juices,3596710494491,Juspommeà base de concentréteneur en fruits 100%,1 l,confirmed,1.05,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3596710307562,Soja chocolat biologique,1 l,confirmed,1.52,1,1,2024-09-28,2024-09-28,FALSE
+fruit_juices,3596710379903,100% Pur jusOrangesans pulpeRiche en vitamine C,1 l,confirmed,2.035,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3301591002167,75 CL,75 cl,confirmed,3.4,1,2,2024-04-22,2025-03-31,FALSE
+fruit_juices,3596710551651,ACE,1 l,confirmed,1.89,1,1,2025-07-21,2025-07-21,FALSE
+fruit_juices,3560070275267,100% Pur Jus - Pomme,1 L,confirmed,1.645,2,2,2025-01-03,2025-05-10,FALSE
+fruit_juices,3256221952605,Pur jus pressé multifruits,90cl,confirmed,2.1777777777777776,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3250391478958,Abc ananas briquettes 6x20cl,1200 ml,confirmed,2.125,1,1,2024-12-07,2024-12-07,FALSE
+fruit_juices,3566141001070,Pur jus de pomme,100cl,confirmed,3.63,2,1,2024-12-08,2025-12-31,FALSE
+fruit_juices,3258561301440,Pet 1L Pur Jus Clémentine,1 L,confirmed,2.69,1,1,2025-06-27,2025-06-27,FALSE
+fruit_juices,3560070820566,100% pur jus RAISIN,1 l,confirmed,3.27,2,2,2025-01-18,2025-03-20,FALSE
+fruit_juices,3596710473175,100% Pur jus Multifruits BIO,1 l,confirmed,3.645,2,1,2024-04-01,2025-01-30,FALSE
+fruit_juices,3596710355082,100% Pur JusOrange - sans pulpe. Riche en vitamine C.,2 l,confirmed,1.3925,2,2,2024-11-11,2025-03-29,FALSE
+fruit_juices,3254691592116,Le Bio Pomme,20 cl,confirmed,13.899999999999999,1,1,2025-10-04,2025-10-04,TRUE
+fruit_juices,3123340008288,Le Fruit - Orange sans pulpe,"1,5 l",confirmed,1.8866666666666667,3,3,2024-04-06,2025-10-04,FALSE
+fruit_juices,3760294960783,Jus d'oranges pressées 100%,1L,confirmed,2.92,5,5,2024-04-22,2025-12-31,FALSE
+fruit_juices,3256224239109,Pur jus orange et fruits mangue goyave bouteille de 1l,1 l,confirmed,2.57,1,1,2024-09-19,2024-09-19,FALSE
+fruit_juices,3270190130802,Ananas,20 cl,confirmed,13.45,1,1,2025-01-03,2025-01-03,TRUE
+fruit_juices,3760059740025,Pur Jus de Pomme Reinette Fabrication Artisanale,1 L,confirmed,4.3,1,1,2024-12-14,2024-12-14,FALSE
+fruit_juices,3560070117345,Jus d’ananas,1 l,confirmed,1.885,2,2,2025-01-03,2025-03-21,FALSE
+fruit_juices,3770032519050,Jus d'orange Maracuja,1L,confirmed,3.49,2,2,2024-08-14,2025-03-24,FALSE
+fruit_juices,3580283512447,Jus de raisin 100% BIO,75 cl,confirmed,2.6133333333333333,1,1,2025-09-17,2025-09-17,FALSE
+fruit_juices,3760294961674,Apple juice,1L,confirmed,1.87,1,1,2025-12-31,2025-12-31,FALSE
+fruit_juices,3256220122658,Pur jus 4 agrumes bouteille de 1l,1 l,confirmed,2.42,3,2,2024-01-25,2025-03-24,FALSE
+fruit_juices,3258561300290,Jus de pomme,1 l,confirmed,1.56,1,1,2025-09-17,2025-09-17,FALSE
+fruit_juices,3266191027951,100% pur jus de citron,25 cl,confirmed,8.76,1,1,2025-01-21,2025-01-21,FALSE
+fruit_juices,3770014111630,Jus de raisin,75 cl,confirmed,4.3999999999999995,1,1,2025-02-17,2025-02-17,FALSE
+fruit_juices,3596710355075,CRANBERRYLIGHT*A base de jus concentré *Allégée en sucres,1 l,confirmed,1.73,1,1,2025-01-30,2025-01-30,FALSE
+fruit_juices,3560070827909,100% PUR JUS Pomme,1 l,confirmed,1.12,2,2,2025-01-03,2025-04-10,FALSE
+fruit_juices,1210002001755,Pause fruitée orange pommes grenade,1L,confirmed,1.79,1,1,2025-08-12,2025-08-12,FALSE
+fruit_juices,4056489644910,Petit déjeuner,1L,confirmed,1.87,1,1,2025-08-12,2025-08-12,FALSE
+fruit_juices,3250393446207,Pj pamplemousse blanc bio brique 1l,1000 ml,confirmed,3.84,1,1,2025-04-01,2025-04-01,FALSE
+fruit_juices,3289196100436,Pur jus clémentine,750 ml,confirmed,5.866666666666667,2,1,2024-12-08,2025-12-31,FALSE
+fruit_juices,3560071494933,Ananas 100% pur jus,90 cl,confirmed,2.7777777777777777,1,1,2025-03-04,2025-03-04,FALSE
+fruit_juices,3456300002508,jus de citron,500 ml,confirmed,6.4,12,7,2024-10-08,2025-12-31,FALSE
+fruit_juices,3560070275236,100% PUR JUS Ananas,1 l,confirmed,3.02,2,2,2024-08-20,2025-01-03,FALSE
+fruit_juices,8718226323064,"Passionsfruchtsaft, Passionsfrucht",1000 ml,confirmed,2.5,1,1,2025-11-15,2025-11-15,FALSE
+fruit_juices,3560071480073,Pur Jus d'orange,1 l,confirmed,1.79,1,1,2024-02-14,2024-02-14,FALSE
+fruit_juices,3502110006790,"Tropicana 100% oranges pressées sans pulpe format familial 1,5 L",1500 ml,confirmed,2.4,7,6,2024-02-11,2025-08-25,FALSE
+fruit_juices,3596710475285,Bio - 100% Pur jus Fruits du verger,1 l,confirmed,3.6,1,1,2025-03-29,2025-03-29,FALSE
+fruit_juices,3248340047867,3 fruits - 100 % pur fruit pressé,1 L,confirmed,1.89,1,1,2025-01-30,2025-01-30,FALSE
+fruit_juices,3256221952629,Pur jus de clémentine flash past. réfrigéré - ble plast. 90cl,0.9000 l,confirmed,2.488888888888889,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,0016229909055,Mango And Passion Fruit Juice Drink,350 ml,confirmed,4.285714285714286,1,1,2025-01-08,2025-01-08,FALSE
+fruit_juices,3250393454592,Pj pomme mangue passion pet 1l,1000 ml,confirmed,2.44,1,1,2025-04-01,2025-04-01,FALSE
+fruit_juices,3270190192794,Jus d'orange à base de concentré,1 l,confirmed,1.835,4,4,2024-08-20,2025-12-05,FALSE
+fruit_juices,3256225426775,Pur jus de pommes douces filière pet 1 litre,1 l,confirmed,1.58,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3256221952575,"Pur jus d'orange a/p.flash pasteurisé, refrigéré - pet 1,5l",1.5000 l,confirmed,2.1666666666666665,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3596710435753,Jus pomme à base de concentré,1 l,confirmed,0.86,1,1,2024-04-06,2024-04-06,FALSE
+fruit_juices,1205149180005,Boisson concentrée à base d'airelles rouges,495ml,confirmed,8.06060606060606,1,1,2024-08-16,2024-08-16,FALSE
+fruit_juices,3254691591355,Pressade bio,1 l,confirmed,3.02,1,1,2025-04-05,2025-04-05,FALSE
+fruit_juices,5038862136143,"pomme, kiwi & concombre",900ml,confirmed,3.572222222222222,2,2,2024-01-16,2025-06-28,FALSE
+fruit_juices,1210002000659,Réveil Fruité - 4 fruits pressés,90cl,confirmed,3.4555555555555553,1,1,2025-03-24,2025-03-24,FALSE
+fruit_juices,3423182102107,Jus Poire des alpes,1 l,confirmed,2.98,3,2,2024-02-29,2025-12-31,FALSE
+fruit_juices,3564700608722,Petillant Gibus Pomme peche sans alcool,75 cl,confirmed,3.453333333333333,1,1,2025-02-01,2025-02-01,FALSE
+fruit_juices,5410188013085,"Tropicana Réveil fruité format familial 1,5 L",1500 ml,confirmed,2.3666666666666667,3,3,2025-01-10,2025-03-24,FALSE
+fruit_juices,3596710404780,"Boisson aux jus de fruits Multifruits - Goût multifruits , à l'eau de source",2 l,confirmed,1.045,1,1,2024-02-15,2024-02-15,FALSE
+fruit_juices,3248340047874,Jus d'orange,1 Litre,structured_only,1.6,2,1,2024-04-06,2024-11-11,FALSE
+fruit_juices,3596710355297,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,2 l,confirmed,0.77,2,2,2024-02-15,2024-03-28,FALSE
+fruit_juices,3560071182236,Orange avec pulpe 100% pur jus,"1,5 L",confirmed,2.1666666666666665,1,1,2024-02-14,2024-02-14,FALSE
+fruit_juices,3410280141350,"Pj orange pet 1,5l",1500 ml,confirmed,1.8,1,1,2025-04-01,2025-04-01,FALSE
+fruit_juices,8410261653013,Peach Juice Drink,1.5l,confirmed,1.6333333333333335,1,1,2025-02-22,2025-02-22,FALSE
+fruit_juices,5038862165501,Jus pomme & framboise,900 ml,confirmed,3.594444444444444,6,5,2024-01-16,2025-06-28,FALSE
+fruit_juices,3502110003652,Tropicana réveil fruité 1 L,1000 ml,confirmed,3,3,3,2024-06-01,2025-04-01,FALSE
+fruit_juices,3250392008918,Pj orange sans pulpe brique 1l,1000 ml,confirmed,2.14,3,3,2024-02-18,2025-04-01,FALSE
+fruit_juices,3256227248368,Pur jus clémentine orange raisin bouteille de 1l,1 l,confirmed,2.1399999999999997,2,2,2024-09-19,2025-03-24,FALSE
+fruit_juices,3289196040510,Pur jus de pamplemousse rose biologique,1000 ml,confirmed,4.425000000000001,2,1,2024-12-08,2025-12-31,FALSE
+fruit_juices,3256226771690,Jus de citron vert,25 cl,confirmed,7.56,1,1,2024-04-05,2024-04-05,FALSE
+fruit_juices,3596710307579,Soja vanille Bio,1 l,confirmed,1.75,1,1,2025-03-29,2025-03-29,FALSE
+fruit_juices,5038862130929,INFATIGABLEU,750 ml,confirmed,4.526666666666666,4,4,2024-01-15,2025-12-17,FALSE

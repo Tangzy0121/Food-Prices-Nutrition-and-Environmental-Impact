@@ -1,0 +1,88 @@
+category,category_label,agribalyse_food_code,agribalyse_proxy_food_code,agribalyse_name,co2_total,n_products,median_price
+biscuits,Biscuits (EUR/kg),23200,,Gingerbread,2.5,1,11.45
+biscuits,Biscuits (EUR/kg),23851,23851,"Soft waffle (Brussels-style), plain or with sugar, prepacked",2.44,1,7.966666666666668
+biscuits,Biscuits (EUR/kg),23853,,"Wafer biscuit, crunchy (thin or dry), plain or with sugar, prepacked",2.21,3,14.843749999999998
+biscuits,Biscuits (EUR/kg),23930,,"Fruit shortbread cake, prepacked",3.34,1,49.94999999999999
+biscuits,Biscuits (EUR/kg),24000,24000,Biscuit (cookie),3.59,17,14.675
+biscuits,Biscuits (EUR/kg),24000,,Biscuit (cookie),3.59,2,8.7375
+biscuits,Biscuits (EUR/kg),24009,,Speculoos biscuit,3.82,3,9.071428571428571
+biscuits,Biscuits (EUR/kg),24011,,"Biscuit (cookie), assortment of miniature sweets and biscuits",4.01,2,10.760000000000002
+biscuits,Biscuits (EUR/kg),24015,,Butter biscuit (cookie),2.47,4,12.831529249193919
+biscuits,Biscuits (EUR/kg),24016,,"Biscuit (cookie), covering with a chocolate bar",7.79,6,16.733333333333334
+biscuits,Biscuits (EUR/kg),24034,,Breakfast biscuit (cookie),3.59,1,5.875
+biscuits,Biscuits (EUR/kg),24038,,"Biscuit (cookie), chocolate covering",7.79,7,7.1
+biscuits,Biscuits (EUR/kg),24041,,"Breakfast biscuit (cookie) with cereals, fortified with vitamins and chemical elements",3.59,2,9.25
+biscuits,Biscuits (EUR/kg),24049,,"Biscuit shortbread, with butter",3.38,3,6.8
+biscuits,Biscuits (EUR/kg),24051,,"Biscuit sponge cake, with chocolate, pre-packed",6.54,1,22.041666666666668
+biscuits,Biscuits (EUR/kg),24052,,"Biscuit (small tart), with chocolate, pre-packed",6.06,2,14.635000000000002
+biscuits,Biscuits (EUR/kg),24054,,"Biscuit shortbread, with fruits",2.44,1,15.92
+biscuits,Biscuits (EUR/kg),24071,,Shortbread pastry biscuit,3.19,20,12.206666666666667
+biscuits,Biscuits (EUR/kg),24080,,"Shortbread cookie with cocoa or chocolate, or praline or other",6.06,1,9.583333333333332
+biscuits,Biscuits (EUR/kg),24225,,"Biscuit (cookie), snack with dairy or vanilla filling",6.67,3,13.863636363636363
+biscuits,Biscuits (EUR/kg),24320,,"Wafer biscuit, with fruits",2.92,2,10.03125
+biscuits,Biscuits (EUR/kg),24371,,"Wafer cookie, with chocolate, prepacked",10.3,1,19.7
+biscuits,Biscuits (EUR/kg),24615,,"Biscuit (cookie), thin, w almonds",3.64,1,13.700000000000001
+biscuits,Biscuits (EUR/kg),24631,,"Madeleine biscuit, with chocolate, prepacked",7.6,1,6.25
+biscuits,Biscuits (EUR/kg),24659,,Biscuit puff pastry,3.59,3,14.25287356321839
+biscuits,Biscuits (EUR/kg),24678,,"Biscuit sponge cake with fruits covering, pre-packed",2.92,1,13.500000000000002
+biscuits,Biscuits (EUR/kg),24679,,"Biscuit (small tart), with fruit covering",2.44,4,9.54251968503937
+biscuits,Biscuits (EUR/kg),24684,,"Biscuit (cookie), with chocolate drops",6.27,6,13.871428571428572
+biscuits,Biscuits (EUR/kg),24686,,Dried sponge cake filled with fruits and covered with chocolate,2.47,6,9.466666666666669
+biscuits,Biscuits (EUR/kg),31113,,Cereal bar w fruit,3.26,1,11.09375
+biscuits,Biscuits (EUR/kg),38402,38402,"Salty snacks, crackers, plain",1.54,1,33.5
+biscuits,Biscuits (EUR/kg),7741,,Brioche,2.95,1,10.576923076923077
+biscuits,Biscuits (EUR/kg),,24000,Biscuit (cookie),3.59,13,8.522727272727273
+biscuits,Biscuits (EUR/kg),,24036,"Biscuit (cookie), with chocolate, prepacked",6.67,22,11.625
+biscuits,Biscuits (EUR/kg),,31001,Coated chocolate bar without biscuit,6.18,1,30.952380952380953
+biscuits,Biscuits (EUR/kg),,31085,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,1,36.328125
+biscuits,Biscuits (EUR/kg),,38402,"Salty snacks, crackers, plain",1.54,1,25.2
+breakfast_cereals,Breakfast cereals (EUR/kg),32001,,"Breakfast cereals, with chocolate, not filled, fortified with vitamins and chemical elements",3.4,5,7.066666666666666
+breakfast_cereals,Breakfast cereals (EUR/kg),32013,,"Breakfast cereals, with chocolate, not filled (not fortified with vitamins and chemical elements)",3.4,3,8.32
+breakfast_cereals,Breakfast cereals (EUR/kg),32017,,"Breakfast cereals, filled with chocolate or chocolate-hazelnuts",3.4,5,9.016129032258064
+breakfast_cereals,Breakfast cereals (EUR/kg),32018,,"Breakfast cereals, filled with a filling other than chocolate, fortified with vitamins and chemical elements",3.4,2,5.725
+breakfast_cereals,Breakfast cereals (EUR/kg),32111,32111,"Muesli, crunchy, with fruits or dried fruits, fortified with vitamins and chemical elements",2.55,12,9.724999999999998
+breakfast_cereals,Breakfast cereals (EUR/kg),32112,32112,"Muesli, crunchy, with chocolate, with or without fruits, fortified with vitamins and chemical elements",2.55,8,13.183333333333334
+breakfast_cereals,Breakfast cereals (EUR/kg),32113,,"Muesli, flakes (Bircher-style), with fruits or dried fruits, without sugar",2.55,2,7.513333333333334
+breakfast_cereals,Breakfast cereals (EUR/kg),32128,32128,"Muesli, flakes (Bircher-style)",2.55,4,10.79047619047619
+breakfast_cereals,Breakfast cereals (EUR/kg),32128,,"Muesli, flakes (Bircher-style)",2.55,3,9.613333333333333
+breakfast_cereals,Breakfast cereals (EUR/kg),9311,,Oatmeal flakes,1.22,5,2.7866666666666666
+breakfast_cereals,Breakfast cereals (EUR/kg),9340_1,,"Quinoa, raw",5.85,1,46.5
+breakfast_cereals,Breakfast cereals (EUR/kg),,32000,"Breakfast cereals, popped or puffed wheat grain, with honey or caramel, fortified with vitamins and chemical elements",3.4,1,6.293333333333333
+breakfast_cereals,Breakfast cereals (EUR/kg),,32111,"Muesli, crunchy, with fruits or dried fruits, fortified with vitamins and chemical elements",2.55,13,9.3
+breakfast_cereals,Breakfast cereals (EUR/kg),,32112,"Muesli, crunchy, with chocolate, with or without fruits, fortified with vitamins and chemical elements",2.55,7,8.149999999999999
+breakfast_cereals,Breakfast cereals (EUR/kg),,32128,"Muesli, flakes (Bircher-style)",2.55,15,8.125
+breakfast_cereals,Breakfast cereals (EUR/kg),,32135,"Breakfast cereals, mix of puffed or extruded cereals, fortified with vitamins and chemical elements",3.4,64,8.2
+dark_chocolates,Dark chocolate (EUR/kg),31004,31004,Milk chocolate bar,12.6,1,24.3
+dark_chocolates,Dark chocolate (EUR/kg),31005,31005,"Dark chocolate bar, less than 70% cocoa",19.1,63,28.5
+dark_chocolates,Dark chocolate (EUR/kg),31030,31030,"Dark chocolate bar, without sugar and with artificial sweeteners",19.1,1,29.5
+dark_chocolates,Dark chocolate (EUR/kg),31069,,"Dark chocolate bar, with fruits (orange, raspberries, pear)",5.32,8,29.775
+dark_chocolates,Dark chocolate (EUR/kg),31070,31070,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)",13.2,7,28.25
+dark_chocolates,Dark chocolate (EUR/kg),31072,,"Dark chocolate, filled with mint confectionery",19.3,1,13.700000000000001
+dark_chocolates,Dark chocolate (EUR/kg),31074,,"Dark chocolate bar, more than 70% cocoa",19.1,17,27.799999999999997
+dark_chocolates,Dark chocolate (EUR/kg),31080,,"Dark chocolate bar, filled with praline",19.1,1,46.5
+dark_chocolates,Dark chocolate (EUR/kg),31085,31085,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,16,13.115853658536585
+dark_chocolates,Dark chocolate (EUR/kg),31085,,"Dark chocolate bar, more than 40% cocoa, for cooking",15.4,2,21.449999999999996
+dark_chocolates,Dark chocolate (EUR/kg),,31005,"Dark chocolate bar, less than 70% cocoa",19.1,22,22.6375
+dark_chocolates,Dark chocolate (EUR/kg),,31070,"Dark chocolate bar, with dried fruits (nuts, almonds, raisin, praline)",13.2,9,18.76470588235294
+fruit_juices,Fruit juices (EUR/L),18017,,"Syrup, with sugar (to be diluted)",0.833,1,8.06060606060606
+fruit_juices,Fruit juices (EUR/L),18900,,"Soy drink, plain, prepacked",0.427,2,1.635
+fruit_juices,Fruit juices (EUR/L),2000,,"Pineapple juice, reconstituted from a concentrate",0.933,3,2.125
+fruit_juices,Fruit juices (EUR/L),2002,2002,"Mixed fruits juice, pure juice, multivitamin",0.882,4,3.772777777777778
+fruit_juices,Fruit juices (EUR/L),2011,2011,"Mixed fruits juice, orange based, multivitamin",0.797,4,2.5866666666666664
+fruit_juices,Fruit juices (EUR/L),2012,,"Orange juice, reconstituted from a concentrate",0.906,3,1.835
+fruit_juices,Fruit juices (EUR/L),2016,,"Grape juice, pure juice",0.579,2,3.835
+fruit_juices,Fruit juices (EUR/L),2028,,"Lemon juice, pure juice",0.837,1,7.56
+fruit_juices,Fruit juices (EUR/L),2035,2035,"Mixed fruits juice, pure juice",0.882,31,2.98
+fruit_juices,Fruit juices (EUR/L),2035,,"Mixed fruits juice, pure juice",0.882,10,3.427777777777778
+fruit_juices,Fruit juices (EUR/L),2073,,"Pineapple juice, pure juice",1.25,3,3.02
+fruit_juices,Fruit juices (EUR/L),2074,2074,"Apple juice, pure juice",0.566,20,2.912777777777778
+fruit_juices,Fruit juices (EUR/L),2074,,"Apple juice, pure juice",0.566,8,1.445
+fruit_juices,Fruit juices (EUR/L),2371,,Peach nectar,0.579,1,2.69
+fruit_juices,Fruit juices (EUR/L),2500,,Smoothie,0.738,2,5.535151515151515
+fruit_juices,Fruit juices (EUR/L),5006,5006,"Cider, dry",1.33,1,3.266666666666667
+fruit_juices,Fruit juices (EUR/L),5007,,"Cider, sweet",1.33,1,3.186666666666667
+fruit_juices,Fruit juices (EUR/L),,2002,"Mixed fruits juice, pure juice, multivitamin",0.882,6,3.5138888888888884
+fruit_juices,Fruit juices (EUR/L),,2011,"Mixed fruits juice, orange based, multivitamin",0.797,18,2.2366666666666664
+fruit_juices,Fruit juices (EUR/L),,2035,"Mixed fruits juice, pure juice",0.882,23,2.99
+fruit_juices,Fruit juices (EUR/L),,2061,Mixed fruits nectar,0.888,1,1.6333333333333335
+fruit_juices,Fruit juices (EUR/L),,2074,"Apple juice, pure juice",0.566,4,1.2725

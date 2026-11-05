@@ -1,0 +1,5 @@
+category,n_products,n_references,n_carbon_values,rho_reference_medians
+biscuits,147,37,24,0.03803424784980434
+breakfast_cereals,150,16,4,0.02428596540719913
+dark_chocolates,148,12,6,-0.05094986711980046
+fruit_juices,149,22,13,0.20541146547987849
