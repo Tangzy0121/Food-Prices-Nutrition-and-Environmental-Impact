@@ -1,0 +1,73 @@
+category,category_label,nutri_grade,environment_grade,n,median_price,category_median,relative_price
+biscuits,Biscuits (EUR/kg),a,d,1,33.6875,11.09375,3.036619718309859
+biscuits,Biscuits (EUR/kg),b,a,1,5.805555555555555,11.09375,0.5233176838810641
+biscuits,Biscuits (EUR/kg),b,b,2,15.204481792717086,11.09375,1.370544837653371
+biscuits,Biscuits (EUR/kg),b,c,1,10.925,11.09375,0.9847887323943663
+biscuits,Biscuits (EUR/kg),c,a-plus,1,33.5,11.09375,3.019718309859155
+biscuits,Biscuits (EUR/kg),c,a,2,9.174999999999999,11.09375,0.8270422535211267
+biscuits,Biscuits (EUR/kg),c,b,1,21.357142857142858,11.09375,1.9251509054325957
+biscuits,Biscuits (EUR/kg),c,c,4,20.83806818181818,11.09375,1.878361075544174
+biscuits,Biscuits (EUR/kg),c,d,1,13.08,11.09375,1.1790422535211267
+biscuits,Biscuits (EUR/kg),d,a,4,9.770833333333334,11.09375,0.8807511737089202
+biscuits,Biscuits (EUR/kg),d,b,4,13.248461538461537,11.09375,1.1942275189599132
+biscuits,Biscuits (EUR/kg),d,c,7,9.1875,11.09375,0.828169014084507
+biscuits,Biscuits (EUR/kg),d,d,4,8.425,11.09375,0.7594366197183099
+biscuits,Biscuits (EUR/kg),e,a-plus,1,19.161676646706585,11.09375,1.727249725900312
+biscuits,Biscuits (EUR/kg),e,a,7,12.733333333333334,11.09375,1.147793427230047
+biscuits,Biscuits (EUR/kg),e,b,33,11.2,11.09375,1.0095774647887323
+biscuits,Biscuits (EUR/kg),e,c,35,12.799999999999999,11.09375,1.1538028169014083
+biscuits,Biscuits (EUR/kg),e,d,26,10.582236842105264,11.09375,0.953891771682728
+biscuits,Biscuits (EUR/kg),e,e,9,12.146739130434783,11.09375,1.0949173300673607
+biscuits,Biscuits (EUR/kg),e,f,2,21.3840625,11.09375,1.9275774647887323
+breakfast_cereals,Breakfast cereals (EUR/kg),a,a-plus,5,5.81,8.266666666666666,0.7028225806451613
+breakfast_cereals,Breakfast cereals (EUR/kg),a,a,15,8.649999999999999,8.266666666666666,1.0463709677419355
+breakfast_cereals,Breakfast cereals (EUR/kg),a,b,13,8.48,8.266666666666666,1.0258064516129033
+breakfast_cereals,Breakfast cereals (EUR/kg),a,c,4,8.1625,8.266666666666666,0.9873991935483871
+breakfast_cereals,Breakfast cereals (EUR/kg),a,d,1,46.5,8.266666666666666,5.625000000000001
+breakfast_cereals,Breakfast cereals (EUR/kg),b,a,5,10.788888888888888,8.266666666666666,1.3051075268817205
+breakfast_cereals,Breakfast cereals (EUR/kg),b,b,6,11.164444444444445,8.266666666666666,1.3505376344086024
+breakfast_cereals,Breakfast cereals (EUR/kg),b,c,2,10.641612903225807,8.266666666666666,1.2872918834547349
+breakfast_cereals,Breakfast cereals (EUR/kg),b,d,2,9.376388888888888,8.266666666666666,1.1342405913978495
+breakfast_cereals,Breakfast cereals (EUR/kg),c,a-plus,5,11.225,8.266666666666666,1.3578629032258065
+breakfast_cereals,Breakfast cereals (EUR/kg),c,a,19,9.7,8.266666666666666,1.1733870967741935
+breakfast_cereals,Breakfast cereals (EUR/kg),c,b,18,8.280000000000001,8.266666666666666,1.0016129032258068
+breakfast_cereals,Breakfast cereals (EUR/kg),c,c,12,5.926660341555977,8.266666666666666,0.7169347187366102
+breakfast_cereals,Breakfast cereals (EUR/kg),c,d,5,6.293333333333333,8.266666666666666,0.7612903225806452
+breakfast_cereals,Breakfast cereals (EUR/kg),d,a,5,11.093333333333334,8.266666666666666,1.3419354838709678
+breakfast_cereals,Breakfast cereals (EUR/kg),d,b,8,8.6875,8.266666666666666,1.0509072580645162
+breakfast_cereals,Breakfast cereals (EUR/kg),d,c,14,6.5,8.266666666666666,0.7862903225806452
+breakfast_cereals,Breakfast cereals (EUR/kg),d,d,3,3.0666666666666664,8.266666666666666,0.3709677419354839
+breakfast_cereals,Breakfast cereals (EUR/kg),e,b,1,4.43,8.266666666666666,0.5358870967741935
+breakfast_cereals,Breakfast cereals (EUR/kg),e,c,2,7.411463414634147,8.266666666666666,0.8965479937057437
+breakfast_cereals,Breakfast cereals (EUR/kg),e,d,2,8.370967741935484,8.266666666666666,1.012617065556712
+dark_chocolates,Dark chocolate (EUR/kg),d,c,15,30.499999999999996,25.833333333333336,1.1806451612903224
+dark_chocolates,Dark chocolate (EUR/kg),d,d,9,45.49999999999999,25.833333333333336,1.7612903225806447
+dark_chocolates,Dark chocolate (EUR/kg),d,e,4,28.7,25.833333333333336,1.1109677419354838
+dark_chocolates,Dark chocolate (EUR/kg),d,f,1,11.95,25.833333333333336,0.46258064516129027
+dark_chocolates,Dark chocolate (EUR/kg),e,a,3,30.099999999999998,25.833333333333336,1.1651612903225805
+dark_chocolates,Dark chocolate (EUR/kg),e,b,4,23,25.833333333333336,0.8903225806451612
+dark_chocolates,Dark chocolate (EUR/kg),e,c,41,27.25,25.833333333333336,1.0548387096774192
+dark_chocolates,Dark chocolate (EUR/kg),e,d,33,25.1,25.833333333333336,0.9716129032258064
+dark_chocolates,Dark chocolate (EUR/kg),e,e,24,20.270833333333332,25.833333333333336,0.7846774193548386
+dark_chocolates,Dark chocolate (EUR/kg),e,f,12,18.804166666666667,25.833333333333336,0.7279032258064516
+fruit_juices,Fruit juices (EUR/L),b,a-plus,1,1.75,2.85,0.6140350877192983
+fruit_juices,Fruit juices (EUR/L),b,b,3,7.56,2.85,2.6526315789473682
+fruit_juices,Fruit juices (EUR/L),b,c,3,4.425000000000001,2.85,1.5526315789473686
+fruit_juices,Fruit juices (EUR/L),b,d,4,9,2.85,3.1578947368421053
+fruit_juices,Fruit juices (EUR/L),c,a-plus,2,2.1950000000000003,2.85,0.7701754385964913
+fruit_juices,Fruit juices (EUR/L),c,a,7,1.84,2.85,0.6456140350877193
+fruit_juices,Fruit juices (EUR/L),c,b,11,2.89,2.85,1.0140350877192983
+fruit_juices,Fruit juices (EUR/L),c,c,14,2.425,2.85,0.850877192982456
+fruit_juices,Fruit juices (EUR/L),c,d,20,2.3633333333333333,2.85,0.8292397660818713
+fruit_juices,Fruit juices (EUR/L),c,e,25,2.44,2.85,0.856140350877193
+fruit_juices,Fruit juices (EUR/L),d,a,6,2.5075000000000003,2.85,0.8798245614035088
+fruit_juices,Fruit juices (EUR/L),d,b,3,4.55,2.85,1.5964912280701753
+fruit_juices,Fruit juices (EUR/L),d,c,5,2.92,2.85,1.0245614035087718
+fruit_juices,Fruit juices (EUR/L),d,d,4,2.3475,2.85,0.8236842105263158
+fruit_juices,Fruit juices (EUR/L),d,e,9,2.3666666666666667,2.85,0.8304093567251462
+fruit_juices,Fruit juices (EUR/L),e,a-plus,1,5.16,2.85,1.8105263157894738
+fruit_juices,Fruit juices (EUR/L),e,a,2,3.835,2.85,1.3456140350877193
+fruit_juices,Fruit juices (EUR/L),e,b,2,2.5425,2.85,0.8921052631578947
+fruit_juices,Fruit juices (EUR/L),e,c,5,4.3,2.85,1.5087719298245612
+fruit_juices,Fruit juices (EUR/L),e,d,6,4.337857142857143,2.85,1.5220551378446114
+fruit_juices,Fruit juices (EUR/L),e,e,11,2.8266666666666667,2.85,0.991812865497076

@@ -37,3 +37,14 @@ Desktop.ini
 
 # Incomplete data acquisition is never a reproducible snapshot
 *.parquet.partial
+
+# Local import transport and derived binary analysis objects
+scratch/
+data/processed/step4_v1_1/*.rds
+outputs/step4/*.rds
+outputs/step4/*.html
+outputs/step4/*.knit.md
+outputs/step4/run.log
+outputs/step4/html_qa.json
+outputs/step4/delivery_check.json
+output/*.zip

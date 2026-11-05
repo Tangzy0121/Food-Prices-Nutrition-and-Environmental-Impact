@@ -1,5 +1,7 @@
 # 正式数据说明
 
+> 本文记录 11 月 2 日 frozen_v1 的获取与冻结状态。11 月 5 日 Step 4 恢复了原始对象中的环境 F 等级；当前三维联合样本为 583 款，后续入口见[修正说明](../04_eda/environment_grade_correction.md)。
+
 日期：2026-11-02。阶段：Step 3 已完成。正式数据冻结为 `data/processed/frozen_v1/`；第四步直接读取该快照。实际覆盖和核查结果见 [数据核查报告](data_quality_review.md)，字段定义见 [数据字典](data_dictionary.md)。
 
 ## 研究范围与数据层级

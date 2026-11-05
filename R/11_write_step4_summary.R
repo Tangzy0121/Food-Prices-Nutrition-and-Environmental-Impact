@@ -1,0 +1,54 @@
+write_step4_summary <- function(result) {
+  t <- result$tables
+  labels <- c(biscuits = "饼干", breakfast_cereals = "早餐谷物", dark_chocolates = "黑巧克力", fruit_juices = "果汁")
+  get_rho <- function(cat, metric) t$associations$rho[t$associations$category == cat & t$associations$metric == metric]
+  fmt <- function(x) sprintf("%.3f", x)
+  n_joint <- sum(t$joint_summary$n)
+  lines <- c("# Step 4 探索性分析结果", "", "日期：2026-11-05。使用 R 实际运行，输入为队友的 frozen_v1 及同次获取的原始商品对象。", "",
+    "## 本轮结论", "",
+    "价格对营养与环境表现的解释随食品类别变化。早餐谷物和黑巧克力呈现更贵商品对应较低营养分数、较高环境分数的方向；饼干和果汁的两项关联接近零。下一阶段适合围绕类别内比较和具体商品的营养组成展开。", "",
+    "## 先修正环境等级", "",
+    paste0("原清洗规则只接受 A+、A—E，漏掉了 16 款原始等级为 F 的商品。已从原始保存对象恢复，并将法国等级与法国分数配对。598 款主样本保持不变，环境等级可用商品增至 596 款，三维联合样本由 568 增至 ", n_joint, " 款。原 frozen_v1 保留，修正数据另存 data/processed/step4_v1_1/。"), "",
+    "## 价格与两项综合分数", "",
+    "下表是类别内 Spearman 秩相关。营养分数越低越好，所以负号对应更贵商品营养分数较好；环境分数越高越好，正号对应更贵商品环境分数较好。每个系数使用自己的有效样本。", "",
+    "| 类别 | 主样本 n | 单位价格中位数 | 价格—营养分数 ρ | 价格—环境分数 ρ |", "|---|---:|---:|---:|---:|")
+  for (cat in names(labels)) {
+    d <- t$category_summary[t$category_summary$category == cat, ]
+    lines <- c(lines, sprintf("| %s | %d | %.2f EUR/%s | %s | %s |", labels[[cat]], d$n, d$median_price, d$target_unit,
+      fmt(get_rho(cat, "nutri_score")), fmt(get_rho(cat, "environment_score"))))
+  }
+  lines <- c(lines, "", "## 具体营养组成解释权衡", "",
+    paste0("黑巧克力中，价格与糖含量的 ρ 为 ", fmt(get_rho("dark_chocolates", "sugars_100g")),
+      "，与饱和脂肪的 ρ 为 ", fmt(get_rho("dark_chocolates", "saturated_fat_100g")),
+      "。这一相反方向值得在商品对比中同时展示。早餐谷物的营养等级较分散；饼干主要集中于 E，黑巧克力仅见 D、E，稀疏等级不适合单独承担结论。"), "",
+    "## 三维商品比较", "",
+    "比较规则是：在同一类别内，寻找单位价格严格更低，且营养等级、环境等级均不差的另一条码。等级只按顺序比较。结果用于挑出需要进一步查看的商品对。", "",
+    "| 类别 | 联合可用 n | 有较低价且两项等级不差的选项 | 当前样本内非支配商品数 |", "|---|---:|---:|---:|")
+  for (i in seq_len(nrow(t$joint_summary))) {
+    d <- t$joint_summary[i, ];cat <- as.character(d$category)
+    lines <- c(lines, sprintf("| %s | %d | %d（%.1f%%） | %d |", labels[[cat]], d$n, d$n_with_cheaper_no_worse,
+      d$pct_with_cheaper_no_worse, d$n_frontier))
+  }
+  lines <- c(lines, "", "这些比例与等级较粗、样本商品数量有关。具体商品仍需核对用途、配方、包装规格和价格日期；此表描述历史样本中的比较机会。", "",
+    "## 价格口径与缺失检查", "",
+    paste0("主样本中 ", sum(t$category_summary$n_single_offer), "/598 款仅有一条有效常规报价。已对至少两条报价、2024、2025、含折扣、保留重复报价及每 100 kcal 计价分别检查，并同时输出替代口径与主口径在同一批商品上的相关系数。"), "",
+    paste0("含折扣口径改变了 ", sum(t$price_sensitivity$n_changed[t$price_sensitivity$scenario == "include_discounts"]),
+      " 款商品的代表价格，保留重复报价改变了 ", sum(t$price_sensitivity$n_changed[t$price_sensitivity$scenario == "keep_duplicate_quotes"]),
+      " 款。每 100 kcal 是不同的比较问题，果汁的营养关联方向随之改变，后续界面主口径继续使用 EUR/kg 或 EUR/L。"), "",
+    paste0("两年都存在有效常规代表价格的配对商品共 ", nrow(t$paired_year_prices), " 款。配对年际价格变化另表报告，同时保留门店、日期与报价次数构成。"), "",
+    "## 环境等级与碳估算", "",
+    "环境综合等级用于商品比较。AGRIBALYSE 3.2 碳估算另以标准食品参考项聚合展示，早餐谷物的 150 款商品仅对应 4 个不同碳值。原模型维持 kg CO₂e/kg 食品，果汁价格维持 EUR/L。", "",
+    "## 下一步的仪表板任务", "",
+    "1. 选定一个类别，查看该类样本量、价格分布和等级覆盖。", "2. 在单位价格上限及等级条件下筛选商品，检查没有结果的条件组合。", "3. 选择两款商品，并排比较单位价格、两项等级、糖、饱和脂肪、纤维、报价次数与日期。", "",
+    "## 运行与材料", "",
+    "- 完整已执行笔记：outputs/step4/step4_eda.html；源文件 notebooks/step4_eda.Rmd。",
+    "- 计算脚本：R/10_eda.R；环境等级恢复：R/09b_restore_environment_grades.R。",
+    "- 输出：outputs/step4/tables/、outputs/step4/figures/、outputs/step4/validation.txt。",
+    "- 本轮验证四份冻结输入哈希、原始商品对象哈希、主键连接及全部 598 个价格中位数。未重新获取上游全量原始价格。", "",
+    "## 来源与解释范围", "",
+    "贡献式价格样本反映法国 2024—2025 年已记录商品；商品营养资料是 2026-11-02 获取的当前资料。分析用于样本内描述，课程结论与此范围一致。已有文献对应见 ../02_literature/literature_review_zh.md。",
+    "环境等级顺序依据：[Open Food Facts 官方方法说明](https://openfoodfacts.github.io/openfoodfacts-server/dev/ref-perl-pod/ProductOpener/Attributes.html)，其范围为 A+ 至 F。原始对象及处理差异详见 environment_grade_correction.md。")
+  dir.create("docs/04_eda", recursive = TRUE, showWarnings = FALSE)
+  con <- file("docs/04_eda/results_summary.md", open = "wb")
+  writeLines(enc2utf8(lines), con, useBytes = TRUE); close(con)
+}

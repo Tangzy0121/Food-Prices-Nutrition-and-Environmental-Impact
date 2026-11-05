@@ -1,0 +1,12 @@
+{
+  "version": "step4_v1_1",
+  "source_snapshot": "frozen_v1",
+  "raw_object_sha256": "d04913631cc3599f2dfe2ce7fdb0243fd51d5043541165296b0b1e9c23f69b5e",
+  "rule": "Environmental grade order is A+, A, B, C, D, E, F; prefer French grade and French score together.",
+  "restored_grades": 16,
+  "n_primary": 598,
+  "n_environment": 596,
+  "n_joint": 583,
+  "snapshot_policy": "Original frozen_v1 files are unchanged.",
+  "method_reference": "https://openfoodfacts.github.io/openfoodfacts-server/dev/ref-perl-pod/ProductOpener/Attributes.html"
+}

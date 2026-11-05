@@ -1,0 +1,563 @@
+category,code,product_name,representative_price,nutri_grade,environment_grade,best_alternative_code,best_alternative_price,potential_price_difference_pct,alternative_name,alternative_nutri_grade,alternative_environment_grade
+biscuits,8410376055856,Gullon cookies,13.266666666666667,d,d,3061990143594,4.05,69.47236180904524,"BN - Casse Croute Biscuits, 375g",d,d
+biscuits,3350031923081,Galettes bretonnes pur beurre,7.359999999999999,e,c,3410280136257,4,45.65217391304348,Petit beurre 200g,e,b
+biscuits,3175681072916,Miel Châtaigne graines de lin,10.925,b,c,3251491787803,5.805555555555555,46.85990338164252,Goûter aux écorces confites,b,a
+biscuits,5902379012125,,31.145833333333336,e,c,3410280136257,4,87.1571906354515,Petit beurre 200g,e,b
+biscuits,5410126806090,The Original Speculoos,9.071428571428571,e,d,3250392804800,2.95,67.48031496062993,Spéculoos,e,d
+biscuits,3222472769743,Barquettes choconoisette,14.458333333333336,e,c,3410280136257,4,72.3342939481268,Petit beurre 200g,e,b
+biscuits,3560071191276,CROK Goût tout chocolat,5.433333333333334,e,c,3410280136257,4,26.380368098159515,Petit beurre 200g,e,b
+biscuits,3700311810721,Cookies pépites de chocolat,5.749999999999999,e,c,3410280136257,4,30.43478260869564,Petit beurre 200g,e,b
+biscuits,3256222822365,palets breton pur beurre,12.88,e,a,3251491787803,5.805555555555555,54.92581090407178,Goûter aux écorces confites,b,a
+biscuits,3175681187962,Génoise chocolat orange sans sucres,21.357142857142858,c,b,3251491787803,5.805555555555555,72.8167967298402,Goûter aux écorces confites,b,a
+biscuits,3350031532511,Génoises fourrées à la cerise nappées de chocolat blanc,9.000000000000002,e,b,3410280136257,4,55.555555555555564,Petit beurre 200g,e,b
+biscuits,3250391118762,Assortiment de biscuits aux 3 chocolats belges,9.653333333333334,e,d,3250392804800,2.95,69.44060773480663,Spéculoos,e,d
+biscuits,3270160800629,Feuillets à la canelle,39,e,c,3410280136257,4,89.74358974358974,Petit beurre 200g,e,b
+biscuits,3560070972982,Crêpe dentelle au chocolat noir,19.7,e,d,3250392804800,2.95,85.0253807106599,Spéculoos,e,d
+biscuits,3350033305496,Petits beurre croustillants tablette de chocolat noir,12.333333333333334,e,d,3250392804800,2.95,76.08108108108107,Spéculoos,e,d
+biscuits,3258561020396,Etui Tuiles Aux Amandes 100G Belle France,13.700000000000001,e,d,3250392804800,2.95,78.46715328467153,Spéculoos,e,d
+biscuits,5000168198491,Sablés Anglais L'Original,4.875,e,c,3410280136257,4,17.94871794871795,Petit beurre 200g,e,b
+biscuits,3396413707153,Goûters chocolat au lait,19.2,e,b,3410280136257,4,79.16666666666667,Petit beurre 200g,e,b
+biscuits,7622300270469,Choco Biscuits,14.066666666666666,e,e,3250392804800,2.95,79.02843601895735,Spéculoos,e,d
+biscuits,3267620200075,Gaufres Fines à la Chicorée,7.966666666666668,e,b,3410280136257,4,49.7907949790795,Petit beurre 200g,e,b
+biscuits,3250391126637,15 Fourrés ronds parfum vanille 300G Goûters CROK,3.6500000000000004,e,d,3250392804800,2.95,19.178082191780824,Spéculoos,e,d
+biscuits,3760294961735,Biscuits fourrés pâte à tartiner,16.866666666666667,e,b,3410280136257,4,76.28458498023716,Petit beurre 200g,e,b
+biscuits,7622210444141,Moelleux chocolat,10.2,c,a,3251491787803,5.805555555555555,43.08278867102396,Goûter aux écorces confites,b,a
+biscuits,3701283800543,Super petit-déj & goûter pois vert citron chocolat sésame,22.64705882352941,b,b,3251491787803,5.805555555555555,74.36507936507937,Goûter aux écorces confites,b,a
+biscuits,8076809580694,Settembrini mb 300g,19.1,e,b,3410280136257,4,79.05759162303666,Petit beurre 200g,e,b
+biscuits,3270190122845,Génoises SAVEUR CERISE,9.933333333333334,e,c,3410280136257,4,59.73154362416108,Petit beurre 200g,e,b
+biscuits,8000500310427,Biscuits NUTELLA Biscuits Noisettes et Cacao x22 - 304g,10.164473684210526,e,d,3250392804800,2.95,70.97734627831716,Spéculoos,e,d
+biscuits,3178530409673,palmier,15,e,b,3410280136257,4,73.33333333333333,Petit beurre 200g,e,b
+biscuits,5410041161700,"Grany moelleux, fruit des bois",11.09375,e,d,3250392804800,2.95,73.40845070422536,Spéculoos,e,d
+biscuits,3245414104730,Vitality* Orange & Soja,6.55,d,a,3251491787803,5.805555555555555,11.365564037319762,Goûter aux écorces confites,b,a
+biscuits,3560071433345,Biscuits complets avoine blé - chocolat,10.45,e,c,3410280136257,4,61.722488038277504,Petit beurre 200g,e,b
+biscuits,7622210795373,oeuf coque oreo,36.328125,e,f,3250392804800,2.95,91.8795698924731,Spéculoos,e,d
+biscuits,3256226396251,Biscuits Galettes bretonnes aux pépites de chocolat 130g,9.384615384615383,e,a,3251491787803,5.805555555555555,38.1375227686703,Goûter aux écorces confites,b,a
+biscuits,3250393006623,8 Tartelettes carrées citron,9.68503937007874,e,b,3410280136257,4,58.69918699186993,Petit beurre 200g,e,b
+biscuits,3258561021034,Cookies chocolat et pépites de chocolat,11,e,d,3250392804800,2.95,73.18181818181819,Spéculoos,e,d
+biscuits,3596710551736,Mini cakes fourrés chocolat,4.904761904761905,e,c,3410280136257,4,18.446601941747577,Petit beurre 200g,e,b
+biscuits,3056440070896,Bastogne,8.615384615384617,e,d,3250392804800,2.95,65.75892857142857,Spéculoos,e,d
+biscuits,3222472772880,Sablés Céréales et chocolat au lait,6.44,e,f,3250392804800,2.95,54.19254658385093,Spéculoos,e,d
+biscuits,3061990144355,DEL'ICE saveur cookie dough,12.571428571428571,e,b,3410280136257,4,68.18181818181819,Petit beurre 200g,e,b
+biscuits,3352776301452,Canistrelli (assortiment) 300g. Biscuits Corses.,11.866666666666667,e,d,3250392804800,2.95,75.14044943820225,Spéculoos,e,d
+biscuits,3564700823439,Palets bretons,14.280000000000001,e,c,3410280136257,4,71.98879551820728,Petit beurre 200g,e,b
+biscuits,3222473590292,Les Fameuses galettes suédoises au chocolat,29.166666666666668,e,c,3410280136257,4,86.28571428571429,Petit beurre 200g,e,b
+biscuits,7622210765338,OREO ORIGINAL,6.761363636363637,e,e,3250392804800,2.95,56.36974789915966,Spéculoos,e,d
+biscuits,3596710756476,duo de génoises,6.803571428571429,e,d,3250392804800,2.95,56.640419947506565,Spéculoos,e,d
+biscuits,3017760306492,Prince petit dej,8.3,e,c,3410280136257,4,51.807228915662655,Petit beurre 200g,e,b
+biscuits,3245413154255,ChocoGrani,7.1,e,d,3250392804800,2.95,58.450704225352105,Spéculoos,e,d
+biscuits,3560071071318,Chocograni chocolat noir,6.615384615384615,e,c,3410280136257,4,39.534883720930225,Petit beurre 200g,e,b
+biscuits,3596710490684,Biscuits meringués fourrage cacao enrobés de chocolat au lait,26.9,e,e,3250392804800,2.95,89.03345724907064,Spéculoos,e,d
+biscuits,3478820091145,Fourrés chocolat Jardin Bio,11.2,e,b,3410280136257,4,64.28571428571428,Petit beurre 200g,e,b
+biscuits,3023470001084,Galettes Au bon beurre (8x5),6.442307692307692,e,a,3251491787803,5.805555555555555,9.883913764510773,Goûter aux écorces confites,b,a
+biscuits,3560071413880,Barquette de chocolate,22.041666666666668,d,b,3251491787803,5.805555555555555,73.66099558916194,Goûter aux écorces confites,b,a
+biscuits,3250390232254,Feuilletés Palmiers,6.8999999999999995,e,b,3410280136257,4,42.028985507246375,Petit beurre 200g,e,b
+biscuits,3250390003977,Tableau d'honneur Chocolat noir,8.866666666666667,e,c,3410280136257,4,54.88721804511279,Petit beurre 200g,e,b
+biscuits,3173990027542,Petit beurre tablette chocolat au lait,19.400000000000002,e,c,3410280136257,4,79.38144329896907,Petit beurre 200g,e,b
+biscuits,3560070718849,Torselini's Au Parmigiano Reggiano et à l'ail,25.2,e,b,3410280136257,4,84.12698412698413,Petit beurre 200g,e,b
+biscuits,3251490332080,figues et son,7.761904761904762,b,b,3251491787803,5.805555555555555,25.204498977505114,Goûter aux écorces confites,b,a
+biscuits,3178530423150,La galette fourrée,9.583333333333332,e,c,3410280136257,4,58.26086956521739,Petit beurre 200g,e,b
+biscuits,7622210449375,Prince goût Choco blanc,6.633333333333334,e,b,3410280136257,4,39.69849246231156,Petit beurre 200g,e,b
+biscuits,3178530412840,Sablés framboise sésame,16.533333333333335,e,b,3410280136257,4,75.80645161290323,Petit beurre 200g,e,b
+biscuits,7311070346916,Pågen Gifflar Zimt  Hefe-Röllchen mit cremiger Zimtfüllung,10.576923076923077,d,b,3251491787803,5.805555555555555,45.111111111111114,Goûter aux écorces confites,b,a
+biscuits,3263852912564,"Génoises pur beurre, nappage à la framboise",10.166666666666668,e,b,3410280136257,4,60.65573770491803,Petit beurre 200g,e,b
+biscuits,3421557800153,P'tit déj sarrasin - pépite de chocolat,23.066666666666666,e,b,3410280136257,4,82.65895953757226,Petit beurre 200g,e,b
+biscuits,3178530416589,Sablés noisette chocolat,17.266666666666666,e,c,3410280136257,4,76.83397683397683,Petit beurre 200g,e,b
+biscuits,3660140954150,Savane Pocket Chocolat x14 420g,8.261904761904763,d,c,3251491787803,5.805555555555555,29.73102785782902,Goûter aux écorces confites,b,a
+biscuits,3329229990860,Lunettes de romans myrtille française,10.328571428571427,e,c,3410280136257,4,61.272475795297375,Petit beurre 200g,e,b
+biscuits,3268350120978,Cookies Nappés chocolat noir,16.742857142857144,e,b,3410280136257,4,76.10921501706486,Petit beurre 200g,e,b
+biscuits,3560070759293,Grandes galettes de Normandie,12.733333333333334,e,a,3251491787803,5.805555555555555,54.406631762652715,Goûter aux écorces confites,b,a
+biscuits,3061990143785,Tarto choco,12.450000000000001,e,d,3250392804800,2.95,76.30522088353413,Spéculoos,e,d
+biscuits,3760253540179,,22.4,c,c,3251491787803,5.805555555555555,74.08234126984127,Goûter aux écorces confites,b,a
+biscuits,3250391406562,Assortiment glacier 100g,12.799999999999999,e,c,3410280136257,4,68.75,Petit beurre 200g,e,b
+biscuits,3564700483978,Galettes Bretonnes aux Pépites de Chocolat,9.384615384615383,e,c,3410280136257,4,57.377049180327866,Petit beurre 200g,e,b
+biscuits,20289478,Broyés du poitou,11.363636363636363,e,c,3410280136257,4,64.8,Petit beurre 200g,e,b
+biscuits,3564707168571,Galettes suédoises chocolat,19.770992366412212,e,c,3410280136257,4,79.76833976833977,Petit beurre 200g,e,b
+biscuits,3760122961722,"Super cookies coeur fondant au chocolat noir, noix de pécan et caramel",27.722222222222225,e,d,3250392804800,2.95,89.35871743486975,Spéculoos,e,d
+biscuits,3760020503628,Speculoos sans sucres,13.08,c,d,3251491787803,5.805555555555555,55.61501868841319,Goûter aux écorces confites,b,a
+biscuits,4017100499715,La Grande Galette 1905,10.333333333333334,e,b,3410280136257,4,61.29032258064516,Petit beurre 200g,e,b
+biscuits,3564706607033,La génoise goût Poire,7.666666666666666,e,d,3250392804800,2.95,61.521739130434774,Spéculoos,e,d
+biscuits,3596710477456,Gaufrettes Choco laitfourrées cacao - noisette,13.457142857142856,e,c,3410280136257,4,70.276008492569,Petit beurre 200g,e,b
+biscuits,8003535084776,Harry Potter Hogwarts Express Snack,23.73015873015873,e,d,3250392804800,2.95,87.56856187290971,Spéculoos,e,d
+biscuits,3560071266530,Sablés au caramel,25.333333333333336,e,a,3251491787803,5.805555555555555,77.08333333333333,Goûter aux écorces confites,b,a
+biscuits,3564700871751,La Gaufrette Fraise et Fraise des bois,9.1875,d,c,3251491787803,5.805555555555555,36.81027966742253,Goûter aux écorces confites,b,a
+biscuits,1103749230000,Cookies,8.522727272727273,e,b,3410280136257,4,53.06666666666668,Petit beurre 200g,e,b
+biscuits,3175681135864,Sablé nature aux graines de chia,21.363636363636363,c,c,3251491787803,5.805555555555555,72.82505910165484,Goûter aux écorces confites,b,a
+biscuits,3268350120145,Twibio,24.333333333333332,e,c,3410280136257,4,83.56164383561644,Petit beurre 200g,e,b
+biscuits,3178530409857,"Bonne Maman - Coconut Croquants, 150g (5.3oz)",8.666666666666668,e,b,3410280136257,4,53.846153846153854,Petit beurre 200g,e,b
+biscuits,3250391612635,Sprits au beurre,6.487499999999999,e,b,3410280136257,4,38.342967244701335,Petit beurre 200g,e,b
+biscuits,84100733,Original Oreo,25.757575757575754,e,d,3250392804800,2.95,88.54705882352941,Spéculoos,e,d
+biscuits,3251490320001,Biscuit complet au germe de blé,7.404761904761905,c,c,3251491787803,5.805555555555555,21.596998928188643,Goûter aux écorces confites,b,a
+biscuits,3263852857018,Le petit beurre Bio,10.778443113772454,e,a,3251491787803,5.805555555555555,46.13734567901234,Goûter aux écorces confites,b,a
+biscuits,3250391124879,Sablé nappé noir - 195g,5.23076923076923,e,d,3250392804800,2.95,43.60294117647058,Spéculoos,e,d
+biscuits,8076809529976,Dolcetti gemme mb 200 gr,49.94999999999999,d,c,3251491787803,5.805555555555555,88.37726615504393,Goûter aux écorces confites,b,a
+biscuits,8000500431719,Ferrero Collection Grand Assortiment Lumières de Fête,51.21827411167512,e,c,3410280136257,4,92.19028741328047,Petit beurre 200g,e,b
+biscuits,3250391697915,Gaufrettes Fourrées Aux Framboises,10.875,d,a,3251491787803,5.805555555555555,46.61558109833972,Goûter aux écorces confites,b,a
+biscuits,3229820789118,Lunettes fraise,14.675,d,a,3251491787803,5.805555555555555,60.43914442551581,Goûter aux écorces confites,b,a
+biscuits,3251490307002,Goûter pépites de chocolat,8.04,d,c,3251491787803,5.805555555555555,27.791597567716966,Goûter aux écorces confites,b,a
+biscuits,3250392259532,Tartelettes rondes abricot 150g,9.4,d,b,3251491787803,5.805555555555555,38.238770685579205,Goûter aux écorces confites,b,a
+biscuits,8076809529969,TENEREZZE LIMONE MB 200g x 10,20.95,e,c,3410280136257,4,80.90692124105013,Petit beurre 200g,e,b
+biscuits,3560071062316,Stick & Choc Chocolat au lait,10.4,e,e,3250392804800,2.95,71.63461538461539,Spéculoos,e,d
+biscuits,3760122966116,Cookie frais chocolat au lait aux noisettes 70g,35.57142857142857,e,d,3250392804800,2.95,91.70682730923694,Spéculoos,e,d
+biscuits,3258561021263,Sablés noix de coco,11.68,e,d,3250392804800,2.95,74.7431506849315,Spéculoos,e,d
+biscuits,3017760635295,Granola l'original,8.044444444444444,e,c,3410280136257,4,50.27624309392265,Petit beurre 200g,e,b
+biscuits,7622210021502,Oreo Original,13.863636363636363,e,e,3250392804800,2.95,78.72131147540985,Spéculoos,e,d
+biscuits,8436048962697,Filipinos Chocolate Blanco,8.515625,e,e,3250392804800,2.95,65.35779816513761,Spéculoos,e,d
+biscuits,3596710424801,Chocogusto 182 g,7.93956043956044,e,d,3250392804800,2.95,62.844290657439444,Spéculoos,e,d
+biscuits,3017760756198,Cookies Granola LU,12.146739130434783,e,e,3250392804800,2.95,75.71364653243847,Spéculoos,e,d
+biscuits,3258561020228,Galettes bretonnes pur beurre,10.08,e,b,3410280136257,4,60.317460317460316,Petit beurre 200g,e,b
+biscuits,3350031618154,Biscuits petit déjeuner 5 céréales et pépites de chocolat,5.875,d,c,3251491787803,5.805555555555555,1.1820330969267172,Goûter aux écorces confites,b,a
+biscuits,3250391773848,Goûter fourré cacao rond BIO,9.027027027027026,e,b,3410280136257,4,55.688622754491014,Petit beurre 200g,e,b
+biscuits,3564700000656,Le Palet Breton,7.68,e,b,3410280136257,4,47.91666666666667,Petit beurre 200g,e,b
+biscuits,8052575092104,Nocciolata Mini Tartelettes,16.82,e,b,3410280136257,4,76.21878715814506,Petit beurre 200g,e,b
+biscuits,3175681210714,Biscuit fondant choco lait,27.380952380952383,d,c,3251491787803,5.805555555555555,78.79710144927537,Goûter aux écorces confites,b,a
+biscuits,3347430020879,Cookies de petit épeautre Amandes et graines de chia,23.333333333333336,e,b,3410280136257,4,82.85714285714286,Petit beurre 200g,e,b
+biscuits,3178530412901,Le Palmier,14.25287356321839,e,a,3251491787803,5.805555555555555,59.267473118279575,Goûter aux écorces confites,b,a
+biscuits,3178530424928,Petits feuilletés,10.6,d,d,3061990143594,4.05,61.79245283018868,"BN - Casse Croute Biscuits, 375g",d,d
+biscuits,3254560028715,Galettes Bretonnes pur beurre,6.8,e,b,3410280136257,4,41.1764705882353,Petit beurre 200g,e,b
+biscuits,8720354768853,,4.949999999999999,e,d,3250392804800,2.95,40.404040404040394,Spéculoos,e,d
+biscuits,3250392259563,Tartelettes fraise rondes 150g - P'tits Prods,8.666666666666668,d,a,3251491787803,5.805555555555555,33.012820512820525,Goûter aux écorces confites,b,a
+biscuits,3175681077324,Biscuit chocolat saveur amande,12.05,d,c,3251491787803,5.805555555555555,51.82111572153067,Goûter aux écorces confites,b,a
+biscuits,3175681261365,Biscuits Abricot Pistache,20.3125,c,c,3251491787803,5.805555555555555,71.41880341880342,Goûter aux écorces confites,b,a
+biscuits,3760294960301,Biscuits sésame et épeautre,11.533333333333333,e,b,3410280136257,4,65.31791907514452,Petit beurre 200g,e,b
+biscuits,3760194783444,Petits sablés aux noix du Dauphiné,26,e,c,3410280136257,4,84.61538461538461,Petit beurre 200g,e,b
+biscuits,0034000151271,resses Sticks,30.952380952380953,e,e,3250392804800,2.95,90.46923076923078,Spéculoos,e,d
+biscuits,3222471110478,Barquettes Fraise,13.500000000000002,e,c,3410280136257,4,70.37037037037038,Petit beurre 200g,e,b
+biscuits,3268350120923,Cookies noix de pécan,22.228571428571428,e,b,3410280136257,4,82.0051413881748,Petit beurre 200g,e,b
+biscuits,3478660050142,Sablé fourré aux myrtilles,36.66666666666667,e,c,3410280136257,4,89.0909090909091,Petit beurre 200g,e,b
+biscuits,3560071489526,Double & Chock,14.843749999999998,e,b,3410280136257,4,73.05263157894736,Petit beurre 200g,e,b
+biscuits,3250391377404,Batonnet lait - 150g,5.733333333333333,e,c,3410280136257,4,30.232558139534884,Petit beurre 200g,e,b
+biscuits,3464860010048,La galette ovale,16.041666666666668,e,c,3410280136257,4,75.06493506493507,Petit beurre 200g,e,b
+biscuits,8076809530286,Cuor di mela estero mb 250 gr,15.92,d,b,3251491787803,5.805555555555555,63.532942490228926,Goûter aux écorces confites,b,a
+biscuits,3229820021027,P'tit Nature Complet,8.149999999999999,c,a,3251491787803,5.805555555555555,28.76618950238581,Goûter aux écorces confites,b,a
+biscuits,3256220210423,Génoises nappées chocolat noir fourrées framboise,7.066666666666667,e,c,3410280136257,4,43.39622641509435,Petit beurre 200g,e,b
+biscuits,3178530402995,Tartelettes framboise,10.814814814814813,e,b,3410280136257,4,63.01369863013698,Petit beurre 200g,e,b
+biscuits,3256229517189,"Galettes pur beurre sans gluten, 105G",19.42857142857143,e,c,3410280136257,4,79.41176470588236,Petit beurre 200g,e,b
+biscuits,3279130101223,"Pain d'épice, langue chocolatées",11.45,e,b,3410280136257,4,65.06550218340611,Petit beurre 200g,e,b
+biscuits,3171910720023,Madeleine coquille fourrée,6.25,d,d,3061990143594,4.05,35.2,"BN - Casse Croute Biscuits, 375g",d,d
+biscuits,3596710553662,Cookies pépites de chocolat nougatine,7.1,e,d,3250392804800,2.95,58.450704225352105,Spéculoos,e,d
+biscuits,3760122966130,Vrai Cookie Chocolat Blanc 70g,35.57142857142857,e,d,3250392804800,2.95,91.70682730923694,Spéculoos,e,d
+biscuits,3250392549343,Petits beurre nature sans gluten - 130g,14.884615384615383,e,b,3410280136257,4,73.1266149870801,Petit beurre 200g,e,b
+biscuits,3257980024244,Cookies pépites de chocolat,6.949999999999999,e,e,3250392804800,2.95,57.553956834532364,Spéculoos,e,d
+breakfast_cereals,3111902100044,Céréales muesli croustillant superfruits Bio,13.840000000000002,c,a,4335619092648,2.49,82.00867052023122,Flocons d'avoine,a,a-plus
+breakfast_cereals,3111900370012,Naturellement équilibré Noix Muesli,17.999999999999996,a,a,4335619092648,2.49,86.16666666666666,Flocons d'avoine,a,a-plus
+breakfast_cereals,3168930010838,Quaker Cruesli Chocolat au lait maxi format,6.466666666666667,d,c,3250391896554,1.7,73.71134020618557,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071013042,Muesly croustillant cruchy chocolat noir intense,2.89,c,c,3250391896554,1.7,41.1764705882353,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5059319025797,Special K Chocolat au Lait,9.38,d,c,3250391896554,1.7,81.87633262260128,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557920677,Petits flocons d'avoine sans gluten,6.5,a,a,4335619092648,2.49,61.69230769230769,Flocons d'avoine,a,a-plus
+breakfast_cereals,3560070967698,Céréales cœur fondant au chocolat et aux noisettes No gluten!,15.973333333333334,d,b,3250391896554,1.7,89.35726210350585,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900360174,Muesli Croustillant Fruits,9.59,c,a-plus,4335619092648,2.49,74.0354535974974,Flocons d'avoine,a,a-plus
+breakfast_cereals,3248650201195,Céréales Fourrées chocolat,7.6000000000000005,d,c,3250391896554,1.7,77.63157894736841,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111902100105,Muesli bio céréales toastées 5 noix,15.114285714285712,a,a,4335619092648,2.49,83.52551984877125,Flocons d'avoine,a,a-plus
+breakfast_cereals,3760336830289,Le Granola Chocolat,17.3,c,a,4335619092648,2.49,85.60693641618496,Flocons d'avoine,a,a-plus
+breakfast_cereals,3760121214492,Muesli superfruits,9.7,a,a-plus,4335619092648,2.49,74.3298969072165,Flocons d'avoine,a,a-plus
+breakfast_cereals,3560070737628,Cr'ocks coeur fondant lait,5.625,d,c,3250391896554,1.7,69.77777777777777,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,4015637826073,Glutenfreies hafer Müsli,17.176470588235293,b,a,4335619092648,2.49,85.50342465753424,Flocons d'avoine,a,a-plus
+breakfast_cereals,3387390331523,NESTLE CHEERIOS Céréales 375g,7.986666666666666,c,a,4335619092648,2.49,68.82303839732887,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820804224,Céréales complètes au chocolat noir intense,10.577777777777778,c,b,3250391896554,1.7,83.92857142857143,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3254560017559,Pétales sucrés,2.8000000000000003,d,d,3250391896554,1.7,39.28571428571429,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3760031831406,Flakes Sarrasin,13.815384615384616,a,b,3250391896554,1.7,87.69487750556793,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900330085,Bombs miel,10.5,c,b,3250391896554,1.7,83.80952380952382,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557922435,Muesli Croustillant Pommes Noisette,10.133333333333333,c,a-plus,4335619092648,2.49,75.42763157894737,Flocons d'avoine,a,a-plus
+breakfast_cereals,3111900350571,Muesli croustillant - duo de chocolats,10.6,d,a,4335619092648,2.49,76.50943396226415,Flocons d'avoine,a,a-plus
+breakfast_cereals,4056489817611,Muesli Crunchy Chocolat Noir Noisettes Grillées,4.43,e,b,3250391896554,1.7,61.62528216704288,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3350031573125,Pétales riz et blé complet aux fruits rouges Monoprix,8.633333333333333,c,c,3250391896554,1.7,80.3088803088803,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5059319025711,Special K Chocolat Noir,8.8,d,b,3250391896554,1.7,80.68181818181817,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3329483607504,Flocons d’avoine petits,2.7866666666666666,a,a,4335619092648,2.49,10.645933014354059,Flocons d'avoine,a,a-plus
+breakfast_cereals,3111900330146,Bombs choco sans gluten,12.428571428571427,c,b,3250391896554,1.7,86.32183908045977,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3222473950324,Corn Flakes,5.760000000000001,c,c,3250391896554,1.7,70.48611111111111,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256228686572,Céréales Muesli croustillant fruits rouges sachet 350g,10.799999999999999,c,a,4335619092648,2.49,76.94444444444444,Flocons d'avoine,a,a-plus
+breakfast_cereals,40897677,Hafer Flocken Zart,3.3899999999999997,a,a-plus,4335619092648,2.49,26.548672566371668,Flocons d'avoine,a,a-plus
+breakfast_cereals,5050083516313,Céréales Extra Kellogg's Pépites Chocolat au lait,6.64,e,c,3250391896554,1.7,74.39759036144578,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071267032,Pétales au chocolat blé complet,9.733333333333333,c,a,4335619092648,2.49,74.41780821917808,Flocons d'avoine,a,a-plus
+breakfast_cereals,5053827199759,TRÉSOR Choco Roulette,7.725806451612903,e,d,3250391896554,1.7,77.99582463465552,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071407681,Croustillant fruits rouges,10.266666666666667,c,a,4335619092648,2.49,75.74675324675324,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820800486,Flocons d'Epeautre,5.3,a,b,3250391896554,1.7,67.92452830188678,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900350670,Cassis et graines gourmandes,14.74,c,a-plus,4335619092648,2.49,83.10719131614654,Flocons d'avoine,a,a-plus
+breakfast_cereals,3273120019499,FLOCONS CHATAIGNE TOASTES,28.857142857142854,c,b,3250391896554,1.7,94.10891089108911,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256229255661,"Céréales Müesli cranberry, 400g",8.125,a,c,3250391896554,1.7,79.07692307692308,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3273120011110,Flocons d'orge,4.98,a,b,3250391896554,1.7,65.86345381526104,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071483036,Crocks mix,4.919354838709677,d,c,3250391896554,1.7,65.44262295081967,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256229255654,"Céréales Muesli chocolat & amandes, 400g",8.149999999999999,a,b,3250391896554,1.7,79.14110429447852,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557502750,Flakes céréales & légumineuses,13.4,a,b,3250391896554,1.7,87.31343283582089,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071407773,Croustillant graines de courge et de tournesol,7.773333333333333,c,a,4335619092648,2.49,67.96740994854203,Flocons d'avoine,a,a-plus
+breakfast_cereals,3256228686534,"Céréales Pétales de blé chocolat bio, sachet 375g",8.32,a,b,3250391896554,1.7,79.5673076923077,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010477360755,Granola chocolat noir - faible en sucre,9.875,a,b,3250391896554,1.7,82.78481012658229,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5053827156219,Trésor Chocolat au lait,9.016129032258064,e,d,3250391896554,1.7,81.14490161001788,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3760031831420,Flakes Sarrasin Érable,15.285714285714283,b,b,3250391896554,1.7,88.87850467289721,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256224357988,Céréales Pépites et pétales aux fruits secs sachet de 400g,6.625,d,b,3250391896554,1.7,74.33962264150944,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557502743,Flakes céréales & légumineuses - nature,9.428571428571427,a,b,3250391896554,1.7,81.96969696969697,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557910494,Corn flakes sans sucres ajoutés,10.355555555555556,b,b,3250391896554,1.7,83.58369098712447,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557501432,CORN FLAKES SUCRE CANNE,8.51,c,b,3250391896554,1.7,80.0235017626322,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3596710494132,Muesli croustillant quinoa chocolat,8.68,d,a,4335619092648,2.49,71.31336405529954,Flocons d'avoine,a,a-plus
+breakfast_cereals,5010477350954,Country Crisp Fruits & Noix,6.32,c,b,3250391896554,1.7,73.10126582278481,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256225428434,Céréales Pétales de riz et blé orge avec fruits rouges boîte de,6.533333333333333,d,c,3250391896554,1.7,73.9795918367347,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071013035,Crunchy Chocolat noir intense,6.07,c,b,3250391896554,1.7,71.99341021416804,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3263851533012,Le muesli croustillant aux fruits rouges,9.3,d,b,3250391896554,1.7,81.72043010752688,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3168930010890,Cruesli Chocolat au lait,6.533333333333333,d,c,3250391896554,1.7,73.9795918367347,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5059319023250,Coco pops Chocos,8.575757575757576,c,c,3250391896554,1.7,80.17667844522968,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900410008,Nature,6.65,c,a,4335619092648,2.49,62.556390977443606,Flocons d'avoine,a,a-plus
+breakfast_cereals,5400101041424,GRANOLA CRUNCHY,9.621212121212121,c,c,3250391896554,1.7,82.33070866141732,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,7613035189027,NESTLE CRUNCH Céréales 450g,6.266666666666666,c,b,3250391896554,1.7,72.87234042553192,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071016074,Corn flakes,4.18,c,c,3250391896554,1.7,59.330143540669845,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3396411241871,Cereales extra croustillantes,12.133333333333333,d,a,4335619092648,2.49,79.47802197802197,Flocons d'avoine,a,a-plus
+breakfast_cereals,3256224060697,Céréales Muesli croustillant aux fruits secs paquet 500g,4.18,c,c,3250391896554,1.7,59.330143540669845,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3596710446599,Muesli croustillant Fruits rouges,5.955555555555556,c,b,3250391896554,1.7,71.45522388059702,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111902100259,Muesli croustillant cacao,7.766666666666667,c,a,4335619092648,2.49,67.93991416309012,Flocons d'avoine,a,a-plus
+breakfast_cereals,3760294961322,Müesli croquant nature,4.7,a,a,4335619092648,2.49,47.02127659574468,Flocons d'avoine,a,a-plus
+breakfast_cereals,3421557501616,Flocons de sarrasin,9.32,a,b,3250391896554,1.7,81.75965665236052,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010477356239,Muesli bio chocolat noir,8.444444444444445,b,a,4335619092648,2.49,70.51315789473684,Flocons d'avoine,a,a-plus
+breakfast_cereals,3421557501562,Crispy o'choc,10.24,c,b,3250391896554,1.7,83.39843750000001,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557500909,Chocolune,12.293333333333333,c,b,3250391896554,1.7,86.1713665943601,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5411788047616,Porridge express OMEGA 3,8.2,a,c,3250391896554,1.7,79.26829268292683,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900410053,Muesli,6.508333333333334,a,a,4335619092648,2.49,61.74135723431498,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820160672,Croustillant Chocolat,8.08,c,a,4335619092648,2.49,69.18316831683168,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820800721,muesli superfruits,8.626666666666667,a,a-plus,4335619092648,2.49,71.13601236476043,Flocons d'avoine,a,a-plus
+breakfast_cereals,3256225042364,Céréales blé soufflé miel caramélisé,6.293333333333333,c,d,3250391896554,1.7,72.98728813559322,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557110320,Krounchy fruits pomme raisin datte canneberge,6.87,c,a,4335619092648,2.49,63.75545851528384,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820792958,Porridge 3 Céréales,8.48,a,b,3250391896554,1.7,79.95283018867924,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,8445291075078,NESTLE CRUNCH Céréales 675g,6.503703703703703,c,c,3250391896554,1.7,73.86104783599087,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010477348555,Country Crisp 4 Noix,5.982352941176471,c,c,3250391896554,1.7,71.58308751229106,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3596710413638,Coeur lait,5.824999999999999,d,c,3250391896554,1.7,70.81545064377681,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010477365378,Céréales oh my crips fruit,9.375,b,d,3250391896554,1.7,81.86666666666666,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010029229110,Crispy Minis Choco,8.2,b,b,3250391896554,1.7,79.26829268292683,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256228686558,Céréales Muesli croustillant au chocolat noir 500G,7.34,c,a,4335619092648,2.49,66.07629427792915,Flocons d'avoine,a,a-plus
+breakfast_cereals,3421557112003,"Muesli+sans gluten Raisin, Figue, Banane",10.66,c,a,4335619092648,2.49,76.64165103189494,Flocons d'avoine,a,a-plus
+breakfast_cereals,8445291914193,Chocapic minis,7.903225806451614,b,c,3250391896554,1.7,78.48979591836735,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3387390123210,Chocapic,9.333333333333334,b,b,3250391896554,1.7,81.78571428571428,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,7613035144699,NESTLE NESQUIK Céréales 450g,7.066666666666666,c,b,3250391896554,1.7,75.94339622641509,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3266191008097,"Muesli Aux 5 Cereales, Raisins Et Noisettes",7.99,a,a,4335619092648,2.49,68.8360450563204,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820805337,CROUTILLANT,10.788888888888888,b,a,4335619092648,2.49,76.92070030895984,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820769165,Muesli avoine chocolat bio,9.613333333333333,b,a,4335619092648,2.49,74.09847434119278,Flocons d'avoine,a,a-plus
+breakfast_cereals,5010029000023,Original,9.093023255813954,a,c,3250391896554,1.7,81.30434782608695,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3258561040363,Petales de blé chocolat,4.613333333333333,c,d,3250391896554,1.7,63.15028901734104,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3387390019995,NESTLE LION Céréales 400g,8.05,c,b,3250391896554,1.7,78.88198757763975,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3168930010906,Cruesli Chocolat noir,6.544444444444444,c,d,3250391896554,1.7,74.02376910016977,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557108624,Krounchy sans gluten amande,12.28,c,a,4335619092648,2.49,79.72312703583061,Flocons d'avoine,a,a-plus
+breakfast_cereals,3560071269784,Flakes épeautre,10.24,a,a,4335619092648,2.49,75.68359375,Flocons d'avoine,a,a-plus
+breakfast_cereals,3380390410601,Quinoa soufflé,46.5,a,d,3250391896554,1.7,96.34408602150538,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5010477348395,Country Crisp - Chocolat noir 70% cacao,7.945454545454545,d,c,3250391896554,1.7,78.604118993135,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071168674,Pétales de maïs,2.92,d,c,3250391896554,1.7,41.78082191780822,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3168930158158,Cruesli miel et noisettes,9.377777777777776,b,d,3250391896554,1.7,81.87203791469193,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557501142,"Muesli noisettes, raisins, seigle complet, blé sans sucres ajoutés",5.81,a,a-plus,4335619092648,2.49,57.14285714285714,Flocons d'avoine,a,a-plus
+breakfast_cereals,3266191008110,Anneaux 3 céréales et miel,17.16,c,b,3250391896554,1.7,90.0932400932401,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,7613036669146,NESTLE CHOCAPIC BIO Céréales - Boite de 375g,11.973333333333334,b,b,3250391896554,1.7,85.80178173719376,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3596710446605,Muesli CroustillantNoix,5.2444444444444445,c,b,3250391896554,1.7,67.58474576271186,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557501722,Muesli croustillant tradition,5.385,c,a,4335619092648,2.49,53.76044568245125,Flocons d'avoine,a,a-plus
+breakfast_cereals,3560071013004,Crunchy 5 fruits secs,5.44,d,b,3250391896554,1.7,68.75,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557501500,Le croustillant super fruits,11.093333333333334,d,a,4335619092648,2.49,77.55408653846153,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820794839,Muesli sans gluten fruits tournesol lin doré,17.30666666666667,a,a,4335619092648,2.49,85.61248073959938,Flocons d'avoine,a,a-plus
+breakfast_cereals,3254560043459,PETALES FRUITS et FIBRES,5.08,d,c,3250391896554,1.7,66.53543307086615,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111902100020,Muesli bio croustillant 3 chocolats,12.986666666666666,c,a-plus,4335619092648,2.49,80.8264887063655,Flocons d'avoine,a,a-plus
+breakfast_cereals,3560071013127,Stylesse Chocolat Noir,5.966666666666667,d,d,3250391896554,1.7,71.50837988826815,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071530273,Riz et blé soufflés Chocolat,3.0666666666666664,d,d,3250391896554,1.7,44.56521739130435,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3229820794556,"Muesli Proteines Soja, Dattes, Fruits Rouges",10.533333333333333,a,a,4335619092648,2.49,76.36075949367088,Flocons d'avoine,a,a-plus
+breakfast_cereals,3256222976716,Céréales Corn flakes,7.626666666666666,a,b,3250391896554,1.7,77.70979020979021,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,8445290549754,Babicao,10.375,c,c,3250391896554,1.7,83.61445783132531,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071531096,Crocks Choco-Noisette,7.874999999999999,d,c,3250391896554,1.7,78.4126984126984,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3350031937804,Muesli croustillant fruits rouges Bio Monoprix,10.533333333333333,c,a,4335619092648,2.49,76.36075949367088,Flocons d'avoine,a,a-plus
+breakfast_cereals,3564706612792,Muesli 4 Noix,4.05,c,b,3250391896554,1.7,58.02469135802469,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5430000992336,Bamboo crunchy chocolate,13.38,b,c,3250391896554,1.7,87.29446935724964,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3111900350878,Surperfruits,15.402777777777779,c,a,4335619092648,2.49,83.83408476104599,Flocons d'avoine,a,a-plus
+breakfast_cereals,5053827110983,Céréales Miel Pops,5.870967741935484,c,c,3250391896554,1.7,71.04395604395604,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3229820797861,Croustillant 3 noix,12.355555555555554,b,a,4335619092648,2.49,79.84712230215827,Flocons d'avoine,a,a-plus
+breakfast_cereals,3250390816416,Forme & chocolat noir,6.366666666666666,d,c,3250391896554,1.7,73.29842931937172,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3387390326574,Céréales Cookie Crisp,7.333333333333333,c,b,3250391896554,1.7,76.81818181818181,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560070330867,Boules De CÉRÉALES,3.986666666666667,c,c,3250391896554,1.7,57.35785953177258,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,4056489233725,Barres Granola au sirop d'érable,9.880952380952381,d,c,3250391896554,1.7,82.79518072289157,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256229401167,Céréales Pétales de riz & blé orge 500g,5.06,c,d,3250391896554,1.7,66.40316205533597,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5053827175654,,9.924242424242424,c,d,3250391896554,1.7,82.8702290076336,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557110221,Muesli avoine amandes chocolat,9.7,c,a,4335619092648,2.49,74.3298969072165,Flocons d'avoine,a,a-plus
+breakfast_cereals,3700036908635,Croustillant nature,6.98,c,a,4335619092648,2.49,64.32664756446991,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820794846,Muesli chocolat sans gluten et bio,18.64,a,a,4335619092648,2.49,86.64163090128754,Flocons d'avoine,a,a-plus
+breakfast_cereals,5902884463405,Musli OneDayMore,11.225,c,a-plus,4335619092648,2.49,77.8173719376392,Flocons d'avoine,a,a-plus
+breakfast_cereals,4056489209980,Crunchy Muesli Multi Fruit,3.733333333333334,d,b,3250391896554,1.7,54.46428571428572,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,7613287514325,Fitness Nature Céréales complètes,7.347368421052631,a,c,3250391896554,1.7,76.86246418338109,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3560071407803,Croustillant Chocolat,8.7,c,b,3250391896554,1.7,80.45977011494253,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3421557500763,Riz complet soufflé,14.774999999999999,b,b,3250391896554,1.7,88.49407783417936,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3256228686596,Céréales Muesli canneberges baies de goji dattes abricots 375g,8.213333333333333,a,a,4335619092648,2.49,69.68344155844156,Flocons d'avoine,a,a-plus
+breakfast_cereals,3111900390034,Pétales de sarrasin chataigne,15.966666666666667,a,a,4335619092648,2.49,84.40501043841337,Flocons d'avoine,a,a-plus
+breakfast_cereals,5010477352590,Country crisp bio Chocolat Noir,8.575,d,b,3250391896554,1.7,80.17492711370262,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3229820129488,"muesli raisin,datte,figue",6.3999999999999995,a,a,4335619092648,2.49,61.09374999999999,Flocons d'avoine,a,a-plus
+breakfast_cereals,5010477356277,Granola Amandes Noisettes & Graines,10.825,a,b,3250391896554,1.7,84.29561200923789,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,5053827199568,Müsli-Tresor-Choco Nut,8.182926829268293,e,c,3250391896554,1.7,79.22503725782414,Flocons d'avoine complète 500g,a,b
+breakfast_cereals,3273120014890,Muesli Étudiants Raisins - Pommes - Noisettes,8.649999999999999,a,a,4335619092648,2.49,71.21387283236994,Flocons d'avoine,a,a-plus
+breakfast_cereals,3111900350557,muesli croustillant Framboise & chocolat,12.98,d,a,4335619092648,2.49,80.81664098613251,Flocons d'avoine,a,a-plus
+breakfast_cereals,3229820801650,Les p’tits curieux Croc Fourrés tout choco,10.571428571428571,d,b,3250391896554,1.7,83.91891891891893,Flocons d'avoine complète 500g,a,b
+dark_chocolates,3046920016377,100% Cacao,52,d,d,20995553,11.879999999999999,77.15384615384616,Шоколад 85% какаова маса,d,d
+dark_chocolates,3700214610190,Noir Pérou dessert,16.15,e,c,26026152,8.95,44.58204334365325,Chocolat Dessert Corsé,e,c
+dark_chocolates,7610036002805,Noir aux Pépites de Café,27.7,e,c,26026152,8.95,67.68953068592057,Chocolat Dessert Corsé,e,c
+dark_chocolates,3700214619124,Chocolat noir Noisettes muesli caramel,26.799999999999997,e,d,3560071006327,8.75,67.35074626865672,Dessert noir,e,d
+dark_chocolates,3110845303536,La Friture croustillante chocolat noir,23.999999999999996,e,e,3256220610407,8.433333333333334,64.8611111111111,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3396413714410,Chocolat noir fourré praliné,55.74999999999999,e,c,26026152,8.95,83.94618834080718,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760278866728,Gianduja noir intense,29.5,d,c,3700036905764,24.7,16.27118644067797,Chocolat Noir Dégustation,d,c
+dark_chocolates,3245678046463,Dessert noir 52%,14.899999999999999,e,c,26026152,8.95,39.93288590604026,Chocolat Dessert Corsé,e,c
+dark_chocolates,3250392556181,Tablette BIO dégustation - Chocolat noir Pérou 85% - 100g,20.4,d,d,20995553,11.879999999999999,41.76470588235294,Шоколад 85% какаова маса,d,d
+dark_chocolates,3046920028721,Dark absolute 99% cacao,54.1,d,d,20995553,11.879999999999999,78.04066543438077,Шоколад 85% какаова маса,d,d
+dark_chocolates,3596710547623,72% Noir fèves de cacao,21.9,e,f,3256220610407,8.433333333333334,61.49162861491628,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3258590000116,Chocolat noir 70% cacao,47.5,e,c,26026152,8.95,81.1578947368421,Chocolat Dessert Corsé,e,c
+dark_chocolates,1205241730009,Belöning,19.5,e,c,26026152,8.95,54.1025641025641,Chocolat Dessert Corsé,e,c
+dark_chocolates,3564707178006,Chocolat Noir Gingembre saveur citron,20,e,c,26026152,8.95,55.25,Chocolat Dessert Corsé,e,c
+dark_chocolates,3564700475355,Noir & une pointe de menthe,11.899999999999999,e,e,3256220610407,8.433333333333334,29.131652661064418,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3664346317108,Chocolat poulain bio,40.705882352941174,e,d,3560071006327,8.75,78.50433526011561,Dessert noir,e,d
+dark_chocolates,3256226088958,Chocolat noir 74% de cacao d'Equateur Tablette de 100g,21.349999999999998,e,d,3560071006327,8.75,59.01639344262295,Dessert noir,e,d
+dark_chocolates,7613035040823,Nestlé dessert Noir,12.73170731707317,e,d,3560071006327,8.75,31.273946360153253,Dessert noir,e,d
+dark_chocolates,3700531202276,Tablette noir 88% St-Domingue Grand Cru au sucre de coco,42,d,d,20995553,11.879999999999999,71.71428571428571,Шоколад 85% какаова маса,d,d
+dark_chocolates,3256222989747,Chocolat noir corsé à pâtisser 64% Tablette de 200g,10.95,e,d,3560071006327,8.75,20.09132420091324,Dessert noir,e,d
+dark_chocolates,3760020503567,Chocolat Noir pointe de Fleur de sel,24.599999999999998,e,c,26026152,8.95,63.61788617886179,Chocolat Dessert Corsé,e,c
+dark_chocolates,3266191106274,Noir 66% fèves de cacao,34.9,e,d,3560071006327,8.75,74.92836676217766,Dessert noir,e,d
+dark_chocolates,3564700010846,Chocolat dessert pâtissier,9.049999999999999,e,d,3560071006327,8.75,3.3149171270718116,Dessert noir,e,d
+dark_chocolates,3564706606043,Noir extra 99%,28.9,d,e,20995553,11.879999999999999,58.892733564013845,Шоколад 85% какаова маса,d,d
+dark_chocolates,3560070669981,80% cacao noir,21.625,d,d,20995553,11.879999999999999,45.063583815028906,Шоколад 85% какаова маса,d,d
+dark_chocolates,3450970055499,Chocolat noir 70% cacao,9.3,e,e,3256220610407,8.433333333333334,9.318996415770613,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3700531202818,Chocolat noir 74% fleur de sel,42,e,c,26026152,8.95,78.69047619047618,Chocolat Dessert Corsé,e,c
+dark_chocolates,3046920010603,Framboise Intense,23.9,e,e,3256220610407,8.433333333333334,64.71408647140865,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,8445290539922,NESTLE L'ATELIER Tablette Chocolat noir orange confite - 100g,117.15,e,b,3564700027493,12.25,89.54332052923601,Chocolat noir écorces d'orange,e,b
+dark_chocolates,3760121219695,Chocolat noir noisettes,25.833333333333336,d,c,3700036905764,24.7,4.38709677419356,Chocolat Noir Dégustation,d,c
+dark_chocolates,3760077182234,Chocolat noir Madagascar 85%,48.125,d,d,20995553,11.879999999999999,75.31428571428572,Шоколад 85% какаова маса,d,d
+dark_chocolates,3250391378074,Tablette fourrée chocolat noir praliné - 150g,11.266666666666667,e,f,3256220610407,8.433333333333334,25.147928994082843,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3250391503803,DESSERT NOIR CORSE,11,e,e,3256220610407,8.433333333333334,23.33333333333333,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3396411221309,Chocolat &quot,45.9,e,d,3560071006327,8.75,80.93681917211329,Dessert noir,e,d
+dark_chocolates,3700214611548,Noir equitable 85% Pérou,28.5,d,c,3700036905764,24.7,13.333333333333336,Chocolat Noir Dégustation,d,c
+dark_chocolates,7613034938459,Chocolate After eight sabor menta,24.5,e,f,3256220610407,8.433333333333334,65.578231292517,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3477730040021,Chocolat noir biologique 58% cacao,31.5625,e,c,26026152,8.95,71.64356435643565,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760091722997,Chocolat noir extra,20.099999999999998,e,c,26026152,8.95,55.472636815920396,Chocolat Dessert Corsé,e,c
+dark_chocolates,3245678046692,NOIR TRUFFE FANTAISIE et ECLATS DE FEVES,18.733333333333334,e,f,3256220610407,8.433333333333334,54.982206405693944,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3256220268370,Chocolat noir dégustation 72% d'éclats fèves de cacao Tablette de 100g,25.1,e,d,3560071006327,8.75,65.1394422310757,Dessert noir,e,d
+dark_chocolates,3033710001354,NESTLE LES RECETTES DE L'ATELIER - Carrés dégustation Chocolat noir 70% - 210g,22.80952380952381,e,d,3560071006327,8.75,61.63883089770355,Dessert noir,e,d
+dark_chocolates,3664346332330,Dessert noir,10.13888888888889,e,e,3256220610407,8.433333333333334,16.82191780821918,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3250390102625,Tablette dégustation chocolat noir min 70% - 100g,11.95,d,f,20995553,11.879999999999999,0.5857740585774083,Шоколад 85% какаова маса,d,d
+dark_chocolates,3245678046920,Noir amandes entieres,9.055555555555555,e,c,26026152,8.95,1.1656441717791468,Chocolat Dessert Corsé,e,c
+dark_chocolates,7622201433017,Tendre noir chocolat,17.352941176470587,e,f,3256220610407,8.433333333333334,51.401129943502816,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3222471363591,Chocolat Noir Noisettes entières,16.299999999999997,e,c,26026152,8.95,45.09202453987729,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760278865301,Chocolat noir dessert,15.85,e,d,3560071006327,8.75,44.79495268138801,Dessert noir,e,d
+dark_chocolates,3760278863055,Chocolat bio noir Pérou 70% café Arabica,26.7,d,c,3700036905764,24.7,7.490636704119851,Chocolat Noir Dégustation,d,c
+dark_chocolates,7622210724519,Chocolat noir Bio 70%,30.444444444444446,e,c,26026152,8.95,70.6021897810219,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760077183767,Chocolat noir Pérou SAVEURS & NATURE,51.14285714285714,e,d,3560071006327,8.75,82.89106145251397,Dessert noir,e,d
+dark_chocolates,7613287142917,NESTLE DESSERT BIO Corsé,21.55882352941176,e,c,26026152,8.95,58.4856753069577,Chocolat Dessert Corsé,e,c
+dark_chocolates,3477730001701,Chocolat Noir 90% Bio,39.5,d,c,3700036905764,24.7,37.46835443037975,Chocolat Noir Dégustation,d,c
+dark_chocolates,8000500359815,,22.777777777777775,e,e,3256220610407,8.433333333333334,62.975609756097555,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3770024791136,Tablette chocolat gourde aux éclats de sarrasin caramélisé,46.5,e,d,3560071006327,8.75,81.18279569892474,Dessert noir,e,d
+dark_chocolates,3760121210975,Chocolat noir dessert 56%,13.5,e,c,26026152,8.95,33.70370370370371,Chocolat Dessert Corsé,e,c
+dark_chocolates,3245412980152,Piel de naranja confitadas negro,18.9,e,c,26026152,8.95,52.645502645502646,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760121219688,Chocolat noir noisettes et fleur de sel de Guérande,33.05555555555556,e,d,3560071006327,8.75,73.52941176470588,Dessert noir,e,d
+dark_chocolates,7622210477934,Toblerone Dark Chocolate,35.833333333333336,e,e,3256220610407,8.433333333333334,76.46511627906976,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,7613035040793,NESTLÉ DESSERT Noir 2x205g,13.536585365853657,e,d,3560071006327,8.75,35.36036036036035,Dessert noir,e,d
+dark_chocolates,3560070660575,Dessert noir,11.45,e,c,26026152,8.95,21.83406113537118,Chocolat Dessert Corsé,e,c
+dark_chocolates,3258590002530,Noir noisettes entières,45.75,e,d,3560071006327,8.75,80.8743169398907,Dessert noir,e,d
+dark_chocolates,3250391107018,Tablette fourrée chocolat noir praliné,15.966666666666669,e,f,3256220610407,8.433333333333334,47.18162839248435,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3477730001138,Chocolat noir corsé dessert biologique,32.25,e,c,26026152,8.95,72.24806201550388,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760226261018,"Tablette de chocolat 75% de cacao,thé earl grey",32.05,e,c,26026152,8.95,72.07488299531983,Chocolat Dessert Corsé,e,c
+dark_chocolates,3046920027861,Excellence Noir Menthe Intense,25.8,e,e,3256220610407,8.433333333333334,67.31266149870801,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3760091722508,Chocolat noir 85% Madagascar,28.549999999999997,d,c,3700036905764,24.7,13.485113835376525,Chocolat Noir Dégustation,d,c
+dark_chocolates,3560070423941,COEUR de Mousse,18.875,e,f,3256220610407,8.433333333333334,55.32008830022075,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3046920040655,Chocolat Noir Pailleté Dentelle Caramel,30.099999999999998,e,f,3256220610407,8.433333333333334,71.98228128460687,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3564700027486,Chocolat noir amandes entières,9.2,e,d,3560071006327,8.75,4.89130434782608,Dessert noir,e,d
+dark_chocolates,7613037677942,LES RECETTES DE L'ATELIER. Pâte d'amande CHOCOLAT NOIR PURE CHOCOLADE MET MARSEPEIN,25.985915492957744,e,d,3560071006327,8.75,66.32791327913279,Dessert noir,e,d
+dark_chocolates,3760278863857,Gianduja Noir Éclats de Noisettes,28.3,e,c,26026152,8.95,68.37455830388693,Chocolat Dessert Corsé,e,c
+dark_chocolates,4056489719618,"Chocolat noir, Éclats d'amandes grillées & pointe de sel",12.166666666666666,e,c,26026152,8.95,26.438356164383563,Chocolat Dessert Corsé,e,c
+dark_chocolates,3501940138466,"Chocolat noir, fourré avec notre pâte à tartiner noir et amandes",60.99999999999999,e,c,26026152,8.95,85.32786885245902,Chocolat Dessert Corsé,e,c
+dark_chocolates,3477730001121,Chocolat noir dessert pâtissier 58% cacao,27.25,e,c,26026152,8.95,67.1559633027523,Chocolat Dessert Corsé,e,c
+dark_chocolates,3250390008347,Tablette familiale chocolat noir - 3x100g,29.4,e,f,3256220610407,8.433333333333334,71.31519274376417,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,4260485630482,Chocolat noir & nibs,52.24999999999999,e,d,3560071006327,8.75,83.2535885167464,Dessert noir,e,d
+dark_chocolates,3256224642022,Chocolat noir dégustation 72% de cacao et fleur de sel Tablette de100g,17.15,e,e,3256220610407,8.433333333333334,50.82604470359572,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3258561060187,Chocolat noir aux écorces d'orange confites,13.999999999999998,e,b,3564700027493,12.25,12.49999999999999,Chocolat noir écorces d'orange,e,b
+dark_chocolates,7640159890690,Chocolat noir Fleur de sel,51.9,e,f,3256220610407,8.433333333333334,83.75080282594735,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3596710540891,Auchan chocolat noir noisettes entieres 180g,11.944444444444445,e,d,3560071006327,8.75,26.74418604651163,Dessert noir,e,d
+dark_chocolates,3760278863062,chocolat bio noir Pérou 70% fleur de sel de Camargue,27.799999999999997,e,c,26026152,8.95,67.80575539568345,Chocolat Dessert Corsé,e,c
+dark_chocolates,3664346306621,tablette poulain fine et gourmande 70% noir moin 2%sucre,16.9,d,e,20995553,11.879999999999999,29.704142011834318,Шоколад 85% какаова маса,d,d
+dark_chocolates,3046920045384,Les Pyrénéens Noir لينت شكولاته دارك,20.866666666666667,e,e,3256220610407,8.433333333333334,59.58466453674121,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3396411240843,Dégustation noir Eclats d Amandes,50.55555555555556,e,d,3560071006327,8.75,82.6923076923077,Dessert noir,e,d
+dark_chocolates,3760246160124,Noir 70% caramel beurre salé,37.99999999999999,e,d,3560071006327,8.75,76.9736842105263,Dessert noir,e,d
+dark_chocolates,4006040013471,Chocolat noir 85%,35,d,c,3700036905764,24.7,29.428571428571427,Chocolat Noir Dégustation,d,c
+dark_chocolates,3560070720859,Chocolate negro,20.75,e,d,3560071006327,8.75,57.83132530120482,Dessert noir,e,d
+dark_chocolates,3760278860498,Chocolat gianduja,27.9,e,c,26026152,8.95,67.92114695340503,Chocolat Dessert Corsé,e,c
+dark_chocolates,4044889002225,Feine Bitter Kuvertüre,25.75,e,c,26026152,8.95,65.24271844660194,Chocolat Dessert Corsé,e,c
+dark_chocolates,3250391503834,Tablette bloc chocolat noir aux amandes entières - 200g,10.524999999999999,e,e,3256220610407,8.433333333333334,19.873317498020572,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,7613035898677,NESTLÉ DESSERT Corsé,15.649999999999999,e,c,26026152,8.95,42.811501597444085,Chocolat Dessert Corsé,e,c
+dark_chocolates,7613037030440,NESTLÉ DESSERT Noir Éclats de Noisettes 170g,18.76470588235294,e,c,26026152,8.95,52.304075235109714,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760091726599,Chocolat noir Gingembre confit,28.5,e,c,26026152,8.95,68.59649122807018,Chocolat Dessert Corsé,e,c
+dark_chocolates,3256229544000,Chocolat noir aromatisé à l'arome nature de menthe 100g,13.700000000000001,e,f,3256220610407,8.433333333333334,38.442822384428226,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3760121219718,Noir dessert,27.999999999999996,e,c,26026152,8.95,68.03571428571429,Chocolat Dessert Corsé,e,c
+dark_chocolates,3700531201927,Tablette chocolat noir 74% éclats d'amandes toastées,45.49999999999999,d,d,20995553,11.879999999999999,73.89010989010988,Шоколад 85% какаова маса,d,d
+dark_chocolates,3760278860481,Chocolat noir amande,28.25,e,c,26026152,8.95,68.31858407079646,Chocolat Dessert Corsé,e,c
+dark_chocolates,3046920021463,Dessert le 70 % cacao Noir intense,34.5,e,e,3256220610407,8.433333333333334,75.55555555555556,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3396410047559,Chocolat Noir Costa Rica 75% De Cacao,52.5,d,c,3700036905764,24.7,52.95238095238095,Chocolat Noir Dégustation,d,c
+dark_chocolates,3664346305891,Poulain Noir extra - pur beurre de cacao,10.612499999999997,e,d,3560071006327,8.75,17.550058892815056,Dessert noir,e,d
+dark_chocolates,3760110970446,Tablette pur cacao 100% sans sucre,77.85714285714285,d,d,20995553,11.879999999999999,84.74128440366974,Шоколад 85% какаова маса,d,d
+dark_chocolates,3046920021043,Noir intense dessert 70%,18.099999999999998,e,d,3560071006327,8.75,51.657458563535904,Dessert noir,e,d
+dark_chocolates,3760077182005,Tablette de chocolat noir 70% Origine Madagascar - 80g,48.125,e,c,26026152,8.95,81.4025974025974,Chocolat Dessert Corsé,e,c
+dark_chocolates,4044889002904,Mørk sjokolade 99%,42.5,d,c,3700036905764,24.7,41.88235294117647,Chocolat Noir Dégustation,d,c
+dark_chocolates,5410081200445,L'original noir,16.45,e,e,3256220610407,8.433333333333334,48.73353596757851,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3258590000185,Chocolat Noir 70% à l'agave,33.8,e,c,26026152,8.95,73.5207100591716,Chocolat Dessert Corsé,e,c
+dark_chocolates,4044889001013,Feine Bitter Orange,32,e,b,3564700027493,12.25,61.71875,Chocolat noir écorces d'orange,e,b
+dark_chocolates,3046920020992,Chocolat noir 70% Cacao Sel rose de l'Himalaya,28.799999999999997,e,e,3256220610407,8.433333333333334,70.71759259259258,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3046920010870,Excellence citron pointe de gingembre,40.99999999999999,e,d,3560071006327,8.75,78.65853658536585,Dessert noir,e,d
+dark_chocolates,3245678047200,Noir menthe,13.1,e,c,26026152,8.95,31.679389312977104,Chocolat Dessert Corsé,e,c
+dark_chocolates,5410081201039,100G COTE D'OR NOIR ORIGINAL,15.5,e,e,3256220610407,8.433333333333334,45.59139784946236,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,5412956213116,Extra Dark Chocolate 85 % Cachet,27.11111111111111,e,d,3560071006327,8.75,67.72540983606558,Dessert noir,e,d
+dark_chocolates,3046920010047,Cioccolato Fondente 78%,27.5,e,d,3560071006327,8.75,68.18181818181819,Dessert noir,e,d
+dark_chocolates,7610036002676,Chocolat Villars Noir 70% Sans sucre ajouté 100g,29.5,d,e,20995553,11.879999999999999,59.728813559322035,Шоколад 85% какаова маса,d,d
+dark_chocolates,7613035859098,NESTLÉ DESSERT 70% Absolu 170g,19.55882352941176,e,d,3560071006327,8.75,55.263157894736835,Dessert noir,e,d
+dark_chocolates,26054247,Chocolat dessert 52% cacao noir,9.95,e,c,26026152,8.95,10.050251256281408,Chocolat Dessert Corsé,e,c
+dark_chocolates,3256227893797,Chocolat,23.65,e,e,3256220610407,8.433333333333334,64.34108527131782,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3179142787401,Pépites Chocolat Noir,19.674999999999997,e,e,3256220610407,8.433333333333334,57.13680643795001,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3046920042765,Lindor noir,21.46666666666667,e,e,3256220610407,8.433333333333334,60.714285714285715,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,4044889002249,Mørk sjokolade 92%,43.375,d,c,3700036905764,24.7,43.054755043227665,Chocolat Noir Dégustation,d,c
+dark_chocolates,3596710507580,Noir chocolat extra fin,10.200000000000001,e,f,3256220610407,8.433333333333334,17.320261437908503,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3046920020183,Délice pistache amande,18.46666666666667,e,e,3256220610407,8.433333333333334,54.33212996389892,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3046920010283,Excellence Lait Extra Fondant,24.3,e,d,3560071006327,8.75,63.9917695473251,Dessert noir,e,d
+dark_chocolates,3760147070164,Chocolat noir orange,30.099999999999998,e,a,7610036002829,29.45,2.1594684385382013,Chocolat Villars Noir Ecorces Orange Confites 100g,e,a
+dark_chocolates,20815356,Dunkle Schokolade mit ganzen Haselnüssen,10.985323003770283,e,c,26026152,8.95,18.527657339449544,Chocolat Dessert Corsé,e,c
+dark_chocolates,3700214619230,Chocolat noir poire amandes doux et croquant,39.599999999999994,e,a,7610036002829,29.45,25.631313131313124,Chocolat Villars Noir Ecorces Orange Confites 100g,e,a
+dark_chocolates,3760226260509,noir fleur de sel,34.25,e,c,26026152,8.95,73.86861313868613,Chocolat Dessert Corsé,e,c
+dark_chocolates,3760147070317,Chocolat cru 75% EL inti,52.8,d,c,3700036905764,24.7,53.219696969696976,Chocolat Noir Dégustation,d,c
+dark_chocolates,3046920110341,Chocolat 100% cacao orange,28.5,d,e,20995553,11.879999999999999,58.31578947368421,Шоколад 85% какаова маса,d,d
+dark_chocolates,7622210869616,Chocolat Bio noir 85%,31.333333333333332,d,c,3700036905764,24.7,21.170212765957444,Chocolat Noir Dégustation,d,c
+dark_chocolates,3700214614266,Chocolat 90% Pérou,30.499999999999996,d,c,3700036905764,24.7,19.016393442622945,Chocolat Noir Dégustation,d,c
+dark_chocolates,3760231780276,Chocolat noir caramel & sel de Guérande bio recette N°33,53.89999999999999,e,c,26026152,8.95,83.3951762523191,Chocolat Dessert Corsé,e,c
+dark_chocolates,3477730001251,Chocolat noir 75% Bio,37.99999999999999,e,c,26026152,8.95,76.44736842105263,Chocolat Dessert Corsé,e,c
+dark_chocolates,3421371534302,Friture chocolat noir 70% de cacao,38.09090909090909,e,e,3256220610407,8.433333333333334,77.85998408910103,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3700152400020,Chocolat Madagascar,75,e,e,3256220610407,8.433333333333334,88.75555555555555,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3560071564735,Dessert noir,11.25,e,e,3256220610407,8.433333333333334,25.037037037037035,Chocolat noir supérieur 3 Tablettes de 100g,e,e
+dark_chocolates,3263850574290,Chocolat noir 70% de cacao,22,e,d,3560071006327,8.75,60.22727272727273,Dessert noir,e,d
+dark_chocolates,3760091722515,Nicaragua grand cru waslala 75%,28.5,d,c,3700036905764,24.7,13.333333333333336,Chocolat Noir Dégustation,d,c
+dark_chocolates,7610036002737,"Chocolat Noir 72%, Collection Pure",27.049999999999997,e,d,3560071006327,8.75,67.65249537892791,Dessert noir,e,d
+fruit_juices,3596710473199,pur jus d'orange issu de l'agriculture biologiqueSans pulpe,2.89,c,b,3596710435753,0.86,70.24221453287198,Jus pomme à base de concentré,c,b
+fruit_juices,5038862134590,Jus - Tutti Frutti,3.555555555555556,e,e,3596710355297,0.77,78.34375,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,20569105,Apple Juice,1.55,d,a,3560070827909,1.12,27.74193548387096,100% PUR JUS Pomme,c,a
+fruit_juices,3596710432653,Instant Gourmand - Fraise - Teneur en fruits : 40% minimum,2.755,e,e,3596710355297,0.77,72.05081669691471,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3423182102411,pur jus pomme framboise bio,4.55,d,b,3596710435753,0.86,81.0989010989011,Jus pomme à base de concentré,c,b
+fruit_juices,5601151543313,Clássico Pêssego,2.69,e,d,3596710435753,0.86,68.02973977695167,Jus pomme à base de concentré,c,b
+fruit_juices,5038862000192,"Pur jus orange, fruit de la passion et mandarine",3.727777777777778,c,e,3596710355297,0.77,79.34426229508196,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3350033288881,100% pur jus multifruits bio,3.09,c,c,3596710435753,0.86,72.16828478964402,Jus pomme à base de concentré,c,b
+fruit_juices,9002515601018,Pago Ace - Orange - Carotte - Citron,2.8266666666666667,e,e,3596710355297,0.77,72.75943396226415,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3289196040541,100% pur jus de grenade,8.05,d,c,3596710435753,0.86,89.31677018633539,Jus pomme à base de concentré,c,b
+fruit_juices,0016229901189,Passion fruit juice,4.285714285714286,e,e,3596710355297,0.77,82.03333333333333,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3596710518975,100% Pur Jus Clémentine CORSESans sucres ajoutés** Comme tous les jus de fruits. Contient les sucres naturellement présents dans les fruits.Riche en Vitamine C,2.99,c,c,3596710435753,0.86,71.23745819397993,Jus pomme à base de concentré,c,b
+fruit_juices,3608580913825,Jus d'orange pressées,2.98,c,d,3596710435753,0.86,71.14093959731544,Jus pomme à base de concentré,c,b
+fruit_juices,3266191001814,Pur jus de cranberry,13.98,b,d,3596710307579,1.75,87.48211731044348,Soja vanille Bio,b,a-plus
+fruit_juices,3123340003054,LE PUR JUS Multifruits,2.325,c,e,3596710355297,0.77,66.88172043010753,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3256227113130,Pur jus ananas bouteille en verre de 75cl,4.373333333333333,c,c,3596710435753,0.86,80.33536585365853,Jus pomme à base de concentré,c,b
+fruit_juices,3560070430215,100% pur jus multifruits,1.62,c,e,3596710355297,0.77,52.46913580246914,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3560071152260,Fiestabul Jus de pomme gazéifié,4.333333333333333,d,a,3560070827909,1.12,74.15384615384616,100% PUR JUS Pomme,c,a
+fruit_juices,3250392878733,Jus de nos vergers,3.79,c,b,3596710435753,0.86,77.30870712401055,Jus pomme à base de concentré,c,b
+fruit_juices,3254691592086,Jus de pomme,1.4533333333333331,d,b,3596710435753,0.86,40.82568807339449,Jus pomme à base de concentré,c,b
+fruit_juices,3608580113591,Multi vitaminés 9 fruits,3.0066666666666664,c,d,3596710435753,0.86,71.3968957871397,Jus pomme à base de concentré,c,b
+fruit_juices,3256223028056,Pur jus multifruits brique de 2l,1.49,c,d,3596710435753,0.86,42.281879194630875,Jus pomme à base de concentré,c,b
+fruit_juices,3271471000630,Jus de pomme poire,3.12,c,d,3596710435753,0.86,72.435897435897445,Jus pomme à base de concentré,c,b
+fruit_juices,3596710518951,100% PUR JUS Poire,2.15,d,e,3596710355297,0.77,64.18604651162791,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,5038862438728,As de Pink,4.2,c,e,3596710355297,0.77,81.66666666666666,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,5038862160506,Jus d'orange avec pulpe,3.0888888888888886,e,c,3596710435753,0.86,72.15827338129496,Jus pomme à base de concentré,c,b
+fruit_juices,3560070720743,Matin Douceur 100% Pur Jus Multifruits,4.275,c,e,3596710355297,0.77,81.98830409356725,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3301591002099,Apibul - jus de pommes pétillant,5.16,e,a-plus,3596710307562,1.52,70.54263565891473,Soja chocolat biologique,c,a-plus
+fruit_juices,9002515601926,Fruit du Dragon Goyave,3.6533333333333333,e,e,3596710355297,0.77,78.92335766423358,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3254690670600,Le bio à emporter partout pomme,2.2250000000000005,d,a,3560070827909,1.12,49.66292134831461,100% PUR JUS Pomme,c,a
+fruit_juices,3250391532230,Pur jus pomme bio pet 1l,2.9555555555555557,c,b,3596710435753,0.86,70.90225563909775,Jus pomme à base de concentré,c,b
+fruit_juices,3502110005663,Tropicana Pomme origine France 1 L,2.83,c,a,3560070827909,1.12,60.42402826855123,100% PUR JUS Pomme,c,a
+fruit_juices,3250390031062,Abc pomme briquettes 6x20cl,1.0916666666666668,c,b,3596710435753,0.86,21.221374045801536,Jus pomme à base de concentré,c,b
+fruit_juices,8410261657806,Néctar de Piña y Coco,1.6333333333333335,e,e,3596710355297,0.77,52.85714285714287,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3256224059066,"Pur jus d'orange sans pulpe pet 1,5L",1.6333333333333335,c,b,3596710435753,0.86,47.34693877551021,Jus pomme à base de concentré,c,b
+fruit_juices,3229820105260,Jus de pruneaux,5.633333333333333,e,c,3596710435753,0.86,84.73372781065088,Jus pomme à base de concentré,c,b
+fruit_juices,3560071083656,100% Pur fruit pressé Jus de Pruneau BIO,4.886666666666667,e,d,3596710435753,0.86,82.40109140518416,Jus pomme à base de concentré,c,b
+fruit_juices,5038862167505,pur jus pomme mangue,4.055555555555555,c,e,3596710355297,0.77,81.01369863013699,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3596710449828,100% pur jus - pomme douce,1.84,c,a,3560070827909,1.12,39.130434782608695,100% PUR JUS Pomme,c,a
+fruit_juices,3564706579194,Jus de pomme,1.145,d,c,3596710435753,0.86,24.89082969432315,Jus pomme à base de concentré,c,b
+fruit_juices,3560070823277,100% pur jus PAMPLEMOUSSE ROSE,3.85,b,c,3596710307579,1.75,54.54545454545455,Soja vanille Bio,b,a-plus
+fruit_juices,3250390880479,Pj pomme pet 1l,1.005,d,c,3596710435753,0.86,14.427860696517406,Jus pomme à base de concentré,c,b
+fruit_juices,3560070333127,Orange Jus à base de concentré,1.3933333333333333,c,c,3596710435753,0.86,38.27751196172249,Jus pomme à base de concentré,c,b
+fruit_juices,3289196400178,Mini pur jus de citron bio,8.32,b,b,3596710307579,1.75,78.96634615384615,Soja vanille Bio,b,a-plus
+fruit_juices,3123349014464,Le BIO pomme,2.69,c,a,3560070827909,1.12,58.364312267657986,100% PUR JUS Pomme,c,a
+fruit_juices,5038862000901,innocent super smoothie défense berry,5.04,e,d,3596710435753,0.86,82.93650793650794,Jus pomme à base de concentré,c,b
+fruit_juices,3423182103203,Jus de pomme aux épices,3.215,e,b,3596710435753,0.86,73.25038880248835,Jus pomme à base de concentré,c,b
+fruit_juices,3596710379927,100% - Pur jus - pomme,1.045,c,c,3596710435753,0.86,17.703349282296646,Jus pomme à base de concentré,c,b
+fruit_juices,3256221510140,"Jus de citron vert 2x12, 5cl",6.52,b,d,3596710307579,1.75,73.15950920245399,Soja vanille Bio,b,a-plus
+fruit_juices,5038862432269,"Jus pressé Orange sanguine, grenade, orange, citron vert",3.811111111111111,c,d,3596710435753,0.86,77.43440233236151,Jus pomme à base de concentré,c,b
+fruit_juices,3250392008956,Pj orange avec pulpe brique 1l,2.1550000000000002,c,d,3596710435753,0.86,60.09280742459397,Jus pomme à base de concentré,c,b
+fruit_juices,3250393446146,Pur jus pruneaux bio,4.39,e,d,3596710435753,0.86,80.41002277904329,Jus pomme à base de concentré,c,b
+fruit_juices,3560070823246,100% pur jus jus d'orange sans pulpe,2.45,c,c,3596710435753,0.86,64.89795918367348,Jus pomme à base de concentré,c,b
+fruit_juices,3250391556205,"Pj orange sans pulpe pet 1,5l",1.7133333333333332,c,b,3596710435753,0.86,49.805447470817114,Jus pomme à base de concentré,c,b
+fruit_juices,3596710386444,Boisson aux jus de fruits - pomme poire - goût pomme poire - à l'eau de source,1.045,d,e,3596710355297,0.77,26.315789473684205,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3250393446184,Pj pomme poire bio brique 1l,1,c,e,3596710355297,0.77,23,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,8020542116016,Limmi Bio,11.48,b,d,3596710307579,1.75,84.7560975609756,Soja vanille Bio,b,a-plus
+fruit_juices,7315120006034,Blend Orange Carrot Pers,6.03030303030303,c,d,3596710435753,0.86,85.73869346733667,Jus pomme à base de concentré,c,b
+fruit_juices,3256223028322,Jus à base de concentré de pamplemousse rose 1l,1.56,e,d,3596710435753,0.86,44.87179487179487,Jus pomme à base de concentré,c,b
+fruit_juices,3256228978844,Pur jus orange avec pulpe bocal 1 litre,3.67,c,b,3596710435753,0.86,76.566757493188,Jus pomme à base de concentré,c,b
+fruit_juices,3560070828692,100% pur jus fruits du verger,3.95,c,d,3596710435753,0.86,78.22784810126583,Jus pomme à base de concentré,c,b
+fruit_juices,3760225491744,Pur Jus Douceur d orange bio,3.22,d,d,3596710435753,0.86,73.29192546583852,Jus pomme à base de concentré,c,b
+fruit_juices,3256229529304,Pur jus d'orange - brique 1 litre,2.61,c,d,3596710435753,0.86,67.04980842911878,Jus pomme à base de concentré,c,b
+fruit_juices,3289196260321,Pur jus de pomme bio,2.87,c,a-plus,3596710307562,1.52,47.038327526132406,Soja chocolat biologique,c,a-plus
+fruit_juices,3560071456269,Ananas Passion 100% pur jus,4.28,c,e,3596710355297,0.77,82.00934579439252,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3250393004209,Pj pomme merci ! brique 1l,1.34,c,a,3560070827909,1.12,16.41791044776119,100% PUR JUS Pomme,c,a
+fruit_juices,3250392445935,"Pur jus orange avec pulpe pet 1,5l",2.3066666666666666,c,d,3596710435753,0.86,62.71676300578036,Jus pomme à base de concentré,c,b
+fruit_juices,5038862138390,Pure Jus Apple & Raspberry,7.8181818181818175,e,e,3596710355297,0.77,90.15116279069767,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,5038862161503,"Innocent jus pomme, pêche & poire 900ml",3.977777777777778,c,e,3596710355297,0.77,80.64245810055866,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3770022787094,Oranges pressées,5.32,c,b,3596710435753,0.86,83.8345864661654,Jus pomme à base de concentré,c,b
+fruit_juices,3760391830354,Pur jus pomme kiwi fraise,3.3,c,c,3596710435753,0.86,73.93939393939394,Jus pomme à base de concentré,c,b
+fruit_juices,3263857098317,Jus de pomme,1.5,c,c,3596710435753,0.86,42.666666666666664,Jus pomme à base de concentré,c,b
+fruit_juices,3596710492916,"Nectar de pomme biologique - A base de concentré, Teneur en fruits: 55% minimum.",1.2133333333333334,d,d,3596710435753,0.86,29.12087912087912,Jus pomme à base de concentré,c,b
+fruit_juices,3123349014556,Jus joker multifruit,2.23,d,e,3596710355297,0.77,65.47085201793722,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3256220024082,Jus de Pruneau - Bouteille verre 75cl,4.56,e,c,3596710435753,0.86,81.14035087719299,Jus pomme à base de concentré,c,b
+fruit_juices,3271470754503,Pétillant pomme,3.3200000000000003,c,b,3596710435753,0.86,74.09638554216868,Jus pomme à base de concentré,c,b
+fruit_juices,4056489170099,Clémentine pur jus,1.99,c,e,3596710355297,0.77,61.30653266331658,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3256220023931,Pur jus de pomme 1l,2.79,d,a,3560070827909,1.12,59.85663082437276,100% PUR JUS Pomme,c,a
+fruit_juices,3596710494491,Juspommeà base de concentréteneur en fruits 100%,1.05,c,c,3596710435753,0.86,18.095238095238102,Jus pomme à base de concentré,c,b
+fruit_juices,3596710379903,100% Pur jusOrangesans pulpeRiche en vitamine C,2.035,c,d,3596710435753,0.86,57.739557739557746,Jus pomme à base de concentré,c,b
+fruit_juices,3301591002167,75 CL,3.4,d,a,3560070827909,1.12,67.05882352941175,100% PUR JUS Pomme,c,a
+fruit_juices,3596710551651,ACE,1.89,d,e,3596710355297,0.77,59.25925925925925,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3560070275267,100% Pur Jus - Pomme,1.645,c,a,3560070827909,1.12,31.91489361702127,100% PUR JUS Pomme,c,a
+fruit_juices,3256221952605,Pur jus pressé multifruits,2.1777777777777776,c,e,3596710355297,0.77,64.64285714285714,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3250391478958,Abc ananas briquettes 6x20cl,2.125,d,d,3596710435753,0.86,59.52941176470589,Jus pomme à base de concentré,c,b
+fruit_juices,3566141001070,Pur jus de pomme,3.63,c,a,3560070827909,1.12,69.14600550964187,100% PUR JUS Pomme,c,a
+fruit_juices,3258561301440,Pet 1L Pur Jus Clémentine,2.69,c,e,3596710355297,0.77,71.37546468401487,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3560070820566,100% pur jus RAISIN,3.27,e,a,3560070827909,1.12,65.74923547400611,100% PUR JUS Pomme,c,a
+fruit_juices,3596710473175,100% Pur jus Multifruits BIO,3.645,c,d,3596710435753,0.86,76.40603566529492,Jus pomme à base de concentré,c,b
+fruit_juices,3596710355082,100% Pur JusOrange - sans pulpe. Riche en vitamine C.,1.3925,c,c,3596710435753,0.86,38.240574506283664,Jus pomme à base de concentré,c,b
+fruit_juices,3254691592116,Le Bio Pomme,13.899999999999999,d,b,3596710435753,0.86,93.81294964028778,Jus pomme à base de concentré,c,b
+fruit_juices,3123340008288,Le Fruit - Orange sans pulpe,1.8866666666666667,c,d,3596710435753,0.86,54.41696113074206,Jus pomme à base de concentré,c,b
+fruit_juices,3760294960783,Jus d'oranges pressées 100%,2.92,d,c,3596710435753,0.86,70.54794520547945,Jus pomme à base de concentré,c,b
+fruit_juices,3256224239109,Pur jus orange et fruits mangue goyave bouteille de 1l,2.57,d,d,3596710435753,0.86,66.53696498054475,Jus pomme à base de concentré,c,b
+fruit_juices,3270190130802,Ananas,13.45,c,e,3596710355297,0.77,94.27509293680298,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3760059740025,Pur Jus de Pomme Reinette Fabrication Artisanale,4.3,e,c,3596710435753,0.86,80,Jus pomme à base de concentré,c,b
+fruit_juices,3560070117345,Jus d’ananas,1.885,e,e,3596710355297,0.77,59.15119363395225,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3770032519050,Jus d'orange Maracuja,3.49,d,e,3596710355297,0.77,77.93696275071633,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3580283512447,Jus de raisin 100% BIO,2.6133333333333333,e,e,3596710355297,0.77,70.53571428571428,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3760294961674,Apple juice,1.87,e,b,3596710435753,0.86,54.01069518716579,Jus pomme à base de concentré,c,b
+fruit_juices,3256220122658,Pur jus 4 agrumes bouteille de 1l,2.42,c,d,3596710435753,0.86,64.46280991735537,Jus pomme à base de concentré,c,b
+fruit_juices,3258561300290,Jus de pomme,1.56,c,b,3596710435753,0.86,44.87179487179487,Jus pomme à base de concentré,c,b
+fruit_juices,3266191027951,100% pur jus de citron,8.76,b,c,3596710307579,1.75,80.02283105022832,Soja vanille Bio,b,a-plus
+fruit_juices,3770014111630,Jus de raisin,4.3999999999999995,e,a,3560070827909,1.12,74.54545454545455,100% PUR JUS Pomme,c,a
+fruit_juices,3596710355075,CRANBERRYLIGHT*A base de jus concentré *Allégée en sucres,1.73,c,e,3596710355297,0.77,55.49132947976879,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,1210002001755,Pause fruitée orange pommes grenade,1.79,c,e,3596710355297,0.77,56.98324022346369,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,4056489644910,Petit déjeuner,1.87,c,d,3596710435753,0.86,54.01069518716579,Jus pomme à base de concentré,c,b
+fruit_juices,3250393446207,Pj pamplemousse blanc bio brique 1l,3.84,e,e,3596710355297,0.77,79.94791666666667,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3289196100436,Pur jus clémentine,5.866666666666667,c,c,3596710435753,0.86,85.3409090909091,Jus pomme à base de concentré,c,b
+fruit_juices,3456300002508,jus de citron,6.4,b,b,3596710307579,1.75,72.65625,Soja vanille Bio,b,a-plus
+fruit_juices,3560070275236,100% PUR JUS Ananas,3.02,d,e,3596710355297,0.77,74.50331125827815,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,8718226323064,"Passionsfruchtsaft, Passionsfrucht",2.5,e,e,3596710355297,0.77,69.2,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3560071480073,Pur Jus d'orange,1.79,c,d,3596710435753,0.86,51.95530726256983,Jus pomme à base de concentré,c,b
+fruit_juices,3502110006790,"Tropicana 100% oranges pressées sans pulpe format familial 1,5 L",2.4,c,c,3596710435753,0.86,64.16666666666667,Jus pomme à base de concentré,c,b
+fruit_juices,3596710475285,Bio - 100% Pur jus Fruits du verger,3.6,d,c,3596710435753,0.86,76.11111111111111,Jus pomme à base de concentré,c,b
+fruit_juices,3248340047867,3 fruits - 100 % pur fruit pressé,1.89,c,e,3596710355297,0.77,59.25925925925925,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3256221952629,Pur jus de clémentine flash past. réfrigéré - ble plast. 90cl,2.488888888888889,c,e,3596710355297,0.77,69.0625,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,0016229909055,Mango And Passion Fruit Juice Drink,4.285714285714286,e,d,3596710435753,0.86,79.93333333333334,Jus pomme à base de concentré,c,b
+fruit_juices,3250393454592,Pj pomme mangue passion pet 1l,2.44,c,e,3596710355297,0.77,68.44262295081967,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3270190192794,Jus d'orange à base de concentré,1.835,e,c,3596710435753,0.86,53.13351498637602,Jus pomme à base de concentré,c,b
+fruit_juices,3256225426775,Pur jus de pommes douces filière pet 1 litre,1.58,d,a,3560070827909,1.12,29.11392405063291,100% PUR JUS Pomme,c,a
+fruit_juices,3256221952575,"Pur jus d'orange a/p.flash pasteurisé, refrigéré - pet 1,5l",2.1666666666666665,c,c,3596710435753,0.86,60.30769230769231,Jus pomme à base de concentré,c,b
+fruit_juices,3254691591355,Pressade bio,3.02,b,d,3596710307579,1.75,42.05298013245033,Soja vanille Bio,b,a-plus
+fruit_juices,5038862136143,"pomme, kiwi & concombre",3.572222222222222,c,e,3596710355297,0.77,78.4447900466563,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,1210002000659,Réveil Fruité - 4 fruits pressés,3.4555555555555553,c,e,3596710355297,0.77,77.71704180064309,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3423182102107,Jus Poire des alpes,2.98,d,e,3596710355297,0.77,74.16107382550335,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3564700608722,Petillant Gibus Pomme peche sans alcool,3.453333333333333,c,c,3596710435753,0.86,75.0965250965251,Jus pomme à base de concentré,c,b
+fruit_juices,5410188013085,"Tropicana Réveil fruité format familial 1,5 L",2.3666666666666667,d,e,3596710355297,0.77,67.46478873239437,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3596710404780,"Boisson aux jus de fruits Multifruits - Goût multifruits , à l'eau de source",1.045,c,e,3596710355297,0.77,26.315789473684205,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3248340047874,Jus d'orange,1.6,c,d,3596710435753,0.86,46.25000000000001,Jus pomme à base de concentré,c,b
+fruit_juices,3560071182236,Orange avec pulpe 100% pur jus,2.1666666666666665,c,d,3596710435753,0.86,60.30769230769231,Jus pomme à base de concentré,c,b
+fruit_juices,8410261653013,Peach Juice Drink,1.6333333333333335,c,e,3596710355297,0.77,52.85714285714287,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,5038862165501,Jus pomme & framboise,3.594444444444444,c,d,3596710435753,0.86,76.07418856259659,Jus pomme à base de concentré,c,b
+fruit_juices,3502110003652,Tropicana réveil fruité 1 L,3,d,e,3596710355297,0.77,74.33333333333333,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3250392008918,Pj orange sans pulpe brique 1l,2.14,c,d,3596710435753,0.86,59.81308411214954,Jus pomme à base de concentré,c,b
+fruit_juices,3256227248368,Pur jus clémentine orange raisin bouteille de 1l,2.1399999999999997,c,e,3596710355297,0.77,64.01869158878505,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e
+fruit_juices,3289196040510,Pur jus de pamplemousse rose biologique,4.425000000000001,b,c,3596710307579,1.75,60.451977401129945,Soja vanille Bio,b,a-plus
+fruit_juices,3256226771690,Jus de citron vert,7.56,b,b,3596710307579,1.75,76.85185185185186,Soja vanille Bio,b,a-plus
+fruit_juices,5038862130929,INFATIGABLEU,4.526666666666666,c,e,3596710355297,0.77,82.98969072164948,Boisson aux jus de fruits - pomme - cassis - framboise - à l'eau de source,c,e

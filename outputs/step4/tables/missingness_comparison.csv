@@ -1,0 +1,9 @@
+category,coverage_group,n,median_price,median_offers
+biscuits,joint_complete,146,11.146875,2
+biscuits,joint_missing,3,10.076923076923077,1
+breakfast_cereals,joint_complete,147,8.444444444444445,1
+breakfast_cereals,joint_missing,3,6.25,2
+dark_chocolates,joint_complete,146,25.81666666666667,2
+dark_chocolates,joint_missing,3,48.125,2
+fruit_juices,joint_complete,144,2.828333333333333,1
+fruit_juices,joint_missing,6,3.226666666666667,1

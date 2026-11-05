@@ -1,0 +1,6 @@
+PASS: four frozen input hashes match the upstream snapshot manifest.
+PASS: 600 selected / 598 primary / 583 joint products; 1541 linked observations; keys and joins checked.
+PASS: 16 environmental F grades restored from the hash-verified original responses; French scores paired with French grades.
+PASS: all 598 representative prices recomputed from the imported price observations.
+PASS: comparison candidates obey within-category lower-price and no-worse-grade rules.
+Scope: Step 4 validates imported inputs and calculations; upstream raw-source acquisition was not rerun.

@@ -7,7 +7,7 @@ stopifnot(nrow(requests) == nrow(selection), all(requests$attempted), !anyDuplic
 nutrients <- c("energy-kcal", "sugars", "fat", "saturated-fat", "proteins", "fiber", "salt")
 valid_grade <- function(x, environment = FALSE) {
   x <- tolower(scalar_chr(x))
-  if (is.na(x) || !x %in% c(letters[1:5], if (environment) "a-plus")) NA_character_ else x
+  if (is.na(x) || !x %in% c(letters[1:5], if (environment) c("a-plus", "f"))) NA_character_ else x
 }
 products <- bind_rows(lapply(seq_len(nrow(selection)), function(i) {
   s <- selection[i, ]; record <- acquired[[s$code]]

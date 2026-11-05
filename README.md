@@ -2,7 +2,9 @@
 
 R for Data Science 课程期末项目。研究同类食品中价格与营养、环境表现的关系，并用 R 完成探索性分析，开发 Shiny 交互仪表板。
 
-当前阶段：**Step 1—3 已完成，可进入 Step 4 EDA。** 正式数据冻结为 `frozen_v1`：饼干、早餐谷物、黑巧克力和果汁各 150 款，共 600 款；598 款进入主要比较集，568 款同时具备有效代表价格、Nutri-Score 2023 和环境等级，连接 1,541 条报价。小组信息与教师审批状态待补充。
+当前阶段：**Step 4 EDA 初稿已执行，Step 5 设计草稿已形成。最终展示与提交为 2026-11-20。** 正式入选 600 款，598 款进入主要比较集，连接 1,541 条报价。本轮恢复原始对象中的 16 款环境 F 等级，三维联合样本由原冻结版的 568 款修正为 **583 款**；`frozen_v1` 原样保留，后续读取 `data/processed/step4_v1_1/`。小组信息与教师审批状态待补充。
+
+本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Shiny 设计草稿](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和二进制派生表在本地生成，源码、图表及结果 CSV 随版本保存。
 
 ## 从这里开始
 
@@ -75,7 +77,7 @@ prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
 
 完整入选表为 `selected_products.rds`，其中保留 600 款商品及两项规格排除记录。`joint_grades_price` 标记三维等级比较样本，`carbon_primary` 标记 AGRIBALYSE 3.2 碳估算子样本；每个数值视图分别按所需字段筛选。早期试取记录见 [首轮报告](docs/03_data/pilot_quality_review_2026-11-02.md)。
 
-本轮流程不计算价格—营养／环境关联结果，EDA 另在 Step 4 开展。
+以上为原 Step 3 获取流程说明。当前 Step 4 已计算价格—营养／环境关联结果；运行方式和修正数据入口见本页顶部与 HANDOFF.md。
 
 修改选题说明的 Markdown 后，可在安装了 `reportlab` 的 Python 环境中运行 `python scripts/build_topic_pdf.py` 更新 PDF。该脚本优先嵌入 Windows 宋体；文档保持一页时需重新检查分页。
 

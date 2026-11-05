@@ -1,0 +1,189 @@
+---
+title: "食品价格、营养与环境表现"
+subtitle: "Step 4 已执行探索性分析"
+date: "2026-11-05"
+lang: zh-CN
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE, warning=TRUE, message=FALSE, fig.align="center", out.width="100%")
+source("R/10_eda.R", encoding="UTF-8")
+result <- run_step4()
+source("R/11_write_step4_summary.R", encoding="UTF-8")
+write_step4_summary(result)
+tbl <- result$tables
+show_table <- function(x, digits=3) knitr::kable(x, digits=digits, row.names=FALSE)
+show_figure <- function(name) knitr::include_graphics(paste0("outputs/step4/figures/",name,".png"))
+```
+
+## 阅读结论
+
+这份 notebook 运行了原始冻结数据的核验、环境等级恢复和三项研究问题的分析。代码以四类食品内部的比较为主，结果为后续 Shiny 的筛选和商品对比功能提供依据。
+
+```{r summary, results='asis', echo=FALSE}
+text <- readLines("docs/04_eda/results_summary.md", encoding="UTF-8")
+start <- match("## 本轮结论", text)
+end <- match("## 价格与两项综合分数", text)
+cat(paste(text[start:(end-1)], collapse="\n"))
+```
+
+## 数据入口与分析口径
+
+```{r inputs}
+selected_original <- readRDS("data/processed/frozen_v1/selected_products.rds")
+products_original <- readRDS("data/processed/frozen_v1/analysis_products.rds")
+prices_original <- readRDS("data/processed/frozen_v1/price_observations.rds")
+show_table(data.frame(table=c("完整入选","主要比较商品","历史报价"),
+                      n=c(nrow(selected_original),nrow(products_original),nrow(prices_original))))
+```
+
+600 款按类别平衡分层抽取；两款因规格问题不进入单位价格主分析。代表价格是合并相同报价组合后的非折扣单位价格中位数。主分析保留全部 598 款，按每个视图所需字段分别筛选。价格极值保留，并输出到 `product_price_review.csv` 供逐项查看。
+
+冻结版清洗遗漏了环境 F 等级。本轮从同批保存的商品对象恢复 16 款 F 级，同时采用法国地域对应分数。原冻结文件未改，修正版位于 `data/processed/step4_v1_1/`。
+
+```{r correction}
+show_table(tbl$environment_grade_corrections[,c("code","category","before_grade","restored_grade","before_score","restored_fr_score")])
+```
+
+### 指标覆盖
+
+```{r coverage, echo=FALSE}
+show_figure("01_coverage")
+```
+
+```{r category-summary}
+show_table(tbl$category_summary)
+```
+
+缺失视图与完整视图的价格和报价次数分布另列如下，以便观察进入联合比较的样本构成。
+
+```{r missingness}
+show_table(tbl$missingness_comparison)
+```
+
+## 研究问题一 价格与营养
+
+价格使用类别内单位价格，营养等级按 A—E 排序。连续 Nutri-Score 分数越低越好。Spearman 系数描述排序关系，不假定等级间隔相等，也不进行显著性筛选。
+
+```{r price-distribution, echo=FALSE}
+show_figure("02_price_distribution")
+```
+
+```{r price-nutrition, echo=FALSE}
+show_figure("03_price_nutrition")
+```
+
+```{r nutrient-associations}
+show_table(dplyr::filter(tbl$associations,metric!="environment_score"))
+```
+
+```{r sugar-scatter, echo=FALSE}
+show_figure("04_price_sugars")
+```
+
+黑巧克力的价格与糖、饱和脂肪方向相反，适合将成分并排展示。饼干的 A 级只有一款、B 级四款，展示时需要保留每个等级的商品数。
+
+## 研究问题二 价格与环境
+
+环境等级采用 A+、A、B、C、D、E、F 顺序。综合环境分数越高越好；碳估算沿用 AGRIBALYSE 3.2 的原功能单位，二者分开解释。
+
+```{r environment-grades, echo=FALSE}
+show_figure("05_price_environment")
+```
+
+```{r environment-associations}
+show_table(dplyr::filter(tbl$associations,metric=="environment_score"))
+```
+
+```{r carbon-references, echo=FALSE}
+show_figure("08_carbon_references")
+```
+
+```{r carbon-summary}
+show_table(tbl$carbon_summary)
+```
+
+每个参考项可能关联多个品牌商品，参考项之间也可能使用相同碳值。参考项相关系数是描述性补充，品牌商品数量不充当独立碳测量次数。
+
+## 研究问题三 联合比较与权衡
+
+价格严格更低且两项等级均不差的商品对构成候选比较。另标记在当前类别样本内没有被其他商品以“价格不高、两等级不差且至少一项更好”支配的商品。这个规则不使用主观综合权重。
+
+```{r joint-heatmap, echo=FALSE}
+show_figure("06_joint_comparison")
+```
+
+```{r joint-counts}
+show_table(tbl$joint_summary)
+```
+
+下面按条码顺序展示每类前三个候选商品对，规则固定，不按价差大小挑例子。
+
+```{r candidate-examples}
+examples <- tbl$comparison_candidates |>
+  dplyr::arrange(category,code) |>
+  dplyr::group_by(category) |>
+  dplyr::slice_head(n=3) |>
+  dplyr::ungroup() |>
+  dplyr::select(category,code,product_name,representative_price,best_alternative_code,
+                alternative_name,best_alternative_price)
+show_table(examples,2)
+```
+
+这些宽类别下的商品用途、配方和口味仍有差别，候选比较还应展示包装、价格日期与成分信息。
+
+## 稳健性检查
+
+替代价格在相同商品上与主口径配对比较。年别和多报价筛选还会改变样本构成，完整结果同时给出主全样本、主口径同商品、替代口径三个系数。
+
+每 100 kcal 价格按 `单位价格 * 10 / 每100g或100ml能量` 计算，只使用能量为正的商品，作为功能单位敏感性展示。
+
+```{r sensitivity, echo=FALSE}
+show_figure("07_sensitivity")
+```
+
+```{r sensitivity-table}
+show_table(dplyr::filter(tbl$association_sensitivity,metric %in% c("nutri_score","environment_score")))
+```
+
+```{r price-sensitivity}
+show_table(tbl$price_sensitivity)
+```
+
+```{r paired-years}
+show_table(tbl$paired_year_summary)
+```
+
+配对年际变化描述这些商品的记录变化。不同年门店与日期构成也会变化，因此后续界面需要保留报价背景。
+
+## 对 Shiny 设计的要求
+
+用户先选择类别，再调整单位价格和等级条件，最后选择两款商品查看具体营养数值及报价依据。类别变化应同步重设价格单位和上限；筛选结果展示有效商品数；未知等级允许单独查看；没有结果时提供清楚的放宽条件提示。设计规格见 `docs/05_dashboard/dashboard_spec.md`。
+
+## 验证与复现环境
+
+```{r validation, results='asis', echo=FALSE}
+cat("```text\n",paste(readLines("outputs/step4/validation.txt"),collapse="\n"),"\n```\n")
+```
+
+```{r session-info}
+sessionInfo()
+```
+
+## 分析脚本
+
+下列代码是本 notebook 实际调用的完整计算脚本。
+
+```{r analysis-source, results='asis', echo=FALSE}
+cat("```r\n",paste(readLines("R/10_eda.R",encoding="UTF-8"),collapse="\n"),"\n```\n")
+```
+
+### 环境等级恢复脚本
+
+```{r correction-source, results='asis', echo=FALSE}
+cat("```r\n",paste(readLines("R/09b_restore_environment_grades.R",encoding="UTF-8"),collapse="\n"),"\n```\n")
+```
+
+## 来源
+
+项目资料及引用见 `docs/02_literature/literature_review_zh.md`、`docs/03_data/data_description.md`。本轮沿用同一固定快照和原始商品对象。环境等级顺序核对了 [Open Food Facts 官方说明](https://openfoodfacts.github.io/openfoodfacts-server/dev/ref-perl-pod/ProductOpener/Attributes.html)。
