@@ -82,3 +82,10 @@ prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
 修改选题说明的 Markdown 后，可在安装了 `reportlab` 的 Python 环境中运行 `python scripts/build_topic_pdf.py` 更新 PDF。该脚本优先嵌入 Windows 宋体；文档保持一页时需重新检查分页。
 
 最终按课程要求提交单一压缩包或仓库链接，命名为 `GroupNumber_FoodRetail_FinalProject`，组号确定后替换 `GroupNumber`。交付内容包括最终报告、R Markdown/Quarto 源文件、R 脚本、Shiny 应用、数据或获取方式、展示材料、个人反思及本说明。课程原件、示例和历史归档属于工作资料，打包时按教师要求选择是否随附。
+
+# English business report and Shiny application
+
+The delivery branch `feat/report-shiny-delivery` builds on `feat/step4-eda`.
+The [English report](reports/README.md) translates the executed findings into a consumer decision workflow and a proposed business validation plan. Build with `./scripts/build_report.ps1`; the PDF is written to `output/food-value-report.pdf`.
+
+The [Shiny guide](shiny/README.md) covers category exploration, budget/grade filtering, two-product comparisons and CSV export. First reconstruct corrected inputs with `./scripts/run_step4.ps1`, then run `./scripts/run_shiny.ps1` and open `http://127.0.0.1:3838`. See [verification](docs/delivery_verification.md) for the checks and remaining course-submission work.
