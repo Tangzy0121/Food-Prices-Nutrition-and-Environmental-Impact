@@ -24,8 +24,8 @@ Step 1—3 材料已具备，Step 4 EDA 初稿已运行，Step 5 设计已落成
 | 3. 数据识别与获取 | 来源引用、合法使用、收集背景、数据字典；可复现的 R 导入代码 | [数据说明](03_data/data_description.md)、[字典](03_data/data_dictionary.md)、[核查结果](03_data/data_quality_review.md)；`R/run_step3.R`；`data/processed/frozen_v1/` | 已完成：600 款正式全字段获取、598 款主要比较商品、568 款联合可用；固定快照及来源校验通过 |
 | 4. R 探索性数据分析 | 清洗、缺失和重复处理、描述统计、ggplot2 图表、模式与限制；R Markdown/Quarto 记录 | [分析约定](04_eda/analysis_plan.md)、[结果摘要](04_eda/results_summary.md)；`notebooks/step4_eda.Rmd`、`outputs/step4/step4_eda.html` | 已执行初稿：598 商品、583 联合样本、8 图、19 表；待小组复核与作者化 |
 | 5. 思考框架与仪表板设计 | 受众需求、问题、指标、维度、图表、交互和叙事；线框图、组件及理由 | [设计草稿](05_dashboard/dashboard_spec.md) | 草稿已形成，依据本轮 EDA；待小组确定界面语言与展示重点 |
-| 6. Shiny 团队实现 | 可本地运行；清楚的 UI/server 结构；至少三个有意义的交互组件；简短用户指南 | `shiny/`、`scripts/run_shiny.ps1` | 英文应用已实现，数据/响应式及浏览器主要任务通过；待组员评审与课堂试用 |
-| 7. 最终报告 | PDF/HTML；完整研究过程、贡献说明、引用、伦理与限制、每位成员反思；可复现材料 | `reports/report.tex`、`output/food-value-report.pdf` | 8 页英文商业分析报告已编译并检查；课程总提交仍需成员贡献、个人反思及反馈整合 |
+| 6. Shiny 团队实现 | 可本地运行；清楚的 UI/server 结构；至少三个有意义的交互组件；简短用户指南 | `shiny/`、`scripts/run_shiny.ps1` | bslib 英文应用已实现：动态解释、指标切换、选点/框选/缩放、搜索/排序/分页、候选对比；R 与 Chrome 主要任务通过，待组员评审与课堂试用 |
+| 7. 最终报告 | PDF/HTML；完整研究过程、贡献说明、引用、伦理与限制、每位成员反思；可复现材料 | `reports/report.tex`、`output/food-value-report-v2.pdf` | 10 页英文报告，含独立生成式封面及行业背景配图；课程总提交仍需成员贡献、个人反思及反馈整合 |
 | 8. 最终展示 | 团队展示 10–15 分钟及问答；关键文献、数据、EDA、设计依据和应用演示 | `slides/` | 待开展 |
 
 步骤 5 的设计草稿可随文献和数据核查迭代，最终设计需结合 EDA；Shiny 正式实现使用经过整理的分析数据。

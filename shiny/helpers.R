@@ -45,3 +45,69 @@ product_table <- function(p) {
   names(result)[3] <- if (length(units) == 1L) paste0("EUR/", units) else "EUR per unit"
   result
 }
+
+metric_spec <- function(metric, unit = "kg") {
+  nutrient_unit <- if (unit == "L") "g / 100 ml" else "g / 100 g"
+  switch(metric,
+    environment_grade = list(label = "Environmental grade", field = "environment_score", better = "higher", ordered = TRUE),
+    nutri_score = list(label = "Nutrition score (lower is better)", field = "nutri_score", better = "lower", ordered = FALSE),
+    sugars_100g = list(label = paste("Sugars", nutrient_unit), field = "sugars_100g", better = "context", ordered = FALSE),
+    saturated_fat_100g = list(label = paste("Saturated fat", nutrient_unit), field = "saturated_fat_100g", better = "context", ordered = FALSE),
+    fiber_100g = list(label = paste("Fibre", nutrient_unit), field = "fiber_100g", better = "context", ordered = FALSE),
+    stop("Unknown chart metric"))
+}
+
+scatter_products <- function(d, metric) {
+  if (metric == "environment_grade") {
+    d$view_value <- match(as.character(d$environment_grade), environment_levels)
+    d$view_value[is.na(d$view_value)] <- 8L
+  } else d$view_value <- d[[metric]]
+  d$nutrition_label <- factor(grade_label(d$nutri_grade), levels = c(LETTERS[1:5], "Unknown"))
+  d
+}
+
+view_association <- function(d, metric) {
+  field <- metric_spec(metric)$field
+  ok <- is.finite(d$representative_price) & is.finite(d[[field]])
+  x <- d$representative_price[ok]; y <- d[[field]][ok]
+  rho <- if (length(x) >= 3L && length(unique(x)) > 1L && length(unique(y)) > 1L) cor(x, y, method = "spearman") else NA_real_
+  list(n = sum(ok), rho = rho, field = field)
+}
+
+explain_view <- function(d, metric, question = "pattern") {
+  spec <- metric_spec(metric, if (nrow(d)) as.character(d$target_unit[1]) else "kg")
+  a <- view_association(d, metric)
+  note <- sprintf("Current filtered sample: %d products; correlation uses %d with both numerical fields. Descriptive association, not a causal effect.", nrow(d), a$n)
+  if (!nrow(d)) return(list(title = "No products match this view", body = "Broaden the budget or grade filters, or clear the product search. Your selected comparison stays available.", note = note, rho = NA_real_))
+  if (question == "read") {
+    body <- if (spec$ordered) "Each point is one product. Left means lower unit price; the top rows have better environmental grades. Colour shows nutrition grade. The Unknown row keeps missing environmental grades visible. Some points overlap." else paste("Each point is one product. Left means lower unit price; vertical position shows", tolower(spec$label), ". Colour shows nutrition grade. Products missing this numerical value stay in the shortlist but are omitted from the plot.")
+    return(list(title = "Read the axes, then inspect a point", body = body, note = note, rho = a$rho))
+  }
+  if (question == "action") return(list(title = "Move from a pattern to a specific choice", body = "Hover over a point for its product profile. Click it to keep it as A, then open Compare. Try a lower-price candidate and check composition, pack size, offer count and dates before deciding whether it fits the same purpose.", note = note, rho = a$rho))
+  if (!is.finite(a$rho)) return(list(title = "Too little variation to describe a trend", body = "This selection has fewer than three complete products, or constant prices or metric values. Inspect individual products or broaden your filters.", note = note, rho = a$rho))
+  strength <- if (abs(a$rho) < .1) "Very little rank association" else if (abs(a$rho) < .3) "A weak rank association" else if (abs(a$rho) < .5) "A moderate rank association" else "A stronger rank association"
+  direction <- if (a$rho > 0) "higher" else "lower"
+  metric_name <- if (spec$ordered) "numerical environmental scores" else tolower(spec$label)
+  body <- if (abs(a$rho) < .1) "Higher unit prices do not consistently line up with higher or lower values in this selection. Use the actual product profile to decide what the price buys." else sprintf("Within these filtered products, higher unit prices tend to accompany %s %s. Compare individual points to see the exceptions.", direction, metric_name)
+  if (spec$ordered) body <- paste(body, "The correlation uses numerical environmental scores; the plotted rows show their ordered grades.")
+  if (abs(a$rho) >= .1 && spec$better %in% c("higher", "lower")) {
+    favourable <- (spec$better == "higher" && a$rho > 0) || (spec$better == "lower" && a$rho < 0)
+    body <- paste(body, sprintf("This direction aligns with %s scores at higher prices in this sample.", if (favourable) "more favourable" else "less favourable"))
+  }
+  if (metric == "sugars_100g" && any(d$category == "dark_chocolates")) body <- paste(body, "Also switch to saturated fat: a lower-sugar chocolate can have a different fat profile.")
+  list(title = strength, body = body, note = note, rho = a$rho)
+}
+
+grade_badge <- function(x) {
+  value <- as.character(x)
+  shiny::span(class = paste0("grade grade-", ifelse(is.na(value), "unknown", value)), grade_label(value))
+}
+
+shortlist_html <- function(d, target = "inspect_code") {
+  shiny::div(class = "table-scroll", shiny::tags$table(class = "shortlist-table",
+    shiny::tags$thead(shiny::tags$tr(lapply(c("Product", paste0("EUR/", unique(d$target_unit)[1]), "Nutrition", "Environment", "Offers", ""), shiny::tags$th))),
+    shiny::tags$tbody(lapply(seq_len(nrow(d)), function(i) shiny::tags$tr(
+      shiny::tags$td(class = "product-name", d$product_name[i], shiny::span(class = "barcode", d$code[i])),
+      shiny::tags$td(sprintf("%.2f", d$representative_price[i])), shiny::tags$td(grade_badge(d$nutri_grade[i])), shiny::tags$td(grade_badge(d$environment_grade[i])),
+      shiny::tags$td(d$n_valid_regular_offers[i]), shiny::tags$td(shiny::tags$button(type = "button", class = "inspect-button", `data-inspect-code` = d$code[i], `data-target` = target, "Inspect")))))))
+}

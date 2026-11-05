@@ -22,6 +22,13 @@ synthetic$environment_grade <- c("f", NA, "a-plus", "a-plus")
 stopifnot(identical(filter_products(synthetic, "biscuits", 5, "a", "a-plus", TRUE)$code, c("2", "3")))
 stopifnot(match("a-plus", environment_levels) < match("a", environment_levels),
           match("f", environment_levels) == 7L)
+stopifnot(abs(view_association(all_cat("biscuits"), "environment_grade")$rho - .029616135379307174) < 1e-10,
+          grepl("Very little", explain_view(all_cat("biscuits"), "environment_grade")$title),
+          grepl("saturated fat", explain_view(all_cat("dark_chocolates"), "sugars_100g")$body),
+          grepl("No products", explain_view(p[FALSE, ], "nutri_score")$title),
+          grepl("Too little", explain_view(p[1, ], "nutri_score")$title),
+          grepl("Unknown row", explain_view(all_cat("biscuits"), "environment_grade", "read")$body),
+          metric_spec("fiber_100g", "L")$label == "Fibre g / 100 ml")
 alt <- cheaper_options(p, "3350031923081")
 stopifnot("3410280136257" %in% alt$code, all(alt$representative_price < 7.36))
 # Reconcile every dominance decision with the executed EDA, not a duplicate formula.
@@ -43,5 +50,28 @@ testServer(server, {
   session$setInputs(category = "fruit_juices", budget = 14)
   stopifnot(nrow(category_data()) == 150L, all(filtered()$target_unit == "L"),
             nrow(scatter_data()) == nrow(filtered()))
+  # Search drives chart, pagination and the shared CSV source together.
+  juice_code <- category_data()$code[1]
+  session$setInputs(search = juice_code)
+  stopifnot(nrow(filtered()) == 1L, filtered()$code == juice_code,
+            nrow(page_products()) == 1L, nrow(plot_data()) == 1L)
+  session$setInputs(search = "no-such-product-!@#")
+  stopifnot(nrow(filtered()) == 0L, nrow(page_products()) == 0L,
+            grepl("No products", explanation()$title))
+  session$setInputs(search = "", multiple_offers = TRUE, metric = "fiber_100g", sort = "price_desc")
+  stopifnot(all(filtered()$n_valid_regular_offers >= 2L), nrow(page_products()) == 12L,
+            nrow(plot_data()) == sum(is.finite(filtered()$fiber_100g)),
+            all(diff(page_products()$representative_price) <= 0))
+  first_page <- page_products()$code
+  session$setInputs(next_page = 1L)
+  stopifnot(page_number() == 2L, !any(page_products()$code %in% first_page))
+  session$setInputs(previous_page = 1L, metric = "environment_grade")
+  d <- plot_data()
+  session$setInputs(scatter_brush = list(xmin = min(d$representative_price), xmax = max(d$representative_price), ymin = min(d$view_value), ymax = max(d$view_value)))
+  stopifnot(nrow(brushed()) == nrow(plot_data()))
+  session$setInputs(zoom_brush = 1L)
+  stopifnot(!is.null(zoom()), nrow(visible_data()) == nrow(plot_data()), grepl("Zoomed view", output$plot_coverage))
+  session$setInputs(reset_zoom = 1L)
+  stopifnot(is.null(zoom()))
 })
-cat("PASS: data contract, missing-grade semantics, empty sets, kg/L, 562 EDA candidates and Shiny reactive interactions.\n")
+cat("PASS: data contract, 562 EDA candidates, live explanations, numerical coverage, search, sorting, pagination, quote filters, brush/zoom and comparison state.\n")

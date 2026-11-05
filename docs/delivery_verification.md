@@ -1,29 +1,41 @@
 # Report and Shiny delivery verification
 
-Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). The branch is local and has not been merged or published.
+Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). The branch remains local, unpublished and unmerged. This record includes the initial implementation and the user's visual/interaction revision.
 
-## Delivered
+## Current deliverables
 
-- English Tau-class business analysis report: `reports/report.tex`; PDF: `output/food-value-report.pdf` (8 pages). Four numerical tables are generated from executed Step 4 CSVs. The report covers the decision, evidence, three research questions, composition trade-offs, a reproducible comparison pair, proposed business validation, sensitivity, scope, reproduction and references.
-- English local Shiny application: `shiny/global.R`, `ui.R`, `server.R`, `helpers.R`. Launch: `scripts/run_shiny.ps1`. Guide: `shiny/README.md`. The application uses corrected local data and no live API.
-- Sources, scripts and generated LaTeX tables are versioned. The PDF and browser preview stay local in `output/`; build and visual-QA intermediates stay in `scratch/report-build/`. No new large binary is added to Git.
+- English business report: `reports/report.tex` → `output/food-value-report-v2.pdf`, 10 pages including a full-page illustrated cover and a new industry-background page. Four numerical tables still come directly from the executed Step 4 CSVs. The revised implementation section covers interpreted charts and richer discovery interactions.
+- Two generated editorial images: `reports/assets/food-choices-cover.png` and `shopping-decision.png`. Prompts, mode and interface limitations are in `reports/assets/provenance.json`. They are labelled as illustrations, not images of sampled products. The previous PDF remains at `output/food-value-report.pdf`; the reader held that file open, so the build now defaults to a sibling v2 filename.
+- English bslib application: `shiny/global.R`, `ui.R`, `server.R`, `helpers.R`, `www/`. Launch with `scripts/run_shiny.ps1`; guide in `shiny/README.md`. Community comparison and source links: `docs/05_dashboard/community_references.md`.
+- Local previews: `output/shiny-preview-v2.png`, `output/shiny-explore-v2.png`, `output/report-cover-v2.png`. Sources and project images are versioned; PDF/previews are ignored. Temporary renders and exports stay in `scratch/`.
 
-## Executed checks
+## Automated R checks
 
-`scripts/check_dashboard.R` passed with the existing conda R environment: 598 primary products, 583 joint products, restored F coverage, unique character barcodes, kg/L selection, budget constraints, cleared-grade empty sets, unknown-grade semantics, A+ through F order, and the candidate rule reconciled against all 562 EDA cases. `shiny::testServer` exercised linked scatter/table data, fixed product choices after budget changes, empty results, price-gap calculation and switching to juices.
+`scripts/check_dashboard.R` passed in the existing conda R environment. It validates 598 primary products, 583 joint products, restored F grades, unique character barcodes, kg/L units, budget/grade/unknown semantics, all 562 EDA candidate cases, and fixed comparison selection when filters change.
 
-Real Chrome verification: initial overview displayed 149 biscuits and median 11.09 EUR/kg; Discover displayed 149/149 with 149 table rows. Clearing nutrition grades with unknowns off produced 0/149 and readable empty messages. Switching to juices changed the ceiling to EUR/L; restoring conditions displayed 150/150 with 150 table rows. The comparison displayed distinct juice barcodes, package sizes, per-100-ml nutrients, regular-offer/store counts and first/last dates. Example juice pair displayed 2.89 vs 3.56 EUR/L and a +23.0% gap. Preview: `output/shiny-preview.png`.
+New checks cover current-sample interpretation against the executed coefficient, no-data/constant-value messages, per-100-ml nutrient labels, numerical plot coverage, barcode search and no-match search, quote-count filters, descending price order, disjoint pagination, brush membership, zoom/reset and zoom-scope labelling. Only existing local packages are used; bslib 0.12.0 was already installed. No Plotly, DT or inference service was added.
 
-Browser testing exposed an initialization problem with competing app.R and ui.R/server.R entry points. The delivered application uses the standard global.R/ui.R/server.R layout; a fresh server startup was verified in Chrome. The local service must run outside the command sandbox's network isolation for a real browser to reach it. The Kimi endpoint and the initial in-app-browser connection were unavailable; the final checks used local Chrome.
+## Real-browser checks
 
-The report was built with XeLaTeX in two passes, rendered with Poppler, and all eight pages inspected. Figures and tables were checked for units, captions and layout. Build-table assertions passed for primary/joint counts. Font and line overflow corrections were incorporated before the final render. Source figures and frozen data were not changed.
+Chrome clean startup displayed the redesigned masthead, editorial hero, category cards and overview. Biscuits showed 149 products, median 11.09 EUR/kg and 79 products with multiple regular offers. The under-median preset returned 74 products at the slider's displayed 11.09 ceiling and updated the explanation. The Read the chart option described axes, grade colour and unknown handling. The full-category environmental explanation reproduced rho +0.030 across 148 complete products.
+
+The 12-row shortlist, literal barcode search and no-variation explanation were checked. Inspecting `3350031923081` selected A; the candidate action set B to `3410280136257`. The comparison explained B's 45.7% lower unit price, nutrition E to E, environment C to B, and sugar difference -6.20 g/100 g, while retaining package, quote counts and dates. The shortlist membership indicator correctly showed A inside the one-product search and B outside it.
+
+Full-screen chart mode was exercised. Clicking the environmental-F point selected `3222472772880` (6.44 EUR/kg, nutrition E, environment F). A drawn brush selected 81 products with median 9.19 EUR/kg; zoom changed the visible region while retaining the 149-product shortlist. The final build adds an explicit visible/plottable count and explanation-scope note for zoomed views. Hover preview/tooltip is implemented with Shiny's point matching and local mouse positioning; point selection was the directly exercised native-pointer path.
+
+The browser download was cancelled. The live download endpoint was then requested directly over loopback and its CSV parsed: the one-product search exported exactly one row with code `3350031923081`. This verifies the handler and filter identity; completion of a browser-managed file save remains unverified.
+
+The initial delivery also exercised empty grade combinations, full-category juice switching, per-100-ml composition, dates and counts. Regression checks retain these cases. Clean final server startup was repeated after source changes. The local service runs on 127.0.0.1:3838; commands require access outside the command sandbox's network isolation for the browser to reach it.
+
+## PDF checks
+
+XeLaTeX completed two passes. The 10-page PDF was rendered with Poppler and every page inspected. The cover has typeset English copy over the generated image; the background photograph has a caption identifying it as illustrative. Table/figure labels, units, sample counts, bibliography and new interaction narrative were checked. No overfull boxes, missing characters or unresolved references were reported. The final text retains 562 candidate cases and the 583-product joint sample. Original EDA figures and frozen input files were not modified.
 
 ## Remaining work
 
-- Team review of narrative, code, literature reading coverage and selected comparison cases; classroom usability testing.
-- Named member contributions, personal reflections and actual classroom feedback for final course assembly. Slides remain a separate project step.
-- Actual savings, retailer revenue and conversion require current-price/user evidence; the report proposes a validation plan and does not report measured commercial uplift.
-- CSV export is implemented using the shared filtered data; an actual browser download was not included in this verification.
-- Review this branch before merge. If the EDA PR is still open, land/reconcile it first to avoid duplicating its commits. This branch contains the EDA ancestry plus the two delivery commits.
+- Team review and classroom user testing, especially whether the explanations improve understanding and candidate selection.
+- Named member contributions, personal reflections, classroom feedback and slides for the final course submission.
+- Current-price validation and user evidence before claiming realised savings, revenue or conversion effects.
+- Review the branch before merge. If the EDA PR is still open, land/reconcile it first to avoid duplicate ancestry.
 
 No project moves, lifecycle changes or archive actions were performed. Existing archives remain unchanged.

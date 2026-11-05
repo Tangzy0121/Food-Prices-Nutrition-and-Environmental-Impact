@@ -2,7 +2,7 @@
 
 日期：2026-11-05。最终展示与提交：2026-11-20。
 
-后续交付已在本地 `feat/report-shiny-delivery` 实现：英文 Tau-class 商业分析报告（`output/food-value-report.pdf`）及英文 Shiny（`shiny/`）。启动方式、测试记录和课程总提交剩余事项见 `docs/delivery_verification.md`。本文件以下保留原 EDA 交接背景。
+后续交付已在本地 `feat/report-shiny-delivery` 实现：10 页英文 Tau-class 商业分析报告（`output/food-value-report-v2.pdf`，含独立封面和背景配图）及 bslib 英文 Shiny（`shiny/`，含动态图表解读、选点、框选和商品比较）。启动方式、测试记录和课程总提交剩余事项见 `docs/delivery_verification.md`，社区参考见 `docs/05_dashboard/community_references.md`。本文件以下保留原 EDA 交接背景。
 
 ## 先看什么
 

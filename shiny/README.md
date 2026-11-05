@@ -1,6 +1,6 @@
-# Food choices | Value within reach
+# Food / Signal — value within reach
 
-English-language local Shiny app for the corrected Step 4 dataset. It reads local files and makes no API requests.
+English local Shiny decision interface for the corrected Step 4 dataset, redesigned using bslib and project-specific CSS. No live API or external inference endpoint is required. Community references and the framework choice are recorded in `docs/05_dashboard/community_references.md`.
 
 From the project root:
 
@@ -9,14 +9,16 @@ From the project root:
 ./scripts/run_shiny.ps1
 ```
 
-Open http://127.0.0.1:3838 in a browser. Stop the foreground R process with Ctrl+C. In RStudio, use `shiny::runApp("shiny")` from the project root. Dependencies: shiny, ggplot2, readr, and the existing Step 4 R packages. `ui.R` defines the interface, `server.R` the reactive workflow, `helpers.R` the data contract and decision rules.
+Open http://127.0.0.1:3838. Stop the foreground R process with Ctrl+C. In RStudio use `shiny::runApp("shiny")` from the root. Dependencies: shiny, bslib (developed with 0.12.0), ggplot2, readr, and the existing Step 4 packages. `global.R` loads data and the local editorial image resource; `ui.R` defines the interface, `server.R` the reactive workflow, and `helpers.R` the decision and explanation rules. `www/` contains local CSS and table/hover interactions.
 
-1. **Category overview:** choose a category, read unit-price distribution and coverage. This page uses the entire selected category.
-2. **Discover:** set a budget and grade filters. Count, plot, table and CSV use the same filtered products. Clear conditions to try an empty state. Unknown grades pass only their own missing dimension when enabled.
-3. **Compare two products:** choose two distinct same-category products. Compare composition, packaging, quote counts and dates. Choices stay fixed under budget/grade changes; membership in the current shortlist is shown. The lower-price candidates table shows up to ten eligible products for A, sorted by unit price.
+1. **The big picture:** choose a category, read its price distribution, median and grade coverage. This page always uses the entire category.
+2. **Explore & explain:** set a unit budget and grades or try a quick preset. Optionally require two regular offers. Switch among environmental grade, nutrition score, sugar, saturated fat and fibre. The explanation panel answers how to read the view, what pattern appears and what to compare next. It computes descriptive correlations and valid sample sizes from the filtered data.
+3. **Inspect a point:** hover to preview a product; click it to select A. Drag across a region to see its product count and median price. Zoom to that region or reset. Full-screen chart mode is available from the card's expand control. Zoom does not change the shortlist; the footer and explanation distinguish the zoomed view from the full filtered data.
+4. **Organise a shortlist:** search by product or barcode, sort by price or offer count, and page through 12 rows at a time. Inspect selects A. The CSV contains all matching products, not just the displayed page. Unknown grades pass only their own missing dimension; numerical plots explicitly report omitted values.
+5. **Compare & decide:** keep two distinct same-category products selected while changing filters. Read the generated price/grade/composition summary and quote context. Find a lower-price candidate for A or Inspect a candidate row to set B. Candidate suggestions use strictly lower historical unit price and neither grade worse.
 
-All price comparisons are historical. Nutrient units switch between 100 g and 100 ml. A+ through F and nutrition A through E have separate orders. Unknown grades remain visible when requested. Raw fields in the CSV retain their original names; juice `_100g` fields are standardised per 100 ml, as described in the data dictionary.
+All prices are historical. Nutrients use 100 g for solids and 100 ml for juices. Environmental A+ through F and nutrition A through E have separate orders. Unknown grades remain visible when requested. Raw CSV `_100g` fields for juices represent per-100-ml standardised nutrients, as documented in the data dictionary.
 
-Run `Rscript --vanilla scripts/check_dashboard.R` from the root for the data, ordinal-rule and reactive checks. Browser verification results are recorded in `docs/delivery_verification.md`.
+Run `Rscript --vanilla scripts/check_dashboard.R` from the root for decision-rule, interpretation, coverage and reactive regression checks. Browser verification is recorded in `docs/delivery_verification.md`.
 
-Implementation references: [Shiny runApp](https://shiny.posit.co/r/reference/shiny/latest/runapp.html), [testServer](https://shiny.posit.co/r/reference/shiny/latest/testserver.html).
+References: [bslib dashboard examples](https://rstudio.github.io/bslib/articles/dashboards/), [Shiny runApp](https://shiny.posit.co/r/reference/shiny/latest/runapp.html), [testServer](https://shiny.posit.co/r/reference/shiny/latest/testserver.html). The overview photograph is an AI-generated editorial illustration; prompts and provenance live in `reports/assets/provenance.json`.
