@@ -21,7 +21,7 @@ def table(name, heads, rows, spec):
             " & ".join(heads) + r" \\", r"\midrule"]
     text += [" & ".join(map(tex, row)) + r" \\" for row in rows]
     text += [r"\bottomrule", r"\end{tabular}", ""]
-    (DEST / (name + ".tex")).write_text("\n".join(text), encoding="utf-8")
+    (DEST / (name + ".tex")).write_text("\n".join(text), encoding="utf-8", newline="\n")
 
 def main():
     DEST.mkdir(parents=True, exist_ok=True)

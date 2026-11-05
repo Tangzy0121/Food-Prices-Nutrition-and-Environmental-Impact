@@ -50,3 +50,7 @@ outputs/step4/delivery_check.json
 output/*.zip
 output/food-value-report.pdf
 output/shiny-preview.png
+output/food-value-report-v2.pdf
+output/shiny-preview-v2.png
+output/shiny-explore-v2.png
+output/report-cover-v2.png

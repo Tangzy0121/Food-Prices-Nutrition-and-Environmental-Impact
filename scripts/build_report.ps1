@@ -1,5 +1,6 @@
-param([string]$Python = 'C:\Users\VIP\miniconda3\envs\sci\python.exe')
+param([string]$Python = 'C:\Users\VIP\miniconda3\envs\sci\python.exe', [string]$OutputName = 'food-value-report-v2.pdf')
 $ErrorActionPreference = 'Stop'
+if ([IO.Path]::GetFileName($OutputName) -ne $OutputName) { throw 'OutputName must be a filename inside output/.' }
 $projectRoot = Split-Path -Parent $PSScriptRoot
 Push-Location -LiteralPath $projectRoot
 try {
@@ -13,6 +14,6 @@ try {
             if ($LASTEXITCODE -ne 0) { throw 'LaTeX failed; see scratch/report-build/build-console.txt' }
         }
     } finally { Pop-Location }
-    Copy-Item -LiteralPath scratch/report-build/report.pdf -Destination output/food-value-report.pdf -Force
-    Write-Output 'PASS: output/food-value-report.pdf'
+    Copy-Item -LiteralPath scratch/report-build/report.pdf -Destination (Join-Path output $OutputName) -Force
+    Write-Output "PASS: output/$OutputName"
 } finally { Pop-Location }

@@ -7,8 +7,10 @@
 ./scripts/build_report.ps1
 ```
 
-Output: `output/food-value-report.pdf`. The build requires Python 3 (standard library only), XeLaTeX and installed Tau-class dependencies. Set `-Python` to another interpreter if needed. Tables are generated directly from the executed CSV outputs, with primary/joint sample assertions. Build intermediates go to `scratch/report-build/`.
+Current output: `output/food-value-report-v2.pdf` (10 pages including a dedicated illustrated cover). The previous `food-value-report.pdf` remains available. The build requires Python 3 (standard library only), XeLaTeX and installed Tau-class dependencies. Set `-Python` to another interpreter, or `-OutputName` for another filename within `output/`. Tables are generated directly from the executed CSV outputs, with primary/joint sample assertions. Build intermediates go to `scratch/report-build/`.
 
 Template selection: the user's `C:/Users/VIP/latex-templates/` contains ElegantBook, kaobook and Tau-class. Tau's compact English article layout suits a decision report with findings and exhibits. We use a single column and green palette. Vendored Tau-class 2.6.0 is by Guillermo Jimenez under **CC BY 4.0** (https://creativecommons.org/licenses/by/4.0/), original repository https://github.com/MemoJimenez/Tau-class. Local class changes remove unused minted and biblatex dependencies; the report uses an explicit bibliography and no shell execution. Other template files retain their upstream headers.
 
 The numerical results are executed EDA. Commercial benefits are proposed and have not been measured in a user or retailer trial. This business report is ready for team review; final course assembly still needs named contributions, individual reflections and classroom feedback.
+
+The visual revision adds a full-page editorial cover and an industry-background page. Both pictures are generated illustrations, labelled in the document; they do not depict sampled products. The original PNGs and exact prompts are in `assets/`, with generation mode and model-interface limitations recorded in `assets/provenance.json`. The shopping illustration is also served locally in the Shiny overview.

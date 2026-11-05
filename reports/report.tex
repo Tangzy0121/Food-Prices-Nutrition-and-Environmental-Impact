@@ -22,6 +22,26 @@ Consumers need a practical way to compare price, nutrition and environmental per
 \end{abstract}
 \keywords{consumer choice, unit price, nutrition, environmental grades, Shiny}
 \begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+  \node[anchor=center,inner sep=0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{assets/food-choices-cover.png}};
+  \node[anchor=north west,inner sep=0,text width=165mm] at ([xshift=23mm,yshift=-25mm]current page.north west) {\color{taucolor}\sffamily
+    {\small\bfseries FOOD RETAIL\quad /\quad BUSINESS ANALYTICS\par}
+    \vspace{13mm}
+    {\fontsize{38}{41}\selectfont\bfseries Food choices:\\value within reach\par}
+    \vspace{7mm}
+    {\Large Price, nutrition and environmental impact\\in four everyday food categories\par}
+    \vspace{9mm}
+    {\small FRANCE\quad /\quad 2024--2025 PRICE OBSERVATIONS\par}
+    \vspace{3mm}
+    {\small 5 November 2026\quad\textbullet\quad R for Data Science\par}
+  };
+  \node[anchor=south west,inner sep=0,text width=165mm] at ([xshift=23mm,yshift=12mm]current page.south west) {\scriptsize\sffamily\color{taucolor}Food Prices, Nutrition and Environmental Impact project\quad |\quad AI-generated editorial illustration};
+\end{tikzpicture}
+\null
+\end{titlepage}
+\setcounter{page}{1}
 \maketitle\thispagestyle{firststyle}
 \section{Decision and value proposition}
 \begin{tauenv}
@@ -32,6 +52,23 @@ The primary user is a consumer comparing similar packaged foods. The immediate b
 \textbf{What the analysis changes.} A premium-price badge would add little information for biscuits or juices in this sample. For cereals and dark chocolate, a tendency toward better scores exists, but individual comparisons remain useful. In dark chocolate, higher prices also align with lower sugar and higher saturated fat, making composition a necessary part of the explanation.
 
 \textbf{Value to validate.} Historical price gaps identify comparison opportunities. Revenue uplift, realised household savings, conversion and willingness to use the tool require user testing and current transaction evidence. The proposed pilot measures task completion, time to a suitable shortlist, understanding of units, and checking of offer dates.
+
+\clearpage
+\section{Industry background: the comparison gap}
+\begin{figure}[H]\centering
+\includegraphics[width=\linewidth]{assets/shopping-decision.png}
+\caption{The decision context: choosing between similar packaged foods. AI-generated editorial illustration; the packaging does not depict sampled barcodes.}
+\end{figure}
+\subsection{One shelf, several competing signals}
+For a shopper choosing between two cereal products, the shelf price answers only part of the question. Pack sizes can differ; nutrition and environmental grades express different attributes; and a cheaper item may have a different recipe. A useful comparison starts by putting like products on a common unit-price basis, then makes those attributes visible together.
+
+Our four categories represent familiar comparison tasks: choosing biscuits for a snack, cereals for breakfast, dark chocolate and bottled fruit juice. Their units and grade distributions differ. The application therefore begins with a category, carries its price unit through the whole interaction, and keeps composition beside the two composite grades.
+
+\begin{tauenv}
+\textbf{The business question.} Can a consumer find a lower-price option worth inspecting, understand what changes in its nutrition and environmental profile, and judge the quality of the price evidence? The proposed service creates value by making that sequence quicker and easier to explain.
+\end{tauenv}
+\subsection{A discovery service to validate}
+The immediate deliverable is a transparent decision aid built from the recorded sample. A retailer, consumer organisation or comparison service could test whether the workflow reduces search time and improves comprehension. The pilot in this report specifies how to measure that benefit before making claims about conversion, customer savings or revenue. The images provide context; all numerical findings come from the executed R analysis.
 
 \clearpage
 \section{Evidence base and analytical design}
@@ -110,7 +147,9 @@ Keep a shortlist & CSV download of the exact filtered rows & Revisit candidates 
 \end{tabularx}
 \caption{Business questions linked to implemented interface actions.}
 \end{table}
-The overview uses all products in the selected category. Discover uses a single filtered dataset for the count, scatterplot, table and export. The plot gives unknown environmental grades a separate row; the switch admits a missing grade only for its own dimension. Product selections stay fixed as budget or grade filters change, and the comparison reports whether each selected product still belongs to the shortlist.
+The overview uses all products in the selected category. Explore uses a single filtered dataset for the count, scatterplot, table and export. The plot gives unknown environmental grades a separate row; the switch admits a missing grade only for its own dimension. Product selections stay fixed as budget or grade filters change, and the comparison reports whether each selected product still belongs to the shortlist.
+
+The revised interface uses bslib cards and a guided exploration workspace. Users can switch between environmental grade, nutrition score, sugar, saturated fat and fibre; hover to inspect a product; click to select it; or brush and zoom into a region. A live explanation panel answers how to read the chart, what pattern appears in the current filtered sample, and what comparison to make next. Search, sorting, pagination and price-evidence filters help organise the shortlist. The two-product page explains the price and composition differences in plain English. Zooming preserves the shortlist and clearly identifies the scope used by the interpretation.
 
 \subsection{Proposed validation with users}
 A small classroom pilot can ask users to find cereals below a stated EUR/kg ceiling, inspect a chocolate trade-off, and explain why a historical biscuit price gap needs a date check. Record task success, elapsed time, unit errors, and whether users inspect quote coverage. Use participant feedback to revise the interface before proposing retailer deployment.
@@ -130,7 +169,7 @@ The source report is \texttt{reports/report.tex}; generated numerical tables com
 
 \textbf{Course submission status.} This is the business analysis deliverable. The team must still supply named member contributions, individual reflections and classroom review feedback when assembling the final course submission. AI assistance contributed code, report drafting and checks; members should review the computations, explanations and code before submission. No member roles or reflections are fabricated here.
 
-\textbf{Template attribution.} Tau-class v2.6.0 by Guillermo Jimenez, CC BY 4.0, adapted from the user's local template collection. The class files are preserved; this document uses English, a single-column layout and a green business-report palette.
+\textbf{Template and imagery.} Tau-class v2.6.0 by Guillermo Jimenez, CC BY 4.0, adapted from the user's local template collection. This document uses English, a single-column layout and a green business-report palette. Cover and industry-context photographs were generated with the built-in image tool as editorial illustrations. Prompts and provenance are saved in \texttt{reports/assets/provenance.json}.
 
 \begin{thebibliography}{9}\small
 \bibitem{masset2014} Masset, G., et al. (2014). Identifying sustainable foods: The relationship between environmental impact, nutritional quality, and prices of foods representative of the French diet. \textit{JAND, 114}, 862--869. \url{https://doi.org/10.1016/j.jand.2014.02.002}.
