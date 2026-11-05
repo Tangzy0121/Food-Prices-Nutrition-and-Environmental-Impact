@@ -1,5 +1,7 @@
 # 正式数据字典：frozen_v1
 
+> 本文为原 frozen_v1 字典。Step 4 的环境有序等级已补全 F，当前联合样本 583 款，修正字段和入口见[修正说明](../04_eda/environment_grade_correction.md)。原冻结字典副本保持不变。
+
 日期：2026-11-02。适用于正式 600 款入选商品及其 1,541 条报价。主要比较集为其中 598 款。实际字段类型、缺失数量与唯一值数由 `R/09_write_formal_report.R` 输出至 `outputs/tables/step3/formal_field_inventory.csv`。条码为字符型，缺失为 R 的 NA，CSV 中为空单元格。
 
 ## 数据表与主键
