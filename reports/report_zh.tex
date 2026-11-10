@@ -34,6 +34,14 @@
 消费者需要在日常购买的同类食品中，方便地比较价格、营养和环境表现。本研究分析四类共 598 款包装食品，发现价格对两项分数的指示作用因类别而异：早餐谷物和黑巧克力呈现适度的有利关联，饼干和果汁的关联接近于零。在同时具有两项等级的 583 款商品中，562 款存在价格更低、两项等级均不更差的候选商品。商业应用的切入点是透明的类别内候选清单，接着用商品对比解释成分差异和历史价格背景。本报告将已执行的探索性分析转化为决策流程，并配套支持中文／English 切换的 Shiny 应用。
 \end{abstract}
 \keywords{消费者选择，单位价格，营养，环境等级，Shiny}
+\AtBeginDocument{
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\renewcommand{\keywordname}{关键词：}
+\captionsetup[figure]{name=图}
+\captionsetup[table]{name=表}
+}
 \begin{document}
 \begin{titlepage}\thispagestyle{empty}
 \begin{tikzpicture}[remember picture,overlay]
@@ -87,15 +95,15 @@ Spearman $\rho$ 与 $n$ & $n$ 款数据完整商品中的秩相关方向与强�
 \section{发现一：价格的信息量因类别而异}
 \begin{table}[!ht]\centering\scriptsize\caption{类别内 Spearman 相关系数，各项使用自身可用样本。}\input{generated/associations_zh.tex}\end{table}
 价格与营养分数负相关，对应更高价格下较好的营养分数；价格与环境分数正相关，对应更高价格下较好的环境分数。早餐谷物和黑巧克力呈现这些有利方向，系数幅度适中；饼干和果汁在两维上均接近零。这支持按类别比较。
-\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/03_price_nutrition.png}\caption{各类别不同营养等级的历史单位价格分布。A 最佳、E 最低。来自已执行的 Step 4。}\label{fig:nutrition}\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/zh/03_price_nutrition.png}\caption{各类别不同营养等级的历史单位价格分布。A 最佳、E 最低。来自已执行的 Step 4。}\label{fig:nutrition}\end{figure}
 \textbf{决策含义。}先选择类别，再展示预算与分数。图~\ref{fig:nutrition} 显示各营养等级内部仍有价格差异。类别间的价格范围、单位和营养构成不同，不宜采用统一跨类别价格排名。对饼干和果汁，直接查看分数与配方比依赖价格档位更有帮助。
 \section{发现二：成分能解释具体取舍}
 黑巧克力说明为何综合等级之后还需要成分视图。其价格与糖含量的相关为 $\rho=-0.456$，与饱和脂肪的相关为 $\rho=0.401$。较高价格可能同时对应较少糖与较多饱和脂肪。膳食纤维也是有用的比较字段。本类别营养等级仅为 D、E，成分指标补充了等级压缩的细节。
-\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/04_price_sugars.png}\caption{价格与糖含量。固体按 g/100 g，果汁按 g/100 ml；各视图使用可用数值。}\label{fig:sugar}\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/zh/04_price_sugars.png}\caption{价格与糖含量。固体按 g/100 g，果汁按 g/100 ml；各视图使用可用数值。}\label{fig:sugar}\end{figure}
 \textbf{决策含义。}图~\ref{fig:sugar} 支持在并排视图中显示糖、饱和脂肪、膳食纤维及其单位，同时保留价格、等级和包装规格。用户据此查看候选商品差异；应用不把偏好加权为人为的单一价值分数。
 \section{发现三：环境比较也需要背景}
 早餐谷物的价格--环境系数为 0.307，黑巧克力为 0.243，饼干为 0.030，果汁为 0.035。应用以有序环境等级为纵轴、营养等级为颜色，将价格与两套等级一起展示。
-\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/05_price_environment.png}\caption{不同环境等级的历史单位价格分布。A+ 最佳、F 最低，已包含恢复的 F 级商品。}\label{fig:environment}\end{figure}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/zh/05_price_environment.png}\caption{不同环境等级的历史单位价格分布。A+ 最佳、F 最低，已包含恢复的 F 级商品。}\label{fig:environment}\end{figure}
 \textbf{单独说明碳参考。}主要样本 594 款有 AGRIBALYSE 3.2 估算，映射到标准参考食品；150 款谷物仅共享四个不同碳值。因此碳汇总适合放在方法说明中，而非品牌排行榜。碳单位始终为 kg CO$_2$e/kg 食品，包括果汁参考估算。
 \section{发现四：候选清单可以揭示比较机会}
 对每款联合覆盖商品，在同类中寻找代表单位价格严格更低、营养和环境等级分别不更差的商品。等级秩只表达顺序；若没有候选同时满足三项条件，则该商品在此规则下属于非劣势商品。

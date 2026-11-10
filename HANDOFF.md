@@ -1,8 +1,14 @@
 # Step 4 给小组的整合说明
 
-日期：2026-11-05。最终展示与提交：2026-11-20。
+日期：2026-11-10。最终展示与提交：2026-11-20。
 
 后续交付在 `feat/report-shiny-delivery`：9 页英文商业分析报告（`output/food-value-report-v3.pdf`，含封面、连续正文及消费者/供货商价值解释）和 bslib 英文 Shiny（`shiny/`，含角色化决策说明、动态图表解读、选点、框选和商品比较）。EDA PR #1 已合并，新交付以 `main` 为评审目标，合并另行确认。运行及验证见 `docs/delivery_verification.md`，社区参考见 `docs/05_dashboard/community_references.md`。以下保留原 EDA 交接背景。
+
+## 双语与线上部署（2026-11-10）
+
+- Shiny 支持点击中文／English 切换，并保留筛选和商品选择；线上入口：https://tangzy0121.github.io/food-signal/ 。部署代码位于个人 fork `Tangzy0121/food-signal` 的 `feat/report-shiny-delivery` 分支，上游评审分支另行保留。
+- 两版报告：`output/food-value-report-en.pdf` 和 `output/food-value-report-zh.pdf`。运行 `scripts/build_report.ps1` 同时生成；中文图表、表头和正文均已适配。
+- 部署流程从原冻结输入重新恢复 16 个环境 F 等级，不上传本机临时目录或另造分析口径。GitHub Pages 由 Shinylive 在浏览器运行 R；首次加载需下载运行时。
 
 ## 先看什么
 

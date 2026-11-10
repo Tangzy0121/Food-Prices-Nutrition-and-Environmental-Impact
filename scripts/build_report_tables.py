@@ -56,7 +56,7 @@ def chinese_tables():
         text = (DEST / (name + ".tex")).read_text(encoding="utf-8")
         for en, zh in sorted(mapping.items(), key=lambda pair: -len(pair[0])):
             text = text.replace(en, zh)
-        (DEST / (name + "_zh.tex")).write_text(text, encoding="utf-8")
+        (DEST / (name + "_zh.tex")).write_text(text, encoding="utf-8", newline="\n")
 
 if __name__ == "__main__":
     main()

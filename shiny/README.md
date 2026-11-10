@@ -1,6 +1,10 @@
 # Food / Signal — value within reach
 
-English local Shiny decision interface for the corrected Step 4 dataset, redesigned using bslib and project-specific CSS. No live API or external inference endpoint is required. Community references and the framework choice are recorded in `docs/05_dashboard/community_references.md`.
+Chinese/English Shiny decision interface for the corrected Step 4 dataset, redesigned using bslib and project-specific CSS. No live API or external inference endpoint is required. Community references and the framework choice are recorded in `docs/05_dashboard/community_references.md`.
+
+线上访问：[Food / Signal](https://tangzy0121.github.io/food-signal/)。侧栏点击「中文 / English」即可切换；默认中文，浏览器记住语言选择。切换保留类别、预算、等级、搜索、排序、页码、缩放和商品选择。商品原名、条码及数据导出字段保留原始记录。
+
+部署副本为 [Tangzy0121/food-signal](https://github.com/Tangzy0121/food-signal)，分支 `feat/report-shiny-delivery`。上游小组仓库没有 Pages 管理权限，因此使用本人 fork 托管。`.github/workflows/deploy-shiny.yml` 从冻结输入恢复修正数据，导出 Shinylive 并部署 Pages。R 在访客浏览器中运行，首次访问需要加载 WebAssembly 运行时与 R 包；数据处理不调用外部 AI 服务。
 
 From the project root:
 
@@ -9,7 +13,7 @@ From the project root:
 ./scripts/run_shiny.ps1
 ```
 
-Open http://127.0.0.1:3838. Stop the foreground R process with Ctrl+C. In RStudio use `shiny::runApp("shiny")` from the root. Dependencies: shiny, bslib (developed with 0.12.0), ggplot2, readr, and the existing Step 4 packages. `global.R` loads data and the local editorial image resource; `ui.R` defines the interface, `server.R` the reactive workflow, and `helpers.R` the decision and explanation rules. `www/` contains local CSS and table/hover interactions.
+Open http://127.0.0.1:3838. Stop the foreground R process with Ctrl+C. In RStudio use `shiny::runApp("shiny")` from the root. Dependencies: shiny, bslib (developed with 0.12.0), ggplot2, readr, jsonlite, and the existing Step 4 packages. `global.R` loads data and the local editorial image resource; `ui.R` defines the interface, `server.R` the reactive workflow, and `helpers.R` the decision and explanation rules. `www/` contains local CSS and table/hover interactions.
 
 1. **The big picture:** choose a category, read its price distribution, median and grade coverage. This page always uses the entire category.
 2. **Explore & explain:** set a unit budget and grades or try a quick preset. Optionally require two regular offers. Switch among environmental grade, nutrition score, sugar, saturated fat and fibre. The explanation panel answers how to read the view, what pattern appears and what to compare next. It computes descriptive correlations and valid sample sizes from the filtered data.

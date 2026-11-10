@@ -1,4 +1,5 @@
 # Run from the project root. Regression checks for meaningful decision rules.
+if (.Platform$OS.type == "windows") invisible(Sys.setlocale("LC_CTYPE", "English_United States.UTF-8"))
 source("shiny/i18n.R")
 source("shiny/helpers.R")
 p <- load_dashboard_data(".")
@@ -80,5 +81,19 @@ testServer(server, {
   stopifnot(!is.null(zoom()), nrow(visible_data()) == nrow(plot_data()), grepl("Zoomed view", output$plot_coverage))
   session$setInputs(reset_zoom = 1L)
   stopifnot(is.null(zoom()))
+  # A language change must only affect presentation, including the live narrative.
+  session$setInputs(product_a = category_data()$code[1], product_b = category_data()$code[2])
+  snapshot <- list(codes = filtered()$code, page = page_number(), pair = pair()$code,
+                   metric = metric(), zoom = zoom())
+  session$setInputs(lang = "zh")
+  stopifnot(grepl("当前筛选样本", explanation()$note),
+            grepl("购物比较", guidance()$title),
+            grepl("当前筛选匹配", output$filtered_count),
+            identical(snapshot, list(codes = filtered()$code, page = page_number(), pair = pair()$code,
+                                    metric = metric(), zoom = zoom())))
+  session$setInputs(lang = "en")
+  stopifnot(grepl("Current filtered sample", explanation()$note),
+            grepl("category products", output$filtered_count),
+            identical(filtered()$code, snapshot$codes))
 })
 cat("PASS: data contract, 562 EDA candidates, live explanations, numerical coverage, search, sorting, pagination, quote filters, brush/zoom and comparison state.\n")
