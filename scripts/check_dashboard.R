@@ -1,4 +1,5 @@
 # Run from the project root. Regression checks for meaningful decision rules.
+source("shiny/i18n.R")
 source("shiny/helpers.R")
 p <- load_dashboard_data(".")
 all_cat <- function(cat, budget = Inf, ng = nutri_levels, eg = environment_levels, unknown = TRUE)

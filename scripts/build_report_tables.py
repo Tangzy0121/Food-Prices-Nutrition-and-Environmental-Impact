@@ -47,5 +47,17 @@ def main():
     ], "lrr")
     print("PASS: 598 primary / 583 joint; four report tables generated from executed CSVs.")
 
+def chinese_tables():
+    mapping = {"Breakfast cereals":"早餐谷物", "Dark chocolate":"黑巧克力", "Fruit juices":"果汁", "Biscuits":"饼干",
+      "Nutrition $n$":"营养 $n$", "Environment $n$":"环境 $n$", "$\\rho$ price--nutrition":"$\\rho$ 价格--营养", "$\\rho$ price--environment":"$\\rho$ 价格--环境",
+      "Non-dominated":"非劣势商品", "With candidate":"有候选商品", "Joint $n$":"联合 $n$", "Category":"类别", "Unit price (EUR/kg)":"单位价格 (EUR/kg)", "Unit":"单位", "Median":"中位数", "Share":"占比",
+      "Product A":"商品 A", "Candidate B":"候选 B", "Measure":"指标", "Barcode":"条码", "Nutrition grade":"营养等级", "Environmental grade":"环境等级"}
+    for name in ["category", "associations", "joint", "example"]:
+        text = (DEST / (name + ".tex")).read_text(encoding="utf-8")
+        for en, zh in sorted(mapping.items(), key=lambda pair: -len(pair[0])):
+            text = text.replace(en, zh)
+        (DEST / (name + "_zh.tex")).write_text(text, encoding="utf-8")
+
 if __name__ == "__main__":
     main()
+    chinese_tables()

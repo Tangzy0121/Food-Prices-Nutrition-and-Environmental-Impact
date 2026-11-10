@@ -1,0 +1,158 @@
+\documentclass[11pt,a4paper,onecolumn,oneside]{tau-class/tau}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}
+\usepackage[english]{babel}
+\usepackage[UTF8,scheme=plain,fontset=fandol]{ctex}
+\usepackage{xurl}
+\renewcommand{\figurename}{图}
+\renewcommand{\tablename}{表}
+\renewcommand{\refname}{参考文献}
+\usepackage{tabularx}
+\geometry{margin=22mm,bottom=25mm}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.12}
+\renewcommand{\floatpagefraction}{.75}
+\definecolor{taucolor}{HTML}{245D4B}
+\hypersetup{pdftitle={食品选择：触手可及的价值},pdfauthor={食品价格、营养与环境影响项目组}}
+\doctype{商业分析报告}
+\title{食品选择：触手可及的价值}
+\author{食品价格、营养与环境影响项目组}
+\dates{2026 年 11 月 5 日 | 法国 | R for Data Science}
+\footinfo{食品选择}
+\organization{商业分析}
+\leadauthor{法国 / 2024--2025 年价格}
+\theday{2026 年 11 月 5 日}
+\renewcommand{\abstractname}{执行摘要}
+\AtBeginDocument{\renewcommand{\abstractname}{执行摘要}}
+\begin{abstract}
+消费者需要在日常购买的同类食品中，方便地比较价格、营养和环境表现。本研究分析四类共 598 款包装食品，发现价格对两项分数的指示作用因类别而异：早餐谷物和黑巧克力呈现适度的有利关联，饼干和果汁的关联接近于零。在同时具有两项等级的 583 款商品中，562 款存在价格更低、两项等级均不更差的候选商品。商业应用的切入点是透明的类别内候选清单，接着用商品对比解释成分差异和历史价格背景。本报告将已执行的探索性分析转化为决策流程，并配套支持中文／English 切换的 Shiny 应用。
+\end{abstract}
+\keywords{消费者选择，单位价格，营养，环境等级，Shiny}
+\begin{document}
+\begin{titlepage}\thispagestyle{empty}
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=center,inner sep=0] at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight]{assets/food-choices-cover.png}};
+\node[anchor=north west,inner sep=0,text width=165mm] at ([xshift=23mm,yshift=-25mm]current page.north west) {\color{taucolor}\sffamily
+{\small\bfseries 食品零售\quad /\quad 商业分析\par}\vspace{13mm}
+{\fontsize{36}{43}\selectfont\bfseries 食品选择：\\触手可及的价值\par}\vspace{7mm}
+{\Large 四类日常食品的价格、营养\\与环境影响\par}\vspace{9mm}
+{\small 法国\quad /\quad 2024--2025 年价格观测\par}\vspace{3mm}
+{\small 2026 年 11 月 5 日\quad\textbullet\quad R for Data Science\par}};
+\node[anchor=south west,inner sep=0,text width=165mm] at ([xshift=23mm,yshift=12mm]current page.south west) {\scriptsize\sffamily\color{taucolor}食品价格、营养与环境影响项目组\quad |\quad AI 生成场景插图};
+\end{tikzpicture}\null\end{titlepage}
+\setcounter{page}{1}\maketitle\thispagestyle{firststyle}
+\section{决策与价值主张}
+\begin{tauenv}\textbf{建议。}围绕三个动作构建比较工具：选择食品类别、筛选预算内候选清单、并排查看两款商品。结合单位价格与有序等级；解释具体选择时，同时显示糖、饱和脂肪和膳食纤维。\end{tauenv}
+主要用户是比较同类包装食品的消费者。直接价值是减少比较成本：统一价格单位，将两套等级放在一起，在选择时显示报价覆盖。零售商或比价服务可在核实现时价格和供应后，将同一流程测试为商品发现功能。
+
+\textbf{分析带来的改变。}在本样本的饼干和果汁中，溢价标签提供的信息较少。早餐谷物和黑巧克力虽有更高价格对应较好分数的倾向，具体商品比较仍有价值。黑巧克力中，更高价格同时对应较低糖和较高饱和脂肪，解释选择时需要展示成分。
+
+\textbf{需要验证的价值。}历史价差帮助确定比较机会；营收提升、实际家庭节省、转化率和使用意愿需要用户测试及当前交易证据。试点可记录任务完成情况、找到合适清单的时间、单位理解和报价日期检查行为。
+\subsection{界面数字的含义}
+应用区分价格基准、商品属性、样本覆盖与描述性关系。表~\ref{tab:meaning} 将各项指标与可支持的决策相连。
+\begin{table}[!ht]\centering\small
+\begin{tabularx}{\linewidth}{p{.2\linewidth}XX}\toprule
+显示指标 & 含义 & 实际用途 \\\midrule
+单位价格中位数 & 所选类别商品价格的中间值；各商品价格本身是常规报价中位数 & 设定同类别预算，或对标商品的观测零售定位 \\
+营养／环境等级 & 对不同商品属性的有序概括，方向与覆盖分别说明 & 比较价格背后的属性；等级掩盖差异时查看成分 \\
+Spearman $\rho$ 与 $n$ & $n$ 款数据完整商品中的秩相关方向与强度 & 判断价格在本类别中的指示作用；不是概率或改善百分比 \\
+候选占比／商品价差 & 存在严格更便宜、两项等级不更差选项的商品占比／两款历史中位价格之差 & 建立比较清单，再核实用途适配和当前报价 \\
+报价次数与日期 & 价格依据的数量和时间 & 确定优先核查对象，尤其是只有一次较早报价的商品 \\\bottomrule
+\end{tabularx}\caption{先理解指标，再采取行动。类别概览使用全类别商品；动态图表解读使用当前筛选样本。}\label{tab:meaning}\end{table}
+\section{行业背景：商品比较中的信息缺口}
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth]{assets/shopping-decision.png}\caption{在类似包装食品间选择的决策场景。图片为 AI 生成插图，包装不对应样本条码。}\end{figure}
+\subsection{同一货架，多种信号}
+消费者在两款谷物食品间选择时，货架价格只回答了部分问题。包装大小可能不同，营养与环境等级表达不同属性，更便宜的商品也可能采用不同配方。实用的比较先将同类商品统一到单位价格，再把属性一起展示。
+
+四个类别对应熟悉的任务：零食饼干、早餐谷物、黑巧克力和瓶装果汁。它们的单位与等级分布不同，因此应用从类别开始，在整个交互中保留该类别的价格单位，并把成分与两项综合等级并排展示。
+\begin{samepage}\begin{tauenv}\textbf{商业问题。}消费者能否找到值得查看的低价选项，理解营养和环境特征的变化，并判断价格依据的质量？拟议服务通过缩短并解释这一过程创造价值。\end{tauenv}\end{samepage}
+\subsection{有待验证的商品发现服务}
+当前交付是基于观测样本的透明决策工具。零售商、消费者组织或比价服务可测试它是否减少搜索时间、提升理解。报告中的试点设计说明如何测量收益，再讨论转化、节省或营收。图片提供场景，全部数值结果来自已执行的 R 分析。
+\section{数据依据与分析设计}
+研究将法国 2024--2025 年以 EUR 计价的 Open Prices 观测，与 2026 年 11 月 2 日获取的 Open Food Facts 商品资料关联。固定随机种子在四类中各抽取 150 款；规格检查剔除两款，主比较集保留 598 款。关联价格表含入选商品的 1,541 条观测，代表价格采用合并重复报价组合后的有效常规报价。
+\begin{table}[!ht]\centering\small\caption{主要样本与覆盖。中位数为历史单位价格。}\input{generated/category_zh.tex}\end{table}
+\textbf{价格构建。}每个条码的代表价格为有效常规单位报价中位数。固体为 EUR/kg，果汁为 EUR/L，报告与应用保持相同单位。主要样本中 291 款只有一条常规报价，因此比较页展示报价次数、门店及最早／最近报价日期。
+
+\textbf{分数与覆盖。}Nutri-Score 使用 2023 算法，等级 A--E，数值分数越低越好。环境等级为 A+、A、B、C、D、E、F，数值分数越高越好。此前清洗遗漏的 16 款 F 级已从同批保存的原始响应恢复，并配套使用法国地域分数。现有环境等级覆盖 596 款，价格与双等级联合覆盖 583 款；原冻结输入保持不变。
+
+\textbf{三个问题。}（1）类别内价格与营养有何关系？（2）与环境表现有何关系？（3）哪些低价商品的两项等级均不更差？前两问用 Spearman 系数描述类别内数值关联，第三问采用明确的有序比较规则。
+
+文献为设计提供背景。功能单位会影响食品可持续关系的表象\cite{masset2015}；跨国食品价格与属性研究提示分别考察营养和环境\cite{martinez2025}；商品层面研究支持同时展示两维及其例外\cite{clark2022}。已有八篇来源综述补充食品可持续性、价格趋势、绿色溢价、折扣覆盖和膳食成本背景\cite{masset2014,hoenink2024,nakavachara2025,desiderio2026,bai2025}。
+\section{发现一：价格的信息量因类别而异}
+\begin{table}[!ht]\centering\scriptsize\caption{类别内 Spearman 相关系数，各项使用自身可用样本。}\input{generated/associations_zh.tex}\end{table}
+价格与营养分数负相关，对应更高价格下较好的营养分数；价格与环境分数正相关，对应更高价格下较好的环境分数。早餐谷物和黑巧克力呈现这些有利方向，系数幅度适中；饼干和果汁在两维上均接近零。这支持按类别比较。
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/03_price_nutrition.png}\caption{各类别不同营养等级的历史单位价格分布。A 最佳、E 最低。来自已执行的 Step 4。}\label{fig:nutrition}\end{figure}
+\textbf{决策含义。}先选择类别，再展示预算与分数。图~\ref{fig:nutrition} 显示各营养等级内部仍有价格差异。类别间的价格范围、单位和营养构成不同，不宜采用统一跨类别价格排名。对饼干和果汁，直接查看分数与配方比依赖价格档位更有帮助。
+\section{发现二：成分能解释具体取舍}
+黑巧克力说明为何综合等级之后还需要成分视图。其价格与糖含量的相关为 $\rho=-0.456$，与饱和脂肪的相关为 $\rho=0.401$。较高价格可能同时对应较少糖与较多饱和脂肪。膳食纤维也是有用的比较字段。本类别营养等级仅为 D、E，成分指标补充了等级压缩的细节。
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/04_price_sugars.png}\caption{价格与糖含量。固体按 g/100 g，果汁按 g/100 ml；各视图使用可用数值。}\label{fig:sugar}\end{figure}
+\textbf{决策含义。}图~\ref{fig:sugar} 支持在并排视图中显示糖、饱和脂肪、膳食纤维及其单位，同时保留价格、等级和包装规格。用户据此查看候选商品差异；应用不把偏好加权为人为的单一价值分数。
+\section{发现三：环境比较也需要背景}
+早餐谷物的价格--环境系数为 0.307，黑巧克力为 0.243，饼干为 0.030，果汁为 0.035。应用以有序环境等级为纵轴、营养等级为颜色，将价格与两套等级一起展示。
+\begin{figure}[!htbp]\centering\includegraphics[width=\linewidth,height=.32\textheight,keepaspectratio]{../outputs/step4/figures/05_price_environment.png}\caption{不同环境等级的历史单位价格分布。A+ 最佳、F 最低，已包含恢复的 F 级商品。}\label{fig:environment}\end{figure}
+\textbf{单独说明碳参考。}主要样本 594 款有 AGRIBALYSE 3.2 估算，映射到标准参考食品；150 款谷物仅共享四个不同碳值。因此碳汇总适合放在方法说明中，而非品牌排行榜。碳单位始终为 kg CO$_2$e/kg 食品，包括果汁参考估算。
+\section{发现四：候选清单可以揭示比较机会}
+对每款联合覆盖商品，在同类中寻找代表单位价格严格更低、营养和环境等级分别不更差的商品。等级秩只表达顺序；若没有候选同时满足三项条件，则该商品在此规则下属于非劣势商品。
+\begin{table}[!ht]\centering\small\caption{按明确的双等级规则寻找低价候选商品。}\input{generated/joint_zh.tex}\end{table}
+总计 583 款中有 562 款存在候选，21 款为非劣势商品。较高候选占比与等级较粗、可比较商品较多有关。该规则用于缩小搜索范围，然后核实适配性。
+\subsection{可复现示例：两款饼干}
+商品 A 为 \textit{Galettes bretonnes pur beurre}，候选 B 为 \textit{Petit beurre 200g}。二者满足比较规则，也说明仍需核对配方和包装。
+\begin{table}[!ht]\centering\small\caption{来自已执行候选表的可复现商品对。}\input{generated/example_zh.tex}\end{table}
+历史单位价差为 EUR 3.36/kg，相当于 A 代表价格的 45.7\%。营养等级均为 E，环境等级从 C 改善为 B。百分比描述的是两款记录中位价格。Shiny 还展示包装、成分、日期、门店与报价次数，帮助判断是否适合相同用途。
+
+\textbf{产品动作。}显示 A 的低价候选短清单，同时保留手动选择 B，让用户考察其他取舍，包括更高价格换取更好分数的情况。
+\section{谁可以根据发现采取行动？}
+\textbf{消费者：确定值得查看的商品。}用类别中位数设定预算，筛选清单并比较成分。在饼干示例中，EUR 3.36/kg 的历史价差给出具体核查任务：配方和规格是否适用，以及当前价格如何。预期收益是减少搜索成本、清楚解释选择。
+
+\textbf{供货商：对标零售定位与商品属性。}选择类别，将商品放到观测零售价格分布及同等级商品中比较。更便宜且等级均不更差的候选，为审视溢价或改配方提供对标对象。黑巧克力中糖与饱和脂肪的相反方向，提示同时评估两项属性。调整商业报价前还需补充当前价格、成本、供应和客户证据。
+\begin{table}[!ht]\centering\small\begin{tabularx}{\linewidth}{p{.23\linewidth}XX}\toprule
+发现 & 消费者行动 & 供货商行动 \\\midrule
+饼干／果汁价格与分数关联近零 & 比较高价商品时直接读等级 & 查明支持溢价的实际属性 \\
+高价巧克力糖更少、饱和脂肪更多 & 结合用途比较两项成分 & 构建多属性产品或配方比较 \\
+562/583 款存在更便宜且双等级不差的候选 & 查看替代品清单 & 寻找零售定位对标和比较缺口 \\
+291/598 款只有一条常规报价 & 依赖价差前核查当前报价 & 竞品分析前更新薄弱价格观测 \\\bottomrule\end{tabularx}\caption{将观测发现转化为两类用户可复核的决策。}\end{table}
+\textbf{如何建立商业价值证据。}消费者测试关注是否减少耗时、单位错误并找到可接受替代品；供货商测试关注分析人员能否识别并解释有用对标，再用当前内部和市场数据核实。本数据包含商品属性与记录零售报价，需求、批发条款、利润率和库存属于未来输入。
+\section{从证据到交互式决策流程}
+\begin{table}[!ht]\centering\small\begin{tabularx}{\linewidth}{lXX}\toprule
+用户任务 & 证据与界面 & 预期收益 \\\midrule
+理解类别 & 全类别价格分布和等级覆盖 & 设定现实的单位预算 \\
+寻找候选 & 预算、双等级、未知开关，联动图表与清单 & 减少手动搜索 \\
+查看选择 & 两款不同同类商品、成分与价格背景、低价候选 & 解释具体取舍 \\
+保存清单 & 导出与筛选结果完全相同的 CSV 行 & 复查候选和来源 \\\bottomrule\end{tabularx}\caption{业务问题与已实现界面动作的对应。}\end{table}
+概览使用所选类别全部商品。探索页的计数、散点、清单和导出共用筛选集。未知环境等级单独占一行；开关只允许各自维度的缺失等级通过。预算或等级变化时保留商品选择，并标明 A、B 是否仍在候选清单中。
+
+界面使用 bslib 卡片和引导式探索区，可切换环境等级、营养分数、糖、饱和脂肪和膳食纤维。悬停预览、点击选品、框选和缩放帮助检查细节。解释面板回答如何读图、当前筛选样本的规律、下一步如何比较。搜索、排序、翻页和报价次数筛选组织候选清单。两商品页以中英文解释价格和成分差异。缩放保留完整候选清单，并明确解释所用范围。语言切换保留当前筛选、搜索、翻页及商品选择。
+\subsection{拟议的用户验证}
+课堂试点可要求用户寻找低于指定 EUR/kg 上限的谷物、查看巧克力成分取舍、解释为何历史饼干价差需要核查日期。记录任务成功、耗时、单位错误和报价覆盖查看情况，根据反馈修改界面。
+
+未来运营试点需收集当前门店库存和价格，测试能否找到可接受替代品，并与现有购物流程比较。届时可测量实际购物篮节省和商业转化；当前探索样本没有估算这些结果。
+\section{稳健性、范围与后续工作}
+敏感性分析比较至少两条常规报价的商品、年度子集、折扣报价、重复观测和按能量计价。纳入折扣改变 15 款代表价格，保留重复观测也改变 15 款。每 100 kcal 口径改变果汁营养关联的方向，因此主比较保留 kg/L。193 款有 2024--2025 配对价格，其构成保留在分析表。
+
+贡献式法国样本与较晚商品快照界定结果范围。稀疏等级组、缺失字段、粗等级和共享碳参考影响解释。下一步为成员复核、课堂反馈、当前价格核实，以及测试清单是否有助于实际决策。
+\section{复现与贡献记录}
+仓库根目录运行 \nolinkurl{scripts/run_step4.ps1} 重建修正数据和执行 notebook；运行 \nolinkurl{scripts/build_report.ps1} 生成中英文报告；运行 \nolinkurl{scripts/run_shiny.ps1} 启动本地应用。可用 \nolinkurl{-RPrefix} 指定 R 环境。运行资源采用项目相对路径，应用不调用实时数据 API。线上版本通过 Shinylive 在浏览器中运行 R，并由 GitHub Pages 托管；首次访问需要下载运行时。
+
+英文源文件为 \nolinkurl{reports/report.tex}，中文为 \nolinkurl{reports/report_zh.tex}。四份数值表由 \nolinkurl{scripts/build_report_tables.py} 从已执行 Step 4 CSV 生成，两版共用数值。图表、敏感性表、哈希与环境记录在 \nolinkurl{outputs/step4/}。原 \nolinkurl{frozen_v1} 输入保留，应用使用修正的 \nolinkurl{step4_v1_1} 数据。
+
+\textbf{课程提交状态。}这是商业分析交付。最终课程提交仍需成员署名贡献、个人反思与课堂反馈。AI 协助了代码、报告草拟和检查，成员应复核计算、解释和代码；此处未编造成员角色或反思。
+
+\textbf{模板与图像。}Tau-class v2.6.0，作者 Guillermo Jimenez，CC BY 4.0，从本机模板库适配。中文与英文版使用同一单栏、绿色商业报告风格。封面和场景图为内置图像工具生成的插图，提示词和来源保存在 \nolinkurl{reports/assets/provenance.json}。
+\begin{thebibliography}{9}\small
+\bibitem{masset2014} Masset, G., et al. (2014). Identifying sustainable foods: The relationship between environmental impact, nutritional quality, and prices of foods representative of the French diet. \textit{JAND, 114}, 862--869. \url{https://doi.org/10.1016/j.jand.2014.02.002}.
+\bibitem{masset2015} Masset, G., Vieux, F., \& Darmon, N. (2015). Which functional unit to identify sustainable foods? \textit{Public Health Nutrition, 18}, 2488--2497. \url{https://doi.org/10.1017/S1368980015000579}.
+\bibitem{hoenink2024} Hoenink, J. C., et al. (2024). Changes in UK price disparities between healthy and less healthy foods over 10 years. \textit{Appetite, 197}, 107290. \url{https://doi.org/10.1016/j.appet.2024.107290}.
+\bibitem{martinez2025} Martinez, E. M., et al. (2025). Retail prices, environmental footprints, and nutritional profiles of commonly sold retail food items in 181 countries. \textit{AJCN, 122}, 1265--1274. \url{https://doi.org/10.1016/j.ajcnut.2025.08.002}.
+\bibitem{nakavachara2025} Nakavachara, V., et al. (2025). The green premium puzzle. Preprint, v1. \url{https://arxiv.org/abs/2507.10333v1}.
+\bibitem{clark2022} Clark, M., et al. (2022). Estimating the environmental impacts of 57,000 food products. \textit{PNAS, 119}, e2120584119. \url{https://doi.org/10.1073/pnas.2120584119}.
+\bibitem{desiderio2026} Desiderio, A., et al. (2026). Mapping regional disparities in discounted grocery products. \textit{npj Science of Food, 10}, 112. \url{https://doi.org/10.1038/s41538-026-00764-0}.
+\bibitem{bai2025} Bai, Y., et al. (2025). Environmental impacts and monetary costs of healthy diets worldwide. \textit{Nature Food, 6}, 1176--1185. \url{https://doi.org/10.1038/s43016-025-01270-4}.
+\end{thebibliography}
+\noindent\textbf{数据与方法来源。}Open Prices，固定版本 \nolinkurl{3d4e029340f3a5128f84913ab1ee5197399518c2}，\url{https://huggingface.co/datasets/openfoodfacts/open-prices}；Open Food Facts，\url{https://world.openfoodfacts.org}；环境等级顺序，\url{https://openfoodfacts.github.io/openfoodfacts-server/dev/ref-perl-pod/ProductOpener/Attributes.html}。完整请求、许可与来源清单保留于项目数据说明。既有文献综述记录了阅读覆盖：Masset (2014) 与 Bai (2025) 的讨论主要依据摘要或元数据；其他来源的可获取内容与细节见该综述。
+\end{document}

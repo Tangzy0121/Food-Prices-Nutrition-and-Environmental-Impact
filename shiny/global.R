@@ -1,8 +1,10 @@
+if (.Platform$OS.type == "windows") invisible(Sys.setlocale("LC_CTYPE", "English_United States.UTF-8"))
 # Shared application environment for the ui.R / server.R Shiny layout.
 library(shiny)
 library(ggplot2)
 library(bslib)
-root <- normalizePath("..", mustWork = TRUE)
+root <- normalizePath(if (file.exists("data/analysis_products.rds")) "." else "..", mustWork = TRUE)
+source("i18n.R", local = TRUE)
 source("helpers.R", local = TRUE)
 products <- load_dashboard_data(root)
-addResourcePath("editorial", file.path(root, "reports/assets"))
+if (dir.exists(file.path(root, "reports/assets"))) addResourcePath("editorial", file.path(root, "reports/assets"))
