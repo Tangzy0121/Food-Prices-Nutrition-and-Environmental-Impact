@@ -1,5 +1,18 @@
 # Report and Shiny delivery verification
 
+## Bilingual release — 2026-11-10
+
+- Live application: https://tangzy0121.github.io/food-signal/ . Deployment fork: `Tangzy0121/food-signal`, branch `feat/report-shiny-delivery`, revision `6ae9eec`. Upstream team branch is synchronized; no PR merge was performed.
+- GitHub Actions build and Pages deployment both succeeded: https://github.com/Tangzy0121/food-signal/actions/runs/42840792286 . The deployment environment permits this exact feature branch. The upstream account provides write access but cannot enable Pages, so hosting uses the user-owned fork.
+- Public-browser verification completed: the WebAssembly R runtime loaded the 598-product dataset; the Chinese overview showed 149 biscuits, median 11.09 EUR/kg and 79 with multiple offers. Clicking English restored the English interface. Screenshot: `scratch/bilingual/online-zh.png`. First load downloads the runtime and packages.
+- Local browser checks verified Chinese/English round trips, translated dynamic explanations, Chinese tables and axes, and preserved category, budget, product A and active tab. Browser page-error events were empty. Windows LC_CTYPE is set to UTF-8 before reading UI strings.
+- `scripts/check_dashboard.R` passes, including the original 562-candidate reconciliation and new language/state tests. Language belongs to the current Shiny session; shared process options are not used to store it.
+- Reports: `output/food-value-report-en.pdf` (9 pages) and `output/food-value-report-zh.pdf` (8 pages). Both compile in two XeLaTeX passes; Chinese figures, captions, table headers and prose are localized. Original product names and bibliography titles are retained. All pages were rendered and visually reviewed; neither log reports overfull boxes, missing characters or unresolved references. Both texts retain the 598/583/562 sample and candidate counts.
+- Rebuild both reports with `scripts/build_report.ps1`; select a single edition with `-Language en` or `zh`. Chinese figures come from the executed corrected analysis object using the original plotting rules. Frozen data, numerical outputs and previous PDFs remain unchanged.
+- Temporary checks and previews are in project `scratch/bilingual/`; report deliverables remain in `output/`. No project move, status change or archive operation was performed.
+
+The earlier verification record below describes the previous English-only delivery.
+
 Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). EDA PR #1 is merged (`origin/main` at `13a638f` when checked); this delivery targets `main` for PR review. Merge remains a separate action. This record includes the initial implementation and subsequent visual/decision-value revisions.
 
 ## Current deliverables
