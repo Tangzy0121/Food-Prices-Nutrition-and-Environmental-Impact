@@ -1,0 +1,7 @@
+category,exclusion_reason,n
+biscuits,included,149
+biscuits,quantity_conflict,1
+breakfast_cereals,included,150
+dark_chocolates,included,149
+dark_chocolates,quantity_missing_or_wrong_basis,1
+fruit_juices,included,150

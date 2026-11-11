@@ -85,6 +85,8 @@ prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
 
 # English business report and Shiny application
 
+The TypeScript [presentation website](website/README.md) introduces the study and explains the Open Prices / Open Food Facts barcode join with real record examples and an interactive processing diagram. Run `cd website` then `npm ci` and `npm run dev`; build with `npm run build`. Vercel root directory: `website`; output: `dist`. The presentation currently covers the study, pipeline and sources. R analysis and the Shiny course deliverable remain in their existing directories.
+
 The delivery branch `feat/report-shiny-delivery` builds on `feat/step4-eda`.
 The [English report](reports/README.md) translates the executed findings into consumer decisions, supplier retail-positioning benchmarks and a business validation plan. Build with `./scripts/build_report.ps1`; the current illustrated PDF is written to `output/food-value-report-v3.pdf` (9 pages, with continuous body layout).
 

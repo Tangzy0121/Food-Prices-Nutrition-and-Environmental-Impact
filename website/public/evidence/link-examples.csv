@@ -1,0 +1,5 @@
+"price_id","code","date","price_eur","price_is_discounted","quantity_base","unit_basis","unit_price_eur","representative_keep"
+"66108","0016229901189",2025-01-08,1.5,FALSE,0.35,"L",4.28571428571429,TRUE
+"5484","3350031923081",2024-02-11,0.95,FALSE,0.125,"kg",7.6,TRUE
+"124730","3350031923081",2025-07-09,0.89,FALSE,0.125,"kg",7.12,TRUE
+"13805","8410376055856",2024-02-22,1.99,FALSE,0.15,"kg",13.2666666666667,TRUE

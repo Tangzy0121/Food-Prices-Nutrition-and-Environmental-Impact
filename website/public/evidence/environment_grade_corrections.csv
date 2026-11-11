@@ -1,0 +1,17 @@
+code,category,product_name,before_grade,restored_grade,before_score,restored_fr_score,in_primary,source_file
+7622210795373,biscuits,oeuf coque oreo,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_001.json
+3222472772880,biscuits,Sablés Céréales et chocolat au lait,,f,-6,-6,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_001.json
+3596710547623,dark_chocolates,72% Noir fèves de cacao,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3250391378074,dark_chocolates,Tablette fourrée chocolat noir praliné - 150g,,f,2,2,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+7613034938459,dark_chocolates,Chocolate After eight sabor menta,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3245678046692,dark_chocolates,NOIR TRUFFE FANTAISIE et ECLATS DE FEVES,,f,2,2,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3250390102625,dark_chocolates,Tablette dégustation chocolat noir min 70% - 100g,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+7622201433017,dark_chocolates,Tendre noir chocolat,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3250391107018,dark_chocolates,Tablette fourrée chocolat noir praliné,,f,2,2,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3560070423941,dark_chocolates,COEUR de Mousse,,f,13,13,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3046920040655,dark_chocolates,Chocolat Noir Pailleté Dentelle Caramel,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3250390008347,dark_chocolates,Tablette familiale chocolat noir - 3x100g,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+7640159890690,dark_chocolates,Chocolat noir Fleur de sel,,f,12,12,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3256229544000,dark_chocolates,Chocolat noir aromatisé à l'arome nature de menthe 100g,,f,10,10,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json
+3596710507580,dark_chocolates,Noir chocolat extra fin,,f,13,14,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_005.json
+3560071494933,fruit_juices,Ananas 100% pur jus,,f,13,13,TRUE,data/raw/open_food_facts/formal_2026-11-02/products/post_batch_006.json

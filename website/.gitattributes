@@ -1,0 +1,6 @@
+# Keep website source text consistent on Windows and Linux.
+* text eol=lf
+
+# Downloadable evidence is hashed byte-for-byte; preserve its source bytes.
+public/evidence/** -text -whitespace
+src/data/** -text -whitespace
