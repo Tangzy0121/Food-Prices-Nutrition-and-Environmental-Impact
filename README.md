@@ -2,7 +2,11 @@
 
 R for Data Science 课程期末项目。研究同类食品中价格与营养、环境表现的关系，并用 R 完成探索性分析，开发 Shiny 交互仪表板。
 
-当前阶段：**Step 4 EDA 初稿已执行，Step 5 设计草稿已形成。最终展示与提交为 2026-11-20。** 正式入选 600 款，598 款进入主要比较集，连接 1,541 条报价。本轮恢复原始对象中的 16 款环境 F 等级，三维联合样本由原冻结版的 568 款修正为 **583 款**；`frozen_v1` 原样保留，后续读取 `data/processed/step4_v1_1/`。小组信息与教师审批状态待补充。
+## 现在到哪
+
+2026-11-11：EDA、双语 Shiny 和中英文研究报告已形成。报告从 Introduction 展开，结果集中解释类别差异、黑巧克力的成分取舍和低价候选。Shiny 的图旁解读对应当前问题、坐标及筛选结果。598 款进入主要比较集，关联 1,541 条报价，583 款可做价格与双等级联合比较。小组成员贡献、课堂反馈与展示材料待补充，最终展示与提交为 2026-11-20。
+
+[线上 Dashboard](https://tangzy0121.github.io/Food-Prices-Nutrition-and-Environmental-Impact/) · [报告与构建方式](reports/README.md) · [应用使用指南](shiny/README.md)
 
 本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Shiny 设计草稿](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和二进制派生表在本地生成，源码、图表及结果 CSV 随版本保存。
 

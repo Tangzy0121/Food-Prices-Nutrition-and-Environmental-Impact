@@ -25,7 +25,7 @@ stopifnot(identical(filter_products(synthetic, "biscuits", 5, "a", "a-plus", TRU
 stopifnot(match("a-plus", environment_levels) < match("a", environment_levels),
           match("f", environment_levels) == 7L)
 stopifnot(abs(view_association(all_cat("biscuits"), "environment_grade")$rho - .029616135379307174) < 1e-10,
-          grepl("Very little", explain_view(all_cat("biscuits"), "environment_grade")$title),
+          grepl("little guidance", explain_view(all_cat("biscuits"), "environment_grade")$title),
           grepl("saturated fat", explain_view(all_cat("dark_chocolates"), "sugars_100g")$body),
           grepl("No products", explain_view(p[FALSE, ], "nutri_score")$title),
           grepl("Too little", explain_view(p[1, ], "nutri_score")$title),
@@ -54,8 +54,8 @@ testServer(server, {
             nrow(scatter_data()) == nrow(filtered()))
   initial_count <- nrow(filtered())
   session$setInputs(audience = "supplier")
-  stopifnot(grepl("retail-positioning", guidance()$title), grepl("wholesale", guidance()$meaning),
-            grepl("Demand, margins and inventory", guidance()$next_data), nrow(filtered()) == initial_count)
+  stopifnot(grepl("retail-positioning", guidance()$title), grepl("historical retail price", guidance()$meaning),
+            grepl("customer demand", guidance()$next_data), nrow(filtered()) == initial_count)
   session$setInputs(audience = "consumer")
   stopifnot(grepl("shopping comparison", guidance()$title), nrow(filtered()) == initial_count)
   # Search drives chart, pagination and the shared CSV source together.
@@ -96,4 +96,17 @@ testServer(server, {
             grepl("category products", output$filtered_count),
             identical(filtered()$code, snapshot$codes))
 })
+# The numerical environment chart and its explanation must use the same variable.
+associations <- readr::read_csv("outputs/step4/tables/associations.csv", show_col_types = FALSE)
+for (cat in names(category_names)) {
+  d <- all_cat(cat)
+  chart <- scatter_products(d, "environment_score")
+  expected <- associations[associations$category == cat & associations$metric == "environment_score", ]
+  result <- view_association(d, "environment_score")
+  stopifnot(identical(chart$view_value, d$environment_score), result$n == expected$n,
+            abs(result$rho - expected$rho) < 1e-10)
+}
+chocolate <- all_cat("dark_chocolates")
+stopifnot(grepl("-0.456", explain_view(chocolate, "sugars_100g")$body, fixed = TRUE),
+          grepl("+0.401", explain_view(chocolate, "saturated_fat_100g")$body, fixed = TRUE))
 cat("PASS: data contract, 562 EDA candidates, live explanations, numerical coverage, search, sorting, pagination, quote filters, brush/zoom and comparison state.\n")

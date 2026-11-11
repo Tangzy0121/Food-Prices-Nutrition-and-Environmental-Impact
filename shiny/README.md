@@ -2,9 +2,11 @@
 
 Chinese/English Shiny decision interface for the corrected Step 4 dataset, redesigned using bslib and project-specific CSS. No live API or external inference endpoint is required. Community references and the framework choice are recorded in `docs/05_dashboard/community_references.md`.
 
-线上访问：[Food / Signal](https://tangzy0121.github.io/food-signal/)。侧栏点击「中文 / English」即可切换；默认中文，浏览器记住语言选择。切换保留类别、预算、等级、搜索、排序、页码、缩放和商品选择。商品原名、条码及数据导出字段保留原始记录。
+线上访问：[Food / Signal](https://tangzy0121.github.io/Food-Prices-Nutrition-and-Environmental-Impact/)。侧栏点击「中文 / English」即可切换，默认中文。浏览器记住语言选择。
 
-部署副本为 [Tangzy0121/food-signal](https://github.com/Tangzy0121/food-signal)，分支 `feat/report-shiny-delivery`。上游小组仓库没有 Pages 管理权限，因此使用本人 fork 托管。`.github/workflows/deploy-shiny.yml` 从冻结输入恢复修正数据，导出 Shinylive 并部署 Pages。R 在访客浏览器中运行，首次访问需要加载 WebAssembly 运行时与 R 包；数据处理不调用外部 AI 服务。
+部署使用本项目的 `feat/report-shiny-delivery` 分支。`.github/workflows/deploy-shiny.yml` 从冻结输入恢复修正数据，导出 Shinylive 并部署 GitHub Pages。R 在访客浏览器中运行，首次访问需要加载运行时与 R 包。
+
+2026-11-11 的图表解读按研究问题组织。概览中的直方图说明价格分布，独立的结果卡说明价格与两套分数的关联。探索页默认显示环境数值分数，使点的位置与旁边的相关系数使用相同指标。每幅散点图都写出问题、坐标含义和当前筛选的结果。黑巧克力的说明同时计算糖与饱和脂肪的关联。角色行动指南位于商品比较之后。
 
 From the project root:
 

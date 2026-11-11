@@ -83,7 +83,7 @@
 %----------------------------------------------------------
 
 \usepackage[T1]{fontenc}
-\usepackage[notextcomp]{stix2}
+\usepackage{unicode-math}
 \usepackage{FiraSans}
 \usepackage[scaled=0.85]{FiraMono}
 

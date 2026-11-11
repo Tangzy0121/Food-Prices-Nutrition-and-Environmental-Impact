@@ -51,6 +51,7 @@ metric_spec <- function(metric, unit = "kg") {
   nutrient_unit <- if (unit == "L") "g / 100 ml" else "g / 100 g"
   switch(metric,
     environment_grade = list(label = tr("Environmental grade"), field = "environment_score", better = tr("higher"), ordered = TRUE),
+    environment_score = list(label = tr("Environmental score (higher is better)"), field = "environment_score", better = tr("higher"), ordered = FALSE),
     nutri_score = list(label = tr("Nutrition score (lower is better)"), field = "nutri_score", better = tr("lower"), ordered = FALSE),
     sugars_100g = list(label = paste(tr("Sugars"), nutrient_unit), field = "sugars_100g", better = "context", ordered = FALSE),
     saturated_fat_100g = list(label = paste(tr("Saturated fat"), nutrient_unit), field = "saturated_fat_100g", better = "context", ordered = FALSE),
@@ -78,7 +79,7 @@ view_association <- function(d, metric) {
 explain_view <- function(d, metric, question = "pattern") {
   spec <- metric_spec(metric, if (nrow(d)) as.character(d$target_unit[1]) else "kg")
   a <- view_association(d, metric)
-  note <- sprintf(tr("Current filtered sample: %d products; correlation uses %d with both numerical fields. Descriptive association, not a causal effect."), nrow(d), a$n)
+  note <- sprintf(tr("Current filtered sample: %d products; %d have both values used for this correlation."), nrow(d), a$n)
   if (!nrow(d)) return(list(title = tr("No products match this view"), body = tr("Broaden the budget or grade filters, or clear the product search. Your selected comparison stays available."), note = note, rho = NA_real_))
   if (question == "read") {
     body <- if (spec$ordered) tr("Each point is one product. Left means lower unit price; the top rows have better environmental grades. Colour shows nutrition grade. The Unknown row keeps missing environmental grades visible. Some points overlap.") else paste(tr("Each point is one product. Left means lower unit price; vertical position shows"), tolower(spec$label), tr(". Colour shows nutrition grade. Products missing this numerical value stay in the shortlist but are omitted from the plot."))
@@ -86,17 +87,35 @@ explain_view <- function(d, metric, question = "pattern") {
   }
   if (question == "action") return(list(title = tr("Move from a pattern to a specific choice"), body = tr("Hover over a point for its product profile. Click it to keep it as A, then open Compare. Try a lower-price candidate and check composition, pack size, offer count and dates before deciding whether it fits the same purpose."), note = note, rho = a$rho))
   if (!is.finite(a$rho)) return(list(title = tr("Too little variation to describe a trend"), body = tr("This selection has fewer than three complete products, or constant prices or metric values. Inspect individual products or broaden your filters."), note = note, rho = a$rho))
-  strength <- if (abs(a$rho) < .1) tr("Very little rank association") else if (abs(a$rho) < .3) tr("A weak rank association") else if (abs(a$rho) < .5) tr("A moderate rank association") else tr("A stronger rank association")
   direction <- if (a$rho > 0) tr("higher") else tr("lower")
-  metric_name <- if (spec$ordered) tr("numerical environmental scores") else tolower(spec$label)
-  body <- if (abs(a$rho) < .1) tr("Higher unit prices do not consistently line up with higher or lower values in this selection. Use the actual product profile to decide what the price buys.") else sprintf(tr("Within these filtered products, higher unit prices tend to accompany %s %s. Compare individual points to see the exceptions."), direction, metric_name)
+  metric_name <- switch(metric,
+    environment_grade = tr("environmental scores"), environment_score = tr("environmental scores"),
+    nutri_score = tr("nutrition scores"), sugars_100g = tr("sugar content"),
+    saturated_fat_100g = tr("saturated-fat content"), fiber_100g = tr("fibre content"))
+  title <- if (abs(a$rho) < .1) tr("Price gives little guidance on this attribute") else sprintf(tr("Higher prices tend to accompany %s %s"), direction, metric_name)
+  body <- if (abs(a$rho) < .1) tr("Products at higher prices have a mix of attribute values. Inspect the individual products to compare what you would get for the price.") else sprintf(tr("Across %d complete products, the price and attribute rankings have rho = %+.3f. Points spread around this pattern, so the two-product comparison shows how a specific choice fits it."), a$n, a$rho)
   if (spec$ordered) body <- paste(body, tr("The correlation uses numerical environmental scores; the plotted rows show their ordered grades."))
   if (abs(a$rho) >= .1 && spec$better %in% c(tr("higher"), tr("lower"))) {
     favourable <- (spec$better == tr("higher") && a$rho > 0) || (spec$better == tr("lower") && a$rho < 0)
     body <- paste(body, sprintf(tr("This direction aligns with %s scores at higher prices in this sample."), if (favourable) tr("more favourable") else tr("less favourable")))
   }
-  if (metric == "sugars_100g" && any(d$category == "dark_chocolates")) body <- paste(body, tr("Also switch to saturated fat: a lower-sugar chocolate can have a different fat profile."))
-  list(title = strength, body = body, note = note, rho = a$rho)
+  if (metric %in% c("sugars_100g", "saturated_fat_100g") && any(d$category == "dark_chocolates")) {
+    sugar <- view_association(d, "sugars_100g")
+    fat <- view_association(d, "saturated_fat_100g")
+    if (is.finite(sugar$rho) && is.finite(fat$rho)) body <- paste(body, sprintf(tr("In this chocolate selection, sugar has rho = %+.3f and saturated fat has rho = %+.3f. Switch between the two panels to inspect the trade-off."), sugar$rho, fat$rho))
+  }
+  list(title = title, body = body, note = note, rho = a$rho)
+}
+
+category_finding <- function(d) {
+  nutrition <- view_association(d, "nutri_score")
+  environment <- view_association(d, "environment_score")
+  if (!is.finite(nutrition$rho) || !is.finite(environment$rho)) return(tr("Choose a category with enough complete products to compare price and scores."))
+  finding <- if (abs(nutrition$rho) < .1 && abs(environment$rho) < .1)
+    tr("Higher prices give little guidance on either score in this category. Compare grades and composition directly.") else if (nutrition$rho < 0 && environment$rho > 0)
+    tr("Higher-priced products tend to have better nutrition and environmental scores in this category. Individual products vary around this pattern.") else
+    tr("The two score relationships point to different product comparisons. Explore each score alongside unit price.")
+  paste(finding, sprintf(tr("Nutrition rho = %+.3f (n = %d); environment rho = %+.3f (n = %d)."), nutrition$rho, nutrition$n, environment$rho, environment$n))
 }
 
 grade_badge <- function(x) {
@@ -109,13 +128,13 @@ decision_guidance <- function(d, audience = "consumer") {
   benchmark <- sprintf("%.2f EUR/%s", median(d$representative_price), as.character(d$target_unit[1]))
   if (audience == "supplier") return(list(
     title = tr("Use the shortlist as a retail-positioning benchmark"),
-    meaning = sprintf(tr("The median of these %d matching products is %s. It describes recorded retail unit prices, not a wholesale quotation or a sales-weighted market price."), nrow(d), benchmark),
+    meaning = sprintf(tr("The median historical retail price of these %d matching products is %s. Use it to locate a product within this comparison set."), nrow(d), benchmark),
     action = tr("Compare a product's price, grades and composition with same-category alternatives. A cheaper option with neither grade worse is a concrete benchmark to inspect when reviewing a premium position or a product brief."),
-    next_data = tr("Before changing an offer, add current competitor prices, your costs and terms, availability and customer evidence. Demand, margins and inventory are not measured here.")))
+    next_data = tr("A pricing review would add current competitor prices, internal costs, availability and customer demand.")))
   list(title = tr("Turn the shortlist into a shopping comparison"),
     meaning = sprintf(tr("The median of these %d matching products is %s. Use it to orient your unit-price budget within this food category."), nrow(d), benchmark),
     action = tr("Inspect a product, compare a lower-price candidate, and read both grades plus sugar, saturated fat and fibre. Check that recipe and pack size fit your intended use."),
-    next_data = tr("Check current shop price and availability before buying. A historical pair gap helps choose what to inspect; it is not a verified saving on today's basket."))
+    next_data = tr("Before buying, compare the current store prices and check that both products fit the same use."))
 }
 
 shortlist_html <- function(d, target = "inspect_code") {

@@ -24,9 +24,21 @@ server <- function(input, output, session) {
   })
   output$coverage <- renderTable({ d <- category_data(); data.frame(Measure = c(tr("Unit price"), tr("Nutrition grade"), tr("Environmental grade"), tr("Both grades and price"), tr("One regular offer")), Products = c(nrow(d), sum(!is.na(d$nutri_grade)), sum(!is.na(d$environment_grade)), sum(d$joint_grades_price), sum(d$n_valid_regular_offers == 1))) })
   output$filtered_count <- renderText(sprintf(tr("%d / %d category products match the current filters"), nrow(filtered()), nrow(category_data())))
-  metric <- reactive(if (is.null(input$metric)) "environment_grade" else input$metric)
+  metric <- reactive(if (is.null(input$metric)) "environment_score" else input$metric)
   scatter_data <- reactive(scatter_products(filtered(), metric()))
   plot_data <- reactive({ d <- scatter_data(); d[is.finite(d$view_value), , drop = FALSE] })
+  output$scatter_question <- renderText(switch(metric(),
+    environment_grade = tr("How do environmental grades vary with price?"),
+    environment_score = tr("Do higher prices accompany better environmental scores?"),
+    nutri_score = tr("Do higher prices accompany better nutrition scores?"),
+    sugars_100g = tr("Do higher-priced products contain less sugar?"),
+    saturated_fat_100g = tr("Do higher-priced products contain more saturated fat?"),
+    fiber_100g = tr("Do higher-priced products contain more fibre?")))
+  output$scatter_concept <- renderText({
+    spec <- metric_spec(metric(), as.character(category_data()$target_unit[1]))
+    if (spec$ordered) return(tr("Each point is a product. Left means cheaper; higher rows mean better environmental grades. Colour shows nutrition grade. The reported correlation uses the corresponding numerical environmental scores."))
+    sprintf(tr("Each point is a product. The horizontal axis is historical unit price; the vertical axis is %s. Colour shows nutrition grade."), spec$label)
+  })
   zoom <- reactiveVal(NULL)
   visible_data <- reactive({
     d <- plot_data(); z <- zoom(); if (is.null(z)) return(d)
@@ -159,13 +171,13 @@ server <- function(input, output, session) {
   guidance <- reactive(decision_guidance(filtered(), if (is.null(input$audience)) "consumer" else input$audience))
   output$decision_value <- renderUI({
     g <- guidance(); div(class = "decision-guide", div(class = "eyebrow", tr("FROM THE NUMBER TO A DECISION")),
-      h3(g$title), p(g$meaning), p(strong(tr("Next action: ")), g$action), tags$details(tags$summary(tr("What to verify before acting")), p(g$next_data)))
+      h3(g$title), p(g$meaning), p(g$action), tags$details(tags$summary(tr("Price dates and next checks")), p(g$next_data)))
   })
   output$audience_action <- renderUI({
     g <- guidance(); tagList(div(class = "insight-divider"), div(class = "insight-kicker", if (is.null(input$audience) || input$audience == "consumer") tr("FOR YOUR SHOPPING DECISION") else tr("FOR YOUR PRODUCT BENCHMARK")), p(g$action))
   })
   output$chart_explanation <- renderUI({
-    e <- explanation(); tagList(div(class = "insight-kicker", tr("LIVE INTERPRETATION")), h4(e$title),
+    e <- explanation(); tagList(div(class = "insight-kicker", tr("FINDING IN THIS SELECTION")), h4(e$title),
       if (is.finite(e$rho) && (is.null(input$question) || input$question == "pattern")) div(class = "big-rho", sprintf("ρ = %+.3f", e$rho)),
       p(e$body), div(class = "insight-divider"), p(class = "sample-note", e$note),
       if (!is.null(zoom())) p(class = "sample-note", tr("The chart is zoomed. This interpretation still uses the full filtered shortlist.")))
@@ -175,13 +187,18 @@ server <- function(input, output, session) {
     sprintf(tr("Plotted: %d / %d matching products. %d missing this plotted measure. %s"), nrow(plot_data()), nrow(filtered()), nrow(filtered()) - nrow(plot_data()), if (metric() == "environment_grade") tr("Unknown environmental grades use their own row.") else tr("Missing numerical values remain in the shortlist."))
   })
   output$category_story <- renderUI({
-    d <- category_data(); e <- explain_view(d, "environment_grade")
-    p(sprintf(tr("%s: %d products. %s"), tr(category_names[[input$category]]), nrow(d), if (abs(e$rho) < .1) tr("Price has little rank association with environmental scores here. Compare the actual product attributes.") else tr("Price and environmental scores move together to some extent, with individual exceptions worth inspecting.")))
+    p(tr("Start with the price range in this category. Then examine how price relates to each score in the separate result below."))
+  })
+  output$category_findings <- renderUI({
+    d <- category_data()
+    tagList(h4(tr("Does a higher price accompany better scores?")), p(category_finding(d)),
+      if (input$category == "dark_chocolates") p(tr("Chocolate also shows a composition trade-off. Open Explore and compare sugar with saturated fat.")))
   })
   output$overview_takeaway <- renderUI({
-    d <- category_data(); e <- explain_view(d, "nutri_score")
-    tagList(div(class = "insight-kicker", tr("NUTRITION & PRICE")), h4(e$title), p(e$body), p(class = "sample-note", sprintf(tr("Spearman ρ = %+.3f across %d complete products."), e$rho, view_association(d, "nutri_score")$n)),
-      if (input$category == "dark_chocolates") p(tr("Chocolate is a useful trade-off case: examine sugar and saturated fat side by side.")))
+    d <- category_data(); unit <- as.character(d$target_unit[1])
+    tagList(h4(sprintf(tr("Half of these products cost at most %.2f EUR/%s"), median(d$representative_price), unit)),
+      p(sprintf(tr("The %d products range from %.2f to %.2f EUR/%s in historical unit price. Use this range to choose the budget you want to explore."), nrow(d), min(d$representative_price), max(d$representative_price), unit)),
+      p(tr("Each bar counts products in a price interval. The dashed line marks the category median.")))
   })
   output$distribution_note <- renderText({ d <- category_data(); sprintf(tr("Dashed line = category median, %.2f EUR/%s. The bars count products in each price range."), median(d$representative_price), d$target_unit[1]) })
   output$top_metrics <- renderUI({
