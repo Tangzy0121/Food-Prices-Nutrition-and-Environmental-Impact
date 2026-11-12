@@ -1,0 +1,4029 @@
+{
+  "version": 1,
+  "snapshot": "2026-11-05",
+  "steps": {
+    "price_source": {
+      "id": "price_source",
+      "beforeCount": 337631,
+      "afterCount": 337631,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/00_download_prices.R",
+      "line": 2,
+      "code": "revision <- \"3d4e029340f3a5128f84913ab1ee5197399518c2\"\nsource_url <- paste0(\"https://huggingface.co/datasets/openfoodfacts/open-prices/resolve/\", revision, \"/prices.parquet\")",
+      "metrics": []
+    },
+    "price_hash": {
+      "id": "price_hash",
+      "beforeCount": 337631,
+      "afterCount": 337631,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/00_download_prices.R",
+      "line": 15,
+      "code": "stopifnot(digest::digest(file = price_path, algo = \"sha256\") == price_sha256)",
+      "metrics": []
+    },
+    "barcode_type": {
+      "id": "barcode_type",
+      "beforeCount": 337631,
+      "afterCount": 337631,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 4,
+      "code": "stopifnot(is.character(x$product_code))",
+      "metrics": []
+    },
+    "filter_fr": {
+      "id": "filter_fr",
+      "beforeCount": 337631,
+      "afterCount": 216623,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 33784,
+            "product_code": "8033976484743",
+            "location_osm_address_country_code": "IT",
+            "currency": "EUR",
+            "date": "2024-09-10",
+            "price": 2.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39552,
+            "product_code": "4061464487482",
+            "location_osm_address_country_code": "DE",
+            "currency": "EUR",
+            "date": "2024-10-01",
+            "price": 2.19,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 7,
+      "code": "  france = x$location_osm_address_country_code == \"FR\",",
+      "metrics": []
+    },
+    "filter_eur": {
+      "id": "filter_eur",
+      "beforeCount": 216623,
+      "afterCount": 216458,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 34387,
+            "product_code": "3596710465385",
+            "location_osm_address_country_code": "FR",
+            "currency": null,
+            "date": null,
+            "price": 1.16,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 87509,
+            "product_code": "3023260029694",
+            "location_osm_address_country_code": "FR",
+            "currency": "ADP",
+            "date": "2025-03-08",
+            "price": 1.49,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 8,
+      "code": "  eur = x$currency == \"EUR\",",
+      "metrics": []
+    },
+    "filter_year": {
+      "id": "filter_year",
+      "beforeCount": 216458,
+      "afterCount": 89163,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 3716,
+            "product_code": "3273220180112",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2021-12-28",
+            "price": 1.4,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 23771,
+            "product_code": "3564700213049",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2018-01-29",
+            "price": 1.09,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 9,
+      "code": "  period_2024_2025 = x$date >= as.Date(\"2024-01-01\") & x$date <= as.Date(\"2025-12-31\"),",
+      "metrics": []
+    },
+    "filter_barcode": {
+      "id": "filter_barcode",
+      "beforeCount": 89163,
+      "afterCount": 83143,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 43283,
+            "product_code": null,
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 3.9,
+            "type": "CATEGORY"
+          },
+          {
+            "id": 29746,
+            "product_code": null,
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-07-05",
+            "price": 14.95,
+            "type": "CATEGORY"
+          },
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 10,
+      "code": "  barcode_product = x$type == \"PRODUCT\" & !is.na(x$product_code) & nzchar(trimws(x$product_code)),",
+      "metrics": []
+    },
+    "filter_positive": {
+      "id": "filter_positive",
+      "beforeCount": 83143,
+      "afterCount": 83141,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 122661,
+            "product_code": "3251241025605",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2025-06-28",
+            "price": 0,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 176514,
+            "product_code": "1000000000931",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2025-12-31",
+            "price": 0,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 11,
+      "code": "  positive_price = is.finite(x$price) & x$price > 0",
+      "metrics": []
+    },
+    "rename_prices": {
+      "id": "rename_prices",
+      "beforeCount": 83141,
+      "afterCount": 83141,
+      "before": {
+        "columns": ["id", "product_code", "location_osm_address_country_code", "currency", "date", "price", "type"],
+        "rows": [
+          {
+            "id": 42629,
+            "product_code": "3560070283484",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.25,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 42630,
+            "product_code": "3560070206469",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-28",
+            "price": 1.99,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39637,
+            "product_code": "3123930711758",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-19",
+            "price": 3.6,
+            "type": "PRODUCT"
+          },
+          {
+            "id": 39573,
+            "product_code": "3500390010247",
+            "location_osm_address_country_code": "FR",
+            "currency": "EUR",
+            "date": "2024-10-18",
+            "price": 19.95,
+            "type": "PRODUCT"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["price_id", "code", "date", "year", "price_eur", "currency", "price_is_discounted"],
+        "rows": [
+          {
+            "price_id": "42629",
+            "code": "3560070283484",
+            "date": "2024-10-28",
+            "year": 2024,
+            "price_eur": 1.25,
+            "currency": "EUR",
+            "price_is_discounted": false
+          },
+          {
+            "price_id": "42630",
+            "code": "3560070206469",
+            "date": "2024-10-28",
+            "year": 2024,
+            "price_eur": 1.99,
+            "currency": "EUR",
+            "price_is_discounted": false
+          },
+          {
+            "price_id": "39637",
+            "code": "3123930711758",
+            "date": "2024-10-19",
+            "year": 2024,
+            "price_eur": 3.6,
+            "currency": "EUR",
+            "price_is_discounted": false
+          },
+          {
+            "price_id": "39573",
+            "code": "3500390010247",
+            "date": "2024-10-18",
+            "year": 2024,
+            "price_eur": 19.95,
+            "currency": "EUR",
+            "price_is_discounted": false
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 22,
+      "code": "prices <- selected %>% transmute(\n  price_id = as.character(id), code = product_code, date, year = as.integer(format(date, \"%Y\")),\n  price_eur = price, price_is_discounted, price_without_discount, discount_type,\n  price_per_source = price_per, currency, location_id, city = location_osm_address_city,\n  proof_id, proof_type, receipt_quantity, source,\n  source_created = created, source_updated = updated\n)\n# Different IDs sharing these observed values are potential repeats, not automatically errors.",
+      "metrics": []
+    },
+    "flag_repeats": {
+      "id": "flag_repeats",
+      "beforeCount": 83141,
+      "afterCount": 83141,
+      "before": {
+        "columns": ["price_id", "code", "date", "price_eur"],
+        "rows": [
+          {
+            "price_id": "42629",
+            "code": "3560070283484",
+            "date": "2024-10-28",
+            "price_eur": 1.25
+          },
+          {
+            "price_id": "42630",
+            "code": "3560070206469",
+            "date": "2024-10-28",
+            "price_eur": 1.99
+          },
+          {
+            "price_id": "39637",
+            "code": "3123930711758",
+            "date": "2024-10-19",
+            "price_eur": 3.6
+          },
+          {
+            "price_id": "39573",
+            "code": "3500390010247",
+            "date": "2024-10-18",
+            "price_eur": 19.95
+          }
+        ]
+      },
+      "after": {
+        "columns": ["price_id", "code", "price_eur", "potential_duplicate_n", "potential_duplicate"],
+        "rows": [
+          {
+            "price_id": "42629",
+            "code": "3560070283484",
+            "price_eur": 1.25,
+            "potential_duplicate_n": 1,
+            "potential_duplicate": false
+          },
+          {
+            "price_id": "42630",
+            "code": "3560070206469",
+            "price_eur": 1.99,
+            "potential_duplicate_n": 1,
+            "potential_duplicate": false
+          },
+          {
+            "price_id": "39637",
+            "code": "3123930711758",
+            "price_eur": 3.6,
+            "potential_duplicate_n": 1,
+            "potential_duplicate": false
+          },
+          {
+            "price_id": "39573",
+            "code": "3500390010247",
+            "price_eur": 19.95,
+            "potential_duplicate_n": 1,
+            "potential_duplicate": false
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 30,
+      "code": "prices <- prices %>% group_by(code, date, location_id, price_eur, price_is_discounted, price_per_source) %>%\n  mutate(potential_duplicate_n = n(), potential_duplicate = n() > 1L) %>% ungroup()",
+      "metrics": {
+        "marked": 3890
+      }
+    },
+    "price_universe": {
+      "id": "price_universe",
+      "beforeCount": 83141,
+      "afterCount": 44789,
+      "before": {
+        "columns": ["code", "date", "price_eur"],
+        "rows": [
+          {
+            "code": "3560070283484",
+            "date": "2024-10-28",
+            "price_eur": 1.25
+          },
+          {
+            "code": "3560070206469",
+            "date": "2024-10-28",
+            "price_eur": 1.99
+          },
+          {
+            "code": "3123930711758",
+            "date": "2024-10-19",
+            "price_eur": 3.6
+          },
+          {
+            "code": "3500390010247",
+            "date": "2024-10-18",
+            "price_eur": 19.95
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "n_prices", "n_regular", "n_discounted"],
+        "rows": [
+          {
+            "code": "00000000",
+            "n_prices": "1",
+            "n_regular": "1",
+            "n_discounted": "0"
+          },
+          {
+            "code": "00000864",
+            "n_prices": "1",
+            "n_regular": "1",
+            "n_discounted": "0"
+          },
+          {
+            "code": "0000146750115",
+            "n_prices": "1",
+            "n_regular": "1",
+            "n_discounted": "0"
+          },
+          {
+            "code": "00001502",
+            "n_prices": "1",
+            "n_regular": "1",
+            "n_discounted": "0"
+          }
+        ]
+      },
+      "source": "R/01_import_prices.R",
+      "line": 33,
+      "code": "codes <- prices %>% group_by(code) %>% summarise(\n  n_prices = n(), n_regular = sum(!is.na(price_is_discounted) & !price_is_discounted),\n  n_discounted = sum(price_is_discounted, na.rm = TRUE), n_stores = n_distinct(location_id, na.rm = TRUE),\n  first_price_date = min(date), last_price_date = max(date), .groups = \"drop\") %>% arrange(code)\nreadr::write_csv(codes, \"data/processed/product_universe.csv\")",
+      "metrics": []
+    },
+    "catalog_source": {
+      "id": "catalog_source",
+      "beforeCount": 8337,
+      "afterCount": 8337,
+      "before": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 15,
+      "code": "    r <- formal_request(\"https://prices.openfoodfacts.org/api/v1/products\", list(categories_tags__contains = rule$tag,\n      price_count__gte = 1L, source = \"off\", size = 100L, page = page, order_by = \"code\"), path)",
+      "metrics": []
+    },
+    "catalog_distinct": {
+      "id": "catalog_distinct",
+      "beforeCount": 8337,
+      "afterCount": 8337,
+      "before": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 31,
+      "code": "    source_last_synced = scalar_chr(x$source_last_synced)))) %>% distinct(code, .keep_all = TRUE)",
+      "metrics": []
+    },
+    "catalog_units": {
+      "id": "catalog_units",
+      "beforeCount": 8337,
+      "afterCount": 8337,
+      "before": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "quantity_source", "quantity_unit_source", "quantity_base", "unit_basis"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_base": "0.12",
+            "unit_basis": "kg"
+          },
+          {
+            "code": "3329489030023",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_base": "0.15",
+            "unit_basis": "kg"
+          },
+          {
+            "code": "3329489030047",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_base": "0.3",
+            "unit_basis": "kg"
+          },
+          {
+            "code": "3347430000338",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_base": "0.2",
+            "unit_basis": "kg"
+          }
+        ]
+      },
+      "source": "R/quantity_helpers.R",
+      "line": 3,
+      "code": "  factors <- c(g = .001, kg = 1, ml = .001, cl = .01, dl = .1, l = 1)\n  kind <- c(g = \"kg\", kg = \"kg\", ml = \"L\", cl = \"L\", dl = \"L\", l = \"L\")\n  unit <- tolower(trimws(as.character(unit)))\n  quantity <- suppressWarnings(as.numeric(quantity))\n  base <- if (!is.na(unit) && unit %in% names(factors) && is.finite(quantity) && quantity > 0) quantity * factors[[unit]] else NA_real_\n  basis <- if (!is.na(base)) kind[[unit]] else NA_character_",
+      "metrics": []
+    },
+    "catalog_text": {
+      "id": "catalog_text",
+      "beforeCount": 8337,
+      "afterCount": 8337,
+      "before": {
+        "columns": ["code", "category", "quantity_source", "quantity_unit_source", "quantity_text"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "quantity_source": "120",
+            "quantity_unit_source": "g",
+            "quantity_text": "120 g"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "quantity_source": "150",
+            "quantity_unit_source": "g",
+            "quantity_text": "150 g"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits",
+            "quantity_source": "300",
+            "quantity_unit_source": "g",
+            "quantity_text": null
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "quantity_source": "200",
+            "quantity_unit_source": "g",
+            "quantity_text": "200g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "quantity_text", "quantity_status", "is_multipack", "quantity_usable"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "quantity_text": "120 g",
+            "quantity_status": "confirmed",
+            "is_multipack": "FALSE",
+            "quantity_usable": "TRUE"
+          },
+          {
+            "code": "3329489030023",
+            "quantity_text": "150 g",
+            "quantity_status": "confirmed",
+            "is_multipack": "FALSE",
+            "quantity_usable": "TRUE"
+          },
+          {
+            "code": "3329489030047",
+            "quantity_text": null,
+            "quantity_status": "structured_only",
+            "is_multipack": "FALSE",
+            "quantity_usable": "TRUE"
+          },
+          {
+            "code": "3347430000338",
+            "quantity_text": "200g",
+            "quantity_status": "confirmed",
+            "is_multipack": "FALSE",
+            "quantity_usable": "TRUE"
+          }
+        ]
+      },
+      "source": "R/quantity_helpers.R",
+      "line": 12,
+      "code": "  simple <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)$\"))\n  multi <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*[x\\u00d7*]\\\\s*\", number, \"\\\\s*(kg|g|ml|cl|dl|l)$\"))\n  reverse <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*[x\\u00d7*]\\\\s*\", number, \"$\"))\n  outer <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*\\\\(\\\\s*\", number, \"\\\\s*[x\\u00d7*]\\\\s*\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*\\\\)$\"))\n  text_conflict <- FALSE",
+      "metrics": []
+    },
+    "catalog_join": {
+      "id": "catalog_join",
+      "beforeCount": 8337,
+      "afterCount": 8337,
+      "before": {
+        "columns": ["code", "category"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits"
+          },
+          {
+            "code": "3329489030047",
+            "category": "biscuits"
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "n_prices", "n_regular", "in_price_universe"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "n_prices": null,
+            "n_regular": null,
+            "in_price_universe": "FALSE"
+          },
+          {
+            "code": "3329489030023",
+            "n_prices": null,
+            "n_regular": null,
+            "in_price_universe": "FALSE"
+          },
+          {
+            "code": "3329489030047",
+            "n_prices": null,
+            "n_regular": null,
+            "in_price_universe": "FALSE"
+          },
+          {
+            "code": "3347430000338",
+            "n_prices": "2",
+            "n_regular": "2",
+            "in_price_universe": "TRUE"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 33,
+      "code": "  df <- bind_cols(df, q) %>% left_join(universe, by = \"code\") %>% mutate(\n    in_price_universe = !is.na(n_prices), has_regular_quote = coalesce(n_regular > 0, FALSE),\n    correct_unit = quantity_usable & unit_basis == target_unit,\n    eligible = in_price_universe & has_regular_quote & coalesce(correct_unit, FALSE))",
+      "metrics": []
+    },
+    "catalog_match": {
+      "id": "catalog_match",
+      "beforeCount": 8337,
+      "afterCount": 3328,
+      "before": {
+        "columns": ["code", "category", "in_price_universe"],
+        "rows": [
+          {
+            "code": "3288131500201",
+            "category": "biscuits",
+            "in_price_universe": "FALSE"
+          },
+          {
+            "code": "3329489030023",
+            "category": "biscuits",
+            "in_price_universe": "FALSE"
+          },
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category", "in_price_universe"],
+        "rows": [
+          {
+            "code": "3347430000338",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          },
+          {
+            "code": "3347430013406",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          },
+          {
+            "code": "3347437054419",
+            "category": "biscuits",
+            "in_price_universe": "TRUE"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 36,
+      "code": "    eligible = in_price_universe & has_regular_quote & coalesce(correct_unit, FALSE))",
+      "metrics": []
+    },
+    "catalog_regular": {
+      "id": "catalog_regular",
+      "beforeCount": 3328,
+      "afterCount": 3303,
+      "before": {
+        "columns": ["code", "n_regular", "has_regular_quote"],
+        "rows": [
+          {
+            "code": "20272760",
+            "n_regular": "0",
+            "has_regular_quote": "FALSE"
+          },
+          {
+            "code": "3254560033467",
+            "n_regular": "0",
+            "has_regular_quote": "FALSE"
+          },
+          {
+            "code": "3347430000338",
+            "n_regular": "2",
+            "has_regular_quote": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "n_regular": "2",
+            "has_regular_quote": "TRUE"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "n_regular", "has_regular_quote"],
+        "rows": [
+          {
+            "code": "3347430000338",
+            "n_regular": "2",
+            "has_regular_quote": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "n_regular": "2",
+            "has_regular_quote": "TRUE"
+          },
+          {
+            "code": "3347430013406",
+            "n_regular": "3",
+            "has_regular_quote": "TRUE"
+          },
+          {
+            "code": "3347437054419",
+            "n_regular": "1",
+            "has_regular_quote": "TRUE"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 34,
+      "code": "    in_price_universe = !is.na(n_prices), has_regular_quote = coalesce(n_regular > 0, FALSE),",
+      "metrics": []
+    },
+    "catalog_quantity": {
+      "id": "catalog_quantity",
+      "beforeCount": 3303,
+      "afterCount": 3002,
+      "before": {
+        "columns": ["code", "quantity_base", "unit_basis", "target_unit", "correct_unit"],
+        "rows": [
+          {
+            "code": "3017760819121",
+            "quantity_base": "0.25",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "FALSE"
+          },
+          {
+            "code": "3472860001058",
+            "quantity_base": "0.125",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "FALSE"
+          },
+          {
+            "code": "3347430000338",
+            "quantity_base": "0.2",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "quantity_base": "0.2",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "quantity_base", "unit_basis", "target_unit", "correct_unit"],
+        "rows": [
+          {
+            "code": "3347430000338",
+            "quantity_base": "0.2",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          },
+          {
+            "code": "3347430006309",
+            "quantity_base": "0.2",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          },
+          {
+            "code": "3347430013406",
+            "quantity_base": "0.135",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          },
+          {
+            "code": "3347437054419",
+            "quantity_base": "0.23",
+            "unit_basis": "kg",
+            "target_unit": "kg",
+            "correct_unit": "TRUE"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 35,
+      "code": "    correct_unit = quantity_usable & unit_basis == target_unit,\n    eligible = in_price_universe & has_regular_quote & coalesce(correct_unit, FALSE))",
+      "metrics": []
+    },
+    "sample_sort": {
+      "id": "sample_sort",
+      "beforeCount": 3002,
+      "afterCount": 3002,
+      "before": {
+        "columns": ["code", "category"],
+        "rows": [
+          {
+            "code": "3347430000338",
+            "category": "biscuits"
+          },
+          {
+            "code": "3347430006309",
+            "category": "biscuits"
+          },
+          {
+            "code": "3347430013406",
+            "category": "biscuits"
+          },
+          {
+            "code": "3347437054419",
+            "category": "biscuits"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category"],
+        "rows": [
+          {
+            "code": "0034000151271",
+            "category": "biscuits"
+          },
+          {
+            "code": "0034000430956",
+            "category": "biscuits"
+          },
+          {
+            "code": "0039047001442",
+            "category": "biscuits"
+          },
+          {
+            "code": "0039047010659",
+            "category": "biscuits"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 43,
+      "code": "  x <- catalog %>% filter(category == rules$category[k], eligible) %>% arrange(code)",
+      "metrics": []
+    },
+    "sample_select": {
+      "id": "sample_select",
+      "beforeCount": 3002,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "category"],
+        "rows": [
+          {
+            "code": "0034000151271",
+            "category": "biscuits"
+          },
+          {
+            "code": "0034000430956",
+            "category": "biscuits"
+          },
+          {
+            "code": "0039047001442",
+            "category": "biscuits"
+          },
+          {
+            "code": "0039047010659",
+            "category": "biscuits"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category", "sampling_order"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category": "biscuits",
+            "sampling_order": "1"
+          },
+          {
+            "code": "3350031923081",
+            "category": "biscuits",
+            "sampling_order": "2"
+          },
+          {
+            "code": "3175681072916",
+            "category": "biscuits",
+            "sampling_order": "3"
+          },
+          {
+            "code": "5902379012125",
+            "category": "biscuits",
+            "sampling_order": "4"
+          }
+        ]
+      },
+      "source": "R/05_select_formal_sample.R",
+      "line": 45,
+      "code": "  selected <- x[sample.int(nrow(x), min(nrow(x), rules$target_n[k])), ]\n  selected %>% mutate(sampling_order = row_number())",
+      "metrics": {
+        "seed": 20261102
+      }
+    },
+    "fetch_batch": {
+      "id": "fetch_batch",
+      "beforeCount": 600,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "category"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category": "biscuits"
+          },
+          {
+            "code": "3350031923081",
+            "category": "biscuits"
+          },
+          {
+            "code": "3175681072916",
+            "category": "biscuits"
+          },
+          {
+            "code": "5902379012125",
+            "category": "biscuits"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "match_status"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "match_status": "matched"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "match_status": "matched"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "match_status": "matched"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "match_status": "matched"
+          }
+        ]
+      },
+      "source": "R/06_acquire_formal_products.R",
+      "line": 15,
+      "code": "  r <- formal_request(\"https://world.openfoodfacts.org/cgi/search.pl\", list(action = \"process\", json = 1L,\n    code = paste(codes, collapse = \",\"), fields = fields, page_size = 100L, page = 1L), path, service = \"off_search\", post = TRUE)",
+      "metrics": []
+    },
+    "fetch_confirm": {
+      "id": "fetch_confirm",
+      "beforeCount": 598,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "product_name", "match_status"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "match_status": "matched"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "match_status": "matched"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "match_status": "matched"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "match_status": "matched"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "match_status"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "match_status": "matched"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "match_status": "matched"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "match_status": "matched"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "match_status": "matched"
+          }
+        ]
+      },
+      "source": "R/06_acquire_formal_products.R",
+      "line": 27,
+      "code": "for (cd in statuses$code[statuses$status != \"ok\"]) {\n  if (Sys.time() > deadline) stop(\"Formal missing-product confirmation reached deadline\")\n  path <- file.path(formal_root, \"products\", paste0(\"confirm_\", cd, \".json\"))\n  r <- formal_request(paste0(\"https://world.openfoodfacts.org/api/v3.2/product/\", cd, \".json\"), list(fields = paste(fields, \"environmental_score_data,environmental_score_grade,environmental_score_score\", sep = \",\")), path, service = \"off_product\")\n  ok <- r$http_status == 200L && !is.null(r$body$product) && scalar_chr(r$body$product$code) == cd\n  statuses$status[statuses$code == cd] <- if (isTRUE(ok)) \"ok_confirmed\" else \"not_found_confirmed\"\n  statuses$source_file[statuses$code == cd] <- path",
+      "metrics": []
+    },
+    "extract_fields": {
+      "id": "extract_fields",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "product_name", "quantity_text"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "quantity_text": "150g"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "quantity_text": "125 g"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "quantity_text": "200g"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "quantity_text": "96 g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "category", "retrieved_at_utc", "quantity_text"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "category": "biscuits",
+            "retrieved_at_utc": "2026-11-02T01:18:49Z",
+            "quantity_text": "150g"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "category": "biscuits",
+            "retrieved_at_utc": "2026-11-02T01:18:49Z",
+            "quantity_text": "125 g"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "category": "biscuits",
+            "retrieved_at_utc": "2026-11-02T01:18:49Z",
+            "quantity_text": "200g"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "category": "biscuits",
+            "retrieved_at_utc": "2026-11-02T01:18:49Z",
+            "quantity_text": "96 g"
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 32,
+      "code": "  row <- tibble(code = s$code, category = s$category, category_tag = s$category_tag, target_unit = s$target_unit,\n    sampling_order = s$sampling_order, product_name = scalar_chr(p$product_name), catalog_name = s$catalog_name,\n    brands = scalar_chr(p$brands), match_status = if (is.null(record)) \"not_found_confirmed\" else \"matched\",\n    categories_json = json_array(p$categories_tags), category_confirmed = s$category_tag %in% tags,\n    quantity_text = scalar_chr(p$quantity), quantity_source = scalar_chr(p$product_quantity), quantity_unit_source = scalar_chr(p$product_quantity_unit),\n    obsolete = isTRUE(as.logical(p$obsolete)), schema_version = scalar_num(p$schema_version),\n    last_modified_t = scalar_num(p$last_modified_t), last_updated_t = scalar_num(p$last_updated_t),",
+      "metrics": []
+    },
+    "confirm_category": {
+      "id": "confirm_category",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "category_tag"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category_tag": "en:biscuits"
+          },
+          {
+            "code": "3350031923081",
+            "category_tag": "en:biscuits"
+          },
+          {
+            "code": "3175681072916",
+            "category_tag": "en:biscuits"
+          },
+          {
+            "code": "5902379012125",
+            "category_tag": "en:biscuits"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category_tag", "category_confirmed"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category_tag": "en:biscuits",
+            "category_confirmed": true
+          },
+          {
+            "code": "3350031923081",
+            "category_tag": "en:biscuits",
+            "category_confirmed": true
+          },
+          {
+            "code": "3175681072916",
+            "category_tag": "en:biscuits",
+            "category_confirmed": true
+          },
+          {
+            "code": "5902379012125",
+            "category_tag": "en:biscuits",
+            "category_confirmed": true
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 35,
+      "code": "    categories_json = json_array(p$categories_tags), category_confirmed = s$category_tag %in% tags,",
+      "metrics": {
+        "confirmed": 600
+      }
+    },
+    "flag_obsolete": {
+      "id": "flag_obsolete",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "product_name"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": ""
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "obsolete"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "obsolete": false
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "obsolete": false
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "obsolete": false
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "obsolete": false
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 37,
+      "code": "    obsolete = isTRUE(as.logical(p$obsolete)), schema_version = scalar_num(p$schema_version),",
+      "metrics": {
+        "obsolete": 0
+      }
+    },
+    "package_units": {
+      "id": "package_units",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "quantity_source", "quantity_unit_source"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "quantity_source": "110",
+            "quantity_unit_source": "g"
+          },
+          {
+            "code": "20022464",
+            "quantity_source": null,
+            "quantity_unit_source": null
+          },
+          {
+            "code": "3350031923081",
+            "quantity_source": "125",
+            "quantity_unit_source": "g"
+          },
+          {
+            "code": "8410376055856",
+            "quantity_source": "150",
+            "quantity_unit_source": "g"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "quantity_source", "quantity_base", "unit_basis"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "quantity_source": "110",
+            "quantity_base": 0.11,
+            "unit_basis": "kg"
+          },
+          {
+            "code": "20022464",
+            "quantity_source": null,
+            "quantity_base": null,
+            "unit_basis": null
+          },
+          {
+            "code": "3350031923081",
+            "quantity_source": "125",
+            "quantity_base": 0.125,
+            "unit_basis": "kg"
+          },
+          {
+            "code": "8410376055856",
+            "quantity_source": "150",
+            "quantity_base": 0.15,
+            "unit_basis": "kg"
+          }
+        ]
+      },
+      "source": "R/quantity_helpers.R",
+      "line": 3,
+      "code": "  factors <- c(g = .001, kg = 1, ml = .001, cl = .01, dl = .1, l = 1)\n  kind <- c(g = \"kg\", kg = \"kg\", ml = \"L\", cl = \"L\", dl = \"L\", l = \"L\")\n  unit <- tolower(trimws(as.character(unit)))\n  quantity <- suppressWarnings(as.numeric(quantity))\n  base <- if (!is.na(unit) && unit %in% names(factors) && is.finite(quantity) && quantity > 0) quantity * factors[[unit]] else NA_real_\n  basis <- if (!is.na(base)) kind[[unit]] else NA_character_",
+      "metrics": []
+    },
+    "package_text": {
+      "id": "package_text",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "quantity_text", "quantity_source"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "quantity_text": "110 g X 2",
+            "quantity_source": "110"
+          },
+          {
+            "code": "20022464",
+            "quantity_text": "g",
+            "quantity_source": null
+          },
+          {
+            "code": "3350031923081",
+            "quantity_text": "125 g",
+            "quantity_source": "125"
+          },
+          {
+            "code": "8410376055856",
+            "quantity_text": "150g",
+            "quantity_source": "150"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "normalized_text", "parsed_text_quantity", "parsed_text_unit", "is_multipack"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "normalized_text": "110 g x 2",
+            "parsed_text_quantity": 0.22,
+            "parsed_text_unit": "kg",
+            "is_multipack": true
+          },
+          {
+            "code": "20022464",
+            "normalized_text": "g",
+            "parsed_text_quantity": null,
+            "parsed_text_unit": null,
+            "is_multipack": false
+          },
+          {
+            "code": "3350031923081",
+            "normalized_text": "125 g",
+            "parsed_text_quantity": 0.125,
+            "parsed_text_unit": "kg",
+            "is_multipack": false
+          },
+          {
+            "code": "8410376055856",
+            "normalized_text": "150g",
+            "parsed_text_quantity": 0.15,
+            "parsed_text_unit": "kg",
+            "is_multipack": false
+          }
+        ]
+      },
+      "source": "R/quantity_helpers.R",
+      "line": 12,
+      "code": "  simple <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)$\"))\n  multi <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*[x\\u00d7*]\\\\s*\", number, \"\\\\s*(kg|g|ml|cl|dl|l)$\"))\n  reverse <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*[x\\u00d7*]\\\\s*\", number, \"$\"))\n  outer <- stringr::str_match(txt, paste0(\"^\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*\\\\(\\\\s*\", number, \"\\\\s*[x\\u00d7*]\\\\s*\", number, \"\\\\s*(kg|g|ml|cl|dl|l)\\\\s*\\\\)$\"))\n  text_conflict <- FALSE",
+      "metrics": []
+    },
+    "package_check": {
+      "id": "package_check",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "structured_quantity_base", "parsed_text_quantity", "parsed_text_unit"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "structured_quantity_base": 0.11,
+            "parsed_text_quantity": 0.22,
+            "parsed_text_unit": "kg"
+          },
+          {
+            "code": "20022464",
+            "structured_quantity_base": null,
+            "parsed_text_quantity": null,
+            "parsed_text_unit": null
+          },
+          {
+            "code": "3350031923081",
+            "structured_quantity_base": 0.125,
+            "parsed_text_quantity": 0.125,
+            "parsed_text_unit": "kg"
+          },
+          {
+            "code": "8410376055856",
+            "structured_quantity_base": 0.15,
+            "parsed_text_quantity": 0.15,
+            "parsed_text_unit": "kg"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "quantity_status", "quantity_usable", "comparable_quantity"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "quantity_status": "conflict",
+            "quantity_usable": false,
+            "comparable_quantity": false
+          },
+          {
+            "code": "20022464",
+            "quantity_status": "missing_or_unsupported",
+            "quantity_usable": false,
+            "comparable_quantity": false
+          },
+          {
+            "code": "3350031923081",
+            "quantity_status": "confirmed",
+            "quantity_usable": true,
+            "comparable_quantity": true
+          },
+          {
+            "code": "8410376055856",
+            "quantity_status": "confirmed",
+            "quantity_usable": true,
+            "comparable_quantity": true
+          }
+        ]
+      },
+      "source": "R/quantity_helpers.R",
+      "line": 27,
+      "code": "  status <- if (is.na(base)) \"missing_or_unsupported\" else \"structured_only\"\n  if (is.finite(parsed) && parsed > 0) {\n    if (is.na(base)) { base <- parsed; basis <- parsed_basis; status <- \"text_derived\" }\n    else status <- if (basis == parsed_basis && abs(base - parsed) <= max(.00001, parsed * .02)) \"confirmed\" else \"conflict\"\n  } else if (multipack) status <- \"multipack_unresolved\"\n  if (text_conflict) status <- \"conflict\"\n  tibble::tibble(quantity_base = as.numeric(base), unit_basis = basis, quantity_status = status,\n    is_multipack = multipack, quantity_usable = is.finite(base) && base > 0 && !status %in% c(\"conflict\", \"multipack_unresolved\"))",
+      "metrics": {
+        "unusable": 2
+      }
+    },
+    "nutri_2023": {
+      "id": "nutri_2023",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "nutri_grade_source", "nutriscore_version_source", "nutri_grade_2021"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "nutri_grade_source": "d",
+            "nutriscore_version_source": "2023",
+            "nutri_grade_2021": "c"
+          },
+          {
+            "code": "3350031923081",
+            "nutri_grade_source": "e",
+            "nutriscore_version_source": "2023",
+            "nutri_grade_2021": "e"
+          },
+          {
+            "code": "3175681072916",
+            "nutri_grade_source": "b",
+            "nutriscore_version_source": "2023",
+            "nutri_grade_2021": "b"
+          },
+          {
+            "code": "5902379012125",
+            "nutri_grade_source": "e",
+            "nutriscore_version_source": "2023",
+            "nutri_grade_2021": "e"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "nutri_grade_2023_reported", "nutriscore_algorithm_version"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "nutri_grade_2023_reported": "d",
+            "nutriscore_algorithm_version": "2023"
+          },
+          {
+            "code": "3350031923081",
+            "nutri_grade_2023_reported": "e",
+            "nutriscore_algorithm_version": "2023"
+          },
+          {
+            "code": "3175681072916",
+            "nutri_grade_2023_reported": "b",
+            "nutriscore_algorithm_version": "2023"
+          },
+          {
+            "code": "5902379012125",
+            "nutri_grade_2023_reported": "e",
+            "nutriscore_algorithm_version": "2023"
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 21,
+      "code": "  n23 <- p$nutriscore[[\"2023\"]]; n21 <- p$nutriscore[[\"2021\"]]\n  grade23 <- valid_grade(n23$grade)\n  if (is.na(grade23) && identical(source_version, \"2023\")) grade23 <- source_grade\n  score23 <- scalar_num(n23$score)\n  if (is.na(score23) && identical(source_version, \"2023\")) score23 <- scalar_num(p$nutriscore_score)\n  grade23_reported <- grade23\n  preparation23 <- scalar_chr(n23$preparation)",
+      "metrics": []
+    },
+    "nutri_preparation": {
+      "id": "nutri_preparation",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "nutri_grade_2023_reported", "nutriscore_2023_preparation"],
+        "rows": [
+          {
+            "code": "3596710404179",
+            "nutri_grade_2023_reported": "c",
+            "nutriscore_2023_preparation": "prepared"
+          },
+          {
+            "code": "3178530416541",
+            "nutri_grade_2023_reported": "e",
+            "nutriscore_2023_preparation": "prepared"
+          },
+          {
+            "code": "5010477348593",
+            "nutri_grade_2023_reported": "d",
+            "nutriscore_2023_preparation": "prepared"
+          },
+          {
+            "code": "3270190111108",
+            "nutri_grade_2023_reported": "c",
+            "nutriscore_2023_preparation": "prepared"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "nutriscore_2023_preparation", "nutri_grade", "nutri_score"],
+        "rows": [
+          {
+            "code": "3596710404179",
+            "nutriscore_2023_preparation": "prepared",
+            "nutri_grade": null,
+            "nutri_score": null
+          },
+          {
+            "code": "3178530416541",
+            "nutriscore_2023_preparation": "prepared",
+            "nutri_grade": null,
+            "nutri_score": null
+          },
+          {
+            "code": "5010477348593",
+            "nutriscore_2023_preparation": "prepared",
+            "nutri_grade": null,
+            "nutri_score": null
+          },
+          {
+            "code": "3270190111108",
+            "nutriscore_2023_preparation": "prepared",
+            "nutri_grade": null,
+            "nutri_score": null
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 28,
+      "code": "  if (!is.na(preparation23) && preparation23 != \"as_sold\") { grade23 <- NA_character_; score23 <- NA_real_ }",
+      "metrics": {
+        "prepared": 6
+      }
+    },
+    "nutrients": {
+      "id": "nutrients",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "sugars_100g_reported", "sugars_unit_source", "fiber_100g_reported"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "sugars_100g_reported": 0.5,
+            "sugars_unit_source": "g",
+            "fiber_100g_reported": 4
+          },
+          {
+            "code": "3350031923081",
+            "sugars_100g_reported": 30,
+            "sugars_unit_source": "g",
+            "fiber_100g_reported": 2
+          },
+          {
+            "code": "3175681072916",
+            "sugars_100g_reported": 14,
+            "sugars_unit_source": "g",
+            "fiber_100g_reported": 7.6
+          },
+          {
+            "code": "5902379012125",
+            "sugars_100g_reported": 34,
+            "sugars_unit_source": "g",
+            "fiber_100g_reported": 5.9
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "sugars_100g", "sugars_invalid", "fiber_100g", "fiber_invalid"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "sugars_100g": 0.5,
+            "sugars_invalid": false,
+            "fiber_100g": 4,
+            "fiber_invalid": false
+          },
+          {
+            "code": "3350031923081",
+            "sugars_100g": 30,
+            "sugars_invalid": false,
+            "fiber_100g": 2,
+            "fiber_invalid": false
+          },
+          {
+            "code": "3175681072916",
+            "sugars_100g": 14,
+            "sugars_invalid": false,
+            "fiber_100g": 7.6,
+            "fiber_invalid": false
+          },
+          {
+            "code": "5902379012125",
+            "sugars_100g": 34,
+            "sugars_invalid": false,
+            "fiber_100g": 5.9,
+            "fiber_invalid": false
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 55,
+      "code": "  for (nm in nutrients) {\n    alias <- gsub(\"-\", \"_\", nm)\n    value <- scalar_num(p$nutriments[[paste0(nm, \"_100g\")]])\n    unit <- scalar_chr(p$nutriments[[paste0(nm, \"_unit\")]])\n    upper <- if (nm == \"energy-kcal\") 1000 else 100\n    expected_unit <- if (nm == \"energy-kcal\") \"kcal\" else \"g\"\n    valid <- is.finite(value) && value >= 0 && value <= upper && !is.na(unit) && tolower(unit) == tolower(expected_unit) && !isTRUE(row$no_nutrition_data)\n    row[[paste0(alias, \"_100g_reported\")]] <- value\n    row[[paste0(alias, \"_unit_source\")]] <- unit\n    row[[paste0(alias, \"_100g\")]] <- if (valid) value else NA_real_\n    row[[paste0(alias, \"_invalid\")]] <- !is.na(value) && !valid\n  }",
+      "metrics": []
+    },
+    "environment": {
+      "id": "environment",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "environment_field_source", "environment_grade_fr", "environment_grade_global"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "environment_field_source": "ecoscore_*",
+            "environment_grade_fr": "d",
+            "environment_grade_global": "d"
+          },
+          {
+            "code": "3350031923081",
+            "environment_field_source": "ecoscore_*",
+            "environment_grade_fr": "c",
+            "environment_grade_global": "c"
+          },
+          {
+            "code": "3175681072916",
+            "environment_field_source": "ecoscore_*",
+            "environment_grade_fr": "c",
+            "environment_grade_global": "c"
+          },
+          {
+            "code": "5902379012125",
+            "environment_field_source": "ecoscore_*",
+            "environment_grade_fr": "c",
+            "environment_grade_global": "c"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "environment_grade", "environment_grade_source", "environment_score"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "environment_grade": "d",
+            "environment_grade_source": "France",
+            "environment_score": 34
+          },
+          {
+            "code": "3350031923081",
+            "environment_grade": "c",
+            "environment_grade_source": "France",
+            "environment_score": 55
+          },
+          {
+            "code": "3175681072916",
+            "environment_grade": "c",
+            "environment_grade_source": "France",
+            "environment_score": 58
+          },
+          {
+            "code": "5902379012125",
+            "environment_grade": "c",
+            "environment_grade_source": "France",
+            "environment_score": 47
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 48,
+      "code": "    environment_grade = coalesce(env_fr, env_global), environment_grade_source = if (!is.na(env_fr)) \"France\" else if (!is.na(env_global)) \"global_fallback\" else NA_character_,\n    environment_score = if (!is.na(env_fr)) scalar_num(ed$scores$fr) else scalar_num(if (modern_environment) p$environmental_score_score else p$ecoscore_score),\n    environment_status = scalar_chr(ed$status), agribalyse_version = scalar_chr(ag$version),",
+      "metrics": []
+    },
+    "carbon_mapping": {
+      "id": "carbon_mapping",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "agribalyse_version", "co2_total_reported"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "agribalyse_version": "3.2",
+            "co2_total_reported": 6.67
+          },
+          {
+            "code": "3350031923081",
+            "agribalyse_version": "3.2",
+            "co2_total_reported": 3.19
+          },
+          {
+            "code": "3175681072916",
+            "agribalyse_version": "3.2",
+            "co2_total_reported": 3.59
+          },
+          {
+            "code": "5902379012125",
+            "agribalyse_version": "3.2",
+            "co2_total_reported": 3.59
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "agribalyse_food_code", "agribalyse_proxy_food_code", "co2_mapping_available", "co2_total"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "agribalyse_food_code": null,
+            "agribalyse_proxy_food_code": "24036",
+            "co2_mapping_available": true,
+            "co2_total": 6.67
+          },
+          {
+            "code": "3350031923081",
+            "agribalyse_food_code": "24071",
+            "agribalyse_proxy_food_code": null,
+            "co2_mapping_available": true,
+            "co2_total": 3.19
+          },
+          {
+            "code": "3175681072916",
+            "agribalyse_food_code": "24000",
+            "agribalyse_proxy_food_code": null,
+            "co2_mapping_available": true,
+            "co2_total": 3.59
+          },
+          {
+            "code": "5902379012125",
+            "agribalyse_food_code": null,
+            "agribalyse_proxy_food_code": "24000",
+            "co2_mapping_available": true,
+            "co2_total": 3.59
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 71,
+      "code": "  co2_mapping_available = !is.na(agribalyse_version) & (!is.na(agribalyse_food_code) | !is.na(agribalyse_proxy_food_code)),\n  co2_total = ifelse(co2_mapping_available & is.finite(co2_total_reported) & co2_total_reported > 0, co2_total_reported, NA_real_))",
+      "metrics": []
+    },
+    "select_quotes": {
+      "id": "select_quotes",
+      "beforeCount": 83141,
+      "afterCount": 1541,
+      "before": {
+        "columns": ["price_id", "code", "date", "price_eur"],
+        "rows": [
+          {
+            "price_id": "42629",
+            "code": "3560070283484",
+            "date": "2024-10-28",
+            "price_eur": 1.25
+          },
+          {
+            "price_id": "42630",
+            "code": "3560070206469",
+            "date": "2024-10-28",
+            "price_eur": 1.99
+          },
+          {
+            "price_id": "39637",
+            "code": "3123930711758",
+            "date": "2024-10-19",
+            "price_eur": 3.6
+          },
+          {
+            "price_id": "39573",
+            "code": "3500390010247",
+            "date": "2024-10-18",
+            "price_eur": 19.95
+          }
+        ]
+      },
+      "after": {
+        "columns": ["price_id", "code", "date", "price_eur"],
+        "rows": [
+          {
+            "price_id": "26465",
+            "code": "3760091722508",
+            "date": "2024-05-19",
+            "price_eur": 2.89
+          },
+          {
+            "price_id": "93756",
+            "code": "3456300002508",
+            "date": "2025-03-12",
+            "price_eur": 4.75
+          },
+          {
+            "price_id": "1410",
+            "code": "3477730001138",
+            "date": "2024-01-05",
+            "price_eur": 3.99
+          },
+          {
+            "price_id": "27554",
+            "code": "7622210869616",
+            "date": "2024-06-01",
+            "price_eur": 2.82
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 74,
+      "code": "prices <- all_prices %>% filter(code %in% selection$code) %>% left_join(products %>% select(code, category, quantity_base, unit_basis, comparable_quantity, obsolete, category_confirmed), by = \"code\") %>%",
+      "metrics": []
+    },
+    "join_quotes": {
+      "id": "join_quotes",
+      "beforeCount": 1541,
+      "afterCount": 1541,
+      "before": {
+        "columns": ["price_id", "code", "price_eur"],
+        "rows": [
+          {
+            "price_id": "26465",
+            "code": "3760091722508",
+            "price_eur": 2.89
+          },
+          {
+            "price_id": "93756",
+            "code": "3456300002508",
+            "price_eur": 4.75
+          },
+          {
+            "price_id": "1410",
+            "code": "3477730001138",
+            "price_eur": 3.99
+          },
+          {
+            "price_id": "27554",
+            "code": "7622210869616",
+            "price_eur": 2.82
+          }
+        ]
+      },
+      "after": {
+        "columns": ["price_id", "code", "price_eur", "quantity_base", "unit_basis", "comparable_quantity"],
+        "rows": [
+          {
+            "price_id": "26465",
+            "code": "3760091722508",
+            "price_eur": 2.89,
+            "quantity_base": 0.1,
+            "unit_basis": "kg",
+            "comparable_quantity": true
+          },
+          {
+            "price_id": "93756",
+            "code": "3456300002508",
+            "price_eur": 4.75,
+            "quantity_base": 0.5,
+            "unit_basis": "L",
+            "comparable_quantity": true
+          },
+          {
+            "price_id": "1410",
+            "code": "3477730001138",
+            "price_eur": 3.99,
+            "quantity_base": 0.2,
+            "unit_basis": "kg",
+            "comparable_quantity": true
+          },
+          {
+            "price_id": "27554",
+            "code": "7622210869616",
+            "price_eur": 2.82,
+            "quantity_base": 0.09,
+            "unit_basis": "kg",
+            "comparable_quantity": true
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 74,
+      "code": "prices <- all_prices %>% filter(code %in% selection$code) %>% left_join(products %>% select(code, category, quantity_base, unit_basis, comparable_quantity, obsolete, category_confirmed), by = \"code\") %>%",
+      "metrics": []
+    },
+    "unit_prices": {
+      "id": "unit_prices",
+      "beforeCount": 1541,
+      "afterCount": 1541,
+      "before": {
+        "columns": ["code", "price_eur", "quantity_base", "unit_basis"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "price_eur": 2.89,
+            "quantity_base": 0.1,
+            "unit_basis": "kg"
+          },
+          {
+            "code": "3456300002508",
+            "price_eur": 4.75,
+            "quantity_base": 0.5,
+            "unit_basis": "L"
+          },
+          {
+            "code": "3477730001138",
+            "price_eur": 3.99,
+            "quantity_base": 0.2,
+            "unit_basis": "kg"
+          },
+          {
+            "code": "7622210869616",
+            "price_eur": 2.82,
+            "quantity_base": 0.09,
+            "unit_basis": "kg"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "price_eur", "quantity_base", "unit_price_eur"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "price_eur": 2.89,
+            "quantity_base": 0.1,
+            "unit_price_eur": 28.9
+          },
+          {
+            "code": "3456300002508",
+            "price_eur": 4.75,
+            "quantity_base": 0.5,
+            "unit_price_eur": 9.5
+          },
+          {
+            "code": "3477730001138",
+            "price_eur": 3.99,
+            "quantity_base": 0.2,
+            "unit_price_eur": 19.95
+          },
+          {
+            "code": "7622210869616",
+            "price_eur": 2.82,
+            "quantity_base": 0.09,
+            "unit_price_eur": 31.3333333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 75,
+      "code": "  mutate(unit_price_eur = ifelse(comparable_quantity & !obsolete & category_confirmed & (is.na(price_per_source) | price_per_source == \"UNIT\"), price_eur / quantity_base, NA_real_),",
+      "metrics": {
+        "valid": 1538
+      }
+    },
+    "mark_duplicates": {
+      "id": "mark_duplicates",
+      "beforeCount": 1541,
+      "afterCount": 1541,
+      "before": {
+        "columns": ["code", "date", "price_eur"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "date": "2024-05-19",
+            "price_eur": 2.89
+          },
+          {
+            "code": "3456300002508",
+            "date": "2025-03-12",
+            "price_eur": 4.75
+          },
+          {
+            "code": "3477730001138",
+            "date": "2024-01-05",
+            "price_eur": 3.99
+          },
+          {
+            "code": "7622210869616",
+            "date": "2024-06-01",
+            "price_eur": 2.82
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "date", "price_eur", "representative_keep"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "date": "2024-05-19",
+            "price_eur": 2.89,
+            "representative_keep": true
+          },
+          {
+            "code": "3456300002508",
+            "date": "2025-03-12",
+            "price_eur": 4.75,
+            "representative_keep": true
+          },
+          {
+            "code": "3477730001138",
+            "date": "2024-01-05",
+            "price_eur": 3.99,
+            "representative_keep": true
+          },
+          {
+            "code": "7622210869616",
+            "date": "2024-06-01",
+            "price_eur": 2.82,
+            "representative_keep": true
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 76,
+      "code": "    representative_keep = is.na(location_id) | !duplicated(pick(code, date, location_id, price_eur, price_is_discounted, price_per_source)))",
+      "metrics": {
+        "omitted": 32
+      }
+    },
+    "regular_mask": {
+      "id": "regular_mask",
+      "beforeCount": 1541,
+      "afterCount": 1541,
+      "before": {
+        "columns": ["code", "price_is_discounted", "representative_keep", "unit_price_eur"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 28.9
+          },
+          {
+            "code": "3456300002508",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 9.5
+          },
+          {
+            "code": "3477730001138",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 19.95
+          },
+          {
+            "code": "7622210869616",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 31.3333333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "price_is_discounted", "representative_keep", "unit_price_eur", "median_eligible"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 28.9,
+            "median_eligible": true
+          },
+          {
+            "code": "3456300002508",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 9.5,
+            "median_eligible": true
+          },
+          {
+            "code": "3477730001138",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 19.95,
+            "median_eligible": true
+          },
+          {
+            "code": "7622210869616",
+            "price_is_discounted": false,
+            "representative_keep": true,
+            "unit_price_eur": 31.3333333333,
+            "median_eligible": true
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 79,
+      "code": "  n_valid_regular_offers = sum(price_is_discounted %in% FALSE & representative_keep & is.finite(unit_price_eur)),\n  n_stores = n_distinct(location_id, na.rm = TRUE), n_price_years = n_distinct(year), first_price_date = min(date), last_price_date = max(date),",
+      "metrics": {
+        "eligible": 1489
+      }
+    },
+    "aggregate_prices": {
+      "id": "aggregate_prices",
+      "beforeCount": 1541,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "unit_price_eur", "median_eligible"],
+        "rows": [
+          {
+            "code": "3760091722508",
+            "unit_price_eur": 28.9,
+            "median_eligible": true
+          },
+          {
+            "code": "3456300002508",
+            "unit_price_eur": 9.5,
+            "median_eligible": true
+          },
+          {
+            "code": "3477730001138",
+            "unit_price_eur": 19.95,
+            "median_eligible": true
+          },
+          {
+            "code": "7622210869616",
+            "unit_price_eur": 31.3333333333,
+            "median_eligible": true
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "n_prices", "n_valid_regular_offers", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "n_prices": 1,
+            "n_valid_regular_offers": 1,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "n_prices": 2,
+            "n_valid_regular_offers": 2,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "n_prices": 2,
+            "n_valid_regular_offers": 2,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "n_prices": 1,
+            "n_valid_regular_offers": 1,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 77,
+      "code": "price_summary <- function(df, grouping) df %>% group_by(across(all_of(grouping))) %>% summarise(\n  n_prices = n(), n_regular_prices = sum(price_is_discounted %in% FALSE), n_discounted_prices = sum(price_is_discounted %in% TRUE),\n  n_valid_regular_offers = sum(price_is_discounted %in% FALSE & representative_keep & is.finite(unit_price_eur)),\n  n_stores = n_distinct(location_id, na.rm = TRUE), n_price_years = n_distinct(year), first_price_date = min(date), last_price_date = max(date),\n  representative_price = median_or_na(unit_price_eur[price_is_discounted %in% FALSE & representative_keep]),\n  median_with_repeats = median_or_na(unit_price_eur[price_is_discounted %in% FALSE]),\n  median_all_prices = median_or_na(unit_price_eur[representative_keep]), .groups = \"drop\")\nsummary <- price_summary(prices, \"code\")",
+      "metrics": []
+    },
+    "join_products": {
+      "id": "join_products",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "product_name", "nutri_grade", "environment_grade"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "nutri_grade": "d",
+            "environment_grade": "d"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "nutri_grade": "b",
+            "environment_grade": "c"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "representative_price", "nutri_grade", "environment_grade"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          },
+          {
+            "code": "3175681072916",
+            "product_name": "Miel Châtaigne graines de lin",
+            "representative_price": 10.925,
+            "nutri_grade": "b",
+            "environment_grade": "c"
+          },
+          {
+            "code": "5902379012125",
+            "product_name": "",
+            "representative_price": 31.1458333333,
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 85,
+      "code": "products <- products %>% left_join(summary, by = \"code\") %>% mutate(",
+      "metrics": []
+    },
+    "quality_flags": {
+      "id": "quality_flags",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "comparable_quantity", "representative_price"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "comparable_quantity": false,
+            "representative_price": null
+          },
+          {
+            "code": "20022464",
+            "comparable_quantity": false,
+            "representative_price": null
+          },
+          {
+            "code": "3350031923081",
+            "comparable_quantity": true,
+            "representative_price": 7.36
+          },
+          {
+            "code": "8410376055856",
+            "comparable_quantity": true,
+            "representative_price": 13.2666666667
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "in_primary", "exclusion_reason", "joint_grades_price", "carbon_primary"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "in_primary": false,
+            "exclusion_reason": "quantity_conflict",
+            "joint_grades_price": false,
+            "carbon_primary": false
+          },
+          {
+            "code": "20022464",
+            "in_primary": false,
+            "exclusion_reason": "quantity_missing_or_wrong_basis",
+            "joint_grades_price": false,
+            "carbon_primary": false
+          },
+          {
+            "code": "3350031923081",
+            "in_primary": true,
+            "exclusion_reason": "included",
+            "joint_grades_price": true,
+            "carbon_primary": true
+          },
+          {
+            "code": "8410376055856",
+            "in_primary": true,
+            "exclusion_reason": "included",
+            "joint_grades_price": true,
+            "carbon_primary": true
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,\n  has_nutri = !is.na(nutri_grade), has_environment = !is.na(environment_grade), has_carbon = !is.na(co2_total),\n  joint_grades_price = in_primary & has_nutri & has_environment,\n  carbon_primary = in_primary & has_carbon & agribalyse_version == \"3.2\",\n  exclusion_reason = case_when(match_status != \"matched\" ~ \"product_not_found\", obsolete ~ \"obsolete_product\", !category_confirmed ~ \"category_not_confirmed\",\n    quantity_status == \"conflict\" ~ \"quantity_conflict\", quantity_status == \"multipack_unresolved\" ~ \"multipack_unresolved\",\n    !comparable_quantity ~ \"quantity_missing_or_wrong_basis\", !is.finite(representative_price) ~ \"no_valid_regular_price\", TRUE ~ \"included\"))",
+      "metrics": []
+    },
+    "freeze": {
+      "id": "freeze",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "in_primary", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "in_primary": true,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "in_primary": true,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "in_primary": true,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "in_primary": true,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "in_primary", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "in_primary": true,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "in_primary": true,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "in_primary": true,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "in_primary": true,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/08_validate_and_freeze.R",
+      "line": 55,
+      "code": "  saveRDS(p, file.path(freeze_dir, \"selected_products.rds\"))\n  readr::write_csv(p, file.path(freeze_dir, \"selected_products.csv\"), na = \"\")\n  saveRDS(p[p$in_primary, ], file.path(freeze_dir, \"analysis_products.rds\"))\n  readr::write_csv(p[p$in_primary, ], file.path(freeze_dir, \"analysis_products.csv\"), na = \"\")\n  saveRDS(x, file.path(freeze_dir, \"price_observations.rds\"))",
+      "metrics": []
+    },
+    "median_validation": {
+      "id": "median_validation",
+      "beforeCount": 598,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "in_primary", "n_valid_regular_offers", "representative_price"],
+        "rows": [
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 1,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 2,
+            "representative_price": 7.36
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 2,
+            "representative_price": 10.925
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 1,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "in_primary", "n_valid_regular_offers", "representative_price"],
+        "rows": [
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 1,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 2,
+            "representative_price": 7.36
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 2,
+            "representative_price": 10.925
+          },
+          {
+            "code": "",
+            "in_primary": true,
+            "n_valid_regular_offers": 1,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/10_eda.R",
+      "line": 39,
+      "code": "  medians <- prices %>% filter(code %in% p$code, price_is_discounted %in% FALSE, representative_keep,\n    is.finite(unit_price_eur)) %>% group_by(code) %>% summarise(recomputed = median(unit_price_eur), .groups = \"drop\")\n  median_check <- left_join(select(p, code, representative_price), medians, by = \"code\")\n  stopifnot(!anyNA(median_check$recomputed), max(abs(median_check$representative_price - median_check$recomputed)) < 1e-9)\n  source(\"R/09b_restore_environment_grades.R\", encoding = \"UTF-8\")",
+      "metrics": {
+        "checked": 598
+      }
+    },
+    "restore_environment": {
+      "id": "restore_environment",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "environment_grade", "environment_score", "joint_grades_price"],
+        "rows": [
+          {
+            "code": "7622210795373",
+            "environment_grade": null,
+            "environment_score": 12,
+            "joint_grades_price": false
+          },
+          {
+            "code": "3222472772880",
+            "environment_grade": null,
+            "environment_score": -6,
+            "joint_grades_price": false
+          },
+          {
+            "code": "3596710547623",
+            "environment_grade": null,
+            "environment_score": 12,
+            "joint_grades_price": false
+          },
+          {
+            "code": "3250391378074",
+            "environment_grade": null,
+            "environment_score": 2,
+            "joint_grades_price": false
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "environment_grade", "environment_score", "joint_grades_price"],
+        "rows": [
+          {
+            "code": "7622210795373",
+            "environment_grade": "f",
+            "environment_score": 12,
+            "joint_grades_price": true
+          },
+          {
+            "code": "3222472772880",
+            "environment_grade": "f",
+            "environment_score": -6,
+            "joint_grades_price": true
+          },
+          {
+            "code": "3596710547623",
+            "environment_grade": "f",
+            "environment_score": 12,
+            "joint_grades_price": true
+          },
+          {
+            "code": "3250391378074",
+            "environment_grade": "f",
+            "environment_score": 2,
+            "joint_grades_price": true
+          }
+        ]
+      },
+      "source": "R/09b_restore_environment_grades.R",
+      "line": 33,
+      "code": "  updated <- dplyr::left_join(dplyr::select(selected, -dplyr::all_of(fields)), restored, by = \"code\") %>%\n    dplyr::mutate(has_environment = !is.na(environment_grade),\n      joint_grades_price = in_primary & has_nutri & has_environment)",
+      "metrics": {
+        "restored": 16
+      }
+    },
+    "filter_matched": {
+      "id": "filter_matched",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,",
+      "metrics": []
+    },
+    "filter_category": {
+      "id": "filter_category",
+      "beforeCount": 600,
+      "afterCount": 600,
+      "before": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,",
+      "metrics": []
+    },
+    "filter_quantity": {
+      "id": "filter_quantity",
+      "beforeCount": 600,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": false,
+            "obsolete": false,
+            "representative_price": null
+          },
+          {
+            "code": "20022464",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": false,
+            "obsolete": false,
+            "representative_price": null
+          },
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,",
+      "metrics": []
+    },
+    "filter_current": {
+      "id": "filter_current",
+      "beforeCount": 598,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,",
+      "metrics": []
+    },
+    "filter_representative": {
+      "id": "filter_representative",
+      "beforeCount": 598,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "match_status", "category_confirmed", "comparable_quantity", "obsolete", "representative_price"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 13.2666666667
+          },
+          {
+            "code": "3350031923081",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 7.36
+          },
+          {
+            "code": "3175681072916",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 10.925
+          },
+          {
+            "code": "5902379012125",
+            "match_status": "matched",
+            "category_confirmed": true,
+            "comparable_quantity": true,
+            "obsolete": false,
+            "representative_price": 31.1458333333
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 86,
+      "code": "  in_primary = match_status == \"matched\" & category_confirmed & comparable_quantity & !obsolete & is.finite(representative_price) & representative_price > 0,",
+      "metrics": []
+    },
+    "excluded_products": {
+      "id": "excluded_products",
+      "beforeCount": 600,
+      "afterCount": 2,
+      "before": {
+        "columns": ["code", "product_name", "quantity_text", "exclusion_reason"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "product_name": "Résille d'or",
+            "quantity_text": "110 g X 2",
+            "exclusion_reason": "quantity_conflict"
+          },
+          {
+            "code": "20022464",
+            "product_name": "Extra Dark 74% Cocoa",
+            "quantity_text": "g",
+            "exclusion_reason": "quantity_missing_or_wrong_basis"
+          },
+          {
+            "code": "3350031923081",
+            "product_name": "Galettes bretonnes pur beurre",
+            "quantity_text": "125 g",
+            "exclusion_reason": "included"
+          },
+          {
+            "code": "8410376055856",
+            "product_name": "Gullon cookies",
+            "quantity_text": "150g",
+            "exclusion_reason": "included"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "product_name", "quantity_text", "exclusion_reason"],
+        "rows": [
+          {
+            "code": "3017760805087",
+            "product_name": "Résille d'or",
+            "quantity_text": "110 g X 2",
+            "exclusion_reason": "quantity_conflict"
+          },
+          {
+            "code": "20022464",
+            "product_name": "Extra Dark 74% Cocoa",
+            "quantity_text": "g",
+            "exclusion_reason": "quantity_missing_or_wrong_basis"
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 90,
+      "code": "  exclusion_reason = case_when(match_status != \"matched\" ~ \"product_not_found\", obsolete ~ \"obsolete_product\", !category_confirmed ~ \"category_not_confirmed\",\n    quantity_status == \"conflict\" ~ \"quantity_conflict\", quantity_status == \"multipack_unresolved\" ~ \"multipack_unresolved\",\n    !comparable_quantity ~ \"quantity_missing_or_wrong_basis\", !is.finite(representative_price) ~ \"no_valid_regular_price\", TRUE ~ \"included\"))",
+      "metrics": []
+    },
+    "order_grades": {
+      "id": "order_grades",
+      "beforeCount": 598,
+      "afterCount": 598,
+      "before": {
+        "columns": ["code", "category", "nutri_grade", "environment_grade"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category": "biscuits",
+            "nutri_grade": "d",
+            "environment_grade": "d"
+          },
+          {
+            "code": "3350031923081",
+            "category": "biscuits",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          },
+          {
+            "code": "3175681072916",
+            "category": "biscuits",
+            "nutri_grade": "b",
+            "environment_grade": "c"
+          },
+          {
+            "code": "5902379012125",
+            "category": "biscuits",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "category", "nutri_grade", "environment_grade"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "category": "biscuits",
+            "nutri_grade": "d",
+            "environment_grade": "d"
+          },
+          {
+            "code": "3350031923081",
+            "category": "biscuits",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          },
+          {
+            "code": "3175681072916",
+            "category": "biscuits",
+            "nutri_grade": "b",
+            "environment_grade": "c"
+          },
+          {
+            "code": "5902379012125",
+            "category": "biscuits",
+            "nutri_grade": "e",
+            "environment_grade": "c"
+          }
+        ]
+      },
+      "source": "R/10_eda.R",
+      "line": 53,
+      "code": "    nutri_grade = ordered(nutri_grade, levels = letters[1:5]),\n    environment_grade = ordered(environment_grade, levels = env_levels))",
+      "metrics": []
+    },
+    "subset_nutrition": {
+      "id": "subset_nutrition",
+      "beforeCount": 598,
+      "afterCount": 585,
+      "before": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "3596710404179",
+            "representative_price": 8.25,
+            "nutri_grade": null,
+            "environment_grade": "e",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3178530416541",
+            "representative_price": 10.0769230769,
+            "nutri_grade": null,
+            "environment_grade": "a",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3175681072916",
+            "representative_price": 10.925,
+            "nutri_grade": "b",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "5902379012125",
+            "representative_price": 31.1458333333,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "source": "R/10_eda.R",
+      "line": 63,
+      "code": "  coverage <- p %>% group_by(category, category_label) %>% summarise(\n    Price = n(), `Nutri-Score 2023` = sum(!is.na(nutri_grade)), `Environment grade` = sum(!is.na(environment_grade)),\n    `Joint grades and price` = sum(joint_grades_price), Sugars = sum(!is.na(sugars_100g)),\n    Fibre = sum(!is.na(fiber_100g)), `Carbon 3.2` = sum(carbon_primary), .groups = \"drop\") %>%\n    pivot_longer(-c(category, category_label), names_to = \"indicator\", values_to = \"n_available\") %>%",
+      "metrics": []
+    },
+    "subset_environment": {
+      "id": "subset_environment",
+      "beforeCount": 598,
+      "afterCount": 596,
+      "before": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "3700531202146",
+            "representative_price": 31.4725,
+            "nutri_grade": "d",
+            "environment_grade": null,
+            "agribalyse_version": null
+          },
+          {
+            "code": "4902102038720",
+            "representative_price": 12.9666666667,
+            "nutri_grade": "e",
+            "environment_grade": null,
+            "agribalyse_version": null
+          },
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3175681072916",
+            "representative_price": 10.925,
+            "nutri_grade": "b",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "5902379012125",
+            "representative_price": 31.1458333333,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "source": "R/10_eda.R",
+      "line": 63,
+      "code": "  coverage <- p %>% group_by(category, category_label) %>% summarise(\n    Price = n(), `Nutri-Score 2023` = sum(!is.na(nutri_grade)), `Environment grade` = sum(!is.na(environment_grade)),\n    `Joint grades and price` = sum(joint_grades_price), Sugars = sum(!is.na(sugars_100g)),\n    Fibre = sum(!is.na(fiber_100g)), `Carbon 3.2` = sum(carbon_primary), .groups = \"drop\") %>%\n    pivot_longer(-c(category, category_label), names_to = \"indicator\", values_to = \"n_available\") %>%",
+      "metrics": []
+    },
+    "subset_joint": {
+      "id": "subset_joint",
+      "beforeCount": 598,
+      "afterCount": 583,
+      "before": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "3596710404179",
+            "representative_price": 8.25,
+            "nutri_grade": null,
+            "environment_grade": "e",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3700531202146",
+            "representative_price": 31.4725,
+            "nutri_grade": "d",
+            "environment_grade": null,
+            "agribalyse_version": null
+          },
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3175681072916",
+            "representative_price": 10.925,
+            "nutri_grade": "b",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "5902379012125",
+            "representative_price": 31.1458333333,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "source": "R/10_eda.R",
+      "line": 63,
+      "code": "  coverage <- p %>% group_by(category, category_label) %>% summarise(\n    Price = n(), `Nutri-Score 2023` = sum(!is.na(nutri_grade)), `Environment grade` = sum(!is.na(environment_grade)),\n    `Joint grades and price` = sum(joint_grades_price), Sugars = sum(!is.na(sugars_100g)),\n    Fibre = sum(!is.na(fiber_100g)), `Carbon 3.2` = sum(carbon_primary), .groups = \"drop\") %>%\n    pivot_longer(-c(category, category_label), names_to = \"indicator\", values_to = \"n_available\") %>%",
+      "metrics": []
+    },
+    "subset_carbon": {
+      "id": "subset_carbon",
+      "beforeCount": 598,
+      "afterCount": 594,
+      "before": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "3700531202146",
+            "representative_price": 31.4725,
+            "nutri_grade": "d",
+            "environment_grade": null,
+            "agribalyse_version": null
+          },
+          {
+            "code": "8720354768853",
+            "representative_price": 4.95,
+            "nutri_grade": "e",
+            "environment_grade": "d",
+            "agribalyse_version": "3.1.1"
+          },
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "after": {
+        "columns": ["code", "representative_price", "nutri_grade", "environment_grade", "agribalyse_version"],
+        "rows": [
+          {
+            "code": "8410376055856",
+            "representative_price": 13.2666666667,
+            "nutri_grade": "d",
+            "environment_grade": "d",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3350031923081",
+            "representative_price": 7.36,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "3175681072916",
+            "representative_price": 10.925,
+            "nutri_grade": "b",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          },
+          {
+            "code": "5902379012125",
+            "representative_price": 31.1458333333,
+            "nutri_grade": "e",
+            "environment_grade": "c",
+            "agribalyse_version": "3.2"
+          }
+        ]
+      },
+      "source": "R/07_prepare_formal_data.R",
+      "line": 89,
+      "code": "  carbon_primary = in_primary & has_carbon & agribalyse_version == \"3.2\",",
+      "metrics": []
+    }
+  },
+  "note": "Primary-sample filters are cumulative views; analysis subsets are independent views. Field-only steps keep all rows. median_eligible is a presentation name for the R summary predicate. Previews are sanitized saved-record excerpts and reconstructed local values from the original R quantity parser."
+}

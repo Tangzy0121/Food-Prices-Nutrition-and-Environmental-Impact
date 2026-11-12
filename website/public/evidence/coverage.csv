@@ -1,0 +1,29 @@
+category,category_label,indicator,n_available,n,n_missing
+biscuits,Biscuits (EUR/kg),Price,149,149,0
+biscuits,Biscuits (EUR/kg),Nutri-Score 2023,147,149,2
+biscuits,Biscuits (EUR/kg),Environment grade,148,149,1
+biscuits,Biscuits (EUR/kg),Joint grades and price,146,149,3
+biscuits,Biscuits (EUR/kg),Sugars,147,149,2
+biscuits,Biscuits (EUR/kg),Fibre,134,149,15
+biscuits,Biscuits (EUR/kg),Carbon 3.2,147,149,2
+breakfast_cereals,Breakfast cereals (EUR/kg),Price,150,150,0
+breakfast_cereals,Breakfast cereals (EUR/kg),Nutri-Score 2023,147,150,3
+breakfast_cereals,Breakfast cereals (EUR/kg),Environment grade,150,150,0
+breakfast_cereals,Breakfast cereals (EUR/kg),Joint grades and price,147,150,3
+breakfast_cereals,Breakfast cereals (EUR/kg),Sugars,148,150,2
+breakfast_cereals,Breakfast cereals (EUR/kg),Fibre,148,150,2
+breakfast_cereals,Breakfast cereals (EUR/kg),Carbon 3.2,150,150,0
+dark_chocolates,Dark chocolate (EUR/kg),Price,149,149,0
+dark_chocolates,Dark chocolate (EUR/kg),Nutri-Score 2023,146,149,3
+dark_chocolates,Dark chocolate (EUR/kg),Environment grade,149,149,0
+dark_chocolates,Dark chocolate (EUR/kg),Joint grades and price,146,149,3
+dark_chocolates,Dark chocolate (EUR/kg),Sugars,148,149,1
+dark_chocolates,Dark chocolate (EUR/kg),Fibre,123,149,26
+dark_chocolates,Dark chocolate (EUR/kg),Carbon 3.2,148,149,1
+fruit_juices,Fruit juices (EUR/L),Price,150,150,0
+fruit_juices,Fruit juices (EUR/L),Nutri-Score 2023,145,150,5
+fruit_juices,Fruit juices (EUR/L),Environment grade,149,150,1
+fruit_juices,Fruit juices (EUR/L),Joint grades and price,144,150,6
+fruit_juices,Fruit juices (EUR/L),Sugars,147,150,3
+fruit_juices,Fruit juices (EUR/L),Fibre,116,150,34
+fruit_juices,Fruit juices (EUR/L),Carbon 3.2,149,150,1

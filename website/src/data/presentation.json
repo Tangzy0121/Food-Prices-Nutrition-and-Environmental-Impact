@@ -1,0 +1,694 @@
+{
+  "counts": {
+    "raw": 337631,
+    "scoped": 83141,
+    "barcodes": 44789,
+    "catalog": 8337,
+    "eligible": 3002,
+    "selected": 600,
+    "retrieved": 600,
+    "primary": 598,
+    "linked": 1541,
+    "joint": 583,
+    "carbon": 594,
+    "environment": 596,
+    "corrections": 16
+  },
+  "seed": 20261102,
+  "tables": {
+    "flow": [
+      {
+        "stage": "raw",
+        "price_observations": "337631",
+        "products": "147645"
+      },
+      {
+        "stage": "france",
+        "price_observations": "216623",
+        "products": "78069"
+      },
+      {
+        "stage": "eur",
+        "price_observations": "216458",
+        "products": "78010"
+      },
+      {
+        "stage": "period_2024_2025",
+        "price_observations": "89163",
+        "products": "44791"
+      },
+      {
+        "stage": "barcode_product",
+        "price_observations": "83143",
+        "products": "44791"
+      },
+      {
+        "stage": "positive_price",
+        "price_observations": "83141",
+        "products": "44789"
+      }
+    ],
+    "selection": [
+      {
+        "category": "biscuits",
+        "n_catalog": "3834",
+        "n_in_price_universe": "1490",
+        "n_regular": "1475",
+        "n_eligible": "1349",
+        "n_selected": "150"
+      },
+      {
+        "category": "breakfast_cereals",
+        "n_catalog": "1830",
+        "n_in_price_universe": "580",
+        "n_regular": "576",
+        "n_eligible": "541",
+        "n_selected": "150"
+      },
+      {
+        "category": "dark_chocolates",
+        "n_catalog": "1052",
+        "n_in_price_universe": "621",
+        "n_regular": "620",
+        "n_eligible": "558",
+        "n_selected": "150"
+      },
+      {
+        "category": "fruit_juices",
+        "n_catalog": "1621",
+        "n_in_price_universe": "637",
+        "n_regular": "632",
+        "n_eligible": "554",
+        "n_selected": "150"
+      }
+    ],
+    "coverage": [
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Price",
+        "n_available": "149",
+        "n": "149",
+        "n_missing": "0"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Nutri-Score 2023",
+        "n_available": "147",
+        "n": "149",
+        "n_missing": "2"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Environment grade",
+        "n_available": "148",
+        "n": "149",
+        "n_missing": "1"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Joint grades and price",
+        "n_available": "146",
+        "n": "149",
+        "n_missing": "3"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Sugars",
+        "n_available": "147",
+        "n": "149",
+        "n_missing": "2"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Fibre",
+        "n_available": "134",
+        "n": "149",
+        "n_missing": "15"
+      },
+      {
+        "category": "biscuits",
+        "category_label": "Biscuits (EUR/kg)",
+        "indicator": "Carbon 3.2",
+        "n_available": "147",
+        "n": "149",
+        "n_missing": "2"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Price",
+        "n_available": "150",
+        "n": "150",
+        "n_missing": "0"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Nutri-Score 2023",
+        "n_available": "147",
+        "n": "150",
+        "n_missing": "3"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Environment grade",
+        "n_available": "150",
+        "n": "150",
+        "n_missing": "0"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Joint grades and price",
+        "n_available": "147",
+        "n": "150",
+        "n_missing": "3"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Sugars",
+        "n_available": "148",
+        "n": "150",
+        "n_missing": "2"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Fibre",
+        "n_available": "148",
+        "n": "150",
+        "n_missing": "2"
+      },
+      {
+        "category": "breakfast_cereals",
+        "category_label": "Breakfast cereals (EUR/kg)",
+        "indicator": "Carbon 3.2",
+        "n_available": "150",
+        "n": "150",
+        "n_missing": "0"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Price",
+        "n_available": "149",
+        "n": "149",
+        "n_missing": "0"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Nutri-Score 2023",
+        "n_available": "146",
+        "n": "149",
+        "n_missing": "3"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Environment grade",
+        "n_available": "149",
+        "n": "149",
+        "n_missing": "0"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Joint grades and price",
+        "n_available": "146",
+        "n": "149",
+        "n_missing": "3"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Sugars",
+        "n_available": "148",
+        "n": "149",
+        "n_missing": "1"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Fibre",
+        "n_available": "123",
+        "n": "149",
+        "n_missing": "26"
+      },
+      {
+        "category": "dark_chocolates",
+        "category_label": "Dark chocolate (EUR/kg)",
+        "indicator": "Carbon 3.2",
+        "n_available": "148",
+        "n": "149",
+        "n_missing": "1"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Price",
+        "n_available": "150",
+        "n": "150",
+        "n_missing": "0"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Nutri-Score 2023",
+        "n_available": "145",
+        "n": "150",
+        "n_missing": "5"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Environment grade",
+        "n_available": "149",
+        "n": "150",
+        "n_missing": "1"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Joint grades and price",
+        "n_available": "144",
+        "n": "150",
+        "n_missing": "6"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Sugars",
+        "n_available": "147",
+        "n": "150",
+        "n_missing": "3"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Fibre",
+        "n_available": "116",
+        "n": "150",
+        "n_missing": "34"
+      },
+      {
+        "category": "fruit_juices",
+        "category_label": "Fruit juices (EUR/L)",
+        "indicator": "Carbon 3.2",
+        "n_available": "149",
+        "n": "150",
+        "n_missing": "1"
+      }
+    ],
+    "categories": [
+      {
+        "category": "biscuits",
+        "target_unit": "kg",
+        "n": "149",
+        "median_price": "11.09375",
+        "q1_price": "8.149999999999999",
+        "q3_price": "19.161676646706585",
+        "min_price": "2.95",
+        "max_price": "51.21827411167512",
+        "n_nutri": "147",
+        "n_environment": "148",
+        "n_joint": "146",
+        "n_single_offer": "70",
+        "n_multiple_offers": "79",
+        "n_two_years": "46"
+      },
+      {
+        "category": "breakfast_cereals",
+        "target_unit": "kg",
+        "n": "150",
+        "median_price": "8.266666666666666",
+        "q1_price": "6.331666666666667",
+        "q3_price": "10.525",
+        "min_price": "1.7",
+        "max_price": "46.5",
+        "n_nutri": "147",
+        "n_environment": "150",
+        "n_joint": "147",
+        "n_single_offer": "74",
+        "n_multiple_offers": "76",
+        "n_two_years": "53"
+      },
+      {
+        "category": "dark_chocolates",
+        "target_unit": "kg",
+        "n": "149",
+        "median_price": "25.833333333333336",
+        "q1_price": "16.299999999999997",
+        "q3_price": "34.5",
+        "min_price": "8.433333333333334",
+        "max_price": "117.15",
+        "n_nutri": "146",
+        "n_environment": "149",
+        "n_joint": "146",
+        "n_single_offer": "64",
+        "n_multiple_offers": "85",
+        "n_two_years": "53"
+      },
+      {
+        "category": "fruit_juices",
+        "target_unit": "L",
+        "n": "150",
+        "median_price": "2.85",
+        "q1_price": "1.87",
+        "q3_price": "3.8475",
+        "min_price": "0.77",
+        "max_price": "13.98",
+        "n_nutri": "145",
+        "n_environment": "149",
+        "n_joint": "144",
+        "n_single_offer": "83",
+        "n_multiple_offers": "67",
+        "n_two_years": "43"
+      }
+    ],
+    "corrections": [
+      {
+        "code": "7622210795373",
+        "category": "biscuits",
+        "product_name": "oeuf coque oreo",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_001.json"
+      },
+      {
+        "code": "3222472772880",
+        "category": "biscuits",
+        "product_name": "Sablés Céréales et chocolat au lait",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "-6",
+        "restored_fr_score": "-6",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_001.json"
+      },
+      {
+        "code": "3596710547623",
+        "category": "dark_chocolates",
+        "product_name": "72% Noir fèves de cacao",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3250391378074",
+        "category": "dark_chocolates",
+        "product_name": "Tablette fourrée chocolat noir praliné - 150g",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "2",
+        "restored_fr_score": "2",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "7613034938459",
+        "category": "dark_chocolates",
+        "product_name": "Chocolate After eight sabor menta",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3245678046692",
+        "category": "dark_chocolates",
+        "product_name": "NOIR TRUFFE FANTAISIE et ECLATS DE FEVES",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "2",
+        "restored_fr_score": "2",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3250390102625",
+        "category": "dark_chocolates",
+        "product_name": "Tablette dégustation chocolat noir min 70% - 100g",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "7622201433017",
+        "category": "dark_chocolates",
+        "product_name": "Tendre noir chocolat",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3250391107018",
+        "category": "dark_chocolates",
+        "product_name": "Tablette fourrée chocolat noir praliné",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "2",
+        "restored_fr_score": "2",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3560070423941",
+        "category": "dark_chocolates",
+        "product_name": "COEUR de Mousse",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "13",
+        "restored_fr_score": "13",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3046920040655",
+        "category": "dark_chocolates",
+        "product_name": "Chocolat Noir Pailleté Dentelle Caramel",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3250390008347",
+        "category": "dark_chocolates",
+        "product_name": "Tablette familiale chocolat noir - 3x100g",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "7640159890690",
+        "category": "dark_chocolates",
+        "product_name": "Chocolat noir Fleur de sel",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "12",
+        "restored_fr_score": "12",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3256229544000",
+        "category": "dark_chocolates",
+        "product_name": "Chocolat noir aromatisé à l'arome nature de menthe 100g",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "10",
+        "restored_fr_score": "10",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_004.json"
+      },
+      {
+        "code": "3596710507580",
+        "category": "dark_chocolates",
+        "product_name": "Noir chocolat extra fin",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "13",
+        "restored_fr_score": "14",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_005.json"
+      },
+      {
+        "code": "3560071494933",
+        "category": "fruit_juices",
+        "product_name": "Ananas 100% pur jus",
+        "before_grade": "",
+        "restored_grade": "f",
+        "before_score": "13",
+        "restored_fr_score": "13",
+        "in_primary": "TRUE",
+        "source_file": "data/raw/open_food_facts/formal_2026-11-02/products/post_batch_006.json"
+      }
+    ],
+    "exclusions": [
+      {
+        "category": "biscuits",
+        "exclusion_reason": "included",
+        "n": "149"
+      },
+      {
+        "category": "biscuits",
+        "exclusion_reason": "quantity_conflict",
+        "n": "1"
+      },
+      {
+        "category": "breakfast_cereals",
+        "exclusion_reason": "included",
+        "n": "150"
+      },
+      {
+        "category": "dark_chocolates",
+        "exclusion_reason": "included",
+        "n": "149"
+      },
+      {
+        "category": "dark_chocolates",
+        "exclusion_reason": "quantity_missing_or_wrong_basis",
+        "n": "1"
+      },
+      {
+        "category": "fruit_juices",
+        "exclusion_reason": "included",
+        "n": "150"
+      }
+    ]
+  },
+  "examples": [
+    {
+      "code": "3350031923081",
+      "name": "Galettes bretonnes pur beurre",
+      "brand": "Monoprix",
+      "category": "biscuits",
+      "quantity": "125 g",
+      "quantityBase": 0.125,
+      "unit": "kg",
+      "nutrition": "E",
+      "environment": "C",
+      "retrieved": "2026-11-02T01:18:49Z",
+      "representativePrice": 7.359999999999999,
+      "quotes": [
+        {
+          "id": "5484",
+          "code": "3350031923081",
+          "date": "2024-02-11",
+          "price": 0.95,
+          "unitPrice": 7.6,
+          "discounted": false,
+          "kept": true
+        },
+        {
+          "id": "124730",
+          "code": "3350031923081",
+          "date": "2025-07-09",
+          "price": 0.89,
+          "unitPrice": 7.12,
+          "discounted": false,
+          "kept": true
+        }
+      ]
+    },
+    {
+      "code": "8410376055856",
+      "name": "Gullon cookies",
+      "brand": "Gullón",
+      "category": "biscuits",
+      "quantity": "150g",
+      "quantityBase": 0.15,
+      "unit": "kg",
+      "nutrition": "D",
+      "environment": "D",
+      "retrieved": "2026-11-02T01:18:49Z",
+      "representativePrice": 13.266666666666667,
+      "quotes": [
+        {
+          "id": "13805",
+          "code": "8410376055856",
+          "date": "2024-02-22",
+          "price": 1.99,
+          "unitPrice": 13.2666666666667,
+          "discounted": false,
+          "kept": true
+        }
+      ]
+    },
+    {
+      "code": "0016229901189",
+      "name": "Passion fruit juice",
+      "brand": "Thai agri foods",
+      "category": "fruit_juices",
+      "quantity": "350 ml",
+      "quantityBase": 0.35000000000000003,
+      "unit": "L",
+      "nutrition": "E",
+      "environment": "E",
+      "retrieved": "2026-11-02T01:19:42Z",
+      "representativePrice": 4.285714285714286,
+      "quotes": [
+        {
+          "id": "66108",
+          "code": "0016229901189",
+          "date": "2025-01-08",
+          "price": 1.5,
+          "unitPrice": 4.28571428571429,
+          "discounted": false,
+          "kept": true
+        }
+      ]
+    }
+  ],
+  "snapshot": "2026-11-05",
+  "productSnapshot": "2026-11-02",
+  "evidenceHashes": {
+    "00_download_prices.R": "74a58311aab82d7d4ede0b28c6ae885df934c1eb4239c72cbc6329c455f9b0fe",
+    "01_import_prices.R": "0cc226ac096cb6e8ffc36820b52ced7877ba37ecd3afa264a44e3aae9e5094d5",
+    "05_select_formal_sample.R": "ed6838939a8d6f3e1ed6ef4cceeaf6e7fc0be8e6d038bf34cb5e8f4244445464",
+    "06_acquire_formal_products.R": "9ed2accb91f624b7c75a1fadcd0bf46e023f96b70bad12b1f77cd904cc18875d",
+    "07_prepare_formal_data.R": "e5f53febe9bdebb255a8020cb49b989caffc9e20df1876d6193b6b49337a499a",
+    "08_validate_and_freeze.R": "420a765e72f35e9d1171d999851773b3af2a52c5b5b20f99e978c2b568ac3af2",
+    "09b_restore_environment_grades.R": "33b34f18296b7b5d52dddd47fb3970fb8bb614799c6b5ca8413ebcdbbb609e51",
+    "10_eda.R": "eb97590428ea94089954670fbc48dff14bb6ec106ff4ba77df059d2bbe686be3",
+    "category_summary.csv": "e913dba4f0dd38f0edfccd4ffb92f7928f3748e3e76d0699611efcc33b116c81",
+    "coverage.csv": "32f39913693d0df1bb63af89f8b75a2e9bb2a71409787a130b084ff4c135a6ee",
+    "data_description.md": "1d3620e8cb260eeeb11450bb823edd8a8c94f44c25a9b07f0bd00464402d0f30",
+    "environment_grade_correction.md": "1bc7e8a3262b891f3e5eef1f00ba55f41aed4610d5163d78b3a2dc183e265250",
+    "environment_grade_corrections.csv": "e8e17a093f3e5f7ba2564a0a7e80c1c614ae8dc2654241b5c5617fa7ac5773c0",
+    "exclusions.csv": "a77893a0aea51d0752cc712f77d3d84862525350f3b3bfac2dfe503e3c6ad17e",
+    "formal_selection_flow.csv": "f549d14d097b1f331744bc73d768e83dbd36bd0bc137e2747e58d9d3fdd23df0",
+    "link-examples.csv": "f3a77e413a2326ad72b25959fc970b8288f854e44f21e6be988a4574e2f791fc",
+    "price_filter_flow.csv": "b10db0d38b701aa7470f36218dcb644c25e9db4be351a1cf89d58a2be3fa2e3e",
+    "processing-trace.json": "c43763d6371802b6d1789145e0e6ff7c5b793231364f74de8de76336da53004a",
+    "quantity_helpers.R": "05c736ba5a8d59a6bd7cbb3b7e984452561b1e8b625694ba3e02411375de6bfd"
+  }
+}
