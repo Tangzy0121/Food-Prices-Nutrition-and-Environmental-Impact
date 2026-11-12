@@ -9,7 +9,7 @@ import type { Bilingual, Operation, TraceTable } from './fullWorkflow';
 import './pipeline.css';
 
 const byId = Object.fromEntries(operations.map(op => [op.id, op]));
-type StepData = { operation: Operation; selected: boolean; inspect: (id: string) => void; [key: string]: unknown };
+type StepData = { operation: Operation; selected: boolean; connected: boolean; inspect: (id: string) => void; [key: string]: unknown };
 type StepNode = Node<StepData, 'operation'>;
 const icons = { source: Database, check: ShieldCheck, filter: Filter, clean: Workflow, join: GitMerge, aggregate: Layers3, sample: Shuffle, output: Table2 };
 
@@ -20,16 +20,20 @@ function OperationNode({ data }: NodeProps<StepNode>) {
   const Icon = icons[op.kind];
   const difference = trace.beforeCount - trace.afterCount;
   return <>
-    <Handle type="target" position={Position.Left} style={{ top: 28 }} />
-    <button className={`operation-node kind-${op.kind} ${data.selected ? 'is-selected' : ''}`} aria-pressed={data.selected} onClick={() => data.inspect(op.id)} title={op.condition[language]}>
+    <Handle type="target" position={Position.Left} style={{ top: 70 }} />
+    <button className={`operation-node kind-${op.kind} ${data.selected ? 'is-selected' : ''} ${data.connected ? 'is-connected' : ''}`} aria-pressed={data.selected} onClick={() => data.inspect(op.id)}>
       <span className="operation-symbol"><Icon size={23} />{op.kind === 'check' && <span className="check-indicator" />}</span>
       <strong>{op.title[language]}</strong>
       <span className="operation-output">{number(trace.afterCount)} <span>{language === 'zh' ? '行' : 'rows'}</span>{difference > 0 && op.kind === 'filter' && <span className="operation-removed">−{number(difference)}</span>}</span>
+      <span className="operation-hover" aria-hidden="true"><span>{language === 'zh' ? '点击查看这一步' : 'Click to inspect this step'}</span><strong>{op.title[language]}</strong><span>{op.description[language]}</span><code>{op.condition[language]}</code></span>
     </button>
-    <Handle type="source" position={Position.Right} style={{ top: 28 }} />
+    <Handle type="source" position={Position.Right} style={{ top: 70 }} />
   </>;
 }
 const nodeTypes = { operation: OperationNode };
+const nodeWidth = 220;
+const nodeHeight = 140;
+const readingZoom = 1.15;
 
 function CanvasActions({ selected, camera }: { selected: string; camera: number }) {
   const { language } = useI18n();
@@ -41,43 +45,50 @@ function CanvasActions({ selected, camera }: { selected: string; camera: number 
   useEffect(() => {
     const currentFlow = flowRef.current;
     if (camera === 0 && selected === 'price_source') {
-      void currentFlow.setViewport({ x: 45, y: 115, zoom: 0.9 }, { duration: 0 });
+      void currentFlow.setViewport({ x: 45, y: 80, zoom: readingZoom }, { duration: 0 });
       return;
     }
     const op = byId[selected];
     const parents = connections.filter(edge => edge.target === selected && !edge.archived).map(edge => byId[edge.source]);
     const sameRegion = parents.filter(parent => Math.abs(parent.x - op.x) <= 600);
     const rows = [op.y, ...sameRegion.map(parent => parent.y)];
-    const centerY = op.kind === 'join' ? (Math.min(...rows) + Math.max(...rows) + 130) / 2 : op.y + 80;
-    const centerX = selected === 'join_quotes' ? op.x - 155 : op.x + 110;
-    void currentFlow.setCenter(centerX, centerY, { zoom: 0.95, duration: 0 });
+    const centerY = op.kind === 'join' ? (Math.min(...rows) + Math.max(...rows) + nodeHeight) / 2 : op.y + nodeHeight / 2;
+    void currentFlow.setCenter(op.x + nodeWidth / 2, centerY, { zoom: readingZoom, duration: 0 });
   }, [camera, selected]);
   return <div className="trace-canvas-controls">
     <button aria-label={text('Zoom out', '缩小')} title={text('Zoom out', '缩小')} onClick={() => flow.zoomOut({ duration: 0 })}><Minus size={17} /></button>
     <span>{Math.round(viewport.zoom * 100)}%</span>
     <button aria-label={text('Zoom in', '放大')} title={text('Zoom in', '放大')} onClick={() => flow.zoomIn({ duration: 0 })}><Plus size={17} /></button>
     <span className="control-divider" />
-    <button aria-label={text('Show the whole connected flow', '查看完整连接图')} title={text('Show the whole connected flow', '查看完整连接图')} onClick={() => flow.fitView({ padding: 0.08, duration: 0 })}><Maximize size={17} /></button>
-    <button className="locate-step" onClick={() => { const op = byId[selected]; void flow.setCenter(op.x + 110, op.y + 60, { zoom: 1, duration: 0 }); }}><ScanLine size={16} />{text('Locate step', '定位当前步骤')}</button>
+    <button aria-label={text('Show the whole connected flow as an overview', '查看完整流程总览')} title={text('Whole-flow overview; use Locate step to return to readable size', '完整流程总览；点击“定位当前步骤”返回阅读大小')} onClick={() => flow.fitView({ padding: 0.08, duration: 0 })}><Maximize size={17} /></button>
+    <button className="locate-step" onClick={() => { const op = byId[selected]; void flow.setCenter(op.x + nodeWidth / 2, op.y + nodeHeight / 2, { zoom: readingZoom, duration: 0 }); }}><ScanLine size={16} />{text('Locate step', '定位当前步骤')}</button>
   </div>;
 }
 
 function Diagram({ selected, camera, inspect }: { selected: string; camera: number; inspect: (id: string) => void }) {
   const { language } = useI18n();
-  const nodes: StepNode[] = useMemo(() => operations.map(op => ({ id: op.id, type: 'operation', width: 190, height: 130, position: { x: op.x, y: op.y }, data: { operation: op, selected: op.id === selected, inspect } })), [selected, inspect]);
-  const edges: Edge[] = connections.map((edge, i) => ({
-    id: `connection-${i}`, source: edge.source, target: edge.target, type: 'smoothstep',
-    label: edge.label?.[language], ariaLabel: `${byId[edge.source].title[language]} → ${byId[edge.target].title[language]}`,
-    style: { stroke: edge.target === selected ? '#328153' : '#c5cbc6', strokeWidth: edge.target === selected ? 1.8 : 1.4, strokeDasharray: edge.archived ? '5 5' : undefined },
-    pathOptions: { borderRadius: 18, offset: edge.archived ? 60 : 24 },
-    labelStyle: { fill: '#777', fontSize: 12 }, labelBgStyle: { fill: '#fafbfa' },
-  }));
+  const neighbours = new Set(connections.filter(edge => edge.source === selected || edge.target === selected).flatMap(edge => [edge.source, edge.target]));
+  const nodes: StepNode[] = useMemo(() => operations.map(op => ({ id: op.id, type: 'operation', width: nodeWidth, height: nodeHeight, position: { x: op.x, y: op.y }, data: { operation: op, selected: op.id === selected, connected: neighbours.has(op.id) && op.id !== selected, inspect } })), [selected, inspect]);
+  const edges: Edge[] = connections.map((edge, i) => {
+    const connected = edge.source === selected || edge.target === selected;
+    return {
+      id: `connection-${i}`, source: edge.source, target: edge.target, type: 'smoothstep',
+      label: edge.label?.[language], ariaLabel: `${byId[edge.source].title[language]} → ${byId[edge.target].title[language]}`,
+      style: { stroke: connected ? '#23834f' : '#c5cbc6', strokeWidth: connected ? 2.4 : 1.4, strokeDasharray: edge.archived ? '5 5' : undefined },
+      pathOptions: { borderRadius: 18, offset: edge.archived ? 60 : 24 },
+      labelStyle: { fill: connected ? '#23683e' : '#777', fontSize: 13 }, labelBgStyle: { fill: '#fafbfa' },
+    };
+  });
+  const selectedOp = byId[selected];
+  const selectedTrace = traces[selected];
+  const selectedIndex = operations.findIndex(op => op.id === selected);
   return <ReactFlowProvider><div className="trace-canvas" aria-label={language === 'zh' ? '包含全部 56 个步骤的完整数据流程' : 'Complete data flow with all 56 steps'}>
-    <div className="trace-canvas-label"><span className="green-dot" />{language === 'zh' ? '完整流程' : 'Complete flow'}<span>·</span>{language === 'zh' ? '拖动画布查看上下游' : 'Drag to follow upstream and downstream steps'}</div>
-    <ReactFlow<StepNode> nodes={nodes} edges={edges} nodeTypes={nodeTypes} defaultViewport={{ x: 45, y: 115, zoom: 0.9 }} minZoom={0.035} maxZoom={1.5} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable={false} zoomOnScroll={false} zoomOnDoubleClick={false} preventScrolling={false} attributionPosition="bottom-left">
+    <div className="trace-canvas-label"><span className="green-dot" />{language === 'zh' ? '完整流程' : 'Complete flow'}<span>·</span>{language === 'zh' ? '悬停预览，点击节点定位并查看详情' : 'Hover to preview; click a node to locate and inspect it'}</div>
+    <ReactFlow<StepNode> nodes={nodes} edges={edges} nodeTypes={nodeTypes} defaultViewport={{ x: 45, y: 80, zoom: readingZoom }} minZoom={0.035} maxZoom={2} nodesDraggable={false} nodesConnectable={false} nodesFocusable={false} edgesFocusable={false} elementsSelectable zoomOnScroll zoomOnDoubleClick preventScrolling={false} attributionPosition="bottom-left">
       <Background variant={BackgroundVariant.Dots} gap={22} size={1} color="#dfe3df" />
-      <MiniMap pannable zoomable style={{ width: 156, height: 80 }} nodeColor={node => node.id === selected ? '#23834f' : '#c7cfca'} nodeBorderRadius={3} maskColor="rgba(246,248,246,0.65)" position="bottom-right" ariaLabel={language === 'zh' ? '完整流程导航缩略图，可拖动定位' : 'Complete flow minimap; drag to navigate'} />
+      <MiniMap pannable zoomable style={{ width: 180, height: 96 }} nodeColor={node => node.id === selected ? '#23834f' : '#c7cfca'} nodeBorderRadius={3} maskColor="rgba(246,248,246,0.65)" position="bottom-right" ariaLabel={language === 'zh' ? '完整流程导航缩略图，可拖动定位' : 'Complete flow minimap; drag to navigate'} />
     </ReactFlow>
+    <div className="canvas-selection" aria-live="polite"><span>{language === 'zh' ? '当前步骤' : 'Current step'} · {String(selectedIndex + 1).padStart(2, '0')} / {operations.length}</span><strong>{selectedOp.title[language]}</strong><p>{selectedOp.description[language]}</p><div>{number(selectedTrace.beforeCount)} → {number(selectedTrace.afterCount)} {language === 'zh' ? '行' : 'rows'}</div></div>
     <CanvasActions selected={selected} camera={camera} />
   </div></ReactFlowProvider>;
 }
@@ -122,11 +133,11 @@ export default function DetailedPipeline() {
   return <div className="detailed-pipeline wide-width">
     <div className="trace-heading"><div><div className="breadcrumb"><a href="#study">{t('The study')}</a><span>/</span><span>{t('Data pipeline')}</span></div><h1>{text('Data preparation, step by step.', '数据如何一步步清洗')}</h1></div><span className="trace-count">{operations.length} {text('operations', '个处理步骤')}<span>·</span>{text('Saved R outputs', '已执行的 R 结果')}</span></div>
     <div className="trace-toolbar"><div className="trace-group-links" aria-label={text('Locate a processing stage', '定位处理阶段')}>{groups.map((group, i) => <button key={group.id} onClick={() => inspect(group.focus)} aria-pressed={group.id === op.group}><span>{String(i + 1).padStart(2, '0')}</span>{local(group.title)}</button>)}</div><div className="segmented"><button aria-label={t('Canvas view')} aria-pressed={view === 'canvas'} className={view === 'canvas' ? 'selected' : ''} onClick={() => setView('canvas')}><Workflow size={16} />{t('Canvas')}</button><button aria-label={t('List view')} aria-pressed={view === 'list'} className={view === 'list' ? 'selected' : ''} onClick={() => setView('list')}><List size={16} />{t('List')}</button></div></div>
-    <div className="trace-stepper"><div><button disabled={!previous} aria-label={text('Previous processing step', '上一个处理步骤')} onClick={() => previous && inspect(previous.id)}><ArrowLeft size={16} /></button><span>{String(selectedIndex + 1).padStart(2, '0')} / {operations.length}</span><button disabled={!next} aria-label={text('Next processing step', '下一个处理步骤')} onClick={() => next && inspect(next.id)}><ArrowRight size={16} /></button></div><div className="trace-step-select"><label className="sr-only" htmlFor="processing-step">{text('Jump to any processing step', '跳转到任一处理步骤')}</label><select id="processing-step" value={selected} onChange={event => inspect(event.target.value)}>{groups.map(group => <optgroup key={group.id} label={local(group.title)}>{operations.filter(item => item.group === group.id).map(item => <option key={item.id} value={item.id}>{String(operations.indexOf(item) + 1).padStart(2, '0')} · {local(item.title)}</option>)}</optgroup>)}</select><ChevronDown size={14} /></div><span className="trace-connected-note">{text('All steps stay on one connected canvas', '全部步骤保留在同一张连接图中')}</span></div>
+    <div className="trace-stepper"><div><button disabled={!previous} aria-label={text('Previous processing step', '上一个处理步骤')} onClick={() => previous && inspect(previous.id)}><ArrowLeft size={16} /></button><span>{String(selectedIndex + 1).padStart(2, '0')} / {operations.length}</span><button disabled={!next} aria-label={text('Next processing step', '下一个处理步骤')} onClick={() => next && inspect(next.id)}><ArrowRight size={16} /></button></div><div className="trace-step-select"><label htmlFor="processing-step">{text('Jump to a step', '直接跳转')}</label><select id="processing-step" value={selected} onChange={event => inspect(event.target.value)}>{groups.map(group => <optgroup key={group.id} label={local(group.title)}>{operations.filter(item => item.group === group.id).map(item => <option key={item.id} value={item.id}>{String(operations.indexOf(item) + 1).padStart(2, '0')} · {local(item.title)}</option>)}</optgroup>)}</select><ChevronDown size={14} /></div><span className="trace-connected-note">{text('Click any node, or switch to List to browse all steps', '可点击任意节点，或切换列表查看全部步骤')}</span></div>
     <div className="trace-workspace">
       {view === 'canvas' ? <Diagram selected={selected} camera={camera} inspect={inspect} /> : <div className="complete-step-list" ref={listRef} style={{ position: 'relative' }}>{groups.map(group => <section key={group.id}><div className="step-list-group">{local(group.title)}</div>{operations.filter(item => item.group === group.id).map(item => <button key={item.id} aria-pressed={item.id === selected} onClick={() => inspect(item.id)} className={item.id === selected ? 'selected' : ''}><span>{String(operations.indexOf(item) + 1).padStart(2, '0')}</span><div><strong>{local(item.title)}</strong><p>{number(traces[item.id].beforeCount)} → {number(traces[item.id].afterCount)} {text('rows', '行')}</p></div><ArrowRight size={16} /></button>)}</section>)}</div>}
       <aside className="trace-inspector" aria-label={t('Selected processing step')}><div className="trace-step-index"><span>{local(kindLabels[op.kind])}</span><span>{String(selectedIndex + 1).padStart(2, '0')} / {operations.length}</span></div><h2>{local(op.title)}</h2><div className="trace-io"><div><span>{text('Input rows', '处理前')}</span><strong>{number(trace.beforeCount)}</strong></div><ArrowRight size={19} /><div><span>{text('Output rows', '处理后')}</span><strong>{number(trace.afterCount)}</strong></div></div>
-        <div className="trace-change">{change < 0 ? <><Minus size={14} />{number(-change)} {text(op.kind === 'aggregate' ? 'fewer rows after grouping' : 'rows excluded from this view', op.kind === 'aggregate' ? '行在汇总后合并' : '行未进入本步骤结果')}</> : change > 0 ? <><Plus size={14} />{number(change)} {text('records recovered', '条记录补查成功')}</> : <><Check size={14} />{text('Row count unchanged', '记录数保持不变')}</>}</div>
+        <div className="trace-change">{op.id === 'excluded_products' ? <><Check size={14} />{number(trace.afterCount)} {text('excluded products retained with their reasons', '款排除商品及其原因已保留')}</> : change < 0 ? <><Minus size={14} />{number(-change)} {text(op.kind === 'aggregate' ? 'fewer rows after grouping' : 'rows excluded from this view', op.kind === 'aggregate' ? '行在汇总后合并' : '行未进入本步骤结果')}</> : change > 0 ? <><Plus size={14} />{number(change)} {text('records recovered', '条记录补查成功')}</> : <><Check size={14} />{text('Row count unchanged', '记录数保持不变')}</>}</div>
         <p className="trace-description">{local(op.description)}</p><div className="trace-condition">{local(op.condition)}</div>
         {op.view && <p className="trace-view-note">{text('The R condition is expanded here as a cumulative view; saved inputs remain intact.', '此处将 R 条件逐项展开为累积视图，原始保存记录继续保留。')}</p>}
         {metrics.length > 0 && <dl className="trace-metrics">{metrics.map(([key, value]) => <div key={key}><dt>{metricLabels[key] ? local(metricLabels[key]) : key}</dt><dd>{number(value)}</dd></div>)}</dl>}

@@ -6,6 +6,7 @@ setwd(root)
 stopifnot(requireNamespace("jsonlite", quietly = TRUE), requireNamespace("nanoparquet", quietly = TRUE))
 read_csv <- function(path) read.csv(path, colClasses = "character", check.names = FALSE, na.strings = "", encoding = "UTF-8")
 p <- as.data.frame(readRDS("data/processed/frozen_v1/selected_products.rds"))
+primary <- as.data.frame(readRDS("data/processed/frozen_v1/analysis_products.rds"))
 x <- as.data.frame(readRDS("data/processed/frozen_v1/price_observations.rds"))
 all_prices <- as.data.frame(readRDS("data/processed/price_observations.rds"))
 raw <- as.data.frame(nanoparquet::read_parquet("data/raw/open_prices/open_prices_2026-10-30.parquet"))
@@ -164,8 +165,8 @@ emit("join_products", p, p, c("code", "product_name", "nutri_grade", "environmen
 emit("quality_flags", p, p, c("code", "comparable_quantity", "representative_price"), "R/07_prepare_formal_data.R", "in_primary =", 7,
   after_columns = c("code", "in_primary", "exclusion_reason", "joint_grades_price", "carbon_primary"), focus = focus)
 emit("freeze", p, p, c("code", "in_primary", "representative_price"), "R/08_validate_and_freeze.R", "saveRDS(p, file.path", 5)
-emit("median_validation", p, p, c("code", "n_valid_regular_offers", "representative_price"), "R/10_eda.R", "medians <- prices %>%", 5,
-  metrics = list(checked = sum(p$in_primary)))
+emit("median_validation", primary, primary, c("code", "in_primary", "n_valid_regular_offers", "representative_price"), "R/10_eda.R", "medians <- prices %>%", 5,
+  metrics = list(checked = nrow(primary)))
 corrected <- p
 for (i in seq_len(nrow(corrections))) {
   at <- match(corrections$code[i], corrected$code)
@@ -196,9 +197,11 @@ for (id in c("subset_nutrition", "subset_environment", "subset_joint", "subset_c
 }
 stopifnot(length(trace) == 56L, trace$filter_positive$afterCount == 83141L, trace$catalog_quantity$afterCount == 3002L,
   trace$fetch_confirm$afterCount == 600L, trace$join_quotes$afterCount == 1541L, trace$filter_representative$afterCount == 598L,
-  trace$subset_joint$afterCount == 583L, trace$restore_environment$metrics$restored == 16L)
+  trace$median_validation$beforeCount == 598L, trace$median_validation$afterCount == 598L,
+  trace$median_validation$metrics$checked == 598L, trace$subset_joint$afterCount == 583L,
+  trace$restore_environment$metrics$restored == 16L)
 export <- list(version = 1L, snapshot = "2026-11-05", steps = trace,
-  note = "Row filters are cumulative views; field-only steps keep all rows. median_eligible is a presentation name for the R summary predicate. Previews are sanitized saved-record excerpts and reconstructed local values from the original R quantity parser.")
+  note = "Primary-sample filters are cumulative views; analysis subsets are independent views. Field-only steps keep all rows. median_eligible is a presentation name for the R summary predicate. Previews are sanitized saved-record excerpts and reconstructed local values from the original R quantity parser.")
 dir.create("website/src/data", recursive = TRUE, showWarnings = FALSE)
 for (file in c("website/src/data/processing-trace.json", "website/public/evidence/processing-trace.json")) {
   jsonlite::write_json(export, file, auto_unbox = TRUE, pretty = TRUE, na = "null", null = "null", dataframe = "rows", digits = 10)

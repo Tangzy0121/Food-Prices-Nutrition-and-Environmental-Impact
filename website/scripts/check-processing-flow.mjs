@@ -42,7 +42,14 @@ assert.equal(traces.join_quotes.afterCount, 1541);
 assert.equal(traces.aggregate_prices.afterCount, 600);
 assert.equal(traces.filter_quantity.afterCount, 598);
 assert.equal(traces.excluded_products.afterCount, 2);
+assert.equal(traces.median_validation.beforeCount, 598);
+assert.equal(traces.median_validation.afterCount, 598);
+assert.equal(traces.median_validation.metrics.checked, 598);
+assert(traces.median_validation.after.rows.every(row => row.in_primary === true), 'Median validation must preview only primary products');
 assert.equal(traces.restore_environment.metrics.restored, 16);
 assert.equal(traces.subset_joint.afterCount, 583);
+for (const id of ['subset_nutrition', 'subset_environment', 'subset_joint', 'subset_carbon']) {
+  assert(!operations.find(op => op.id === id).view, `${id}: independent analysis subsets are not cumulative views`);
+}
 assert(traces.rename_prices.after.rows.some(row => typeof row.code === 'string'), 'Barcode preview keys must remain character data');
 console.log(`Processing flow verified: ${operations.length} operations, ${connections.length} connections, two inputs, no cycles, complete bilingual copy and matched R excerpts.`);

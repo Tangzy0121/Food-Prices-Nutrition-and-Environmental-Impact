@@ -3051,53 +3051,61 @@
     },
     "median_validation": {
       "id": "median_validation",
-      "beforeCount": 600,
-      "afterCount": 600,
+      "beforeCount": 598,
+      "afterCount": 598,
       "before": {
-        "columns": ["code", "n_valid_regular_offers", "representative_price"],
+        "columns": ["code", "in_primary", "n_valid_regular_offers", "representative_price"],
         "rows": [
           {
-            "code": "8410376055856",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 1,
             "representative_price": 13.2666666667
           },
           {
-            "code": "3350031923081",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 2,
             "representative_price": 7.36
           },
           {
-            "code": "3175681072916",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 2,
             "representative_price": 10.925
           },
           {
-            "code": "5902379012125",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 1,
             "representative_price": 31.1458333333
           }
         ]
       },
       "after": {
-        "columns": ["code", "n_valid_regular_offers", "representative_price"],
+        "columns": ["code", "in_primary", "n_valid_regular_offers", "representative_price"],
         "rows": [
           {
-            "code": "8410376055856",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 1,
             "representative_price": 13.2666666667
           },
           {
-            "code": "3350031923081",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 2,
             "representative_price": 7.36
           },
           {
-            "code": "3175681072916",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 2,
             "representative_price": 10.925
           },
           {
-            "code": "5902379012125",
+            "code": "",
+            "in_primary": true,
             "n_valid_regular_offers": 1,
             "representative_price": 31.1458333333
           }
@@ -4017,5 +4025,5 @@
       "metrics": []
     }
   },
-  "note": "Row filters are cumulative views; field-only steps keep all rows. median_eligible is a presentation name for the R summary predicate. Previews are sanitized saved-record excerpts and reconstructed local values from the original R quantity parser."
+  "note": "Primary-sample filters are cumulative views; analysis subsets are independent views. Field-only steps keep all rows. median_eligible is a presentation name for the R summary predicate. Previews are sanitized saved-record excerpts and reconstructed local values from the original R quantity parser."
 }
