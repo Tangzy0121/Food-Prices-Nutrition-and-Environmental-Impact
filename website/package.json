@@ -6,8 +6,9 @@
   "scripts": {
     "sync:data": "node scripts/sync-presentation.mjs",
     "check:flow": "node scripts/check-processing-flow.mjs",
+    "check:dashboard": "node scripts/check-dashboard.mjs",
     "dev": "npm run sync:data && vite --host 127.0.0.1",
-    "build": "npm run sync:data && npm run check:flow && tsc -b && vite build",
+    "build": "npm run sync:data && npm run check:flow && npm run check:dashboard && tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
