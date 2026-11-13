@@ -24,7 +24,7 @@ Avoid promotional slogans, stacks of secondary headings, small explanatory capti
 
 - Let alignment, spacing and typography explain the structure.
 - Make each transformation inspectable and keep record counts distinct from product counts.
-- Show every data-preparation operation as its own node on one connected canvas. Preserve complete upstream and downstream context, and show actual before/after records and R source provenance.
+- Use the whole pipeline page as a continuous canvas. Group related operations into readable nodes, preserving external dependencies. Let users inspect every underlying operation, its actual before/after records and R source provenance in the bottom data panel.
 - Present committed R outputs; do not imply the browser executes the pipeline.
 - Keep the first version focused on the study and data pipeline.
 - Support English and Simplified Chinese throughout the presentation, while preserving source code, product names and data keys.

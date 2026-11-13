@@ -1,6 +1,17 @@
 # Presentation verification
 
-Checked on 11 November 2026.
+## Full-page grouped workspace, 13 November 2026
+
+- Production build passed with TypeScript, source-line validation and presentation-data synchronization.
+- The grouped-flow check verifies 17 visible nodes and 20 external connections. All 56 original operations belong to exactly one node. Both input roots, reachability, every external dependency and the absence of cycles are checked. Independent analysis subsets remain separate datasets, with no summed row count.
+- Browser checks verified node selection, operation switching inside a grouped node, the complete 56-operation navigation list, direct selection, previous/next navigation, overview and locating a step. The seven quote-cleaning operations share one node; switching to the EUR filter shows 216,623 → 216,458 rows. The analysis-output node exposes four datasets; selecting the joint-grade set shows 598 → 583 rows.
+- The canvas occupies the complete page below the shared header. At 1280 × 720 and 390 × 844 the document dimensions match the viewport; tables scroll within the bottom panel. Mobile retains access to all 56 operations.
+- Selection preserves the viewport: browser checks compared the exact transform before and after a node click, an internal operation change, direct selection and next-node navigation after zooming. All preserved pan and zoom. Explicit Locate step still moved the camera, and the browser reported no warnings or errors.
+- Canvas dragging changed its viewport. Pointer dragging increased the data panel from 310 to 356 pixels, and the keyboard separator then decreased it by 24 pixels. The data panel and navigation can be hidden and reopened.
+- English/Chinese switching preserves the selected operation, camera and exact R excerpt. Field profiles explicitly use the displayed record excerpts.
+- Returning to the study restores normal document scrolling, the footer and all eight research-workflow steps. Returning to the pipeline restores the full-page workspace. A fresh reload produced no console warnings or errors.
+
+## Earlier verification, 11 November 2026
 
 - Production build: `npm run build` passed, including TypeScript and R-output synchronization.
 - Standalone Vercel bundle: `node scripts/sync-presentation.mjs --check-bundle` passed. Validates stored source/download agreement, category totals, example barcode identity, regular-offer medians and SHA-256 of published evidence files.
