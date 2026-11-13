@@ -1,10 +1,11 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { ArrowUpRight, ArrowRight, Download, ChevronRight } from 'lucide-react';
 import { LanguageProvider, useI18n } from './i18n';
-type Page = 'study' | 'pipeline' | 'sources';
-const pageFromHash = (): Page => location.hash === '#pipeline' ? 'pipeline' : location.hash === '#sources' ? 'sources' : 'study';
+type Page = 'study' | 'pipeline' | 'dashboard' | 'sources';
+const pageFromHash = (): Page => location.hash === '#pipeline' ? 'pipeline' : location.hash === '#dashboard' ? 'dashboard' : location.hash === '#sources' ? 'sources' : 'study';
 const repo = 'https://github.com/Tangzy0121/Food-Prices-Nutrition-and-Environmental-Impact';
 const DetailedPipeline = lazy(() => import('./DetailedPipeline'));
+const Dashboard = lazy(() => import('./Dashboard'));
 function Brand() {
     const { t } = useI18n();
     return <a className="brand" href="#study" aria-label={t("Food / Signal, the study")}><span className="brand-mark" aria-hidden="true"><span /><span /><span /></span><span>{t("Food")} <span className="brand-slash">{t("/")}</span> {t("Signal")}</span></a>;
@@ -17,12 +18,12 @@ function AppContent() {
         window.addEventListener('hashchange', navigate);
         return () => window.removeEventListener('hashchange', navigate);
     }, []);
-    useEffect(() => { document.title = `Food / Signal · ${page === 'study' ? t("The study") : page === 'pipeline' ? t("Data pipeline") : t("Sources")}`; }, [page, t]);
+    useEffect(() => { document.title = `Food / Signal · ${page === 'study' ? t("The study") : page === 'pipeline' ? t("Data pipeline") : page === 'dashboard' ? t("Dashboard") : t("Sources")}`; }, [page, t]);
     useEffect(() => { window.scrollTo(0, 0); }, [page]);
     return <div className={`app-shell${page === 'pipeline' ? ' is-pipeline' : ''}`}>
     <a className="skip-link" href="#main-content" onClick={e => { e.preventDefault(); document.getElementById('main-content')?.focus(); }}>{t("Skip to content")}</a>
-    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{([['study', t("The study")], ['pipeline', t("Data pipeline")], ['sources', t("Sources")]] as const).map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
-    <main id="main-content" tabIndex={-1}>{page === 'study' ? <Study /> : page === 'pipeline' ? <Suspense fallback={<div style={{ padding: '64px', color: '#777' }} role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense> : <Sources />}</main>
+    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{([['study', t("The study")], ['pipeline', t("Data pipeline")], ['dashboard', t("Dashboard")], ['sources', t("Sources")]] as const).map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
+    <main id="main-content" tabIndex={-1}>{page === 'study' ? <Study /> : page === 'pipeline' ? <Suspense fallback={<div style={{ padding: '64px', color: '#777' }} role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense> : page === 'dashboard' ? <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense> : <Sources />}</main>
     {page !== 'pipeline' && <footer className="site-footer"><div><span>{t("Food / Signal")}</span><span>{t("R for Data Science")}</span></div><p>{t("Open Prices & Open Food Facts contributors")} <span>{t("\u00B7")}</span> {t("ODbL")}</p><a href="#sources">{t("Sources & methodology")} <ArrowUpRight size={14}/></a></footer>}
   </div>;
 }
@@ -58,7 +59,7 @@ function Study() {
         </li>)}
       </ol>
     </section>
-    <div className="study-end"><a className="button secondary" href="#pipeline">{t("Open data pipeline")} <ArrowRight size={17}/></a></div>
+    <div className="study-end"><a className="button primary" href="#dashboard">{t("Open dashboard")} <ArrowRight size={17}/></a><a className="button secondary" href="#pipeline">{t("Open data pipeline")} <ArrowRight size={17}/></a></div>
   </div>;
 }
 function Sources() {

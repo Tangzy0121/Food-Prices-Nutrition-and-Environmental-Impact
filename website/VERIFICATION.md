@@ -1,5 +1,14 @@
 # Presentation verification
 
+## Research dashboard, 13 November 2026
+
+- Implements the user-confirmed six-direction chart plan in `docs/05_dashboard/research_dashboard.md`; replaces the earlier consumer shortlist layout in the website.
+- R export and independent Node validation pass for 598 products, 45 log-scale box summaries, 28 coverage cells, 20 correlations, 72 joint cells, 87 carbon reference groups, 120 sensitivity rows and 193 paired products. Source and executed-table hashes are checked.
+- Browser checks confirmed the six views, category filtering, nutrition boxes and 590 sugar points, environmental boxes and 87 carbon bubbles, joint-cell product inspection, missing-product inspection, sensitivity measure switching and paired-year table search. The annual view contains no chart.
+- English/Chinese switching preserves the active analysis and category. The 390-pixel viewport passed all six views without document-level horizontal overflow; wide tables and statistical plots scroll within their regions. Console checks returned no errors or warnings.
+- Browser CSV download for the fruit-juice paired records completed; the export contains all 41 matched products while the table displays 12 per page.
+
+
 ## Full-page grouped workspace, 13 November 2026
 
 - Production build passed with TypeScript, source-line validation and presentation-data synchronization.
