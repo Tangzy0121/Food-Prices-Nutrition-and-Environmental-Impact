@@ -1,5 +1,13 @@
 # Report and Shiny delivery verification
 
+## 2026-11-14 Issue #5 integration
+
+- Integrated with `upstream/main` at PR #4 (`1ad6277`), retaining its category facets, heatmap drilldowns, sensitivity metric selector, annual search/sort/pagination and CSV exports. Shiny gained the matching six-direction menu; both ends use forest green, light green, sage, warm orange and neutral colours.
+- `Rscript --vanilla scripts/check_dashboard.R` passed with R 4.6.0. `Rscript --vanilla website/scripts/export-dashboard.R .` refreshed the dashboard source hash after the Shiny helper update.
+- Website `npm ci`, `npm run build` and `node scripts/sync-presentation.mjs --check-bundle` passed. The build independently checked 45 R boxes, 28 coverage cells, 20 correlations, 72 joint cells, 87 carbon references, 120 sensitivity rows and 193 paired products. A second build with `VITE_BASE_PATH=/Food-Prices-Nutrition-and-Environmental-Impact/` passed.
+- The Pages production build was exercised in headless Chrome: all six directions, fruit-juice filtering (150 primary / 41 paired), joint-cell drilldown, Chinese switching, warm-orange alternative coefficients and six source downloads worked. All evidence links retained the repository base path; all six directions passed the 390 px page-overflow check and no browser exceptions occurred.
+- Repository Pages was already configured with **GitHub Actions** as its source. `.github/workflows/deploy-pages.yml` builds pull requests and deploys only from `main`.
+
 Date: 2026-11-05. Branch: `feat/report-shiny-delivery`, based on EDA revision `466f665` (`feat/step4-eda`). EDA PR #1 is merged (`origin/main` at `13a638f` when checked); this delivery targets `main` for PR review. Merge remains a separate action. This record includes the initial implementation and subsequent visual/decision-value revisions.
 
 ## Current deliverables

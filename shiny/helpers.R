@@ -125,3 +125,28 @@ shortlist_html <- function(d, target = "inspect_code") {
       shiny::tags$td(sprintf("%.2f", d$representative_price[i])), shiny::tags$td(grade_badge(d$nutri_grade[i])), shiny::tags$td(grade_badge(d$environment_grade[i])),
       shiny::tags$td(d$n_valid_regular_offers[i]), shiny::tags$td(shiny::tags$button(type = "button", class = "inspect-button", `data-inspect-code` = d$code[i], `data-target` = target, "Inspect")))))))
 }
+
+load_dashboard_analysis <- function(root) {
+  tables <- c("coverage", "price_by_grade", "carbon_references", "joint_cells",
+              "associations", "association_sensitivity", "paired_year_summary")
+  result <- lapply(tables, function(name) {
+    readr::read_csv(file.path(root, "outputs/step4/tables", paste0(name, ".csv")),
+                    show_col_types = FALSE, progress = FALSE)
+  })
+  names(result) <- tables
+  stopifnot(nrow(result$coverage) == 28L, nrow(result$associations) == 20L,
+            nrow(result$association_sensitivity) == 120L,
+            sum(result$joint_cells$n) == 583L,
+            sum(result$carbon_references$n_products) == 594L,
+            sum(result$paired_year_summary$n) == 193L)
+  result
+}
+
+dashboard_theme <- function() {
+  theme_minimal(base_size = 12) +
+    theme(plot.title = element_text(colour = "#214d41", face = "bold"),
+          panel.grid.minor = element_blank(), legend.position = "bottom")
+}
+
+analysis_metric_labels <- c(nutri_score = "Nutrition score", environment_score = "Environmental score",
+                            sugars_100g = "Sugars", saturated_fat_100g = "Saturated fat", fiber_100g = "Fibre")

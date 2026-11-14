@@ -13,7 +13,7 @@
 
 ## 当前状态
 
-Step 1—3 材料已具备，Step 4 EDA 初稿已运行，Step 5 设计已落成本地英文 Shiny，英文 LaTeX 商业分析报告已编译。正式入选 600 款，主要比较 598 款，联合可用 **583 款**。原 `frozen_v1` 保留，分析与 Shiny 使用 `data/processed/step4_v1_1/`。本轮工作位于 `feat/report-shiny-delivery`，基于 `feat/step4-eda`，尚未合并。验证详见 [交付验证](delivery_verification.md)。小组编号、成员、贡献、个人反思及课堂反馈仍待补充。
+Step 1—3 材料已具备，Step 4 EDA 已运行；Step 5 的六方向设计已落入英文 Shiny 和中英双语 React Dashboard，GitHub Pages 工作流已配置，英文 LaTeX 商业分析报告已编译。正式入选 600 款，主要比较 598 款，联合可用 **583 款**。原 `frozen_v1` 保留，分析与 Shiny 使用 `data/processed/step4_v1_1/`；静态网站读取已提交 R 结果生成的同源 `dashboard.json`。验证详见 [交付验证](delivery_verification.md)。小组编号、成员、贡献、个人反思及课堂反馈仍待补充。
 
 ## 八个步骤及交付位置
 
@@ -21,10 +21,10 @@ Step 1—3 材料已具备，Step 4 EDA 初稿已运行，Step 5 设计已落成
 | --- | --- | --- | --- |
 | 1. 组队与行业选择 | 组队；明确行业、受众和决策背景；向教师提交一页选题说明 | [中文版](01_topic/industry_selection.md)；[英文版](01_topic/industry_selection_en.md)；提交版按用户要求导出 | 中英文文档已整理；组员信息与审批待补 |
 | 2. 科学背景与文献综述 | 至少 5–8 篇可信学术或行业来源；综述矩阵；2–3 页综述和研究问题 | [中文版](02_literature/literature_review_zh.md)、[英文版](02_literature/literature_review_en.md)，各含矩阵与参考文献 | 初稿已完成；7 篇期刊论文、1 篇预印本；两篇摘要级文献的全文补读列为后续事项 |
-| 3. 数据识别与获取 | 来源引用、合法使用、收集背景、数据字典；可复现的 R 导入代码 | [数据说明](03_data/data_description.md)、[字典](03_data/data_dictionary.md)、[核查结果](03_data/data_quality_review.md)；`R/run_step3.R`；`data/processed/frozen_v1/` | 已完成：600 款正式全字段获取、598 款主要比较商品、568 款联合可用；固定快照及来源校验通过 |
+| 3. 数据识别与获取 | 来源引用、合法使用、收集背景、数据字典；可复现的 R 导入代码 | [数据说明](03_data/data_description.md)、[字典](03_data/data_dictionary.md)、[核查结果](03_data/data_quality_review.md)；`R/run_step3.R`；`data/processed/frozen_v1/` | 已完成：600 款正式全字段获取、598 款主要比较商品；修正后联合可用 583 款；固定快照及来源校验通过 |
 | 4. R 探索性数据分析 | 清洗、缺失和重复处理、描述统计、ggplot2 图表、模式与限制；R Markdown/Quarto 记录 | [分析约定](04_eda/analysis_plan.md)、[结果摘要](04_eda/results_summary.md)；`notebooks/step4_eda.Rmd`、`outputs/step4/step4_eda.html` | 已执行初稿：598 商品、583 联合样本、8 图、19 表；待小组复核与作者化 |
-| 5. 思考框架与仪表板设计 | 受众需求、问题、指标、维度、图表、交互和叙事；线框图、组件及理由 | [设计草稿](05_dashboard/dashboard_spec.md) | 草稿已形成，依据本轮 EDA；待小组确定界面语言与展示重点 |
-| 6. Shiny 团队实现 | 可本地运行；清楚的 UI/server 结构；至少三个有意义的交互组件；简短用户指南 | `shiny/`、`scripts/run_shiny.ps1` | bslib 英文应用已实现：动态解释、指标切换、选点/框选/缩放、搜索/排序/分页、候选对比；R 与 Chrome 主要任务通过，待组员评审与课堂试用 |
+| 5. 思考框架与仪表板设计 | 受众需求、问题、指标、维度、图表、交互和叙事；线框图、组件及理由 | [六方向设计](05_dashboard/dashboard_spec.md) | 六个方向、统一配色、双端数据口径已形成；待小组确定课堂展示重点 |
+| 6. Shiny 团队实现 | 可本地运行；清楚的 UI/server 结构；至少三个有意义的交互组件；简短用户指南 | `shiny/`、`website/`、`scripts/run_shiny.ps1` | 英文 Shiny 与中英双语静态 Dashboard 均已实现六方向；保留动态解释、热图下钻、商品筛选、两商品比较与 CSV 导出；Pages 工作流待发布 |
 | 7. 最终报告 | PDF/HTML；完整研究过程、贡献说明、引用、伦理与限制、每位成员反思；可复现材料 | `reports/report.tex`、`output/food-value-report-v3.pdf` | 9 页英文报告，连续排版，含独立封面、行业背景、指标含义与消费者/供货商行动；课程总提交仍需成员贡献、个人反思及反馈整合 |
 | 8. 最终展示 | 团队展示 10–15 分钟及问答；关键文献、数据、EDA、设计依据和应用演示 | `slides/` | 待开展 |
 

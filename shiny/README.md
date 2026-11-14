@@ -2,6 +2,8 @@
 
 English local Shiny decision interface for the corrected Step 4 dataset, redesigned using bslib and project-specific CSS. No live API or external inference endpoint is required. Community references and the framework choice are recorded in `docs/05_dashboard/community_references.md`.
 
+The **Six analyses** menu follows the team design: coverage heatmap and log-price product boxplots; nutrition-grade boxplots, price–sugar scatter and nutrient correlations; environmental-grade boxplots and reference-level carbon bubbles; the joint grade/price heatmap; connected-dot sensitivity results; and paired 2024–2025 tables. These views use the executed Step 4 CSVs and the complete selected category. The existing Explore filters and two-product comparison remain separate. Forest/sage, warm orange and neutral colours share the same meanings as the static website Dashboard.
+
 From the project root:
 
 ```powershell
