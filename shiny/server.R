@@ -199,4 +199,108 @@ server <- function(input, output, session) {
     div(class = "comparison-summary", div(class = "eyebrow", "THE COMPARISON, EXPLAINED"), h3(title),
       p(sprintf("Nutrition: %s → %s. Environment: %s → %s. %sRead saturated fat and fibre below, then check the price-record dates and counts.", grade_label(d$nutri_grade[1]), grade_label(d$nutri_grade[2]), grade_label(d$environment_grade[1]), grade_label(d$environment_grade[2]), composition)))
   })
+
+  analysis_category <- function(name) {
+    d <- analysis[[name]]
+    d[d$category == input$category, , drop = FALSE]
+  }
+  output$analysis_coverage <- renderPlot({
+    d <- analysis$coverage
+    d$indicator <- factor(d$indicator, levels = rev(unique(d$indicator)))
+    d$category_label <- factor(d$category_label, levels = rev(unique(d$category_label)))
+    ggplot(d, aes(indicator, category_label, fill = n_available / n)) +
+      geom_tile(colour = "white", linewidth = 1) +
+      geom_text(aes(label = sprintf("%d/%d", n_available, n)), size = 3.4) +
+      scale_fill_gradient(low = "#e8ddc8", high = "#4f8272", limits = c(0, 1), labels = scales::percent) +
+      labs(x = NULL, y = NULL, fill = "Coverage") + dashboard_theme() +
+      theme(axis.text.x = element_text(angle = 30, hjust = 1), panel.grid = element_blank())
+  })
+  output$analysis_price_distribution <- renderPlot({
+    d <- category_data(); unit <- unique(d$target_unit)
+    ggplot(d, aes(category, representative_price)) +
+      geom_boxplot(width = .38, outlier.shape = NA, fill = "#c3d8cb", colour = "#214d41") +
+      geom_jitter(width = .12, height = 0, size = 2, alpha = .48, colour = "#2d6f5e") +
+      scale_y_log10() + scale_x_discrete(labels = category_names[[input$category]]) +
+      labs(x = NULL, y = paste0("Median unit price (EUR/", unit, ", log scale)")) + dashboard_theme()
+  })
+  output$analysis_price_note <- renderText({
+    d <- category_data(); sprintf("%d products. Boxes show quartiles and medians; every point is one product. Range: %.2f–%.2f EUR/%s.", nrow(d), min(d$representative_price), max(d$representative_price), unique(d$target_unit))
+  })
+  output$analysis_nutrition_count <- renderText({
+    d <- category_data(); sprintf("%s: %d products; %d have a nutrition grade and %d have both price and sugars.", category_names[[input$category]], nrow(d), sum(!is.na(d$nutri_grade)), sum(is.finite(d$sugars_100g)))
+  })
+  output$analysis_nutrition_box <- renderPlot({
+    d <- category_data(); d <- d[!is.na(d$nutri_grade), , drop = FALSE]
+    d$nutri_grade <- factor(d$nutri_grade, levels = nutri_levels)
+    ggplot(d, aes(nutri_grade, representative_price)) +
+      geom_boxplot(width = .58, outlier.shape = NA, fill = "#dce8c8", colour = "#435f36") +
+      geom_jitter(width = .12, height = 0, alpha = .35, colour = "#647a3f") +
+      scale_y_log10() + scale_x_discrete(labels = toupper) +
+      labs(x = "Nutrition grade (A is best)", y = paste0("EUR/", unique(category_data()$target_unit), " (log scale)")) + dashboard_theme()
+  })
+  output$analysis_sugar_scatter <- renderPlot({
+    d <- category_data(); d <- d[is.finite(d$sugars_100g), , drop = FALSE]
+    d$nutrition_label <- factor(grade_label(d$nutri_grade), levels = c(LETTERS[1:5], "Unknown"))
+    ggplot(d, aes(representative_price, sugars_100g, colour = nutrition_label)) +
+      geom_point(size = 2.7, alpha = .72) + scale_x_log10() +
+      scale_colour_manual(values = c(A = "#268161", B = "#78913f", C = "#b28a2e", D = "#c36d3f", E = "#a94f57", Unknown = "#7a847e"), drop = FALSE) +
+      labs(x = paste0("EUR/", unique(category_data()$target_unit), " (log scale)"), y = if (unique(category_data()$target_unit) == "L") "Sugars (g/100 ml)" else "Sugars (g/100 g)", colour = "Nutrition") + dashboard_theme()
+  })
+  output$analysis_nutrition_table <- renderTable({
+    d <- analysis_category("associations")
+    d <- d[d$metric != "environment_score", , drop = FALSE]
+    data.frame(Metric = unname(analysis_metric_labels[d$metric]), Products = d$n,
+               `Spearman rho` = sprintf("%+.3f", d$rho), `Better direction` = d$better_direction, check.names = FALSE)
+  }, striped = TRUE)
+  output$analysis_environment_box <- renderPlot({
+    d <- category_data(); d <- d[!is.na(d$environment_grade), , drop = FALSE]
+    d$environment_grade <- factor(d$environment_grade, levels = environment_levels)
+    ggplot(d, aes(environment_grade, representative_price)) +
+      geom_boxplot(width = .62, outlier.shape = NA, fill = "#c3ddd5", colour = "#285d4f") +
+      geom_jitter(width = .12, height = 0, alpha = .35, colour = "#3c7666") +
+      scale_y_log10() + scale_x_discrete(labels = function(x) ifelse(x == "a-plus", "A+", toupper(x))) +
+      labs(x = "Environmental grade", y = paste0("EUR/", unique(category_data()$target_unit), " (log scale)")) + dashboard_theme()
+  })
+  output$analysis_carbon_bubble <- renderPlot({
+    d <- analysis_category("carbon_references")
+    validate(need(nrow(d) > 0, "No carbon reference estimates for this category."))
+    ggplot(d, aes(median_price, co2_total, size = n_products)) +
+      geom_point(fill = "#6b9c8b", colour = "#285d4f", alpha = .68) +
+      scale_x_log10() + scale_size_continuous(range = c(2, 12)) +
+      labs(x = paste0("Median unit price of mapped products (EUR/", unique(category_data()$target_unit), ", log scale)"),
+           y = "Carbon estimate (kg CO₂e/kg food)", size = "Products mapped") + dashboard_theme()
+  })
+  output$analysis_joint_count <- renderText({
+    d <- analysis_category("joint_cells"); sprintf("%s: %d products with price and both grades.", category_names[[input$category]], sum(d$n))
+  })
+  output$analysis_joint_heatmap <- renderPlot({
+    d <- analysis_category("joint_cells")
+    d$nutri_grade <- factor(d$nutri_grade, levels = nutri_levels)
+    d$environment_grade <- factor(d$environment_grade, levels = rev(environment_levels))
+    ggplot(d, aes(nutri_grade, environment_grade, fill = relative_price)) +
+      geom_tile(colour = "white", linewidth = 1.2) +
+      geom_text(aes(label = sprintf("n=%d\n%.2f", n, median_price)), size = 3.4) +
+      scale_fill_gradient2(low = "#4f8272", mid = "#f5f0df", high = "#c66d42", midpoint = 1, trans = "log", labels = function(x) sprintf("%.1f×", x)) +
+      scale_x_discrete(labels = toupper) + scale_y_discrete(labels = function(x) ifelse(x == "a-plus", "A+", toupper(x))) +
+      labs(x = "Nutrition grade (A is best)", y = "Environmental grade", fill = "Price / category median") + dashboard_theme() + theme(panel.grid = element_blank())
+  })
+  output$analysis_sensitivity_plot <- renderPlot({
+    d <- analysis_category("association_sensitivity")
+    d <- d[d$metric %in% c("nutri_score", "environment_score"), , drop = FALSE]
+    d$scenario <- factor(d$scenario, levels = rev(unique(d$scenario)))
+    d$metric <- factor(d$metric, levels = c("nutri_score", "environment_score"), labels = c("Nutrition score", "Environmental score"))
+    ggplot(d, aes(y = scenario, colour = metric)) +
+      geom_segment(aes(x = rho_main_same_goods, xend = rho_variant, yend = scenario), linewidth = 1.1, alpha = .7) +
+      geom_point(aes(x = rho_main_same_goods), shape = 1, size = 3.2, stroke = 1.1) +
+      geom_point(aes(x = rho_variant), size = 2.8) +
+      geom_vline(xintercept = 0, colour = "#87938c", linetype = "dashed") +
+      scale_colour_manual(values = c("Nutrition score" = "#21705a", "Environmental score" = "#b66036")) +
+      labs(x = "Spearman correlation", y = "Alternative price scenario", colour = "Metric") + dashboard_theme()
+  })
+  output$analysis_year_table <- renderTable({
+    d <- analysis_category("paired_year_summary")
+    data.frame(Category = category_names[[d$category[1]]], `Paired products` = d$n,
+               `Median change` = sprintf("%+.1f%%", d$median_change_pct),
+               Q1 = sprintf("%+.1f%%", d$q1), Q3 = sprintf("%+.1f%%", d$q3), check.names = FALSE)
+  }, striped = TRUE)
 }

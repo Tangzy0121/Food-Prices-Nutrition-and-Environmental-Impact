@@ -84,6 +84,7 @@ export function SensitivityPlot({ rows }: { rows: Sensitivity[] }) {
 }
 export const jointFill = (ratio: number) => {
   const log = Math.max(-1.5, Math.min(1.5, Math.log2(ratio))) / 1.5;
-  return log < 0 ? `oklch(${97 + log * 12}% ${-log * .055} 152)` : `oklch(${97 - log * 19}% .005 145)`;
+  const opacity = .16 + Math.abs(log) * .68;
+  return log < 0 ? `rgba(79, 130, 114, ${opacity})` : log > 0 ? `rgba(198, 109, 66, ${opacity})` : '#f5f0df';
 };
 export const envLabel = (index: number) => gradeLabel(environmentGrades[index]);

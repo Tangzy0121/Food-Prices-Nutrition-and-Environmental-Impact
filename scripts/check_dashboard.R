@@ -36,6 +36,14 @@ candidates <- sum(vapply(p$code[p$joint_grades_price], function(code) nrow(cheap
 stopifnot(candidates == 562L)
 library(shiny); library(ggplot2)
 products <- p
+analysis <- load_dashboard_analysis(".")
+stopifnot(nrow(analysis$coverage) == 28L, nrow(analysis$associations) == 20L,
+          sum(analysis$joint_cells$n) == 583L,
+          sum(analysis$carbon_references$n_products) == 594L,
+          sum(analysis$paired_year_summary$n) == 193L,
+          all(c("a-plus", "f") %in% analysis$price_by_grade$grade),
+          all(analysis$association_sensitivity$rho_main_same_goods >= -1),
+          all(analysis$association_sensitivity$rho_variant <= 1))
 source("shiny/server.R")
 testServer(server, {
   session$setInputs(category = "biscuits", budget = 10, nutrition = nutri_levels,

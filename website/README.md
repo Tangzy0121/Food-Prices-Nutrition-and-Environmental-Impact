@@ -33,6 +33,10 @@ The processing exporter reads the existing Parquet, cached category pages, froze
 
 The barcode examples include a multi-quote product, a single-quote product and a barcode with leading zeros. Environmental corrections are applied using the corrected Step 4 table. Dates remain separate for historical prices and current product attributes.
 
+## GitHub Pages
+
+`.github/workflows/deploy-pages.yml` builds pull requests and deploys `website/dist` from `main`. Set the repository's **Pages → Source** to **GitHub Actions** before the first deployment. The workflow supplies `VITE_BASE_PATH=/Food-Prices-Nutrition-and-Environmental-Impact/`; evidence links use Vite's base URL and hash navigation needs no rewrite. The Dashboard address is `https://tangzy0121.github.io/Food-Prices-Nutrition-and-Environmental-Impact/#dashboard`. Pages serves only this static React Dashboard; run the Shiny application separately for the course deliverable.
+
 ## Vercel
 
 Import the Git repository and set **Root Directory** to `website`. Framework: **Vite**. Build: `npm run build`. Output: `dist`. Use Node.js 24, or 22.18 and newer. Dashboard validation uses Node’s built-in TypeScript support. The site needs no environment variables, database or server functions.

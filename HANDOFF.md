@@ -2,7 +2,7 @@
 
 日期：2026-11-05。最终展示与提交：2026-11-20。
 
-后续交付在 `feat/report-shiny-delivery`：9 页英文商业分析报告（`output/food-value-report-v3.pdf`，含封面、连续正文及消费者/供货商价值解释）和 bslib 英文 Shiny（`shiny/`，含角色化决策说明、动态图表解读、选点、框选和商品比较）。EDA PR #1 已合并，新交付以 `main` 为评审目标，合并另行确认。运行及验证见 `docs/delivery_verification.md`，社区参考见 `docs/05_dashboard/community_references.md`。以下保留原 EDA 交接背景。
+后续交付包括 9 页英文商业分析报告（`output/food-value-report-v3.pdf`）、bslib 英文 Shiny 和 React 静态 Dashboard。2026-11-14 已按小组设计补齐 Shiny 六方向分析，保留角色化决策说明、动态图表解读、选点、框选和商品比较；网站 `#dashboard` 保留六方向下钻与 CSV 导出，两端统一配色，`.github/workflows/deploy-pages.yml` 用于 GitHub Pages。运行及验证见 `docs/delivery_verification.md`，设计见 `docs/05_dashboard/research_dashboard.md`。以下保留原 EDA 交接背景。
 
 ## 先看什么
 
