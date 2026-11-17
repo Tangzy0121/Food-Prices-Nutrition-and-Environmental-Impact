@@ -4,7 +4,7 @@ R for Data Science 课程期末项目。研究同类食品中价格与营养、�
 
 当前阶段：**Step 4 EDA 已执行，Step 5—6 的六方向 Shiny 与静态 Dashboard 已实现。最终展示与提交为 2026-11-20。** 正式入选 600 款，598 款进入主要比较集，连接 1,541 条报价。已恢复原始对象中的 16 款环境 F 等级，三维联合样本为 **583 款**；`frozen_v1` 原样保留，后续读取 `data/processed/step4_v1_1/`。小组信息与教师审批状态待补充。
 
-本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Dashboard 设计与六方向说明](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和二进制派生表在本地生成，源码、图表及结果 CSV 随版本保存。
+本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Dashboard 设计与六方向说明](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和 `outputs/step4/` 下的二进制结果由脚本生成。修正版商品表、源码、图表及结果 CSV 随版本保存。
 
 ## 从这里开始
 
@@ -89,4 +89,4 @@ The TypeScript [website](website/README.md) includes the study, a bilingual six-
 
 The [English report](reports/README.md) translates the executed findings into consumer decisions, supplier retail-positioning benchmarks and a business validation plan. Build with `./scripts/build_report.ps1`; the current illustrated PDF is written to `output/food-value-report-v3.pdf` (9 pages, with continuous body layout).
 
-The [Shiny guide](shiny/README.md) covers the six analysis directions and the bslib decision workflow: interpreted charts, hover/click/brush/zoom, quick presets, search/sort/pagination, two-product comparisons and CSV export. First reconstruct corrected inputs with `./scripts/run_step4.ps1`, then run `./scripts/run_shiny.ps1` and open `http://127.0.0.1:3838`. See [community references](docs/05_dashboard/community_references.md) and [verification](docs/delivery_verification.md) for design sources, checks and remaining course-submission work.
+The [Shiny guide](shiny/README.md) covers the six analysis directions and the bslib decision workflow: interpreted charts, hover/click/brush/zoom, quick presets, search/sort/pagination, two-product comparisons and CSV export. Run `./scripts/run_shiny.ps1` and open `http://127.0.0.1:3838`. To rebuild the included Step 4 data and results, run `./scripts/run_step4.ps1`. See [community references](docs/05_dashboard/community_references.md) and [verification](docs/delivery_verification.md) for design sources, checks and remaining course-submission work.

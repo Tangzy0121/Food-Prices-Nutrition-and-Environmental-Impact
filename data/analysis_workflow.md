@@ -188,7 +188,7 @@ Shiny 应用据此组织类别筛选、指标切换、商品检索和对比，�
 
 原始价格与商品响应位于 `data/raw/`。`data/processed/frozen_v1/` 保存原冻结版，包括 600 款完整入选商品、598 款主样本、1,541 条报价、分年价格、字典和来源校验信息。
 
-当前分析通过 `data/processed/step4_v1_1/` 使用环境等级修正版。该目录随仓库保存修正清单和 manifest，两个修正后的 RDS 商品表由分析脚本在本地生成。重新获取项目后，即使暂时没有这些派生 RDS，也可以从原冻结版和已保存的原始商品对象重建。
+当前分析通过 `data/processed/step4_v1_1/` 使用环境等级修正版。该目录随仓库保存两份修正后的 RDS 商品表、修正清单和 manifest。分析脚本可以从原冻结版和已保存的原始商品对象重建修正版。
 
 在项目根目录执行以下命令，可以重建修正版和全部 EDA 结果：
 
@@ -198,7 +198,7 @@ Rscript --vanilla -e "source('R/10_eda.R', encoding='UTF-8'); run_step4()"
 
 该入口需要可用的 R 环境及脚本列明的 `dplyr`、`tidyr`、`readr`、`ggplot2`、`jsonlite`、`digest` 包。它会校验本地输入、恢复环境等级、重算分析，生成 19 张结果表和 8 张图，并保留运行环境信息。
 
-生成后，当前分析表可这样读取：
+克隆仓库后，可直接读取以下分析输入：
 
 ```r
 products <- readRDS("data/processed/step4_v1_1/analysis_products.rds")
