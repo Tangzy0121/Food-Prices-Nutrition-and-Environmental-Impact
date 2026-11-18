@@ -9,7 +9,9 @@
     "check:dashboard": "node scripts/check-dashboard.mjs",
     "dev": "npm run sync:data && vite --host 127.0.0.1",
     "build": "npm run sync:data && npm run check:flow && npm run check:dashboard && tsc -b && vite build",
-    "preview": "vite preview --host 127.0.0.1"
+    "preview": "vite preview --host 127.0.0.1",
+    "build:standalone": "npm run build && node scripts/build-standalone.mjs",
+    "check:consumer": "node scripts/check-consumer-dashboard.cjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.0.0",
@@ -21,6 +23,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
+    "playwright-core": "^1.65.0",
     "typescript": "~5.7.2",
     "vite": "^6.0.0"
   }

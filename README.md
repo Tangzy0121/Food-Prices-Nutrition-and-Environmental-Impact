@@ -2,7 +2,7 @@
 
 R for Data Science 课程期末项目。研究同类食品中价格与营养、环境表现的关系，并用 R 完成探索性分析，开发 Shiny 交互仪表板。
 
-当前阶段：**Step 4 EDA 已执行，Step 5—6 的六方向 Shiny 与静态 Dashboard 已实现。最终展示与提交为 2026-11-20。** 正式入选 600 款，598 款进入主要比较集，连接 1,541 条报价。已恢复原始对象中的 16 款环境 F 等级，三维联合样本为 **583 款**；`frozen_v1` 原样保留，后续读取 `data/processed/step4_v1_1/`。小组信息与教师审批状态待补充。
+当前阶段：**2026-11-18 已按消费者视角重做 HTML 仪表板，保留营养、环境、联合比较三页。** 使用现有 R 结果：正式入选 600 款，598 款进入主要比较集，三维联合可用 583 款。可直接打开 [独立 HTML](outputs/dashboard/2026-11-18-food-signal.html)；改版内容、解释口径与验证见 [本轮说明](docs/05_dashboard/2026-11-18-consumer-redesign.md)。原 Shiny 界面仍保留此前版本，R 数据处理与冻结输入不变。第三条结论待小组看联合图后确定，项目继续进行。
 
 本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Dashboard 设计与六方向说明](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和二进制派生表在本地生成，源码、图表及结果 CSV 随版本保存。
 

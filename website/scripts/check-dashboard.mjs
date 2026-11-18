@@ -69,4 +69,4 @@ assert.deepEqual(nutritionGrades, ['a','b','c','d','e']);
 assert.deepEqual(environmentGrades, ['a-plus','a','b','c','d','e','f']);
 assert(logTicks(logDomain([.77,13.98])).every(v => v > 0));
 assert(csvRows([{code:'00123',name:'=SUM(1,2)',rho:-.25}]).includes('"-0.25"'));
-console.log(`Research dashboard verified: 6 directions, ${boxes.length} R boxes, 28 coverage cells, 20 correlations, ${t.joint_cells.length} joint cells, ${t.carbon_references.length} carbon references, 120 sensitivity rows and 193 paired products.`);
+console.log(`R dashboard data verified: ${boxes.length} R boxes, 28 coverage cells, 20 correlations, ${t.joint_cells.length} joint cells, ${t.carbon_references.length} carbon references, 120 sensitivity rows and 193 paired products.`);

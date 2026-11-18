@@ -1,6 +1,6 @@
 # Food / Signal presentation website
 
-React, TypeScript and Vite. A presentation of the research questions and the complete R data-preparation flow. The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection. The shared navigation also includes the six-direction research dashboard at `#dashboard`, following the user-confirmed EDA chart plan.
+React, TypeScript and Vite. A presentation of the research questions and the complete R data-preparation flow. The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection. The shared navigation also includes the three-page consumer research dashboard at `#dashboard`, following the user-confirmed EDA chart plan.
 
 The canvas fills the page beneath the shared navigation. Related filters, field transformations and checks share a compact node; its badge shows how many operations it contains. A collapsible navigation panel, previous/next node controls, a direct operation selector, pan/zoom and a minimap navigate the flow. The resizable bottom panel lists the selected node's operations and shows each operation's actual counts, sanitized before/after records, excerpt-based field profiles and exact R source lines. Independent analysis subsets share an output node labelled as four datasets, without adding their overlapping row counts. Cumulative R predicates remain labelled and flagging steps preserve their row counts.
 
@@ -53,7 +53,7 @@ See `PRODUCT.md` and `DESIGN.md`. Component proportions follow the user's Apple 
 
 ## Research dashboard
 
-The chart contract is [research_dashboard.md](../docs/05_dashboard/research_dashboard.md). The six views cover data and prices, nutrition, environment, joint comparison, sensitivity, and paired annual changes. Charts preserve the R analysis units and statistical definitions. All four categories appear as separate facets by default; the category selector limits the active view. Coverage cells reveal missing products; joint cells reveal their member products. CSV buttons export the active figure’s data for the selected categories. Year tables support search, sorting and pagination; export includes every matching record.
+The current chart contract is [2026-11-18-consumer-redesign.md](../docs/05_dashboard/2026-11-18-consumer-redesign.md). Three views cover nutrition, environment and joint comparison. Category checkboxes control visibility on shared, fixed axes. Nutrients use category colours and nutrient shapes; joint comparison uses environment grades on x, price on y and nutrition colours. CSV export follows the active selection. The original six-view R data bundle is retained for reproducibility.
 
 `src/data/dashboard.json` contains 598 corrected products, nine executed R tables and 45 R box summaries. To refresh from existing local inputs, run from the repository root:
 
@@ -62,3 +62,11 @@ Rscript --vanilla website/scripts/export-dashboard.R .
 ```
 
 The exporter uses the existing environmental correction routine and reads `outputs/step4/tables/`. It does not regenerate EDA result tables; run the Step 4 workflow first if analytical inputs change. Commit the refreshed bundle with the source. Production builds require no R runtime or Shiny service. `npm run check:dashboard` checks source hashes when available and independently checks boxes, coverage, correlations, joint cells, carbon reference grouping and paired-year summaries. R and CSV source hashes normalize CRLF to LF so Windows and Linux checkouts agree; frozen RDS hashes preserve exact bytes. It also works with the checked-in bundle when only `website/` is deployed.
+
+## Consumer redesign, 18 November 2026
+
+`npm run build:standalone` runs the data, processing-flow and TypeScript checks, builds the site, then embeds the JavaScript, CSS and data into `../outputs/dashboard/2026-11-18-food-signal.html`. Open this file directly in a browser; no R service or network is needed for the charts. The online R-source and data-source links still require a connection.
+
+`npm run check:consumer -- http://127.0.0.1:5173/#dashboard` exercises the real UI with headless Chrome. It also accepts a `file:///...html#dashboard` URL to check the standalone artifact. Install dependencies with `npm ci`; set `CHROME_PATH` if Chrome is installed elsewhere. Screenshots are regenerated in `../.scratch/consumer-check/`. The check covers tabs, nutrient and category toggles, fixed axes, empty selections, joint-product details by mouse and keyboard, both languages, mobile overflow, study workflow and source-page simplification.
+
+This redesign applies to the HTML/React website. The separate Shiny application still uses its previous interface; the underlying R inputs and statistical outputs were preserved.
