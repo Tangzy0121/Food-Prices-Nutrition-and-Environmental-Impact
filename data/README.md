@@ -6,7 +6,7 @@
 
 ## 当前分析读取
 
-首次使用时，在项目根目录重建修正版及 EDA 结果。`step4_v1_1/` 中的派生 RDS 文件由这一步在本地生成：
+仓库包含 `step4_v1_1/` 下的两份修正版 RDS，克隆后即可读取。需要复现修正版及 EDA 结果时，在项目根目录运行：
 
 ```powershell
 Rscript --vanilla -e "source('R/10_eda.R', encoding='UTF-8'); run_step4()"

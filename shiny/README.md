@@ -4,10 +4,9 @@ English local Shiny decision interface for the corrected Step 4 dataset, redesig
 
 The **Six analyses** menu follows the team design: coverage heatmap and log-price product boxplots; nutrition-grade boxplots, price–sugar scatter and nutrient correlations; environmental-grade boxplots and reference-level carbon bubbles; the joint grade/price heatmap; connected-dot sensitivity results; and paired 2024–2025 tables. These views use the executed Step 4 CSVs and the complete selected category. The existing Explore filters and two-product comparison remain separate. Forest/sage, warm orange and neutral colours share the same meanings as the static website Dashboard.
 
-From the project root:
+The repository includes the corrected inputs and Step 4 result tables. Start Shiny from the project root:
 
 ```powershell
-./scripts/run_step4.ps1  # first use: reconstruct corrected data from frozen inputs
 ./scripts/run_shiny.ps1
 ```
 
