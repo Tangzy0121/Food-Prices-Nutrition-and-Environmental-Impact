@@ -7,13 +7,17 @@ export const metricLabels = { nutri_score: 'Nutrition score', environment_score:
 export type Metric = keyof typeof metricLabels;
 export type Product = {
   code: string; category: Category; product_name: string | null; brands: string | null; quantity_text: string | null;
+  subtype: string | null;
   target_unit: string; representative_price: number; nutri_grade: string | null; environment_grade: string | null;
   nutri_score: number | null; environment_score: number | null; sugars_100g: number | null;
   saturated_fat_100g: number | null; fiber_100g: number | null; n_valid_regular_offers: number;
+  energy_kcal_100g: number | null; fat_100g: number | null; proteins_100g: number | null; salt_100g: number | null;
   n_stores: number; first_price_date: string; last_price_date: string; joint_grades_price: boolean;
   carbon_primary: boolean; co2_total: number | null; agribalyse_food_code: string | null;
   agribalyse_proxy_food_code: string | null; agribalyse_name: string | null;
 };
+export type Quote = { id: string; code: string; date: string; unit_price: number; package_price: number;
+  store: string | null; city: string | null; discounted: boolean; kept: boolean };
 export type Box = { category: Category; dimension: 'all' | 'nutrition' | 'environment'; grade: string; n: number; lower: number; q1: number; middle: number; q3: number; upper: number };
 export type Coverage = { category: Category; indicator: string; n_available: number; n: number; n_missing: number };
 export type Association = { category: Category; metric: Metric; n: number; rho: number | null };
@@ -23,14 +27,66 @@ export type Sensitivity = { category: Category; scenario: string; metric: Metric
 export type YearPair = { code: string; category: Category; year_2024: number; year_2025: number; change_pct: number };
 export type YearSummary = { category: Category; n: number; median_change_pct: number; q1: number; q3: number };
 export type DashboardData = {
-  version: string; products: Product[]; boxes: Box[];
+  version: string; products: Product[]; quotes: Quote[]; boxes: Box[];
   tables: { coverage: Coverage[]; category_summary: { category: Category; n: number; median_price: number; target_unit: string }[];
     associations: Association[]; joint_cells: JointCell[]; carbon_references: Carbon[];
     carbon_summary: { category: Category; n_products: number; n_references: number }[];
     association_sensitivity: Sensitivity[]; paired_year_prices: YearPair[]; paired_year_summary: YearSummary[] };
 };
 export const gradeLabel = (grade: string | null) => grade === 'a-plus' ? 'A+' : grade?.toUpperCase() ?? '—';
+export function matchesGrade(grade: string | null, filter: string, grades: string[]) {
+  if (!filter) return true;
+  if (filter !== 'through-c') return (grade ?? 'unknown') === filter;
+  const rank = grade === null ? -1 : grades.indexOf(grade);
+  return rank >= 0 && rank <= grades.indexOf('c');
+}
 export const productName = (p: Product) => p.product_name?.trim() || p.code;
+export const fmt = (value: number | null, digits = 2) => value === null || !Number.isFinite(value) ? '—' : Number(value.toFixed(digits)).toString();
+export const unitPrice = (price: number, unit: string) => `€${price.toFixed(2)}/${unit}`;
+export const signedDifference = (number: number, digits = 2) => {
+  const value = Number(number.toFixed(digits));
+  return (value > 0 ? '+' : value < 0 ? '−' : '') + fmt(Math.abs(value), digits);
+};
+
+export function gradeChange(reference: string | null, comparison: string | null, grades: string[]): 'missing' | 'same' | 'better' | 'worse' {
+  const before = reference === null ? -1 : grades.indexOf(reference);
+  const after = comparison === null ? -1 : grades.indexOf(comparison);
+  if (before < 0 || after < 0) return 'missing';
+  if (after === before) return 'same';
+  return after < before ? 'better' : 'worse';
+}
+export const searchText = (text: string) => text.normalize('NFD').replace(/\p{Diacritic}/gu, '').trim().toLowerCase();
+export const nutrientFields = [
+  ['energy_kcal_100g', 'Energy', '能量', 'kcal'], ['sugars_100g', 'Sugars', '糖', 'g'],
+  ['fat_100g', 'Total fat', '总脂肪', 'g'], ['saturated_fat_100g', 'Saturated fat', '饱和脂肪', 'g'],
+  ['proteins_100g', 'Protein', '蛋白质', 'g'], ['fiber_100g', 'Fibre', '纤维', 'g'], ['salt_100g', 'Salt', '盐', 'g'],
+] as const;
+
+const subtypeLabels: Record<string, [string, string]> = {
+  filled_biscuits: ['Filled biscuits', '夹心饼干'], chocolate_biscuits: ['Chocolate biscuits', '巧克力饼干'],
+  shortbread: ['Shortbread', '黄油酥饼'], plain_biscuits: ['Plain biscuits', '原味饼干'],
+  rolled_oats: ['Rolled oats', '燕麦片'], crunchy_muesli: ['Crunchy muesli', '脆麦片'],
+  muesli: ['Muesli', '混合麦片'], filled_cereals: ['Filled cereals', '夹心谷物'],
+  cereal_flakes: ['Cereal flakes', '谷物脆片'], extruded_cereals: ['Puffed cereals', '膨化谷物'],
+  cooking_chocolate: ['Cooking chocolate', '烘焙黑巧克力'], filled_chocolate: ['Filled chocolate', '夹心巧克力'],
+  flavored_chocolate: ['Chocolate with added flavours', '风味黑巧克力'], chocolate_bars: ['Chocolate bars', '黑巧克力排块'],
+  nectars: ['Fruit nectars', '果肉饮料'], mixed_juices: ['Mixed juices', '混合果汁'],
+  orange_juice: ['Orange juice', '橙汁'], apple_juice: ['Apple juice', '苹果汁'], grape_juice: ['Grape juice', '葡萄汁'],
+  pineapple_juice: ['Pineapple juice', '菠萝汁'], lemon_juice: ['Lemon juice', '柠檬汁'],
+  other_concentrate: ['Other juice from concentrate', '其他浓缩还原果汁'],
+};
+export const subtypeLabel = (subtype: string | null, language: 'en' | 'zh') => {
+  const label = subtype ? subtypeLabels[subtype] : undefined;
+  return label?.[language === 'zh' ? 1 : 0] ?? (language === 'zh' ? '未分类' : 'Unclassified');
+};
+
+export function isCheaperCandidate(product: Product, reference: Product) {
+  return product.category === reference.category && reference.subtype !== null && product.subtype === reference.subtype &&
+    product.representative_price < reference.representative_price - 1e-9 &&
+    product.joint_grades_price && reference.joint_grades_price &&
+    nutritionGrades.indexOf(product.nutri_grade!) <= nutritionGrades.indexOf(reference.nutri_grade!) &&
+    environmentGrades.indexOf(product.environment_grade!) <= environmentGrades.indexOf(reference.environment_grade!);
+}
 export const quantile = (values: number[], probability: number): number => {
   if (!values.length) return NaN;
   const sorted = [...values].sort((a, b) => a - b);

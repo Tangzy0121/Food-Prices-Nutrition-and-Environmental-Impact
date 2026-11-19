@@ -2,6 +2,7 @@
 .app-shell.is-pipeline{height:100dvh;display:flex;flex-direction:column;overflow:hidden}
 .is-pipeline .site-header{flex:none;position:relative;z-index:20}
 .is-pipeline .header-inner{height:64px;width:calc(100% - 40px);max-width:none}
+@media (max-width: 640px) { .is-pipeline .site-header .header-inner { height: 100px; grid-template-rows: 36px 42px; } }
 .is-pipeline #main-content{position:relative;flex:1;min-height:0;overflow:hidden}
 .prep-workspace{--prep-surface:oklch(99% .002 145);--prep-canvas:oklch(97% .003 145);--prep-line:oklch(89% .005 145);--prep-muted:oklch(49% .008 145);--prep-ink:oklch(24% .008 145);--prep-accent:oklch(54% .12 151);position:absolute;inset:0;isolation:isolate;color:var(--prep-ink);background:var(--prep-canvas);overflow:hidden}
 .prep-workspace button,.prep-workspace a,.prep-workspace select{outline-offset:-3px}

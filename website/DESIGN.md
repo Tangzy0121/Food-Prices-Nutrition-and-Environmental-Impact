@@ -25,4 +25,10 @@ Compact shared navigation. The study presents a factual title, brief consumer co
 
 User direction, 13 November 2026: avoid slogans and direct appeals; use fewer secondary headings and small explanatory captions. Let layout, alignment, whitespace, table headers and control placement communicate the content. Keep essential units, sample sizes and price dates readable.
 
-The user's six-direction chart plan is the dashboard's governing reference; see `../docs/05_dashboard/research_dashboard.md`. Use one factual title, a row of six analysis tabs, a shared category selector and flat chart sections. Show all four categories as separate facets by default. Use coverage and joint heatmaps; log-price boxplots with individual product points; price–sugar scatterplots; reference-level carbon bubbles; connected sensitivity coefficients; and tables for paired annual changes. Consumer budget filters and A/B shopping comparisons are outside this research dashboard's main flow. Preserve the existing light monochrome identity rather than adopting the dark background of the reference table. Green carries meaningful low-relative-price cells and alternative coefficients. Method explanations belong in an expandable section.
+Open on Find products. A single cascader commits the food category and type together. The price histogram sits below it and reports the live count between two independently adjustable handles. Show five matching products on the left, with search, local filters and expansion in the list. Opening a row updates product details on the right. A link takes that product to Compare products as the starting reference.
+
+Compare products starts with one reference and compares it against products of the same food type. Allow the full category and make the selected price-range constraint visible. Plot alternatives against the reference price at zero and group them by whether their nutrition and environmental grades decline. Mark cheaper products with both grades maintained or improved with a green diamond. Selecting a point opens the price and grade differences beside the plot, with access to the full nutrient, carbon and quote evidence for that pair.
+
+## EDA
+
+The EDA page restores the original six analysis tabs and defaults to Data & prices. Category filters, chart scales, drill-downs and CSV exports follow the original research interface.
