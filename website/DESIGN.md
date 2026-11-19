@@ -1,16 +1,16 @@
 # Design
 
-User direction: black and white with a small amount of green emphasis; restrained copy; few headings; layout communicates content. Apple-inspired component proportions, adapted for a website, rather than a claim of exact platform conformance.
+User direction: neutral gray-white canvas with blue used sparingly as accent; restrained copy; few headings; layout communicates content. Apple-inspired component proportions, adapted for a website, rather than a claim of exact platform conformance.
 
 ## Scene
 
-A reviewer reads the study on a laptop in a bright classroom, then inspects the processing steps. Use a light neutral surface, strong dark type, and clear controls.
+A reviewer reads the study on a laptop in a bright classroom, then inspects the processing steps. Use a neutral surface, clear type, and blue only for emphasis.
 
 ## Foundations
 
 - System UI typography: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif. Do not download proprietary Apple fonts.
-- Primary canvas #fafafa, surface #fff, text #191919, secondary text #626262, separators #e7e7e7.
-- Accent #23834f for active states and meaningful links. Pale green #eff7f1 for selected nodes only.
+- Primary canvas #f7f7f8, surface #fff, text #1d2330, secondary text #5c6570, separators #e3e5e8.
+- Accent #2865a5 for active states and meaningful links; navy #173b68 for primary actions. Soft panels use neutral #f2f3f5; pressed controls may use a light blue tint #e8f0fa. Violet #6352a0 is reserved for contrasting chart series only.
 - Body 16–18px, controls 14–16px, minimum secondary text 13px. Numbers use tabular lining figures.
 - Main width 1240px; immersive pipeline width 1440px. Spacing uses 4px multiples, with larger section gaps.
 - Controls target 44px height, soft 10–12px corners; segmented controls use a neutral track and selected white surface.

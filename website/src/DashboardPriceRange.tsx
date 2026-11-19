@@ -47,7 +47,7 @@ export default function DashboardPriceRange({ prices, range, median, unit, onCha
       <div className="dash-budget-chart">
         <svg viewBox="0 0 1000 96" preserveAspectRatio="none" aria-hidden="true" onPointerDown={selectNearest}>
           <defs><clipPath id={id + '-range'}><rect x={x(from)} width={Math.max(0, x(to) - x(from))} y="0" height="96"/></clipPath></defs>
-          <rect x={x(from)} width={Math.max(0, x(to) - x(from))} y="0" height="96" fill="#e7efe3"/>
+          <rect x={x(from)} width={Math.max(0, x(to) - x(from))} y="0" height="96" fill="#e4eefb"/>
           {[false, true].map(active => <g key={String(active)} clipPath={active ? 'url(#' + id + '-range)' : undefined}
             className={active ? 'dash-budget-bars active' : 'dash-budget-bars'}>
             {bins.map((count, i) => {

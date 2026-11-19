@@ -1,9 +1,8 @@
-# Shared application environment for the ui.R / server.R Shiny layout.
+# Shared application environment for the consumer Find/Compare dashboard.
 library(shiny)
 library(ggplot2)
 library(bslib)
 root <- normalizePath("..", mustWork = TRUE)
 source("helpers.R", local = TRUE)
 products <- load_dashboard_data(root)
-analysis <- load_dashboard_analysis(root)
-addResourcePath("editorial", file.path(root, "reports/assets"))
+quotes <- load_dashboard_quotes(root, products$code)

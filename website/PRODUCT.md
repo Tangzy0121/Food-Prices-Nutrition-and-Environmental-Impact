@@ -18,7 +18,7 @@ Precise, calm, direct. Continue the Food / Signal project identity with the user
 
 ## Anti-references
 
-Avoid promotional slogans, stacks of secondary headings, small explanatory captions, decorative metric cards, excessive green, and generic SaaS landing-page patterns.
+Avoid promotional slogans, stacks of secondary headings, small explanatory captions, decorative metric cards, loud accent overload, and generic SaaS landing-page patterns.
 
 ## Design Principles
 

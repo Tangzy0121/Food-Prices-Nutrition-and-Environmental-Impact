@@ -84,5 +84,7 @@ export function SensitivityPlot({ rows }: { rows: Sensitivity[] }) {
 export const jointFill = (ratio: number) => {
   const log = Math.max(-1.5, Math.min(1.5, Math.log2(ratio))) / 1.5;
   const opacity = .16 + Math.abs(log) * .68;
-  return log < 0 ? `rgba(79, 130, 114, ${opacity})` : log > 0 ? `rgba(198, 109, 66, ${opacity})` : '#f5f0df';
+  if (log === 0) return 'var(--blue-neutral)';
+  const color = log < 0 ? 'var(--research-blue)' : 'var(--research-violet)';
+  return `color-mix(in srgb, ${color} ${opacity * 100}%, transparent)`;
 };
