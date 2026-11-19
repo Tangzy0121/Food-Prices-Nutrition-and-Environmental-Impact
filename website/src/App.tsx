@@ -1,10 +1,12 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import { ArrowUpRight, ArrowRight, ChevronRight } from 'lucide-react';
 import { LanguageProvider, useI18n } from './i18n';
-type Page = 'study' | 'pipeline' | 'dashboard' | 'sources';
-const pageFromHash = (): Page => location.hash === '#pipeline' ? 'pipeline' : location.hash === '#dashboard' ? 'dashboard' : location.hash === '#sources' ? 'sources' : 'study';
+const pages = [['study', 'The study'], ['pipeline', 'Data pipeline'], ['eda', 'EDA'], ['dashboard', 'Dashboard'], ['sources', 'Sources']] as const;
+type Page = typeof pages[number][0];
+const pageFromHash = (): Page => pages.find(([id]) => location.hash === `#${id}`)?.[0] ?? 'study';
 const repo = 'https://github.com/Tangzy0121/Food-Prices-Nutrition-and-Environmental-Impact';
 const DetailedPipeline = lazy(() => import('./DetailedPipeline'));
+const Eda = lazy(() => import('./eda/Eda'));
 const Dashboard = lazy(() => import('./Dashboard'));
 function Brand() {
     const { t } = useI18n();
@@ -18,12 +20,19 @@ function AppContent() {
         window.addEventListener('hashchange', navigate);
         return () => window.removeEventListener('hashchange', navigate);
     }, []);
-    useEffect(() => { document.title = `Food / Signal · ${page === 'study' ? t("The study") : page === 'pipeline' ? t("Data pipeline") : page === 'dashboard' ? t("Dashboard") : t("Sources")}`; }, [page, t]);
+    const pageLabel = t(pages.find(([id]) => id === page)![1]);
+    useEffect(() => { document.title = `Food / Signal · ${pageLabel}`; }, [pageLabel]);
     useEffect(() => { window.scrollTo(0, 0); }, [page]);
     return <div className={`app-shell${page === 'pipeline' ? ' is-pipeline' : ''}`}>
     <a className="skip-link" href="#main-content" onClick={e => { e.preventDefault(); document.getElementById('main-content')?.focus(); }}>{t("Skip to content")}</a>
-    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{([['study', t("The study")], ['pipeline', t("Data pipeline")], ['dashboard', t("Dashboard")], ['sources', t("Sources")]] as const).map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
-    <main id="main-content" tabIndex={-1}>{page === 'study' ? <Study /> : page === 'pipeline' ? <Suspense fallback={<div style={{ padding: '64px', color: '#777' }} role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense> : page === 'dashboard' ? <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense> : <Sources />}</main>
+    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{pages.map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{t(label)}</a>)}</nav><div className="header-actions"><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
+    <main id="main-content" tabIndex={-1}>
+      {page === 'study' && <Study />}
+      {page === 'pipeline' && <Suspense fallback={<div style={{ padding: '64px', color: '#777' }} role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense>}
+      {page === 'eda' && <Suspense fallback={<div className="page-width route-loading" role="status">{language === 'zh' ? '正在载入 EDA…' : 'Loading EDA…'}</div>}><Eda /></Suspense>}
+      {page === 'dashboard' && <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense>}
+      {page === 'sources' && <Sources />}
+    </main>
     {page !== 'pipeline' && <footer className="site-footer"><div><span>{t("Food / Signal")}</span><span>{t("R for Data Science")}</span></div><p>{t("Open Prices & Open Food Facts contributors")} <span>{t("\u00B7")}</span> {t("ODbL")}</p><a href="#sources">{t("Sources & methodology")} <ArrowUpRight size={14}/></a></footer>}
   </div>;
 }
@@ -48,7 +57,7 @@ function Study() {
     </section>
 
     <section className="questions" aria-label={t("Research questions")}><div className="question-row"><span className="row-number">{t("01")}</span><p>{t("Do higher-priced products have better nutritional profiles?")}</p><span className="question-tag">{t("Price \u00D7 nutrition")}</span></div><div className="question-row"><span className="row-number">{t("02")}</span><p>{t("Does a higher price align with better environmental performance?")}</p><span className="question-tag">{t("Price \u00D7 environment")}</span></div><div className="question-row"><span className="row-number">{t("03")}</span><p>{t("Do greener products also have better nutritional profiles?")}</p><span className="question-tag">{t("Environment × nutrition")}</span></div></section>
-    <section className="consumer-findings"><h2>{l('What the current sample shows', '当前样本告诉我们什么')}</h2><div className="finding-grid"><article><span>01</span><h3>{l('Higher prices offer different nutritional trade-offs', '高价带来的营养变化因类别而异')}</h3><p>{l('Cereals and dark chocolate show a modest tendency toward better nutrition scores at higher prices. In dark chocolate, lower sugar comes with more saturated fat; its observed grades are still D or E. Biscuits and juice have near-zero price–nutrition correlations.', '早餐谷物与黑巧克力中，较高价格与较好的营养评分有一定关联。黑巧克力随价格上升呈现糖更少、饱和脂肪更多的权衡，样本营养等级仍集中于 D、E。饼干与果汁的价格—营养评分相关接近零。')}</p></article><article><span>02</span><h3>{l('Price is an uneven environmental signal', '价格传递的环保信号并不一致')}</h3><p>{l('Price and environment scores correlate positively for cereals (ρ = 0.307) and dark chocolate (ρ = 0.243), but are close to unrelated for biscuits (0.030) and juice (0.035). The highest-priced product in each category does not have that category’s best observed environmental grade.', '早餐谷物（ρ = 0.307）与黑巧克力（ρ = 0.243）的价格与环境评分呈正相关，饼干（0.030）与果汁（0.035）则接近零。各类别最昂贵的商品均未达到该类别样本中的最佳环境等级。')}</p></article><article><span>03</span><h3>{l('Compare nutrition at similar prices', '在相近价格下比较营养与环境')}</h3><p>{l('Use the joint chart to compare similarly priced products within one category. Environment is on the horizontal axis and nutrition is shown by colour. The third conclusion will be settled after reviewing this view.', '联合图以环境等级为横轴、价格为纵轴、营养等级为颜色，便于在同一类别内比较相近价格的商品。第三条结论留待审阅该图后确定。')}</p><a href="#dashboard">{t('Open dashboard')} <ArrowRight size={16}/></a></article></div></section>
+    <section className="consumer-findings"><h2>{l('What the current sample shows', '当前样本告诉我们什么')}</h2><div className="finding-grid"><article><span>01</span><h3>{l('Higher prices offer different nutritional trade-offs', '高价带来的营养变化因类别而异')}</h3><p>{l('Cereals and dark chocolate show a modest tendency toward better nutrition scores at higher prices. In dark chocolate, lower sugar comes with more saturated fat; its observed grades are still D or E. Biscuits and juice have near-zero price–nutrition correlations.', '早餐谷物与黑巧克力中，较高价格与较好的营养评分有一定关联。黑巧克力随价格上升呈现糖更少、饱和脂肪更多的权衡，样本营养等级仍集中于 D、E。饼干与果汁的价格—营养评分相关接近零。')}</p></article><article><span>02</span><h3>{l('Price is an uneven environmental signal', '价格传递的环保信号并不一致')}</h3><p>{l('Price and environment scores correlate positively for cereals (ρ = 0.307) and dark chocolate (ρ = 0.243), but are close to unrelated for biscuits (0.030) and juice (0.035). The highest-priced product in each category does not have that category’s best observed environmental grade.', '早餐谷物（ρ = 0.307）与黑巧克力（ρ = 0.243）的价格与环境评分呈正相关，饼干（0.030）与果汁（0.035）则接近零。各类别最昂贵的商品均未达到该类别样本中的最佳环境等级。')}</p></article><article><span>03</span><h3>{l('Compare nutrition at similar prices', '在相近价格下比较营养与环境')}</h3><p>{l('The grade matrix in EDA shows unit prices and product counts for each combination of nutrition and environmental grades.', 'EDA 的等级矩阵展示各营养与环境等级组合的单位价格和商品数量。')}</p><a href="#eda">{t('View EDA')} <ArrowRight size={16}/></a></article></div></section>
     <section className="research-workflow" aria-labelledby="research-workflow-title">
       <h2 id="research-workflow-title">{t("Research workflow")}</h2>
       <ol className="research-step-list">

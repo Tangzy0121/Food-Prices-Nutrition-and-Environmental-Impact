@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
-import { categories, nutritionGrades, environmentGrades, logBox, association, median, quantile, logDomain, logTicks, csvRows } from '../src/dashboardModel.ts';
+import { categories, nutritionGrades, environmentGrades, isCheaperCandidate, logBox, association, median, quantile, logDomain, logTicks, csvRows } from '../src/dashboardModel.ts';
 const bundle = JSON.parse(await readFile(new URL('../src/data/dashboard.json', import.meta.url), 'utf8'));
-const { products: p, boxes, tables: t } = bundle;
+const { products: p, quotes, boxes, tables: t } = bundle;
 const near = (a, b, message) => assert(Math.abs(a - b) < 1e-9, message);
 assert.equal(p.length, 598);
 assert.equal(new Set(p.map(p => p.code)).size, 598);
@@ -11,6 +11,28 @@ assert.equal(p.filter(p => p.joint_grades_price).length, 583);
 assert.equal(p.filter(p => p.environment_grade === 'f').length, 16);
 assert(p.every(p => typeof p.code === 'string' && p.representative_price > 0));
 assert(p.some(p => p.code.startsWith('00')));
+const productCodes = new Set(p.map(product => product.code));
+const quoteIds = new Set();
+const regularQuotes = new Map();
+for (const quote of quotes) {
+  assert(productCodes.has(quote.code));
+  assert(!quoteIds.has(quote.id));
+  quoteIds.add(quote.id);
+  assert(quote.date >= '2024-01-01' && quote.date <= '2025-12-31');
+  assert(Number.isFinite(quote.unit_price) && quote.unit_price > 0);
+  if (quote.discounted || !quote.kept) continue;
+  if (!regularQuotes.has(quote.code)) regularQuotes.set(quote.code, []);
+  regularQuotes.get(quote.code).push(quote.unit_price);
+}
+for (const product of p) {
+  const rows = regularQuotes.get(product.code) ?? [];
+  assert.equal(rows.length, product.n_valid_regular_offers);
+  near(median(rows), product.representative_price, 'Product quote median: ' + product.code);
+}
+const cerealReference = p.find(product => product.code === '3111902100044');
+assert.equal(cerealReference.subtype, 'crunchy_muesli');
+assert.equal(p.filter(product => isCheaperCandidate(product, cerealReference)).length, 11);
+assert(!isCheaperCandidate(p.find(product => product.subtype === 'rolled_oats'), cerealReference));
 for (const [file, expected] of Object.entries(bundle.sourceHashes)) {
   let bytes;
   try { bytes = await readFile(new URL(file.startsWith('website/') ? `../${file.slice(8)}` : `../../${file}`, import.meta.url)); }
@@ -69,4 +91,4 @@ assert.deepEqual(nutritionGrades, ['a','b','c','d','e']);
 assert.deepEqual(environmentGrades, ['a-plus','a','b','c','d','e','f']);
 assert(logTicks(logDomain([.77,13.98])).every(v => v > 0));
 assert(csvRows([{code:'00123',name:'=SUM(1,2)',rho:-.25}]).includes('"-0.25"'));
-console.log(`R dashboard data verified: ${boxes.length} R boxes, 28 coverage cells, 20 correlations, ${t.joint_cells.length} joint cells, ${t.carbon_references.length} carbon references, 120 sensitivity rows and 193 paired products.`);
+console.log(`R dashboard data verified: ${quotes.length} quotes and all 598 price medians, same-type candidates, ${boxes.length} R boxes, 28 coverage cells, 20 correlations, ${t.joint_cells.length} joint cells, ${t.carbon_references.length} carbon references, 120 sensitivity rows and 193 paired products.`);
