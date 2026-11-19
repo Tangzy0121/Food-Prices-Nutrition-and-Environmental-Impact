@@ -28,7 +28,7 @@ export default function DashboardProductSearch({ query, suggestions, total, onCh
   return <div className="dash-field dash-search" onBlur={event => {
     if (!event.currentTarget.contains(event.relatedTarget)) { setOpen(false); setActive(-1); }
   }}>
-    <label htmlFor={id}>{name}</label>
+    <label htmlFor={id} className="sr-only">{name}</label>
     <div className="dash-searchbox">
       <Search size={17} aria-hidden="true"/>
       <input id={id} ref={input} type="search" role="combobox" aria-autocomplete="list" aria-expanded={show}
@@ -63,7 +63,8 @@ export default function DashboardProductSearch({ query, suggestions, total, onCh
           }
         }}/>
       {query && <button className="dash-search-clear" type="button" aria-label={l('Clear search', '清除搜索')}
-        onClick={() => { onChange(''); setActive(-1); setOpen(false); input.current?.focus(); }}><X size={15}/></button>}
+        title={l('Clear search', '清除搜索')}
+        onClick={() => { onChange(''); setActive(-1); setOpen(false); input.current?.focus(); }}><X size={15} aria-hidden="true"/></button>}
     </div>
     <div className="dash-search-popup" hidden={!show}>
       <p>{total ? l(total + ' matching products', total + ' 款匹配商品') :

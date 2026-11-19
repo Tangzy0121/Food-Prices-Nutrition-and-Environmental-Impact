@@ -27,7 +27,7 @@ User direction, 13 November 2026: avoid slogans and direct appeals; use fewer se
 
 Open on Find products. A single cascader commits the food category and type together. The price histogram sits below it and reports the live count between two independently adjustable handles. Show five matching products on the left, with search, local filters and expansion in the list. Opening a row updates product details on the right. A link takes that product to Compare products as the starting reference.
 
-Compare products starts with one reference and compares it against products of the same food type. Allow the full category and make the selected price-range constraint visible. Plot alternatives against the reference price at zero and group them by whether their nutrition and environmental grades decline. Mark cheaper products with both grades maintained or improved with a green diamond. Selecting a point opens the price and grade differences beside the plot, with access to the full nutrient, carbon and quote evidence for that pair.
+Compare products starts with a reference and defaults to alternatives of the same food type that cost less and maintain or improve both grades. Price, nutrition and environment are independent criteria. Preview the first five matches by unit price and let users reveal the full list or clear the criteria. Show unit-price differences on a shared scale inside the list, with the reference as the zero point, and show both grade changes in each row. Allow comparison across the full category and show any inherited price-range constraint. Expand a product row to reveal its nutrient, carbon and quote evidence inline.
 
 ## EDA
 

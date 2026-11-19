@@ -1,8 +1,10 @@
 import { useId } from 'react';
 import type { PointerEvent } from 'react';
+import { RotateCcw } from 'lucide-react';
 import { useI18n } from './i18n';
 import { fmt, unitPrice } from './dashboardModel';
 import type { PriceRange } from './DashboardMarketChart';
+import { IconButton } from './DashboardVisuals';
 
 export default function DashboardPriceRange({ prices, range, median, unit, onChange }: {
   prices: number[]; range?: PriceRange; median: number; unit: string; onChange: (range?: PriceRange) => void;
@@ -76,7 +78,7 @@ export default function DashboardPriceRange({ prices, range, median, unit, onCha
         <button type="button" className="dash-button" aria-pressed={atMedian} onClick={() => onChange(atMedian ? undefined : [lower, medianBound])}>
           {l('Up to the median', '不高于中位价')}
         </button>
-        {range && <button type="button" className="dash-button dash-clear" onClick={() => onChange()}>{l('Reset range', '重置价格')}</button>}
+        {range && <IconButton icon={RotateCcw} label={l('Reset range', '重置价格')} className="dash-clear" onClick={() => onChange()}/>}
       </div>
     </div>
   </section>;

@@ -1,15 +1,14 @@
 import { useMemo, useRef, useState } from 'react';
-import { ArrowLeftRight, ArrowRight, ChevronDown, CircleDot, Package, Search, SlidersHorizontal, X } from 'lucide-react';
+import { ArrowLeftRight, ArrowRight, ChartScatter, ChevronDown, CircleDot, FilterX, Package, ReceiptText, Search, SlidersHorizontal, X } from 'lucide-react';
 import { useI18n } from './i18n';
 import snapshot from './data/dashboard.json';
 import { categories, environmentGrades, gradeLabel, matchesGrade, median, nutritionGrades, productName, searchText, subtypeLabel, unitPrice } from './dashboardModel';
 import type { Category, DashboardData, Product } from './dashboardModel';
 import DashboardCategoryPicker from './DashboardCategoryPicker';
-import DashboardCompare from './DashboardCompare';
 import DashboardComparisonBoard from './DashboardComparisonBoard';
 import DashboardPriceRange from './DashboardPriceRange';
 import DashboardProductSearch from './DashboardProductSearch';
-import { ExportButton, GradeBadge } from './DashboardVisuals';
+import { ExportButton, GradeBadge, GradeMetricIcon, IconButton } from './DashboardVisuals';
 import MarketplacePlot from './DashboardMarketChart';
 import type { MarketMetric, PriceRange } from './DashboardMarketChart';
 import './dashboard.css';
@@ -40,7 +39,6 @@ export default function Dashboard() {
   const [multipleOffers, setMultipleOffers] = useState(false);
   const [selectedCode, setSelectedCode] = useState<string>();
   const [reference, setReference] = useState<Product>();
-  const [detail, setDetail] = useState<Product>();
   const [sort, setSort] = useState('low');
   const [expanded, setExpanded] = useState(false);
   const [chartOpen, setChartOpen] = useState(false);
@@ -90,7 +88,6 @@ export default function Dashboard() {
 
   function switchView(next: View, revealPanel = false) {
     setView(next);
-    setDetail(undefined);
     if (revealPanel) {
       header.current?.scrollIntoView({ block: 'start' });
       requestAnimationFrame(() => panel.current?.focus({ preventScroll: true }));
@@ -100,16 +97,10 @@ export default function Dashboard() {
   function changeScope(category: Category, nextType: string) {
     if (selection?.category === category && subtype === nextType) return;
     setReference(undefined);
-    setDetail(undefined);
     setSelectedCode(undefined);
     setSelection({ category, subtype: nextType });
     setRange(undefined); setZoom(undefined); setQuery('');
     setExpanded(false);
-  }
-
-  function chooseReference(product?: Product) {
-    setReference(product);
-    setDetail(undefined);
   }
 
   function resetListFilters() {
@@ -118,7 +109,7 @@ export default function Dashboard() {
 
   return <div className="food-dashboard">
     <header ref={header} className="dash-heading">
-      <h1>{l('Compare packaged foods', '比较同类包装食品')}</h1>
+      <h1>{l('Find better food', '找到更好的食物')}</h1>
       <span className="dash-snapshot"><CircleDot size={14}/>{l('France · 2024–2025 quotes', '法国 · 2024–2025 年报价')}</span>
     </header>
     <div className="dash-tabs" role="tablist" aria-label={l('Dashboard views', '仪表板视图')}>
@@ -158,10 +149,10 @@ export default function Dashboard() {
               <div className="dash-list-controls">
                 <DashboardProductSearch key={selection.category + ':' + subtype} query={query} suggestions={suggested} total={filtered.length}
                   onChange={setQuery} onSelect={product => setSelectedCode(product.code)}/>
-                <button type="button" className="dash-button" aria-expanded={advanced} aria-controls="dash-extra-filters" onClick={() => setAdvanced(!advanced)}>
-                  <SlidersHorizontal size={16}/>{l('More filters', '更多筛选')}
-                  {activeFilters.length > 0 && <span className="dash-filter-count">{activeFilters.length}</span>}
-                </button>
+                <IconButton icon={SlidersHorizontal} label={l('More filters', '更多筛选')}
+                  aria-expanded={advanced} aria-controls="dash-extra-filters" onClick={() => setAdvanced(!advanced)}>
+                  {activeFilters.length > 0 && <span className="dash-filter-count" aria-hidden="true">{activeFilters.length}</span>}
+                </IconButton>
               </div>
               <div className="dash-refine" id="dash-extra-filters" hidden={!advanced}>
                 <label className="dash-field"><span>{l('Nutrition grade', '营养等级')}</span><select value={nutrition} onChange={e => setNutrition(e.target.value)}>
@@ -179,7 +170,7 @@ export default function Dashboard() {
                   <button type="button" className="dash-button" aria-pressed={balanced} onClick={() => {
                     const grade = balanced ? '' : 'through-c'; setNutrition(grade); setEnvironment(grade);
                   }}>{l('Both grades C or better', '两项等级均为 C 或更好')}</button>
-                  <button type="button" className="dash-button dash-clear" onClick={resetListFilters}>{l('Clear filters', '清除筛选')}</button>
+                  <IconButton icon={FilterX} label={l('Clear filters', '清除筛选')} className="dash-clear" onClick={resetListFilters}/>
                 </div>
               </div>
               {!advanced && activeFilters.length > 0 && <div className="dash-active-filters">
@@ -193,10 +184,12 @@ export default function Dashboard() {
                       <small>{[product.brands, product.quantity_text].filter(Boolean).join(' · ') || product.code}</small>
                     </span>
                     <span className="dash-list-price"><strong>{unitPrice(product.representative_price, unit)}</strong>
-                      <small data-offers={product.n_valid_regular_offers}>{product.n_valid_regular_offers} {l('quotes', '条报价')}</small></span>
+                      <small className="dash-list-quote-count" data-offers={product.n_valid_regular_offers} title={l('Regular quotes', '常规报价')}>
+                        <ReceiptText size={12} aria-hidden="true"/>{product.n_valid_regular_offers}<span className="sr-only"> {l('regular quotes', '条常规报价')}</span>
+                      </small></span>
                     <span className="dash-list-grades">
-                      <span><GradeBadge grade={product.nutri_grade}/><small title={l('Nutrition', '营养')}>{l('Nutri.', '营养')}</small></span>
-                      <span><GradeBadge grade={product.environment_grade}/><small title={l('Environment', '环境')}>{l('Env.', '环境')}</small></span>
+                      <span><GradeMetricIcon metric="nutrition"/><GradeBadge grade={product.nutri_grade}/></span>
+                      <span><GradeMetricIcon metric="environment"/><GradeBadge grade={product.environment_grade}/></span>
                     </span>
                   </button>
                 </li>)}
@@ -225,7 +218,7 @@ export default function Dashboard() {
                   <div><dt>{l('Latest record', '最近记录')}</dt><dd>{selected.last_price_date}</dd></div>
                 </dl>
                 <button type="button" className="dash-button" onClick={() => {
-                  chooseReference(selected);
+                  setReference(selected);
                   switchView('compare', true);
                 }}>{l('Compare this product', '去对比这款商品')}<ArrowRight size={15}/></button>
               </> : <p>{l('Select a product in the list to see its price, grades and quote history.', '从左侧列表选择一款商品，查看价格、等级和报价情况。')}</p>}
@@ -233,15 +226,10 @@ export default function Dashboard() {
           </div>
         </>}
       </>}
-      {view === 'compare' && selection && <div hidden={!!detail}>
-        <DashboardComparisonBoard key={selection.category + ':' + subtype + ':' + (reference?.code ?? '')}
-          reference={reference} options={scope} products={products} range={range}
-          onReference={chooseReference} onDetails={product => {
-            switchView('compare', true); setDetail(product);
-          }}/>
-      </div>}
+      {view === 'compare' && selection && <DashboardComparisonBoard key={selection.category + ':' + subtype}
+        reference={reference} options={scope} products={products} quotes={data.quotes} range={range} onReference={setReference}/>}
       {view === 'find' && selection && <details className="dash-distribution-details" open={chartOpen} onToggle={e => setChartOpen(e.currentTarget.open)}>
-            <summary>{l('View individual products on a chart', '查看商品点图')}</summary>
+            <summary><ChartScatter size={16} aria-hidden="true"/>{l('Product plot', '商品点图')}<ChevronDown size={15} aria-hidden="true"/></summary>
             {chartOpen && <section className="dash-chart-card">
               <MarketplacePlot key={selection.category + ':' + subtype} scope={scope} products={filtered} selected={selected}
                 metric={metric} onMetric={setMetric} zoom={zoom} onZoom={setZoom} onSelect={product => setSelectedCode(product.code)}/>
@@ -251,8 +239,6 @@ export default function Dashboard() {
               </div>
             </section>}
       </details>}
-      {view === 'compare' && reference && detail && <DashboardCompare first={reference} second={detail} quotes={data.quotes}
-        onBack={() => switchView('compare', true)}/>}
       {view === 'compare' && !selection && <div className="dash-list-empty">
         <p>{l('Choose a food category before comparing products.', '先选择食品类别，再选择一款参照商品。')}</p>
         <button className="dash-button" type="button" onClick={() => switchView('find', true)}>{l('Find products', '找商品')}<ArrowRight size={16}/></button>

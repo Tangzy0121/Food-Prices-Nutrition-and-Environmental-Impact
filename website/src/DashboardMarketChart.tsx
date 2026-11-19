@@ -4,7 +4,7 @@ import { ScanLine, RotateCcw, ZoomIn } from 'lucide-react';
 import { useI18n } from './i18n';
 import { environmentGrades, fmt, gradeLabel, nutrientFields, nutritionGrades, productName, quantile, unitPrice } from './dashboardModel';
 import type { Product } from './dashboardModel';
-import { spreadPlotOffsets, useChartWidth } from './DashboardVisuals';
+import { IconButton, spreadPlotOffsets, useChartWidth } from './DashboardVisuals';
 
 const gradeMetrics = [
   ['nutri_grade', 'Nutrition grade', '营养等级', nutritionGrades],
@@ -125,13 +125,11 @@ export default function MarketplacePlot({ scope, products, selected, metric, onM
           onClick={() => { closeRange(); onZoom(typicalActive ? undefined : typical); }}>
           <ZoomIn size={15}/>{l('Typical prices', '常见价位')}
         </button>}
-        <button ref={rangeButton} type="button" className="dash-button" aria-expanded={rangeOpen} aria-controls="dash-price-range"
-          onClick={() => { if (rangeOpen) closeRange(); else setRangeOpen(true); }}>
-          <ScanLine size={16}/>{l('Price range', '框选价格')}
-        </button>
-        {zoom && <button type="button" className="dash-button" onClick={() => { onZoom(); closeRange(); rangeButton.current?.focus(); }}>
-          <RotateCcw size={15}/>{l('Reset zoom', '重置缩放')}
-        </button>}
+        <IconButton ref={rangeButton} icon={ScanLine} label={l('Price range', '框选价格')}
+          aria-expanded={rangeOpen} aria-controls={rangeOpen ? 'dash-price-range' : undefined}
+          onClick={() => { if (rangeOpen) closeRange(); else setRangeOpen(true); }}/>
+        {zoom && <IconButton icon={RotateCcw} label={l('Reset zoom', '重置缩放')}
+          onClick={() => { onZoom(); closeRange(); rangeButton.current?.focus(); }}/>}
       </div>
     </div>
     {rangeOpen && <div className="dash-range" id="dash-price-range" onKeyDown={event => {
