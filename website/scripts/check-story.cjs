@@ -56,7 +56,8 @@ const { mkdir } = require('node:fs/promises');
 
     await page.getByRole('link', { name: '07 The answer' }).click();
     await page.waitForTimeout(350);
-    assert.equal(await page.locator('.end-card').count(), 4, 'End card offers four routes');
+    assert.equal(await page.locator('.end-card').count(), 5, 'End card offers five routes');
+    assert.equal(await page.locator('.team li').count(), 5, 'Five team members with roles');
     const href = await page.locator('.end-card[download]').getAttribute('href');
     assert(href && href.endsWith('.pdf'), 'Download link points at the report');
     const response = await page.request.get(new URL(href, page.url()).toString());
@@ -69,8 +70,22 @@ const { mkdir } = require('node:fs/promises');
     assert((await page.locator('h1').first().innerText()).includes('价格是一个很弱的标签'), 'Chinese copy renders');
     await page.screenshot({ path: path.join(screenshots, 'answer-zh.png'), fullPage: true });
 
+    await page.getByRole('button', { name: 'English', exact: true }).click();
+    await page.waitForTimeout(300);
+    await page.locator('.chapter-rail a[href="#story/nutrition"]').click();
+    await page.waitForTimeout(300);
+    await page.getByRole('link', { name: /Open the full nutrition view in the EDA/ }).click();
+    await page.waitForTimeout(900);
+    assert.equal(await page.evaluate(() => location.hash), '#eda/nutrition', 'Chapter links deep into the EDA');
+    assert.equal(await page.evaluate(() => [...document.querySelectorAll('[role="tab"]')].find(b => b.getAttribute('aria-selected') === 'true')?.textContent?.trim()), '02Nutrition');
+
+    await page.setViewportSize({ width: 1024, height: 768 });
+    await page.goto(`${base}/#story/opening`, { waitUntil: 'networkidle' });
+    await page.waitForTimeout(300);
+    assert(await page.evaluate(() => document.documentElement.scrollHeight <= innerHeight + 1), 'Opening fits one screen without scrolling');
+
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.getByRole('link', { name: '04 营养' }).click();
+    await page.locator('.chapter-rail a[href="#story/nutrition"]').click();
     await page.waitForTimeout(400);
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'No horizontal overflow on mobile');
     await page.screenshot({ path: path.join(screenshots, 'nutrition-mobile.png'), fullPage: true });

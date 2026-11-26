@@ -2,10 +2,12 @@ import { lazy, Suspense, useEffect, useState } from 'react';
 import { ArrowUpRight, ArrowRight, ChevronRight, Download } from 'lucide-react';
 import { LanguageProvider, useI18n } from './i18n';
 import Story, { storySlugs } from './Story';
+import type { Direction } from './eda/Eda';
 
+const edaTabs = ['coverage', 'nutrition', 'environment', 'joint', 'sensitivity', 'years'];
 const pages = [['story', 'The story'], ['pipeline', 'Data pipeline'], ['eda', 'EDA'], ['dashboard', 'Dashboard'], ['sources', 'Sources']] as const;
 type Page = typeof pages[number][0];
-type Route = { page: Page; chapter: number };
+type Route = { page: Page; chapter: number; tab?: string };
 const repo = 'https://github.com/Tangzy0121/Food-Prices-Nutrition-and-Environmental-Impact';
 const report = `${import.meta.env.BASE_URL}downloads/food-choices-report.pdf`;
 const DetailedPipeline = lazy(() => import('./DetailedPipeline'));
@@ -15,7 +17,10 @@ const Dashboard = lazy(() => import('./Dashboard'));
 function readRoute(): Route {
     const raw = location.hash.replace(/^#\/?/, '');
     if (raw.startsWith('pipeline')) return { page: 'pipeline', chapter: 0 };
-    if (raw.startsWith('eda')) return { page: 'eda', chapter: 0 };
+    if (raw.startsWith('eda')) {
+        const tab = raw.split('/')[1];
+        return { page: 'eda', chapter: 0, tab: edaTabs.includes(tab) ? tab : undefined };
+    }
     if (raw.startsWith('dashboard')) return { page: 'dashboard', chapter: 0 };
     if (raw.startsWith('sources')) return { page: 'sources', chapter: 0 };
     const slug = raw.split('/')[1];
@@ -36,7 +41,7 @@ function AppContent() {
         window.addEventListener('hashchange', navigate);
         return () => window.removeEventListener('hashchange', navigate);
     }, []);
-    const { page, chapter } = route;
+    const { page, chapter, tab } = route;
     useEffect(() => {
         document.title = page === 'story'
             ? `Food / Signal · ${['Does paying more buy better food?', 'One shelf, three answers', 'Four aisles, 598 products', 'From a receipt to a price', 'Price and nutrition', 'Price and environment', 'At similar prices', 'The answer'][chapter] ?? 'The story'}`
@@ -48,7 +53,7 @@ function AppContent() {
     <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{pages.map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{t(label)}</a>)}</nav><div className="header-actions"><a className="download-link" href={report} download aria-label={t("Download report")}><Download size={15} /><span>{t("Download report")}</span></a><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
     {page === 'story' ? <Story index={chapter} /> : <main id="main-content" tabIndex={-1}>
       {page === 'pipeline' && <Suspense fallback={<div className="route-loading page-width" role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense>}
-      {page === 'eda' && <Suspense fallback={<div className="page-width route-loading" role="status">{language === 'zh' ? '正在载入 EDA…' : 'Loading EDA…'}</div>}><Eda /></Suspense>}
+      {page === 'eda' && <Suspense fallback={<div className="page-width route-loading" role="status">{language === 'zh' ? '正在载入 EDA…' : 'Loading EDA…'}</div>}><Eda initialDirection={(tab as Direction) ?? 'coverage'} /></Suspense>}
       {page === 'dashboard' && <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense>}
       {page === 'sources' && <Sources />}
     </main>}

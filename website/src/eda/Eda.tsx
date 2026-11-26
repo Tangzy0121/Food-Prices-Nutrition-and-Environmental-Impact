@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import { ArrowDownToLine, ChevronLeft, ChevronRight, Search, X } from 'lucide-react';
 import { useI18n } from '../i18n';
@@ -17,7 +17,8 @@ const directions = [
   ['environment', 'Environment', '环境'], ['joint', 'Joint comparison', '联合比较'],
   ['sensitivity', 'Sensitivity', '敏感性'], ['years', 'Year-to-year', '年际变化'],
 ] as const;
-type Direction = typeof directions[number][0];
+export type Direction = typeof directions[number][0];
+export const directionIds = directions.map(([id]) => id);
 const indicators = ['Price', 'Nutri-Score 2023', 'Environment grade', 'Joint grades and price', 'Sugars', 'Fibre', 'Carbon 3.2'];
 const indicatorChinese: Record<string, string> = { Price: '价格', 'Nutri-Score 2023': '营养等级', 'Environment grade': '环境等级', 'Joint grades and price': '价格与两项等级', Sugars: '糖', Fibre: '纤维', 'Carbon 3.2': '碳估算 3.2' };
 const available = (p: Product, indicator: string) => indicator === 'Price' ? true : indicator === 'Nutri-Score 2023' ? p.nutri_grade !== null : indicator === 'Environment grade' ? p.environment_grade !== null : indicator === 'Joint grades and price' ? p.joint_grades_price : indicator === 'Sugars' ? p.sugars_100g !== null : indicator === 'Fibre' ? p.fiber_100g !== null : p.carbon_primary;
@@ -45,10 +46,11 @@ function ProductTable({ rows }: { rows: Product[] }) {
   return <><ScrollTable label={l('Products in selected cell', '所选单元格中的商品')}><table className="research-product-table"><thead><tr><th>{l('Product', '商品')}</th><th>{l('Barcode', '条码')}</th><th>{l('Price', '价格')}</th><th>{l('Nutrition', '营养')}</th><th>{l('Environment', '环境')}</th><th>{l('Regular offers', '常规报价')}</th></tr></thead><tbody>{rows.slice(current * 10, current * 10 + 10).map(p => <tr key={p.code}><th scope="row">{productName(p)}</th><td><code>{p.code}</code></td><td>€{p.representative_price.toFixed(2)}/{p.target_unit}</td><td>{gradeLabel(p.nutri_grade)}</td><td>{gradeLabel(p.environment_grade)}</td><td>{p.n_valid_regular_offers}</td></tr>)}</tbody></table></ScrollTable>{!rows.length && <p className="research-empty">{l('No products.', '没有商品。')}</p>}<div className="research-pagination"><span>{rows.length ? `${current * 10 + 1}–${Math.min(current * 10 + 10, rows.length)} / ${rows.length}` : '0 / 0'}</span><div><button disabled={!current} aria-label={l('Previous products', '上一页商品')} onClick={() => setPage(current - 1)}><ChevronLeft size={17}/></button><button disabled={current + 1 >= pages} aria-label={l('Next products', '下一页商品')} onClick={() => setPage(current + 1)}><ChevronRight size={17}/></button></div></div></>;
 }
 
-export default function Eda() {
+export default function Eda({ initialDirection = 'coverage' }: { initialDirection?: Direction }) {
   const { language, t } = useI18n();
   const l = (en: string, zh: string) => language === 'zh' ? zh : en;
-  const [direction, setDirection] = useState<Direction>('coverage');
+  const [direction, setDirection] = useState<Direction>(initialDirection);
+  useEffect(() => { setDirection(initialDirection); }, [initialDirection]);
   const [category, setCategory] = useState<Category | 'all'>('all');
   const [metric, setMetric] = useState<Metric>('nutri_score');
   const [coverageCell, setCoverageCell] = useState<Coverage | null>(null);

@@ -64,6 +64,10 @@ function Pager({ current }: { current: number }) {
   </nav>;
 }
 
+function Jump({ href, children }: { href: string; children: ReactNode }) {
+  return <a className="jump" href={href}><span>{children}</span><ArrowUpRight size={15} /></a>;
+}
+
 function Head({ index, label, title, lead }: { index: number; label: string; title: ReactNode; lead?: ReactNode }) {
   return <header className="chapter-head">
     <p className="chapter-kicker"><span>{pad(index)}</span><i aria-hidden="true" />{label}</p>
@@ -186,6 +190,9 @@ function Sample() {
       <div><span className="source-tag">{zh ? '商品资料' : 'Attributes'}</span><strong>Open Food Facts</strong><p>{zh ? '获取于 2026 年 11 月 2 日' : 'retrieved 2 November 2026'}</p></div>
       <div><span className="source-tag">{zh ? '连接键' : 'Join key'}</span><strong>{zh ? '字符型条码' : 'Character barcode'}</strong><p>{zh ? '保留前导零，多条报价对一款商品' : 'Leading zeros kept; many quotes, one product'}</p></div>
     </div>
+    <div className="jump-row">
+      <Jump href="#eda/coverage">{zh ? '在 EDA 看四个类别的数据覆盖' : 'See data coverage for the four categories in the EDA'}</Jump>
+    </div>
   </section>;
 }
 
@@ -270,7 +277,10 @@ function Nutrition() {
         <TrendPlot products={chocolate} metric="saturated_fat_100g" colour="#4c7fa8" label={zh ? '饱和脂肪' : 'Saturated fat'} unit={zh ? 'g / 100 g · ρ = +0.40' : 'g / 100 g · ρ = +0.40'} />
       </div>
     </div>
-    <p className="chart-note">{zh ? '每个点是一款商品，折线为价格三分位内的中位数。完整分布与下钻见仪表板。' : 'Each dot is a product. The line joins the median of each price third. Full distributions and drill-down are in the dashboard.'}</p>
+    <p className="chart-note">{zh ? '每个点是一款商品，折线为价格三分位内的中位数。' : 'Each dot is a product. The line joins the median of each price third.'}</p>
+    <div className="jump-row">
+      <Jump href="#eda/nutrition">{zh ? '在 EDA 看营养的完整视图' : 'Open the full nutrition view in the EDA'}</Jump>
+    </div>
   </section>;
 }
 
@@ -309,6 +319,10 @@ function Environment() {
       <p>{zh
         ? 'AGRIBALYSE 3.2 的碳估算覆盖 594 款商品，但它们映射到标准食品参考项。早餐谷物 150 款商品只对应 4 个不同的碳值。因此这些数字适合看参考项之间的差异，不适合排品牌榜。'
         : 'AGRIBALYSE 3.2 estimates cover 594 products, but they map to standard food references. The 150 cereals share just four distinct carbon values. Read them as reference-level differences, not a brand ranking.'}</p>
+    </div>
+    <div className="jump-row">
+      <Jump href="#eda/environment">{zh ? '在 EDA 看环境的完整视图' : 'Open the full environment view in the EDA'}</Jump>
+      <Jump href="#eda/sensitivity">{zh ? '换一种样本口径，结论还成立吗' : 'Does the result survive a different sample?'}</Jump>
     </div>
   </section>;
 }
@@ -359,7 +373,10 @@ function Joint() {
         : 'Of the 583 products that carry both grades, 562 have a cheaper alternative in the same category with neither grade worse. The remaining 21 are the ones genuinely asking for a premium.'}</p>
     </div>
     <p className="chart-note">{zh ? '等级是序数，不假设等级之间的距离。规则只问“是否不更差”。数字与报告一致，逐款清单见数据处理流程。' : 'Grades are ordinal. No distance between letters is assumed, and the rule only asks whether a grade is no worse. The counts follow the report. The product-level list is in the data pipeline.'}</p>
-    <a className="inline-link" href="#eda">{zh ? '在 EDA 里看全部六个研究视图' : 'See all six research views in the EDA'} <ArrowUpRight size={16} /></a>
+    <div className="jump-row">
+      <Jump href="#eda/joint">{zh ? '在 EDA 看等级组合的完整矩阵' : 'Open the full grade matrix in the EDA'}</Jump>
+      <Jump href="#dashboard">{zh ? '在仪表板里对比两款商品' : 'Compare two products in the dashboard'}</Jump>
+    </div>
   </section>;
 }
 
@@ -400,6 +417,20 @@ function Answer() {
         <figcaption>{zh ? '示意图 · AI 生成' : 'Editorial illustration · AI-generated'}</figcaption>
       </figure>
     </div>
+    <section className="team" aria-labelledby="team-title">
+      <p className="eyebrow">{zh ? '分工' : 'Who did what'}</p>
+      <h2 id="team-title">{zh ? '五个人的分工。' : 'Five people, five parts.'}</h2>
+      <ul>
+        {[
+          ['Tang Zhengyu', 'Exploratory data analysis', '探索性数据分析'],
+          ['Chen Haozhe', 'Data cleaning and dashboard styling', '数据清洗与仪表板样式'],
+          ['Zheng Bowen', 'Shiny dashboard development', 'Shiny 仪表板开发'],
+          ['Liu Weidong', 'Presentation design', '演示设计'],
+          ['Zeng Cheng', 'Topic selection, data collection and script', '选题、数据获取与讲稿'],
+        ].map(([name, en, role]) => <li key={name}><strong>{name}</strong><p>{zh ? role : en}</p></li>)}
+      </ul>
+      <p className="team-note">{zh ? '分析与图表由小组完成。网站与报告的文字整理使用了 AI 辅助，数字与解释由成员逐项核对。' : 'The analysis and charts are the team’s work. AI assistance was used for drafting the site and the report; members checked every figure and explanation.'}</p>
+    </section>
     <div className="story-end">
       <div className="end-copy">
         <p className="eyebrow">{zh ? '故事到这里' : 'End of the story'}</p>
@@ -408,6 +439,7 @@ function Answer() {
       </div>
       <div className="end-actions">
         <a className="end-card is-primary" href="#dashboard"><div><span>{zh ? '打开仪表板' : 'Open the dashboard'}</span><small>{zh ? '按类别筛选、对比两款商品、导出 CSV' : 'Filter by category, compare two products, export CSV'}</small></div><ArrowRight size={18} /></a>
+        <a className="end-card" href="#eda"><div><span>{zh ? 'EDA 六个视图' : 'EDA, six views'}</span><small>{zh ? '覆盖、营养、环境、联合、敏感性、年际变化' : 'Coverage, nutrition, environment, joint, sensitivity, year-to-year'}</small></div><ArrowRight size={18} /></a>
         <a className="end-card" href={asset('downloads/food-choices-report.pdf')} download><div><span>{zh ? '下载报告' : 'Download the report'}</span><small>{zh ? 'PDF · 商业分析报告' : 'PDF · business analytics report'}</small></div><Download size={18} /></a>
         <a className="end-card" href="#pipeline"><div><span>{zh ? '数据处理流程' : 'Data pipeline'}</span><small>{zh ? '56 个步骤、前后数据与 R 源码' : '56 steps, before/after rows and R source'}</small></div><ArrowUpRight size={18} /></a>
         <a className="end-card" href="#sources"><div><span>{zh ? '来源与方法' : 'Sources & method'}</span><small>{zh ? '四个来源、连接规则与时间口径' : 'Four sources, linking rule and dates'}</small></div><ArrowUpRight size={18} /></a>
@@ -436,7 +468,7 @@ export default function Story({ index }: { index: number }) {
   }, [current]);
   return <>
     <Rail current={current} />
-    <main id="main-content" className="story-main" tabIndex={-1}>
+    <main id="main-content" className={`story-main${current === 0 ? ' is-opening' : ''}`} tabIndex={-1}>
       <Section />
       <Pager current={current} />
       <StoryFoot />
