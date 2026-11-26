@@ -1,5 +1,20 @@
 # Presentation verification
 
+## Narrative restructure, 26 November 2026
+
+- The site now opens on an eight-chapter story (`#story/opening` … `#story/answer`) with a sticky chapter rail, previous/next pager, left/right arrow keys and a closing card that links to the dashboard, the report PDF, the pipeline and the sources. `#study` resolves to the opening; `#pipeline`, `#eda`, `#dashboard` and `#sources` are unchanged, in that navigation order.
+- Every displayed number is read from the committed bundles (`src/data/dashboard.json`, `src/data/presentation.json`); the story recalculates no statistics. Chapter 6 shows the report's 562/583 lower-price-candidate count; the budget slider and the sample counter are computed live from the product rows.
+- `npm run check:story -- http://127.0.0.1:4173` passes: eight chapters, rail state, pager, keyboard navigation, category chips, budget extremes (1/146 at the floor), product detail from the plot, the PDF link returning `application/pdf`, four end-card routes, Chinese copy and no horizontal overflow at 390 × 844. No page errors or console errors were recorded.
+- The consumer-dashboard check (`npm run check:consumer`) was updated for the merged navigation and still passes against the redesigned Dashboard, the EDA views and the story: product discovery, qualifying alternatives, inline price and grade comparisons, quote evidence, the six EDA tabs, and the eight-chapter rail.
+- `npm run build` passes with TypeScript, the processing-flow check, the dashboard data check and the presentation sync. `npm run check:flow` and `npm run check:dashboard` are unchanged.
+- Images in `public/img/` are the report's two editorial illustrations plus the four-category cut-out; both illustrations are labelled AI-generated on the page. The report PDF is served from `public/downloads/food-choices-report.pdf` and refreshed with `npm run sync:report`.
+- The palette is the shared neutral canvas with #2865a5 accents; the story adds no colours of its own beyond the grade scale.
+- The opening is a full-screen slide on screens at least 901 × 700: header (79 px), rail (57 px) and hero fill `100svh` exactly, with no pager or footer in that chapter. Checked at 1440 × 900, 1440 × 1080, 1280 × 720 and 1024 × 768; smaller screens scroll normally.
+- Chapters hand off to the deep dives: sample → `#eda/coverage`, nutrition → `#eda/nutrition`, environment → `#eda/environment` and `#eda/sensitivity`, joint → `#eda/joint` and `#dashboard`. `#eda/<tab>` selects that tab on load; clicking the nutrition hand-off lands on `02 Nutrition`.
+- Chapter 7 carries the team record: five members with their roles, plus the note that AI assistance drafted the site and report while members checked every figure.
+- Copy pass: `docs/2026-11-26-website-copy-tone.md` records the AI-tone check before and after the rewrite (prompt colons 2 → 0 in Chinese, 9 → 1 in English; semicolons 13 → 2; MTLD 481 → 415). Structure, figures and citations were unchanged.
+- Chapter 6 quotes the report's candidate count. An independent recount from the exported product rows gives 569/583 when A+ is ranked ahead of A, so the count is sensitive to grade ordering; the figure should be reconciled with the R output before the report is finalised.
+
 ## Research dashboard, 13 November 2026
 
 - Implements the user-confirmed six-direction chart plan in `docs/05_dashboard/research_dashboard.md`; replaces the earlier consumer shortlist layout in the website.

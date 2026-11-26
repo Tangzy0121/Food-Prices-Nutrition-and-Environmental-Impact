@@ -1,6 +1,10 @@
 # Food / Signal presentation website
 
-React, TypeScript and Vite. A presentation of the research questions and the complete R data-preparation flow. The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection. The consumer Dashboard is at `#dashboard`; the six research views are at `#eda`.
+React, TypeScript and Vite. An eight-chapter narrative of the study, followed by three deep dives: the complete R data-preparation flow at `#pipeline`, the six research views at `#eda`, the consumer comparison Dashboard at `#dashboard` and the sources at `#sources`.
+
+The story runs `#story/opening` through `#story/answer`. Each chapter carries one argument, one visual and a hand-off line: the opening question, the comparison gap and the literature, the sample, the five pricing rules, price × nutrition, price × environment, the joint view with a working budget, and the answer. A sticky chapter rail jumps to any chapter; the pager and the left/right arrow keys move one chapter at a time. The opening is a full-screen slide (no scroll above 900 × 700); the finding chapters hand off to the matching EDA tab through `#eda/<tab>`, and the last chapter returns to the opening and links to the dashboard, the EDA, the report PDF, the pipeline and the sources, with the team record. Chapters are separate hash routes, so one can be linked or refreshed directly, and the old `#study` address resolves to the opening. Navigation order is The story, Data pipeline, EDA, Dashboard, Sources.
+
+The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection.
 
 The canvas fills the page beneath the shared navigation. Related filters, field transformations and checks share a compact node; its badge shows how many operations it contains. A collapsible navigation panel, previous/next node controls, a direct operation selector, pan/zoom and a minimap navigate the flow. The resizable bottom panel lists the selected node's operations and shows each operation's actual counts, sanitized before/after records, excerpt-based field profiles and exact R source lines. Independent analysis subsets share an output node labelled as four datasets, without adding their overlapping row counts. Cumulative R predicates remain labelled and flagging steps preserve their row counts.
 
@@ -16,7 +20,11 @@ npm ci
 npm run dev
 ```
 
-`npm run build` validates and exports the presentation data, checks graph completeness and bilingual copy, checks TypeScript and builds `dist/`. `npm run check:flow` verifies all processing nodes and connections independently. `npm run preview` serves the build. npm scripts launch foreground servers; automated background launches on Windows must use the project-required `Start-CodexBackground.ps1` launcher.
+`npm run build` validates and exports the presentation data, checks graph completeness and bilingual copy, checks TypeScript and builds `dist/`. `npm run check:flow` verifies all processing nodes and connections independently. `npm run preview` serves the build.
+
+After rebuilding the report, run `npm run sync:report` to copy `output/food-value-report-v3.pdf` (or the English PDF) into `public/downloads/food-choices-report.pdf`, which is what the Download button serves. The committed PDF is a snapshot of the last assembled report.
+
+`npm run check:story -- http://127.0.0.1:4173` exercises the eight chapters, the rail, the pager, keyboard navigation, the budget interaction, the product detail, the PDF link and both languages with headless Chrome. npm scripts launch foreground servers; automated background launches on Windows must use the project-required `Start-CodexBackground.ps1` launcher.
 
 ## Data
 

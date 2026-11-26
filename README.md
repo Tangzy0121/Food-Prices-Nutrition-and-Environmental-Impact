@@ -2,7 +2,7 @@
 
 R for Data Science 课程期末项目。研究同类食品中价格与营养、环境表现的关系，并用 R 完成探索性分析，开发 Shiny 交互仪表板。
 
-当前阶段：**2026-11-18 已按消费者视角重做 HTML 仪表板，保留营养、环境、联合比较三页。** 使用现有 R 结果：正式入选 600 款，598 款进入主要比较集，三维联合可用 583 款。可直接打开 [独立 HTML](outputs/dashboard/2026-11-18-food-signal.html)；改版内容、解释口径与验证见 [本轮说明](docs/05_dashboard/2026-11-18-consumer-redesign.md)。原 Shiny 界面仍保留此前版本，R 数据处理与冻结输入不变。第三条结论待小组看联合图后确定，项目继续进行。
+当前阶段：**2026-11-26 已把网站重排为八章故事线，并加上报告 PDF 下载。** 首页提问题，然后逐章讲比较缺口、样本、方法、价格×营养、价格×环境、相近价格下的权衡，最后回答并交回仪表板、数据处理流程与来源。每章一屏一图，顶部章节条可直达，末章回到开头。站点部署在 GitHub Pages；原 Shiny 界面、R 数据处理与冻结输入不变。Report 仍在修改，定稿后运行 `npm run sync:report` 同步下载用的 PDF。可直接打开 [独立 HTML](outputs/dashboard/2026-11-18-food-signal.html) 查看上一版仪表板；本轮网页说明见 [website/README.md](website/README.md) 与 [VERIFICATION.md](website/VERIFICATION.md)。
 
 本轮改动与运行方式见 [HANDOFF.md](HANDOFF.md)。最新材料：[结果摘要](docs/04_eda/results_summary.md)、[notebook 源文件](notebooks/step4_eda.Rmd)、[环境等级修正](docs/04_eda/environment_grade_correction.md)、[Dashboard 设计与六方向说明](docs/05_dashboard/dashboard_spec.md)。项目根目录运行 `./scripts/run_step4.ps1` 可离线重建本轮结果，生成可独立打开的 `outputs/step4/step4_eda.html`；HTML 和 `outputs/step4/` 下的二进制结果由脚本生成。修正版商品表、源码、图表及结果 CSV 随版本保存。
 
@@ -85,7 +85,7 @@ prices <- readRDS("data/processed/frozen_v1/price_observations.rds")
 
 # English business report and Shiny application
 
-The TypeScript [website](website/README.md) includes the study, a bilingual six-direction analysis Dashboard, the barcode-join examples and the interactive processing diagram. Run `cd website` then `npm ci` and `npm run dev`; open `#dashboard`. Build with `npm run build`. Vercel root directory: `website`; output: `dist`. `.github/workflows/deploy-pages.yml` builds the project-path site and deploys it to GitHub Pages from `main`. The Shiny course deliverable remains in `shiny/` because GitHub Pages hosts only the static React version.
+The TypeScript [website](website/README.md) tells the study as an eight-chapter story and keeps three deep dives: the research Dashboard, the barcode-join examples and the interactive processing diagram. The story starts at `#story/opening`; the dashboard, pipeline and sources keep their addresses. A Download button serves the report PDF from `website/public/downloads/`. Run `cd website` then `npm ci` and `npm run dev`; build with `npm run build`; after rebuilding the report run `npm run sync:report`. Vercel root directory: `website`; output: `dist`. `.github/workflows/deploy-pages.yml` builds the project-path site and deploys it to GitHub Pages from `main`. The Shiny course deliverable remains in `shiny/` because GitHub Pages hosts only the static React version.
 
 The [English report](reports/README.md) translates the executed findings into consumer decisions, supplier retail-positioning benchmarks and a business validation plan. Build with `./scripts/build_report.ps1`; the current illustrated PDF is written to `output/food-value-report-v3.pdf` (9 pages, with continuous body layout).
 
