@@ -266,8 +266,8 @@ function Nutrition() {
           : 'In dark chocolate the price–sugar correlation is −0.46: the expensive bars carry less sugar. The same products also show +0.40 for saturated fat. The extra money buys an improvement and a deterioration at the same time, and the grade reports one letter — in this category, always D or E.'}</p>
       </div>
       <div className="tradeoff-plots">
-        <TrendPlot products={chocolate} metric="sugars_100g" colour="#c66d42" label={zh ? '糖' : 'Sugars'} unit={zh ? 'g / 100 g · ρ = −0.46' : 'g / 100 g · ρ = −0.46'} />
-        <TrendPlot products={chocolate} metric="saturated_fat_100g" colour="#214d41" label={zh ? '饱和脂肪' : 'Saturated fat'} unit={zh ? 'g / 100 g · ρ = +0.40' : 'g / 100 g · ρ = +0.40'} />
+        <TrendPlot products={chocolate} metric="sugars_100g" colour="#b4514a" label={zh ? '糖' : 'Sugars'} unit={zh ? 'g / 100 g · ρ = −0.46' : 'g / 100 g · ρ = −0.46'} />
+        <TrendPlot products={chocolate} metric="saturated_fat_100g" colour="#4c7fa8" label={zh ? '饱和脂肪' : 'Saturated fat'} unit={zh ? 'g / 100 g · ρ = +0.40' : 'g / 100 g · ρ = +0.40'} />
       </div>
     </div>
     <p className="chart-note">{zh ? '每个点是一款商品，折线为价格三分位内的中位数。完整分布与下钻见仪表板。' : 'Each dot is a product; the line joins the median of each price third. Full distributions and drill-down are in the dashboard.'}</p>

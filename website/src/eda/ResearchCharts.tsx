@@ -1,18 +1,17 @@
-import { useI18n } from './i18n';
-import { environmentGrades, gradeLabel, jitter, logDomain, logTicks, productName } from './dashboardModel';
-import type { Box, Carbon, Product } from './dashboardModel';
+import { useI18n } from '../i18n';
+import { fmt, gradeLabel, jitter, logDomain, logTicks, productName } from '../dashboardModel';
+import type { Box, Carbon, Product, Sensitivity } from '../dashboardModel';
 
 const W = 560, H = 330, L = 57, R = 20, T = 25, B = 55;
-export const fmt = (v: number | null, digits = 2) => v === null || !Number.isFinite(v) ? '—' : Number(v.toFixed(digits)).toString();
 const linear = (v: number, lo: number, hi: number, start: number, end: number) => start + (v - lo) / (hi - lo || 1) * (end - start);
 const logScale = (v: number, d: [number, number], start: number, end: number) => linear(Math.log10(v), Math.log10(d[0]), Math.log10(d[1]), start, end);
 
-export function BoxPlot({ products, boxes, grades, dimension, priceDomain }: { products: Product[]; boxes: Box[]; grades: string[]; dimension: 'all' | 'nutrition' | 'environment'; priceDomain?: [number, number] }) {
+export function BoxPlot({ products, boxes, grades, dimension }: { products: Product[]; boxes: Box[]; grades: string[]; dimension: 'all' | 'nutrition' | 'environment' }) {
   const { language } = useI18n();
   const width = dimension === 'all' ? 280 : W;
   const field = dimension === 'nutrition' ? 'nutri_grade' : 'environment_grade';
   const d = dimension === 'all' ? products : products.filter(p => p[field] !== null);
-  const domain = priceDomain ?? logDomain(d.map(p => p.representative_price));
+  const domain = logDomain(d.map(p => p.representative_price));
   const y = (v: number) => logScale(v, domain, H - B, T);
   const step = (width - L - R) / grades.length;
   const x = (index: number) => L + step * (index + .5);
@@ -63,9 +62,29 @@ export function CarbonPlot({ references, unit }: { references: Carbon[]; unit: s
   </svg>;
 }
 
- export const jointFill = (ratio: number) => {
+const scenarios = [
+  ['keep_duplicate_quotes', 'Keep duplicate quotes', '保留重复报价'],
+  ['include_discounts', 'Include discounts', '纳入折扣报价'],
+  ['at_least_two_offers', 'At least two offers', '至少两条常规报价'],
+  ['year_2024', '2024 prices', '2024 年价格'], ['year_2025', '2025 prices', '2025 年价格'],
+  ['per_100_kcal', 'Price per 100 kcal', '每 100 kcal 价格'],
+] as const;
+export const scenarioLabel = (key: string, language: string) => { const row = scenarios.find(r => r[0] === key); return row ? row[language === 'zh' ? 2 : 1] : key; };
+export function SensitivityPlot({ rows }: { rows: Sensitivity[] }) {
+  const { language } = useI18n();
+  const width = 620, height = 345, left = 183, right = 64, top = 26, bottom = 42;
+  const x = (v: number) => linear(v, -1, 1, left, width - right);
+  const y = (i: number) => top + i * 48;
+  return <svg className="research-svg sensitivity-svg" viewBox={`0 0 ${width} ${height}`} role="img" aria-label={language === 'zh' ? '相同商品的主价格与替代价格相关系数连点图' : 'Connected correlations for main and alternative prices on identical products'}>
+    {[-1, -.5, 0, .5, 1].map(v => <g key={v}><line className={v === 0 ? 'plot-zero' : 'plot-grid'} x1={x(v)} x2={x(v)} y1={10} y2={height - bottom}/><text x={x(v)} y={height - 18} textAnchor="middle">{fmt(v, 1)}</text></g>)}
+    {scenarios.map(([key], i) => { const row = rows.find(r => r.scenario === key); return <g key={key}><text x={left - 15} y={y(i) + 5} textAnchor="end">{scenarioLabel(key, language)}</text>{row && <><text className="plot-count" x={width - right + 14} y={y(i) + 5}>n={row.n}</text>{row.rho_main_same_goods !== null && row.rho_variant !== null ? <g><title>{`${scenarioLabel(key, language)} · n=${row.n} · ${fmt(row.rho_main_same_goods, 4)} → ${fmt(row.rho_variant, 4)}`}</title><line className="plot-connection" x1={x(row.rho_main_same_goods)} x2={x(row.rho_variant)} y1={y(i)} y2={y(i)}/><circle className="plot-main-coefficient" cx={x(row.rho_main_same_goods)} cy={y(i)} r={5.5}/><circle className="plot-alternative-coefficient" cx={x(row.rho_variant)} cy={y(i)} r={3.8}/></g> : <text x={x(0)} y={y(i) + 5} textAnchor="middle">—</text>}</>}</g>; })}
+    <text x={(left + width - right) / 2} y={height - 1} textAnchor="middle" className="plot-unit">Spearman ρ</text>
+  </svg>;
+}
+export const jointFill = (ratio: number) => {
   const log = Math.max(-1.5, Math.min(1.5, Math.log2(ratio))) / 1.5;
   const opacity = .16 + Math.abs(log) * .68;
-  return log < 0 ? `rgba(79, 130, 114, ${opacity})` : log > 0 ? `rgba(198, 109, 66, ${opacity})` : '#f5f0df';
+  if (log === 0) return 'var(--blue-neutral)';
+  const color = log < 0 ? 'var(--research-blue)' : 'var(--research-violet)';
+  return `color-mix(in srgb, ${color} ${opacity * 100}%, transparent)`;
 };
-export const envLabel = (index: number) => gradeLabel(environmentGrades[index]);

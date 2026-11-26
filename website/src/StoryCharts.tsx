@@ -1,8 +1,10 @@
 import { useI18n } from './i18n';
-import { categoryLabels, environmentGrades, gradeLabel, jitter, logDomain, logTicks, median, nutritionGrades, productName } from './dashboardModel';
+import { categoryLabels, environmentGrades, fmt, gradeLabel, jitter, logDomain, logTicks, median, nutritionGrades, productName } from './dashboardModel';
 import type { Category, Product } from './dashboardModel';
-import { fmt } from './ResearchCharts';
-import { gradeColors } from './ConsumerCharts';
+
+/* Grade colours follow the dashboard's grade badges: green at the top of
+   both scales, warm red at the bottom. */
+const gradeColors: Record<string, string> = { 'a-plus': '#2f7d5b', a: '#2f7d5b', b: '#6a8f42', c: '#b28a2e', d: '#c07a3a', e: '#b4514a', f: '#a2453f' };
 
 /* Correlation rows. Values are oriented so that positive always means
    "a higher price comes with the better grade". */

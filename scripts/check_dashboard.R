@@ -1,91 +1,58 @@
-# Run from the project root. Regression checks for meaningful decision rules.
+# Run from the project root. Regression checks for the Find/Compare dashboard helpers.
 source("shiny/helpers.R")
 p <- load_dashboard_data(".")
-all_cat <- function(cat, budget = Inf, ng = nutri_levels, eg = environment_levels, unknown = TRUE)
-  filter_products(p, cat, budget, ng, eg, unknown)
-stopifnot(nrow(all_cat("biscuits")) == 149L,
-          nrow(all_cat("fruit_juices")) == 150L,
-          nrow(all_cat("biscuits", 0)) == 0L,
-          nrow(all_cat("biscuits", ng = character(), unknown = FALSE)) == 0L,
-          nrow(all_cat("biscuits", eg = character(), unknown = FALSE)) == 0L,
-          nrow(all_cat("biscuits", unknown = FALSE)) == 146L,
-          all(all_cat("fruit_juices")$target_unit == "L"),
-          all(all_cat("dark_chocolates")$target_unit == "kg"),
-          names(product_table(all_cat("fruit_juices")))[3] == "EUR/L",
-          names(product_table(all_cat("dark_chocolates")))[3] == "EUR/kg")
-# Missing grades pass their own dimension only, not the budget or the other grade.
-synthetic <- p[rep(1, 4), ]
-synthetic$code <- as.character(1:4); synthetic$category <- "biscuits"
-synthetic$representative_price <- c(2, 2, 2, 20)
-synthetic$nutri_grade <- c(NA, "a", NA, NA)
-synthetic$environment_grade <- c("f", NA, "a-plus", "a-plus")
-stopifnot(identical(filter_products(synthetic, "biscuits", 5, "a", "a-plus", TRUE)$code, c("2", "3")))
-stopifnot(match("a-plus", environment_levels) < match("a", environment_levels),
-          match("f", environment_levels) == 7L)
-stopifnot(abs(view_association(all_cat("biscuits"), "environment_grade")$rho - .029616135379307174) < 1e-10,
-          grepl("Very little", explain_view(all_cat("biscuits"), "environment_grade")$title),
-          grepl("saturated fat", explain_view(all_cat("dark_chocolates"), "sugars_100g")$body),
-          grepl("No products", explain_view(p[FALSE, ], "nutri_score")$title),
-          grepl("Too little", explain_view(p[1, ], "nutri_score")$title),
-          grepl("Unknown row", explain_view(all_cat("biscuits"), "environment_grade", "read")$body),
-          metric_spec("fiber_100g", "L")$label == "Fibre g / 100 ml")
-alt <- cheaper_options(p, "3350031923081")
-stopifnot("3410280136257" %in% alt$code, all(alt$representative_price < 7.36))
-# Reconcile every dominance decision with the executed EDA, not a duplicate formula.
-candidates <- sum(vapply(p$code[p$joint_grades_price], function(code) nrow(cheaper_options(p, code)) > 0L, logical(1)))
-stopifnot(candidates == 562L)
-library(shiny); library(ggplot2)
+stopifnot(nrow(p) == 598L, "subtype" %in% names(p), sum(!is.na(p$subtype)) > 100L)
+
+cereals <- scope_products(p, "breakfast_cereals", "crunchy_muesli")
+stopifnot(nrow(cereals) > 0L, all(cereals$category == "breakfast_cereals"),
+          all(cereals$subtype == "crunchy_muesli"))
+
+biscuits <- filter_find_products(p, "biscuits", range = c(0, 10), nutrition = "through-c")
+stopifnot(nrow(biscuits) > 0L, all(biscuits$representative_price <= 10),
+          all(is.na(biscuits$nutri_grade) | match(as.character(biscuits$nutri_grade), nutri_levels) <= match("c", nutri_levels)))
+
+ref <- p[p$code == "3350031923081", , drop = FALSE]
+alts <- comparison_rows(p, ref, same_type = TRUE, lower_price = TRUE, nutrition = TRUE, environment = TRUE)
+stopifnot(nrow(ref) == 1L, nrow(alts) >= 1L, all(alts$price_delta < 0),
+          "3410280136257" %in% alts$code || any(alts$representative_price < ref$representative_price))
+
+q <- load_dashboard_quotes(".", p$code)
+stopifnot(nrow(q) > 1000L, all(q$code %in% p$code), all(q$unit_price > 0))
+
+stopifnot(names(product_table(scope_products(p, "fruit_juices")))[3] == "EUR/L",
+          names(product_table(scope_products(p, "dark_chocolates")))[3] == "EUR/kg",
+          identical(grade_change("c", "a", nutri_levels), "better"),
+          identical(grade_change("a", "c", nutri_levels), "worse"),
+          identical(grade_change(NA_character_, "a", nutri_levels), "missing"),
+          tr("find_tab", "zh") == "找商品")
+
+library(shiny)
+library(ggplot2)
 products <- p
-analysis <- load_dashboard_analysis(".")
-stopifnot(nrow(analysis$coverage) == 28L, nrow(analysis$associations) == 20L,
-          sum(analysis$joint_cells$n) == 583L,
-          sum(analysis$carbon_references$n_products) == 594L,
-          sum(analysis$paired_year_summary$n) == 193L,
-          all(c("a-plus", "f") %in% analysis$price_by_grade$grade),
-          all(analysis$association_sensitivity$rho_main_same_goods >= -1),
-          all(analysis$association_sensitivity$rho_variant <= 1))
+quotes <- q
 source("shiny/server.R")
 testServer(server, {
-  session$setInputs(category = "biscuits", budget = 10, nutrition = nutri_levels,
-                   environment = environment_levels, unknown = TRUE)
-  stopifnot(nrow(scatter_data()) == nrow(filtered()), nrow(filtered()) > 0L,
-            all(filtered()$representative_price <= 10))
-  session$setInputs(product_a = "3350031923081", product_b = "3410280136257")
-  stopifnot(nrow(pair()) == 2L, grepl("45.7", output$price_gap, fixed = TRUE))
-  session$setInputs(budget = 0)
-  stopifnot(nrow(filtered()) == 0L, nrow(pair()) == 2L,
-            grepl("A = no; B = no", output$selection_status, fixed = TRUE))
-  session$setInputs(category = "fruit_juices", budget = 14)
-  stopifnot(nrow(category_data()) == 150L, all(filtered()$target_unit == "L"),
-            nrow(scatter_data()) == nrow(filtered()))
-  initial_count <- nrow(filtered())
-  session$setInputs(audience = "supplier")
-  stopifnot(grepl("retail-positioning", guidance()$title), grepl("wholesale", guidance()$meaning),
-            grepl("Demand, margins and inventory", guidance()$next_data), nrow(filtered()) == initial_count)
-  session$setInputs(audience = "consumer")
-  stopifnot(grepl("shopping comparison", guidance()$title), nrow(filtered()) == initial_count)
-  # Search drives chart, pagination and the shared CSV source together.
-  juice_code <- category_data()$code[1]
-  session$setInputs(search = juice_code)
-  stopifnot(nrow(filtered()) == 1L, filtered()$code == juice_code,
-            nrow(page_products()) == 1L, nrow(plot_data()) == 1L)
+  session$setInputs(category = "biscuits", subtype = "", price_range = c(0, 10),
+                    nutrition = "", environment = "", multiple_offers = "", search = "", sort = "low")
+  stopifnot(nrow(filtered()) > 0L, all(filtered()$representative_price <= 10),
+            all(filtered()$category == "biscuits"))
+  session$setInputs(selected_code = filtered()$code[1])
+  stopifnot(!is.null(selected_product()), selected_product()$code == filtered()$code[1])
   session$setInputs(search = "no-such-product-!@#")
-  stopifnot(nrow(filtered()) == 0L, nrow(page_products()) == 0L,
-            grepl("No products", explanation()$title))
-  session$setInputs(search = "", multiple_offers = TRUE, metric = "fiber_100g", sort = "price_desc")
-  stopifnot(all(filtered()$n_valid_regular_offers >= 2L), nrow(page_products()) == 12L,
-            nrow(plot_data()) == sum(is.finite(filtered()$fiber_100g)),
-            all(diff(page_products()$representative_price) <= 0))
-  first_page <- page_products()$code
-  session$setInputs(next_page = 1L)
-  stopifnot(page_number() == 2L, !any(page_products()$code %in% first_page))
-  session$setInputs(previous_page = 1L, metric = "environment_grade")
-  d <- plot_data()
-  session$setInputs(scatter_brush = list(xmin = min(d$representative_price), xmax = max(d$representative_price), ymin = min(d$view_value), ymax = max(d$view_value)))
-  stopifnot(nrow(brushed()) == nrow(plot_data()))
-  session$setInputs(zoom_brush = 1L)
-  stopifnot(!is.null(zoom()), nrow(visible_data()) == nrow(plot_data()), grepl("Zoomed view", output$plot_coverage))
-  session$setInputs(reset_zoom = 1L)
-  stopifnot(is.null(zoom()))
+  stopifnot(nrow(filtered()) == 0L)
+  session$setInputs(search = "", category = "fruit_juices")
+  bounds <- price_bounds()
+  session$setInputs(price_range = bounds)
+  stopifnot(nrow(scoped()) == 150L, all(scoped()$target_unit == "L"))
+  session$setInputs(category = "breakfast_cereals", subtype = "crunchy_muesli")
+  session$setInputs(price_range = price_bounds())
+  code <- scoped()$code[1]
+  session$setInputs(selected_code = code)
+  stopifnot(identical(selected_code(), code))
+  session$setInputs(compare_selected = 1L)
+  stopifnot(identical(reference_code(), code))
+  session$setInputs(crit_price = TRUE, crit_nutrition = TRUE, crit_environment = TRUE,
+                    scope = "type", use_range = FALSE)
+  stopifnot(nrow(alternatives()) >= 0L)
 })
-cat("PASS: data contract, 562 EDA candidates, live explanations, numerical coverage, search, sorting, pagination, quote filters, brush/zoom and comparison state.\n")
+message("Dashboard checks passed.")

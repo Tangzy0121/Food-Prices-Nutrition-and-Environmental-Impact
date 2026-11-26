@@ -1,16 +1,16 @@
 # Design
 
-User direction: black and white with a small amount of green emphasis; restrained copy; few headings; layout communicates content. Apple-inspired component proportions, adapted for a website, rather than a claim of exact platform conformance.
+User direction: neutral gray-white canvas with blue used sparingly as accent; restrained copy; few headings; layout communicates content. Apple-inspired component proportions, adapted for a website, rather than a claim of exact platform conformance.
 
 ## Scene
 
-A reviewer reads the study on a laptop in a bright classroom, then inspects the processing steps. Use a light neutral surface, strong dark type, and clear controls.
+A reviewer reads the study on a laptop in a bright classroom, then inspects the processing steps. Use a neutral surface, clear type, and blue only for emphasis.
 
 ## Foundations
 
 - System UI typography: -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif. Do not download proprietary Apple fonts.
-- Primary canvas #fafafa, surface #fff, text #191919, secondary text #626262, separators #e7e7e7.
-- Accent #23834f for active states and meaningful links. Pale green #eff7f1 for selected nodes only.
+- Primary canvas #f7f7f8, surface #fff, text #1d2330, secondary text #5c6570, separators #e3e5e8.
+- Accent #2865a5 for active states and meaningful links; navy #173b68 for primary actions. Soft panels use neutral #f2f3f5; pressed controls may use a light blue tint #e8f0fa. Violet #6352a0 is reserved for contrasting chart series only.
 - Body 16–18px, controls 14–16px, minimum secondary text 13px. Numbers use tabular lining figures.
 - Main width 1240px; immersive pipeline width 1440px. Spacing uses 4px multiples, with larger section gaps.
 - Controls target 44px height, soft 10–12px corners; segmented controls use a neutral track and selected white surface.
@@ -19,10 +19,16 @@ A reviewer reads the study on a laptop in a bright classroom, then inspects the 
 
 ## Structure
 
-Compact shared navigation with a report download. The story is eight full-page chapters under a sticky chapter rail: opening, comparison gap and literature, sample, five pricing rules, price and nutrition, price and environment, the joint view with a budget slider, and the answer. Each chapter has one headline, one lead paragraph and one visual; the pager and the arrow keys move between them, and the last chapter closes the loop back to the opening. Chapters start on a warm paper surface with hairline rules, large tight-tracked headlines and tabular numerals; the closing chapter uses the forest surface for the end card. Detailed data-processing operations and sample statistics remain in the pipeline and sources pages. The pipeline is a viewport-filling Tableau Prep-style workspace: the canvas forms the page background, with no framed graph container or document footer. Seventeen compact grouped nodes preserve all external connections; badges show the number of underlying operations. The collapsible left navigation contains inputs, stages and the complete 56-operation list. A resizable bottom data panel exposes each operation inside the selected node, its changes, before/after excerpts, clearly labelled excerpt-based field profiles and exact R source. Panels can be hidden to free the canvas; selection and camera persist across language changes. Selecting a node or operation keeps the existing pan and zoom; moving to the selection requires the explicit Locate step control. Mobile keeps the full canvas, with overlay navigation and vertically stacked record previews. Sources has a compact document list with meaningful download links.
+Compact shared navigation with a report download. The story is eight full-page chapters under a sticky chapter rail: opening, comparison gap and literature, sample, five pricing rules, price and nutrition, price and environment, the joint view with a budget slider, and the answer. Each chapter has one headline, one lead paragraph and one visual; the pager and the arrow keys move between them, and the last chapter closes the loop back to the opening. Chapters sit on the neutral #f7f7f8 surface with hairline rules, large tight-tracked headlines and tabular numerals; the active chapter, the positive correlation bars and the links use #2865a5, and the closing card uses the navy #173b68 surface. Grade colours keep their own green-to-red scale, matching the dashboard badges. Detailed data-processing operations and sample statistics remain in the pipeline and sources pages. The pipeline is a viewport-filling Tableau Prep-style workspace: the canvas forms the page background, with no framed graph container or document footer. Seventeen compact grouped nodes preserve all external connections; badges show the number of underlying operations. The collapsible left navigation contains inputs, stages and the complete 56-operation list. A resizable bottom data panel exposes each operation inside the selected node, its changes, before/after excerpts, clearly labelled excerpt-based field profiles and exact R source. Panels can be hidden to free the canvas; selection and camera persist across language changes. Selecting a node or operation keeps the existing pan and zoom; moving to the selection requires the explicit Locate step control. Mobile keeps the full canvas, with overlay navigation and vertically stacked record previews. Sources has a compact document list with meaningful download links.
 
 ## Dashboard
 
 User direction, 13 November 2026: avoid slogans and direct appeals; use fewer secondary headings and small explanatory captions. Let layout, alignment, whitespace, table headers and control placement communicate the content. Keep essential units, sample sizes and price dates readable.
 
-The user's six-direction chart plan is the dashboard's governing reference; see `../docs/05_dashboard/research_dashboard.md`. Use one factual title, a row of six analysis tabs, a shared category selector and flat chart sections. Show all four categories as separate facets by default. Use coverage and joint heatmaps; log-price boxplots with individual product points; price–sugar scatterplots; reference-level carbon bubbles; connected sensitivity coefficients; and tables for paired annual changes. Consumer budget filters and A/B shopping comparisons are outside this research dashboard's main flow. Preserve the existing light monochrome identity rather than adopting the dark background of the reference table. Green carries meaningful low-relative-price cells and alternative coefficients. Method explanations belong in an expandable section.
+Open on Find products. A single cascader commits the food category and type together. The price histogram sits below it and reports the live count between two independently adjustable handles. Show five matching products on the left, with search, local filters and expansion in the list. Opening a row updates product details on the right. A link takes that product to Compare products as the starting reference.
+
+Compare products starts with a reference and defaults to alternatives of the same food type that cost less and maintain or improve both grades. Price, nutrition and environment are independent criteria. Preview the first five matches by unit price and let users reveal the full list or clear the criteria. Show unit-price differences on a shared scale inside the list, with the reference as the zero point, and show both grade changes in each row. Allow comparison across the full category and show any inherited price-range constraint. Expand a product row to reveal its nutrient, carbon and quote evidence inline.
+
+## EDA
+
+The EDA page restores the original six analysis tabs and defaults to Data & prices. Category filters, chart scales, drill-downs and CSV exports follow the original research interface.

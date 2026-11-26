@@ -6,12 +6,12 @@ export const languageStorageKey = 'food-signal-language';
 
 // English strings are the keys so the original copy remains the fallback.
 const chinese: Record<string, string> = {
-  'Dashboard': '仪表板', 'Open dashboard': '打开仪表板',
+  'Dashboard': '仪表板', 'Open dashboard': '打开仪表板', 'View EDA': '查看 EDA',
   'Environmental grade': '环境等级', 'Nutrition score': '营养分数',
   'Saturated fat': '饱和脂肪',
   'Food / Signal, the study': 'Food / Signal，研究介绍',
   'Skip to content': '跳转到正文', 'Main navigation': '主导航',
-  'The study': '研究介绍', 'The story': '故事', 'Data pipeline': '数据流程', 'Sources': '数据来源与处理流程',
+  'The study': '研究介绍', 'The story': '故事', 'Data pipeline': '数据流程', 'Sources': '数据来源',
   'Download report': '下载报告',
   'R source': 'R 源码', 'Sources & methodology': '数据来源与处理流程',
   'R for Data Science': 'R 数据科学课程',

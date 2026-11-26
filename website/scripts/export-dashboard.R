@@ -3,15 +3,20 @@ args <- commandArgs(trailingOnly = TRUE)
 root <- if (length(args)) normalizePath(args[[1]]) else normalizePath(".")
 setwd(root)
 suppressPackageStartupMessages(library(dplyr))
-source("R/09b_restore_environment_grades.R")
 source("shiny/helpers.R")
-prepare_step4_inputs(readRDS("data/processed/frozen_v1/selected_products.rds")) |> invisible()
+if (!file.exists("data/processed/step4_v1_1/analysis_products.rds")) {
+  source("R/09b_restore_environment_grades.R")
+  prepare_step4_inputs(readRDS("data/processed/frozen_v1/selected_products.rds")) |> invisible()
+}
 p <- load_dashboard_data(root)
 fields <- c("code", "category", "product_name", "brands", "quantity_text", "target_unit",
   "representative_price", "nutri_grade", "environment_grade", "nutri_score", "environment_score",
   "sugars_100g", "saturated_fat_100g", "fiber_100g", "n_valid_regular_offers", "n_stores",
   "first_price_date", "last_price_date", "joint_grades_price", "carbon_primary", "co2_total",
-  "agribalyse_food_code", "agribalyse_proxy_food_code", "agribalyse_name")
+  "agribalyse_food_code", "agribalyse_proxy_food_code", "agribalyse_name", "subtype",
+  "energy_kcal_100g", "fat_100g", "proteins_100g", "salt_100g")
+quote_path <- "data/processed/frozen_v1/price_observations.rds"
+quotes <- load_dashboard_quotes(root, p$code)
 table_names <- c("coverage", "category_summary", "associations", "joint_cells", "association_sensitivity",
   "carbon_references", "carbon_summary", "paired_year_prices", "paired_year_summary")
 table_paths <- paste0("outputs/step4/tables/", table_names, ".csv")
@@ -44,7 +49,8 @@ for (category in names(category_names)) {
 }
 source_paths <- c("data/processed/frozen_v1/selected_products.rds",
   "data/raw/open_food_facts/formal_2026-11-02/products_formal.rds", "R/09b_restore_environment_grades.R",
-  "R/10_eda.R", "shiny/helpers.R", "website/scripts/export-dashboard.R", table_paths)
+  "R/10_eda.R", "shiny/helpers.R", "website/scripts/export-dashboard.R",
+  "data/processed/step4_v1_1/analysis_products.rds", quote_path, table_paths)
 # Git checkouts may convert text to CRLF on Windows; hash a portable LF form.
 # Frozen RDS inputs retain exact byte hashes.
 hashes <- setNames(lapply(source_paths, function(f) {
@@ -53,6 +59,7 @@ hashes <- setNames(lapply(source_paths, function(f) {
   digest::digest(bytes, algo = "sha256", serialize = FALSE)
 }), source_paths)
 bundle <- list(version = "step4_v1_1", pricePeriod = "2024–2025", attributesDate = "2026-11-02",
-  sourceHashes = hashes, products = as.data.frame(p[, fields]), tables = tables, boxes = do.call(rbind, boxes))
+  sourceHashes = hashes, products = as.data.frame(p[, fields]), quotes = as.data.frame(quotes),
+  tables = tables, boxes = do.call(rbind, boxes))
 jsonlite::write_json(bundle, "website/src/data/dashboard.json", dataframe = "rows", na = "null", auto_unbox = TRUE, digits = 17)
 message("Exported 598 products, 9 executed R tables and ", length(boxes), " log-scale box summaries.")

@@ -3,29 +3,29 @@ import { ArrowUpRight, ArrowRight, ChevronRight, Download } from 'lucide-react';
 import { LanguageProvider, useI18n } from './i18n';
 import Story, { storySlugs } from './Story';
 
-type Page = 'story' | 'pipeline' | 'dashboard' | 'sources';
+const pages = [['story', 'The story'], ['pipeline', 'Data pipeline'], ['eda', 'EDA'], ['dashboard', 'Dashboard'], ['sources', 'Sources']] as const;
+type Page = typeof pages[number][0];
 type Route = { page: Page; chapter: number };
 const repo = 'https://github.com/Tangzy0121/Food-Prices-Nutrition-and-Environmental-Impact';
 const report = `${import.meta.env.BASE_URL}downloads/food-choices-report.pdf`;
 const DetailedPipeline = lazy(() => import('./DetailedPipeline'));
+const Eda = lazy(() => import('./eda/Eda'));
 const Dashboard = lazy(() => import('./Dashboard'));
 
 function readRoute(): Route {
     const raw = location.hash.replace(/^#\/?/, '');
-    if (raw.startsWith('dashboard')) return { page: 'dashboard', chapter: 0 };
     if (raw.startsWith('pipeline')) return { page: 'pipeline', chapter: 0 };
+    if (raw.startsWith('eda')) return { page: 'eda', chapter: 0 };
+    if (raw.startsWith('dashboard')) return { page: 'dashboard', chapter: 0 };
     if (raw.startsWith('sources')) return { page: 'sources', chapter: 0 };
-    if (raw.startsWith('story')) {
-        const slug = raw.split('/')[1];
-        const index = storySlugs.indexOf(slug as typeof storySlugs[number]);
-        return { page: 'story', chapter: index < 0 ? 0 : index };
-    }
-    return { page: 'story', chapter: 0 };
+    const slug = raw.split('/')[1];
+    const index = storySlugs.indexOf(slug as typeof storySlugs[number]);
+    return { page: 'story', chapter: index < 0 ? 0 : index };
 }
 
 function Brand() {
     const { t } = useI18n();
-    return <a className="brand" href="#story" aria-label={t("Food / Signal, the study")}><span className="brand-mark" aria-hidden="true"><span /><span /><span /></span><span>{t("Food")} <span className="brand-slash">{t("/")}</span> {t("Signal")}</span></a>;
+    return <a className="brand" href="#story" aria-label={t("Food / Signal, the story")}><span className="brand-mark" aria-hidden="true"><span /><span /><span /></span><span>{t("Food")} <span className="brand-slash">{t("/")}</span> {t("Signal")}</span></a>;
 }
 
 function AppContent() {
@@ -39,15 +39,19 @@ function AppContent() {
     const { page, chapter } = route;
     useEffect(() => {
         document.title = page === 'story'
-            ? `Food / Signal · ${['Does paying more buy better food?', 'One shelf, three answers', 'Four aisles, 598 products', 'From a receipt to a price', 'Price and nutrition', 'Price and environment', 'At similar prices', 'The answer'][chapter] ?? 'The study'}`
-            : `Food / Signal · ${page === 'pipeline' ? t("Data pipeline") : page === 'dashboard' ? t("Dashboard") : t("Sources")}`;
+            ? `Food / Signal · ${['Does paying more buy better food?', 'One shelf, three answers', 'Four aisles, 598 products', 'From a receipt to a price', 'Price and nutrition', 'Price and environment', 'At similar prices', 'The answer'][chapter] ?? 'The story'}`
+            : `Food / Signal · ${t(pages.find(([id]) => id === page)![1])}`;
     }, [page, chapter, t]);
     useEffect(() => { if (page !== 'story') window.scrollTo(0, 0); }, [page]);
-    const nav = ([['story', t('The story')], ['dashboard', t('Dashboard')], ['pipeline', t('Data pipeline')], ['sources', t('Sources')]] as const);
     return <div className={`app-shell${page === 'pipeline' ? ' is-pipeline' : ''}`}>
     <a className="skip-link" href="#main-content" onClick={e => { e.preventDefault(); document.getElementById('main-content')?.focus(); }}>{t("Skip to content")}</a>
-    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{nav.map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{label}</a>)}</nav><div className="header-actions"><a className="download-link" href={report} download><Download size={15} />{t("Download report")}</a><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
-    {page === 'story' ? <Story index={chapter} /> : <main id="main-content" tabIndex={-1}>{page === 'pipeline' ? <Suspense fallback={<div style={{ padding: '64px', color: '#777' }} role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense> : page === 'dashboard' ? <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense> : <Sources />}</main>}
+    <header className="site-header"><div className="header-inner"><Brand /><nav aria-label={t("Main navigation")}>{pages.map(([id, label]) => <a key={id} className={page === id ? 'nav-link active' : 'nav-link'} href={`#${id}`} aria-current={page === id ? 'page' : undefined}>{t(label)}</a>)}</nav><div className="header-actions"><a className="download-link" href={report} download><Download size={15} />{t("Download report")}</a><div className="language-switch" role="group" aria-label={t("Language")}><button type="button" lang="en" aria-label="English" aria-pressed={language === 'en'} onClick={() => setLanguage('en')}>EN</button><button type="button" lang="zh-CN" aria-label="中文" aria-pressed={language === 'zh'} onClick={() => setLanguage('zh')}>中文</button></div><a className="repo-link" href={repo} target="_blank" rel="noreferrer">{t("R source")} <ArrowUpRight size={16}/></a></div></div></header>
+    {page === 'story' ? <Story index={chapter} /> : <main id="main-content" tabIndex={-1}>
+      {page === 'pipeline' && <Suspense fallback={<div className="route-loading page-width" role="status">{language === 'zh' ? '正在载入完整数据流程…' : 'Loading the complete data flow…'}</div>}><DetailedPipeline /></Suspense>}
+      {page === 'eda' && <Suspense fallback={<div className="page-width route-loading" role="status">{language === 'zh' ? '正在载入 EDA…' : 'Loading EDA…'}</div>}><Eda /></Suspense>}
+      {page === 'dashboard' && <Suspense fallback={<div className="dashboard-loading" role="status">{language === 'zh' ? '正在载入研究图表…' : 'Loading research charts…'}</div>}><Dashboard /></Suspense>}
+      {page === 'sources' && <Sources />}
+    </main>}
     {page !== 'pipeline' && page !== 'story' && <footer className="site-footer"><div><span>{t("Food / Signal")}</span><span>{t("R for Data Science")}</span></div><p>{t("Open Prices & Open Food Facts contributors")} <span>{t("\u00B7")}</span> {t("ODbL")}</p><a href="#sources">{t("Sources & methodology")} <ArrowUpRight size={14}/></a></footer>}
   </div>;
 }
