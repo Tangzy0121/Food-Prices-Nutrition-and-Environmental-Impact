@@ -107,16 +107,16 @@ function Gap() {
   const { language } = useI18n();
   const zh = language === 'zh';
   const signals = [
-    { tag: '€/kg', title: zh ? '价格' : 'Price', body: zh ? '货架价取决于包装大小。同一条货架上同时有 125 g 和 1.2 kg 的包装，只有换算成 €/kg 才能比较。' : 'The shelf price depends on pack size. A 125 g pack and a 1.2 kg pack sit on the same shelf; only €/kg makes them comparable.' },
+    { tag: '€/kg', title: zh ? '价格' : 'Price', body: zh ? '货架价取决于包装大小。同一条货架上同时有 125 g 和 1.2 kg 的包装，只有换算成 €/kg 才能比较。' : 'The shelf price depends on pack size. A 125 g pack and a 1.2 kg pack sit on the same shelf. Only €/kg makes them comparable.' },
     { tag: 'A–E', title: zh ? '营养等级' : 'Nutrition grade', body: zh ? '一个字母同时概括糖、盐、饱和脂肪、纤维和蛋白质。字母相同的两款商品，配方可以差别很大。' : 'One letter summarises sugar, salt, saturated fat, fibre and protein together. Two products with the same letter can differ in what they contain.' },
-    { tag: 'A+–F', title: zh ? '环境等级' : 'Environmental grade', body: zh ? '按每 100 g 计算的综合评分，随配方与采购变化，却不会随价签变化。' : 'A composite score per 100 g. It moves with recipe and sourcing, not with the price tag.' },
+    { tag: 'A+–F', title: zh ? '环境等级' : 'Environmental grade', body: zh ? '按每 100 g 计算的综合评分，随配方与采购变化，却不会随价格变化。' : 'A composite score per 100 g. It moves with recipe and sourcing, not with price.' },
   ];
   return <section className="chapter">
     <Head index={1} label={zh ? '比较的缺口' : 'The comparison gap'}
       title={<>{zh ? '一个货架，三种答案，' : 'One shelf, three answers.'}<br />{zh ? '没有一个叫“值不值”。' : 'None of them is “value”.'}</>}
       lead={zh
-        ? '购物者被要求同时读懂三套从未打算互相比较的系统。我们想知道：在这三套系统之间，价格到底透露了多少信息。'
-        : 'Shoppers are asked to combine three systems that were never designed to be compared. We asked how much the price tag actually tells you about the other two.'} />
+        ? '购物者被要求同时读懂三套从未打算互相比较的系统。我们想知道，在这三套系统之间，价格到底透露了多少信息。'
+        : 'Shoppers are asked to combine three systems that were never designed to be compared. We asked how much the price actually tells you about the other two.'} />
     <div className="signal-cards">
       {signals.map(s => <article key={s.tag}>
         <span className="signal-tag">{s.tag}</span>
@@ -160,7 +160,7 @@ function Sample() {
   ];
   return <section className="chapter">
     <Head index={2} label={zh ? '样本' : 'The sample'}
-      title={zh ? <>四个货架，598 款商品，<br />每款一个可比价格。</> : <>Four aisles, 598 products,<br />one comparable price each.</>}
+      title={zh ? <>四个类别，598 款商品，<br />每款一个可比价格。</> : <>Four categories, 598 products,<br />one comparable price each.</>}
       lead={zh
         ? '我们把 2024–2025 年法国零售报价与商品资料按条码连接。每款商品最终得到一个可比的单位价格，以及在数据允许时的两个等级。'
         : 'We linked French retail quotes from 2024–2025 to product information by barcode. Every product ends with one comparable unit price and, where the data allow, two grades.'} />
@@ -169,7 +169,7 @@ function Sample() {
     </ol>
     <figure className="category-figure">
       <img src={asset('img/categories.webp')} alt={zh ? '饼干、加奶早餐谷物、黑巧克力与橙汁' : 'Biscuits, breakfast cereal with milk, dark chocolate and orange juice'} width={1800} height={600} />
-      <figcaption>{zh ? '四个类别各抽 150 款；两款因包装规格无法换算被排除。' : '150 products per category at selection; two were excluded because their package size could not be converted.'}</figcaption>
+      <figcaption>{zh ? '四个类别各抽 150 款。两款因包装规格无法换算被排除。' : '150 products per category at selection. Two were excluded because their package size could not be converted.'}</figcaption>
     </figure>
     <div className="category-cards">
       {categories.map(c => {
@@ -194,18 +194,18 @@ function Method() {
   const zh = language === 'zh';
   const example = bundle.examples[0];
   const steps = [
-    [zh ? '保留有效常规报价' : 'Keep valid regular quotes', zh ? '剔除折扣与异常价格，折扣记录单独保留。' : 'Discounts and invalid prices are removed; discount rows stay separate.'],
+    [zh ? '保留有效常规报价' : 'Keep valid regular quotes', zh ? '剔除折扣与异常价格，折扣记录单独保留。' : 'Discounts and invalid prices are removed. Discount rows stay separate.'],
     [zh ? '按条码连接商品' : 'Join to the product', zh ? '字符型条码精确匹配，前导零不丢。' : 'Exact match on the character barcode, leading zeros preserved.'],
-    [zh ? '除以净含量' : 'Divide by net quantity', zh ? '固体换算为 €/kg，果汁为 €/L。' : 'Solids become €/kg; juice becomes €/L.'],
+    [zh ? '除以净含量' : 'Divide by net quantity', zh ? '固体换算为 €/kg，果汁为 €/L。' : 'Solids become €/kg. Juice becomes €/L.'],
     [zh ? '取中位数' : 'Take the median', zh ? '同一商品的多条常规报价合成一个代表价格。' : 'Several regular quotes for one product become one representative price.'],
-    [zh ? '核对覆盖与样本' : 'Check coverage', zh ? '598 款可比，583 款同时具备两项等级。' : '598 are comparable; 583 carry both grades.'],
+    [zh ? '核对覆盖与样本' : 'Check coverage', zh ? '598 款可比，583 款同时具备两项等级。' : '598 are comparable. 583 carry both grades.'],
   ];
   return <section className="chapter">
     <Head index={3} label={zh ? '研究方法' : 'The method'}
       title={zh ? <>从一张小票，到一个可比价格。</> : <>From a receipt to a comparable price.</>}
       lead={zh
         ? '这一步决定了后面所有图表能不能读。规则只有五条，完整审计可以逐条展开到 56 个操作。'
-        : 'This is what makes the charts readable. Five rules carry the whole dataset; the full audit expands to 56 operations.'} />
+        : 'This is what makes the charts readable. Five rules carry the whole dataset. The full audit expands to 56 operations.'} />
     <ol className="method-steps">
       {steps.map(([title, body], i) => <li key={title}>
         <span className="method-number">{pad(i + 1)}</span>
@@ -244,17 +244,17 @@ function Nutrition() {
   const chocolate = data.products.filter(p => p.category === 'dark_chocolates');
   return <section className="chapter">
     <Head index={4} label={zh ? '价格与营养' : 'Price and nutrition'}
-      title={zh ? <>两个货架上，价格与营养同向；<br />另外两个，价格几乎不说明问题。</> : <>In two aisles, price tracks nutrition.<br />In two, it does not.</>}
+      title={zh ? <>两个类别里，价格与营养同向。<br />另外两个，价格几乎不说明问题。</> : <>In two categories, price tracks nutrition.<br />In two, it does not.</>}
       lead={zh
-        ? '我们把价格与营养分数在类别内做秩相关。取值为正，表示价格越高、等级越好；取值越接近零，表示价签越读不出营养信息。'
-        : 'We rank-correlated price and nutrition score inside each category. Positive means a higher price comes with the better grade; values near zero mean the price tag carries little nutrition information.'} />
+        ? '我们把价格与营养分数在类别内做秩相关。取值为正，表示价格越高、等级越好。取值越接近零，表示价格越读不出营养信息。'
+        : 'We rank-correlated price and nutrition score inside each category. Positive means a higher price comes with the better grade. Values near zero mean price carries little nutrition information.'} />
     <SignalPlot rows={signals} unit={zh ? 'Spearman ρ · 正值为“价格更高、营养更好”' : 'Spearman ρ · positive means higher price, better grade'} />
     <div className="reading-pair">
       <p>{zh
-        ? '早餐谷物与黑巧克力在最上面：ρ 分别是 0.20 和 0.27。饼干与果汁贴着零线，意味着贵一倍的商品，营养等级和便宜那款几乎没有系统性差别。'
-        : 'Breakfast cereals and dark chocolate sit at the top, at 0.20 and 0.27. Biscuits and juice sit on the zero line: a product that costs twice as much has, on average, essentially the same nutrition grade.'}</p>
+        ? '早餐谷物与黑巧克力在最上面，ρ 分别是 0.20 和 0.27。饼干与果汁贴着零线，意味着贵一倍的商品，营养等级和便宜那款几乎没有系统性差别。'
+        : 'Breakfast cereals and dark chocolate sit at the top, at 0.20 and 0.27. Biscuits and juice sit on the zero line. A product that costs twice as much has, on average, essentially the same nutrition grade.'}</p>
       <p className="muted-note">{zh
-        ? '即使是最强的关系也只是“温和”：ρ ≈ 0.2 意味着价格只能解释两款商品之间很小一部分差异。类别内的单个比较仍然必要。'
+        ? '即使是最强的关系也只是“温和”。ρ ≈ 0.2 意味着价格只能解释两款商品之间很小一部分差异。类别内的单个比较仍然必要。'
         : 'Even the strongest link is modest. A ρ near 0.2 means price explains only a small part of the difference between two products, so the individual comparison still matters.'}</p>
     </div>
     <div className="tradeoff">
@@ -262,15 +262,15 @@ function Nutrition() {
         <p className="eyebrow">{zh ? '为什么等级不够用' : 'Why the grade compresses'}</p>
         <h2>{zh ? '黑巧克力：糖更少，饱和脂肪更多。' : 'Dark chocolate: less sugar, more saturated fat.'}</h2>
         <p>{zh
-          ? '黑巧克力里，价格与糖的相关系数是 −0.46：越贵，糖越少。但同样这批商品，价格与饱和脂肪是 +0.40。多付的钱同时买到了“更好”和“更差”，而营养等级只有一个字母——本类别里所有商品都是 D 或 E。'
-          : 'In dark chocolate the price–sugar correlation is −0.46: the expensive bars carry less sugar. The same products also show +0.40 for saturated fat. The extra money buys an improvement and a deterioration at the same time, and the grade reports one letter — in this category, always D or E.'}</p>
+          ? '黑巧克力里，价格与糖的相关系数是 −0.46。越贵，糖越少。但同样这批商品，价格与饱和脂肪是 +0.40。多付的钱同时买到了“更好”和“更差”，而营养等级只有一个字母——本类别里所有商品都是 D 或 E。'
+          : 'In dark chocolate the price–sugar correlation is −0.46. The expensive bars carry less sugar. The same products also show +0.40 for saturated fat. The extra money buys an improvement and a deterioration at the same time, and the grade reports one letter — in this category, always D or E.'}</p>
       </div>
       <div className="tradeoff-plots">
         <TrendPlot products={chocolate} metric="sugars_100g" colour="#b4514a" label={zh ? '糖' : 'Sugars'} unit={zh ? 'g / 100 g · ρ = −0.46' : 'g / 100 g · ρ = −0.46'} />
         <TrendPlot products={chocolate} metric="saturated_fat_100g" colour="#4c7fa8" label={zh ? '饱和脂肪' : 'Saturated fat'} unit={zh ? 'g / 100 g · ρ = +0.40' : 'g / 100 g · ρ = +0.40'} />
       </div>
     </div>
-    <p className="chart-note">{zh ? '每个点是一款商品，折线为价格三分位内的中位数。完整分布与下钻见仪表板。' : 'Each dot is a product; the line joins the median of each price third. Full distributions and drill-down are in the dashboard.'}</p>
+    <p className="chart-note">{zh ? '每个点是一款商品，折线为价格三分位内的中位数。完整分布与下钻见仪表板。' : 'Each dot is a product. The line joins the median of each price third. Full distributions and drill-down are in the dashboard.'}</p>
   </section>;
 }
 
@@ -280,22 +280,22 @@ function Environment() {
   const signals = categories.map(c => { const r = correlation('environment_score', c); return { category: c, value: r.value, n: r.n }; });
   return <section className="chapter">
     <Head index={5} label={zh ? '价格与环境' : 'Price and environment'}
-      title={zh ? <>更环保的货架更贵，<br />但只在两个货架上成立。</> : <>A greener shelf costs more,<br />but only in two aisles.</>}
+      title={zh ? <>更环保的商品更贵，<br />但只在两个类别里成立。</> : <>Greener products cost more,<br />but only in two categories.</>}
       lead={zh
-        ? '环境等级按 A+ 到 F 排序。这里同样是类别内的秩相关：早餐谷物 0.31，黑巧克力 0.24，饼干 0.03，果汁 0.04。'
+        ? '环境等级按 A+ 到 F 排序。这里同样是类别内的秩相关。早餐谷物 0.31，黑巧克力 0.24，饼干 0.03，果汁 0.04。'
         : 'Environmental grades run A+ to F. The within-category rank correlation is 0.31 for cereals, 0.24 for chocolate, 0.03 for biscuits and 0.04 for juice.'} />
     <SignalPlot rows={signals} unit={zh ? 'Spearman ρ · 正值为“价格更高、环境更好”' : 'Spearman ρ · positive means higher price, better grade'} />
     <div className="callout">
       <p className="eyebrow">{zh ? '一个具体的例外' : 'A concrete exception'}</p>
-      <h2>{zh ? '每类里最贵的那款，环境等级都不是该类最好的。' : 'The most expensive product in every category is never the best environmental grade in it.'}</h2>
+      <h2>{zh ? '每个类别里最贵的那款，都不是该类最好的环境等级。' : 'The most expensive product in every category is never its best environmental grade.'}</h2>
       <div className="callout-body">
         <div>
           <p>{zh
-            ? '早餐谷物里最贵的是 Priméal 的藜麦膨化谷物，€46.50/kg。它的营养等级是 A，这一类里最好的一档；环境等级却是 D。'
+            ? '早餐谷物里最贵的是 Priméal 的藜麦膨化谷物，€46.50/kg。它的营养等级是 A，这一类里最好的一档。环境等级却是 D。'
             : 'The priciest cereal is Priméal quinoa soufflé at €46.50/kg. Its nutrition grade is A, the best grade in this category. Its environmental grade is D.'}</p>
           <p>{zh
-            ? '这正是价格的问题：它把两件事打包成一个数字。贵，可能意味着更好的配方，也可能只是更小的包装、更远的运输、或者一个愿意为货架位置付钱的品牌。'
-            : 'This is the problem with price: it bundles two different things into one number. Expensive can mean a better recipe, a smaller pack, a longer journey, or a brand paying for shelf position.'}</p>
+            ? '价格把两件事打包成一个数字。贵，可能意味着更好的配方，也可能只是因为包装更小、运输更远，或者品牌为货架位置付了钱。'
+            : 'Price bundles two different things into one number. Expensive can mean a better recipe, or simply a smaller pack and a longer journey. It can also mean a brand paying for shelf position.'}</p>
         </div>
         <dl className="callout-facts">
           <div><dt>€46.50</dt><dd>{zh ? '每公斤' : 'per kg'}</dd></div>
@@ -307,8 +307,8 @@ function Environment() {
     <div className="caveat">
       <p className="eyebrow">{zh ? '关于碳的数字' : 'On the carbon numbers'}</p>
       <p>{zh
-        ? 'AGRIBALYSE 3.2 的碳估算覆盖 594 款商品，但它们映射到标准食品参考项：早餐谷物 150 款商品只对应 4 个不同的碳值。因此这些数字适合看参考项之间的差异，不适合排品牌榜。'
-        : 'AGRIBALYSE 3.2 estimates cover 594 products, but they map to standard food references: the 150 cereals share just four distinct carbon values. Read them as reference-level differences, not a brand ranking.'}</p>
+        ? 'AGRIBALYSE 3.2 的碳估算覆盖 594 款商品，但它们映射到标准食品参考项。早餐谷物 150 款商品只对应 4 个不同的碳值。因此这些数字适合看参考项之间的差异，不适合排品牌榜。'
+        : 'AGRIBALYSE 3.2 estimates cover 594 products, but they map to standard food references. The 150 cereals share just four distinct carbon values. Read them as reference-level differences, not a brand ranking.'}</p>
     </div>
   </section>;
 }
@@ -358,7 +358,7 @@ function Joint() {
         ? '在同时具备两项等级的 583 款商品中，562 款都能在同类里找到“价格更低、两项等级都不更差”的替代品。剩下 21 款，才是真正在要求溢价的商品。'
         : 'Of the 583 products that carry both grades, 562 have a cheaper alternative in the same category with neither grade worse. The remaining 21 are the ones genuinely asking for a premium.'}</p>
     </div>
-    <p className="chart-note">{zh ? '等级是序数，不假设等级之间的距离；规则只问“是否不更差”。数字与报告一致，逐款清单见数据处理流程。' : 'Grades are ordinal: no distance between letters is assumed, and the rule only asks whether a grade is no worse. The counts follow the report; the product-level list is in the data pipeline.'}</p>
+    <p className="chart-note">{zh ? '等级是序数，不假设等级之间的距离。规则只问“是否不更差”。数字与报告一致，逐款清单见数据处理流程。' : 'Grades are ordinal. No distance between letters is assumed, and the rule only asks whether a grade is no worse. The counts follow the report. The product-level list is in the data pipeline.'}</p>
     <a className="inline-link" href="#eda">{zh ? '在 EDA 里看全部六个研究视图' : 'See all six research views in the EDA'} <ArrowUpRight size={16} /></a>
   </section>;
 }
@@ -367,16 +367,16 @@ function Answer() {
   const { language } = useI18n();
   const zh = language === 'zh';
   const points = [
-    [zh ? '先定类别，再谈价格。' : 'Set the category first.', zh ? '四个货架的价格区间和计价单位都不同。跨类别排一个“性价比榜”，在方法上就不成立。' : 'The four aisles have different price ranges and units. A single cross-category value ranking is not a meaningful object.'],
-    [zh ? '把溢价当成问题，而不是信号。' : 'Treat a premium as a question, not a signal.', zh ? '饼干与果汁里，价格几乎读不出营养和环境信息；谷物与巧克力里有一点，但远不足以替代具体比较。' : 'In biscuits and juice, price carries almost no information about either grade. In cereals and chocolate it carries some, but far too little to replace an actual comparison.'],
+    [zh ? '先定类别，再谈价格。' : 'Set the category first.', zh ? '四个类别的价格区间和计价单位都不同。跨类别排一个“性价比榜”，在方法上就不成立。' : 'The four categories have different price ranges and units. A single cross-category value ranking is not a meaningful object.'],
+    [zh ? '先问溢价买到了什么。' : 'A premium is a question.', zh ? '饼干与果汁里，价格几乎读不出营养和环境信息。谷物与巧克力里有一点，但远不足以替代具体比较。' : 'In biscuits and juice, price carries almost no information about either grade. In cereals and chocolate it carries some, but far too little to replace an actual comparison.'],
     [zh ? '打开配方看。' : 'Open the composition.', zh ? '黑巧克力里，多付的钱同时买到更少的糖和更多的饱和脂肪。一个字母的等级压不住这种权衡。' : 'In dark chocolate, the extra money buys less sugar and more saturated fat at once. A single-letter grade cannot hold that trade-off.'],
   ];
   return <section className="chapter">
     <Head index={7} label={zh ? '结论' : 'The answer'}
       title={zh ? <>价格是一个很弱的标签。<br />类别，才是有用的那个。</> : <>Price is a weak label.<br />The category is the useful one.</>}
       lead={zh
-        ? '回答开头的问题：不一定。多付的钱有时买到更好的营养，有时只是买到更小的包装；而在每个类别里，它都没有买到该类最好的环境等级。'
-        : 'The answer to the opening question is: not reliably. Sometimes the extra money buys better nutrition; sometimes it buys only a smaller pack. In every category it never bought the best environmental grade on the shelf.'} />
+        ? '开头的问题，答案是不一定。多付的钱有时买到更好的营养，有时只是买到更小的包装。而在每个类别里，它都没有买到该类最好的环境等级。'
+        : 'The short answer is no. Sometimes the extra money buys better nutrition. Sometimes it buys only a smaller pack. In every category, the extra money never bought the best environmental grade.'} />
     <ol className="takeaways">
       {points.map(([title, body], i) => <li key={title}>
         <span className="method-number">{pad(i + 1)}</span>
@@ -389,11 +389,11 @@ function Answer() {
         <p className="eyebrow">{zh ? '谁能用上' : 'Who can use this'}</p>
         <h2>{zh ? '消费者挑商品，零售商看位置。' : 'Shoppers choose products; retailers read position.'}</h2>
         <p>{zh
-          ? '对消费者，用途是缩小候选：先定类别与预算，再看两款商品的配方差异，而不是把“贵”当作质量标签。对零售商，同样的视图是一张位置图：哪些商品在更低价格上提供了不更差的等级，值得在定价或配方复核时拿出来看。'
-          : 'For a shopper, the use is narrowing a choice: set the category and the budget, then compare two compositions instead of reading “expensive” as a quality label. For a retailer, the same view is a positioning map: which products offer no-worse grades at a lower price, and therefore deserve a look in a pricing or reformulation review.'}</p>
+          ? '对消费者，用途是缩小候选。先定类别与预算，再看两款商品的配方差异，而不是把“贵”当作质量标签。对零售商，同样的视图是一张位置图。它显示哪些商品在更低价格上提供了不更差的等级，值得在定价或配方复核时拿出来看。'
+          : 'For a shopper, the use is narrowing a choice. Set the category and the budget, then compare two compositions rather than reading “expensive” as a quality label. For a retailer, the same view is a positioning map. It shows which products offer no-worse grades at a lower price, and therefore deserve a look in a pricing or reformulation review.'}</p>
         <p className="muted-note">{zh
           ? '这些是零售比较基准。成本、需求、货架条款与当前价格都不在数据里，任何商业决定都需要另补证据。'
-          : 'These are retail comparison benchmarks. Costs, demand, shelf terms and current prices are not in the data; any commercial decision needs separate evidence.'}</p>
+          : 'These are retail comparison benchmarks. Costs, demand, shelf terms and current prices are not in the data. Any commercial decision needs separate evidence.'}</p>
       </div>
       <figure className="actors-art">
         <img src={asset('img/shelf.webp')} alt={zh ? '超市里，顾客在比较两袋谷物' : 'A shopper comparing two bags of cereal in a supermarket'} width={1700} height={957} />
