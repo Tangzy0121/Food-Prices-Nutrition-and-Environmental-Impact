@@ -359,6 +359,7 @@ function Joint() {
         : 'Of the 583 products that carry both grades, 562 have a cheaper alternative in the same category with neither grade worse. The remaining 21 are the ones genuinely asking for a premium.'}</p>
     </div>
     <p className="chart-note">{zh ? '等级是序数，不假设等级之间的距离；规则只问“是否不更差”。数字与报告一致，逐款清单见数据处理流程。' : 'Grades are ordinal: no distance between letters is assumed, and the rule only asks whether a grade is no worse. The counts follow the report; the product-level list is in the data pipeline.'}</p>
+    <a className="inline-link" href="#eda">{zh ? '在 EDA 里看全部六个研究视图' : 'See all six research views in the EDA'} <ArrowUpRight size={16} /></a>
   </section>;
 }
 
