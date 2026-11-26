@@ -244,7 +244,7 @@ function Nutrition() {
   const chocolate = data.products.filter(p => p.category === 'dark_chocolates');
   return <section className="chapter">
     <Head index={4} label={zh ? '价格与营养' : 'Price and nutrition'}
-      title={zh ? <>两个类别里，价格与营养同向。<br />另外两个，价格几乎不说明问题。</> : <>In two categories, price tracks nutrition.<br />In two, it does not.</>}
+      title={zh ? <>两个类别里，价格与营养同向。<br />另外两个，价格几乎不说明问题。</> : <>Price tracks nutrition in two.<br />In the other two, it does not.</>}
       lead={zh
         ? '我们把价格与营养分数在类别内做秩相关。取值为正，表示价格越高、等级越好。取值越接近零，表示价格越读不出营养信息。'
         : 'We rank-correlated price and nutrition score inside each category. Positive means a higher price comes with the better grade. Values near zero mean price carries little nutrition information.'} />

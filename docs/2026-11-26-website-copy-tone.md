@@ -34,7 +34,7 @@ Representative edits; the full set is 44 string pairs in `Story.tsx`.
 | 04 reading | …sit on the zero line: a product that costs twice as much… | …sit on the zero line. A product that costs twice as much… |
 | 07 takeaway | Treat a premium as a question, not a signal. | A premium is a question. |
 | 07 actors | …narrowing a choice: set the category… | …narrowing a choice. Set the category… |
-| 04 heading | In two aisles, price tracks nutrition. | In two categories, price tracks nutrition. |
+| 04 heading | In two aisles, price tracks nutrition. / In two, it does not. | Price tracks nutrition in two. / In the other two, it does not. |
 | 05 heading | A greener shelf costs more, but only in two aisles. | Greener products cost more, but only in two categories. |
 | 02 heading | Four aisles, 598 products… | Four categories, 598 products… |
 | 07 takeaway | The four aisles have different price ranges… | The four categories have different price ranges… |
