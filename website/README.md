@@ -1,6 +1,10 @@
 # Food / Signal presentation website
 
-React, TypeScript and Vite. A presentation of the research questions and the complete R data-preparation flow. The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection. The shared navigation also includes the three-page consumer research dashboard at `#dashboard`, following the user-confirmed EDA chart plan.
+React, TypeScript and Vite. An eight-chapter narrative of the study, plus three deep-dive pages: the complete R data-preparation flow at `#pipeline`, the three-view research dashboard at `#dashboard` and the sources at `#sources`.
+
+The story runs `#story/opening` through `#story/answer`. Each chapter carries one argument, one visual and a hand-off line: the opening question, the comparison gap and the literature, the sample, the five pricing rules, price × nutrition, price × environment, the joint view with a working budget, and the answer. A sticky chapter rail jumps to any chapter; the pager and the left/right arrow keys move one chapter at a time; the last chapter returns to the opening and links to the dashboard, the report PDF, the pipeline and the sources. Chapters are separate hash routes, so a chapter can be linked or refreshed directly, and the old `#study` address resolves to the opening.
+
+The Tableau Prep-style workspace uses 17 grouped nodes and 20 external connections, with all 56 underlying operations available for inspection. The shared navigation also includes the three-view consumer research dashboard at `#dashboard`, following the user-confirmed EDA chart plan.
 
 The canvas fills the page beneath the shared navigation. Related filters, field transformations and checks share a compact node; its badge shows how many operations it contains. A collapsible navigation panel, previous/next node controls, a direct operation selector, pan/zoom and a minimap navigate the flow. The resizable bottom panel lists the selected node's operations and shows each operation's actual counts, sanitized before/after records, excerpt-based field profiles and exact R source lines. Independent analysis subsets share an output node labelled as four datasets, without adding their overlapping row counts. Cumulative R predicates remain labelled and flagging steps preserve their row counts.
 
@@ -16,7 +20,9 @@ npm ci
 npm run dev
 ```
 
-`npm run build` validates and exports the presentation data, checks graph completeness and bilingual copy, checks TypeScript and builds `dist/`. `npm run check:flow` verifies all processing nodes and connections independently. `npm run preview` serves the build. npm scripts launch foreground servers; automated background launches on Windows must use the project-required `Start-CodexBackground.ps1` launcher.
+`npm run build` validates and exports the presentation data, checks graph completeness and bilingual copy, checks TypeScript and builds `dist/`. `npm run check:flow` verifies all processing nodes and connections independently. `npm run preview` serves the build.
+
+`npm run build:standalone` and `npm run check:consumer` are documented below. After rebuilding the report, run `npm run sync:report` to copy `output/food-value-report-v3.pdf` (or the English PDF) into `public/downloads/food-choices-report.pdf`, which is what the Download button serves. The committed PDF is therefore a snapshot of the last assembled report. npm scripts launch foreground servers; automated background launches on Windows must use the project-required `Start-CodexBackground.ps1` launcher.
 
 ## Data
 
@@ -45,7 +51,7 @@ When the parent repository is available, the data-sync step refreshes its presen
 
 The website's `.gitattributes` preserves evidence and generated-data bytes so Git line-ending conversion does not invalidate the committed hashes.
 
-Navigation uses URL hashes, so study, pipeline and source links work without a server rewrite. The site is ready for deployment; no Vercel deployment is created by the local development workflow.
+Navigation uses URL hashes, so story chapters, the pipeline and the sources work without a server rewrite. The site is ready for deployment; no Vercel deployment is created by the local development workflow.
 
 ## Design
 
@@ -53,7 +59,7 @@ See `PRODUCT.md` and `DESIGN.md`. Component proportions follow the user's Apple 
 
 ## Research dashboard
 
-The current chart contract is [2026-11-18-consumer-redesign.md](../docs/05_dashboard/2026-11-18-consumer-redesign.md). Three views cover nutrition, environment and joint comparison. Category checkboxes control visibility on shared, fixed axes. Nutrients use category colours and nutrient shapes; joint comparison uses environment grades on x, price on y and nutrition colours. CSV export follows the active selection. The original six-view R data bundle is retained for reproducibility.
+The narrative layer is `src/Story.tsx` with `src/StoryCharts.tsx` and `src/story.css`; it reads the same committed bundles as the dashboard (`src/data/dashboard.json`, `src/data/presentation.json`) and recalculates nothing. Editorial images live in `public/img/` and are labelled AI-generated, matching the report's `assets/provenance.json`. The current chart contract is [2026-11-18-consumer-redesign.md](../docs/05_dashboard/2026-11-18-consumer-redesign.md). Three views cover nutrition, environment and joint comparison. Category checkboxes control visibility on shared, fixed axes. Nutrients use category colours and nutrient shapes; joint comparison uses environment grades on x, price on y and nutrition colours. CSV export follows the active selection. The original six-view R data bundle is retained for reproducibility.
 
 `src/data/dashboard.json` contains 598 corrected products, nine executed R tables and 45 R box summaries. To refresh from existing local inputs, run from the repository root:
 
@@ -66,6 +72,8 @@ The exporter uses the existing environmental correction routine and reads `outpu
 ## Consumer redesign, 18 November 2026
 
 `npm run build:standalone` runs the data, processing-flow and TypeScript checks, builds the site, then embeds the JavaScript, CSS and data into `../outputs/dashboard/2026-11-18-food-signal.html`. Open this file directly in a browser; no R service or network is needed for the charts. The online R-source and data-source links still require a connection.
+
+`npm run check:story -- http://127.0.0.1:4173` exercises the eight chapters, the rail, the pager, keyboard navigation, the budget interaction, the product detail, the PDF link and both languages with headless Chrome.
 
 `npm run check:consumer -- http://127.0.0.1:5173/#dashboard` exercises the real UI with headless Chrome. It also accepts a `file:///...html#dashboard` URL to check the standalone artifact. Install dependencies with `npm ci`; set `CHROME_PATH` if Chrome is installed elsewhere. Screenshots are regenerated in `../.scratch/consumer-check/`. The check covers tabs, nutrient and category toggles, fixed axes, empty selections, joint-product details by mouse and keyboard, both languages, mobile overflow, study workflow and source-page simplification.
 

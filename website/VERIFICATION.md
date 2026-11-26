@@ -1,5 +1,15 @@
 # Presentation verification
 
+## Narrative restructure, 26 November 2026
+
+- The site now opens on an eight-chapter story (`#story/opening` … `#story/answer`) with a sticky chapter rail, previous/next pager, left/right arrow keys and a closing card that links to the dashboard, the report PDF, the pipeline and the sources. `#study` resolves to the opening; `#dashboard`, `#pipeline` and `#sources` are unchanged.
+- Every displayed number is read from the committed bundles (`src/data/dashboard.json`, `src/data/presentation.json`); the story recalculates no statistics. Chapter 6 shows the report's 562/583 lower-price-candidate count; the budget slider and the sample counter are computed live from the product rows.
+- `npm run check:story -- http://127.0.0.1:4173` passes: eight chapters, rail state, pager, keyboard navigation, category chips, budget extremes (1/146 at the floor), product detail from the plot, the PDF link returning `application/pdf`, four end-card routes, Chinese copy and no horizontal overflow at 390 × 844. No page errors or console errors were recorded.
+- The existing consumer-dashboard check (`npm run check:consumer`) was updated for the new navigation and still passes: three tabs, nutrient and category toggles, empty selections, joint detail, bilingual switching and mobile.
+- `npm run build` passes with TypeScript, the processing-flow check, the dashboard data check and the presentation sync. `npm run check:flow` and `npm run check:dashboard` are unchanged.
+- Images in `public/img/` are the report's two editorial illustrations plus the four-category cut-out; both illustrations are labelled AI-generated on the page. The report PDF is served from `public/downloads/food-choices-report.pdf` and refreshed with `npm run sync:report`.
+- Chapter 6 quotes the report's candidate count. An independent recount from the exported product rows gives 569/583 when A+ is ranked ahead of A, so the count is sensitive to grade ordering; the figure should be reconciled with the R output before the report is finalised.
+
 ## Research dashboard, 13 November 2026
 
 - Implements the user-confirmed six-direction chart plan in `docs/05_dashboard/research_dashboard.md`; replaces the earlier consumer shortlist layout in the website.

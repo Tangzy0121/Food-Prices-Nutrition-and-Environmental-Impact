@@ -5,13 +5,15 @@
   "type": "module",
   "scripts": {
     "sync:data": "node scripts/sync-presentation.mjs",
+    "sync:report": "node scripts/sync-report.mjs",
     "check:flow": "node scripts/check-processing-flow.mjs",
     "check:dashboard": "node scripts/check-dashboard.mjs",
     "dev": "npm run sync:data && vite --host 127.0.0.1",
     "build": "npm run sync:data && npm run check:flow && npm run check:dashboard && tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "build:standalone": "npm run build && node scripts/build-standalone.mjs",
-    "check:consumer": "node scripts/check-consumer-dashboard.cjs"
+    "check:consumer": "node scripts/check-consumer-dashboard.cjs",
+    "check:story": "node scripts/check-story.cjs"
   },
   "dependencies": {
     "@xyflow/react": "^12.0.0",

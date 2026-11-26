@@ -4,3 +4,7 @@
 # Downloadable evidence is hashed byte-for-byte; preserve its source bytes.
 public/evidence/** -text -whitespace
 src/data/** -text -whitespace
+
+# Published binaries (report PDF, editorial images) keep their exact bytes.
+public/downloads/** -text -whitespace
+public/img/** -text -whitespace
